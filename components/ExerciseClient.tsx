@@ -15,7 +15,12 @@ function shuffle<T>(arr: T[]): T[] {
   return copy;
 }
 
-export default function ExerciseClient({ lesson }: { lesson: Lesson }) {
+interface Props {
+  lesson: Lesson;
+  lessonId: string;
+}
+
+export default function ExerciseClient({ lesson, lessonId }: Props) {
   const router = useRouter();
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -26,7 +31,6 @@ export default function ExerciseClient({ lesson }: { lesson: Lesson }) {
   const isAnswered = selected !== null;
   const isCorrect = selected === exercise.correctAnswer;
 
-  // Shuffle is stable per exercise (keyed by id, not by answer values)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const options = useMemo(() => shuffle([exercise.correctAnswer, ...exercise.wrongAnswers]), [exercise.id]);
 
@@ -38,7 +42,7 @@ export default function ExerciseClient({ lesson }: { lesson: Lesson }) {
 
   const handleNext = () => {
     if (isLast) {
-      router.push(`/lesson/${lesson.id}/complete?score=${score}&total=${lesson.exercises.length}`);
+      router.push(`/lesson/${lessonId}/complete?score=${score}&total=${lesson.exercises.length}`);
     } else {
       setIndex((i) => i + 1);
       setSelected(null);
@@ -54,9 +58,19 @@ export default function ExerciseClient({ lesson }: { lesson: Lesson }) {
 
   return (
     <main className="flex flex-col min-h-dvh px-6 pb-10 pt-6 max-w-md mx-auto">
-      <p className="text-center text-sm text-muted mb-6">
-        {index + 1} / {lesson.exercises.length}
-      </p>
+      <div className="flex items-center mb-4">
+        <button
+          type="button"
+          onClick={() => router.push(`/lesson/${lessonId}`)}
+          className="p-2 rounded-lg text-muted hover:text-ink hover:bg-border transition-colors text-xl leading-none mr-3"
+        >
+          ←
+        </button>
+        <p className="flex-1 text-center text-sm text-muted">
+          {index + 1} / {lesson.exercises.length}
+        </p>
+        <div className="w-9" />
+      </div>
 
       <div className="flex-1 flex flex-col">
         <div className="flex flex-col items-center justify-center py-10">
