@@ -6,6 +6,10 @@ import type { Lesson } from '@/types';
 import OptionButton from './OptionButton';
 import PrimaryButton from './PrimaryButton';
 
+function normalize(str: string): string {
+  return str.toLowerCase().normalize('NFD').replace(/\p{Mn}/gu, '');
+}
+
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -82,7 +86,7 @@ export default function ExerciseClient({ lesson, lessonId }: Props) {
           {options.map((option) => (
             <OptionButton
               key={option}
-              label={option}
+              label={isAnswered ? option : normalize(option)}
               state={getOptionState(option)}
               onClick={() => handleSelect(option)}
             />
