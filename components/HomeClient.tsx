@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_LESSONS } from '@/lib/lesson-registry';
+import { PHRASE_TOPIC_LABELS, PHRASE_TOPICS } from '@/lib/phrase-registry';
 
 const PROFILES = [
   { name: 'Shaza',   year: '2007' },
@@ -94,6 +95,18 @@ export default function HomeClient() {
               className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm"
             >
               {CATEGORY_LABELS[cat]}
+            </button>
+          ))}
+        </div>
+
+        {/* Phrases */}
+        <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 mt-6">Phrases</p>
+        <div className="grid grid-cols-2 gap-3">
+          {PHRASE_TOPICS.filter((t) => t !== 'dialogue_nikiza_jenny').map((topic) => (
+            <button key={topic} type="button" onClick={() => router.push(`/phrases/${topic}`)}
+              className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm"
+            >
+              {PHRASE_TOPIC_LABELS[topic]}
             </button>
           ))}
         </div>

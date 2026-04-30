@@ -1,0 +1,27 @@
+export const PHRASE_TOPIC_LABELS: Record<string, string> = {
+  greetings_formal: 'Salutations formelles',
+  greetings_informal: 'Salutations informelles',
+  greetings_responses_good: 'Réponses (bien)',
+  greetings_responses_bad: 'Réponses (mal)',
+  greetings_responses_soso: 'Réponses (couci-couça)',
+  greetings_sending: 'Prendre congé',
+  asking_direction: 'Demander la direction',
+  asking_origin: 'Demander l\'origine',
+  asking_residence: 'Demander où on habite',
+  asking_name: 'Demander le nom',
+  asking_birth: 'Demander la naissance',
+  asking_occupation: 'Demander le métier',
+  requests_polite: 'Demandes polies',
+  gifts: 'Cadeaux',
+  likes_dislikes: 'Goûts',
+  appointments: 'Rendez-vous',
+  illness: 'Maladie',
+  invitations: 'Invitations',
+  complaints: 'Plaintes',
+  offers: 'Offres',
+  polite_requests: 'Requêtes',
+  shock: 'Surprise',
+  dialogue_nikiza_jenny: 'Dialogue : Nikiza & Jenny',
+};
+
+export const PHRASE_TOPICS = Object.keys(PHRASE_TOPIC_LABELS);

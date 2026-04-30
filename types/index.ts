@@ -1,5 +1,3 @@
-export type ExerciseType = 'multiple_choice' | 'translation';
-
 export interface MultipleChoiceExercise {
   id: string;
   type: 'multiple_choice';
@@ -8,10 +6,7 @@ export interface MultipleChoiceExercise {
   wrongAnswers: string[];
 }
 
-// Future: export interface TranslationExercise { ... }
-
 export type Exercise = MultipleChoiceExercise;
-// Future: | TranslationExercise
 
 export interface Lesson {
   id: string;
