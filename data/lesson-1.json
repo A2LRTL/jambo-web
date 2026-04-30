@@ -1,0 +1,42 @@
+{
+  "id": "lesson-1",
+  "language": "swahili",
+  "title": "Salutations de base",
+  "exercises": [
+    {
+      "id": "ex1",
+      "type": "multiple_choice",
+      "prompt": "habari",
+      "correctAnswer": "bonjour",
+      "wrongAnswers": ["merci", "au revoir", "oui"]
+    },
+    {
+      "id": "ex2",
+      "type": "multiple_choice",
+      "prompt": "asante",
+      "correctAnswer": "merci",
+      "wrongAnswers": ["bonjour", "non", "au revoir"]
+    },
+    {
+      "id": "ex3",
+      "type": "multiple_choice",
+      "prompt": "kwaheri",
+      "correctAnswer": "au revoir",
+      "wrongAnswers": ["merci", "oui", "bonjour"]
+    },
+    {
+      "id": "ex4",
+      "type": "multiple_choice",
+      "prompt": "ndiyo",
+      "correctAnswer": "oui",
+      "wrongAnswers": ["non", "merci", "au revoir"]
+    },
+    {
+      "id": "ex5",
+      "type": "multiple_choice",
+      "prompt": "hapana",
+      "correctAnswer": "non",
+      "wrongAnswers": ["oui", "bonjour", "merci"]
+    }
+  ]
+}
