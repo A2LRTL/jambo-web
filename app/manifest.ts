@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Jambo',
-    short_name: 'Jambo',
+    name: 'Ubuntu',
+    short_name: 'Ubuntu',
     description: 'Apprends le kirundi et le swahili',
     start_url: '/',
     display: 'standalone',

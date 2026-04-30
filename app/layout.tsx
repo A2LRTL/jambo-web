@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Jambo',
+  title: 'Ubuntu',
   description: 'Apprends le kirundi et le swahili',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Jambo',
+    title: 'Ubuntu',
   },
 };
 

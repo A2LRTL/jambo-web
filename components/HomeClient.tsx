@@ -67,7 +67,7 @@ export default function HomeClient() {
     return (
       <main className="flex flex-col min-h-dvh px-8 pt-16 pb-12 max-w-md mx-auto">
         <div className="flex-1 flex flex-col items-center justify-center text-center gap-3">
-          <h1 className="text-7xl font-bold text-accent">Jambo</h1>
+          <h1 className="text-7xl font-bold text-accent">Ubuntu</h1>
           <p className="text-muted text-base">Kirundi &amp; Swahili</p>
           <p className="text-ink font-semibold text-lg mt-6">Qui es-tu ?</p>
         </div>
@@ -102,7 +102,7 @@ export default function HomeClient() {
         {/* Header */}
         <div className="flex items-start justify-between mb-8">
           <div>
-            <h1 className="text-5xl font-bold text-accent">Jambo</h1>
+            <h1 className="text-5xl font-bold text-accent">Ubuntu</h1>
             <p className="text-muted text-sm mt-1">
               {lang !== 'scores' && <>{LANGS.find((l) => l.id === lang)?.flag} {LANGS.find((l) => l.id === lang)?.label}</>}
               {lang === 'scores' && 'Classement'}
