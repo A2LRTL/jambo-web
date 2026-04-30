@@ -94,6 +94,15 @@ export default function HomeClient() {
               {lang !== 'scores' && <>{LANGS.find((l) => l.id === lang)?.flag} {LANGS.find((l) => l.id === lang)?.label}</>}
               {lang === 'scores' && 'Classement'}
             </p>
+            <a
+              href="https://wa.me/33611764746"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 mt-2 text-xs text-muted hover:text-ink transition-colors"
+            >
+              <span className="text-sm">💬</span>
+              Poser une question à maman
+            </a>
           </div>
           <button
             type="button"
