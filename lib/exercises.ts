@@ -6,12 +6,17 @@ interface RawVocabItem {
   id: string;
   term_kirundi: string;
   translation_en: string;
+  translation_fr: string | null;
   category: string;
 }
 
 export interface VocabItem {
   term: string;
   translation: string;
+}
+
+function tr(item: RawVocabItem): string {
+  return item.translation_fr ?? item.translation_en;
 }
 
 function sample<T>(arr: T[], n: number): T[] {
@@ -61,23 +66,19 @@ function pickSmartDistractors(correct: string, pool: string[], n: number): strin
 export function generateKirundiLesson(category: string, count = 10): Lesson | null {
   if (!(category in CATEGORY_LABELS)) return null;
   const all = vocab.vocabulary_items as RawVocabItem[];
-  const pool = all.filter((v) => v.category === category && v.translation_en);
+  const pool = all.filter((v) => v.category === category && tr(v));
   if (pool.length < 2) return null;
   const selected = sample(pool, Math.min(count, pool.length));
-  const fallback = all
-    .filter((v) => v.category !== category && v.translation_en)
-    .map((v) => v.translation_en);
+  const fallback = all.filter((v) => v.category !== category && tr(v)).map(tr);
   const exercises: Exercise[] = selected.map((item) => {
-    const samePool = pool.filter((v) => v.id !== item.id).map((v) => v.translation_en);
-    const wrongPool = [...new Set([...samePool, ...fallback])].filter(
-      (t) => t !== item.translation_en,
-    );
+    const samePool = pool.filter((v) => v.id !== item.id).map(tr);
+    const wrongPool = [...new Set([...samePool, ...fallback])].filter((t) => t !== tr(item));
     return {
       id: item.id,
       type: 'multiple_choice' as const,
       prompt: item.term_kirundi,
-      correctAnswer: item.translation_en,
-      wrongAnswers: pickSmartDistractors(item.translation_en, wrongPool, 3),
+      correctAnswer: tr(item),
+      wrongAnswers: pickSmartDistractors(tr(item), wrongPool, 3),
     };
   });
   return { id: `kirundi-${category}`, language: 'kirundi', title: CATEGORY_LABELS[category], exercises };
@@ -106,7 +107,12 @@ interface RawPhrase {
   id: string;
   phrase_kirundi: string;
   translation_en: string;
+  translation_fr: string | null;
   topic: string;
+}
+
+function trPhrase(p: RawPhrase): string {
+  return p.translation_fr ?? p.translation_en;
 }
 
 export interface PhraseExercise {
@@ -117,7 +123,9 @@ export interface PhraseExercise {
 }
 
 export function getPhraseExercises(topic: string): PhraseExercise[] {
-  const phrases = (vocab.phrases as RawPhrase[]).filter((p) => p.topic === topic && p.phrase_kirundi && p.translation_en);
+  const phrases = (vocab.phrases as RawPhrase[]).filter(
+    (p) => p.topic === topic && p.phrase_kirundi && trPhrase(p),
+  );
   const allKirundiWords = (vocab.vocabulary_items as RawVocabItem[])
     .filter((v) => v.term_kirundi && !v.term_kirundi.includes(' '))
     .map((v) => v.term_kirundi);
@@ -131,7 +139,7 @@ export function getPhraseExercises(topic: string): PhraseExercise[] {
     );
     return {
       id: p.id,
-      phraseEN: p.translation_en,
+      phraseEN: trPhrase(p),
       solution,
       allWords: shuffle([...solution, ...decoys]),
     };
@@ -141,6 +149,6 @@ export function getPhraseExercises(topic: string): PhraseExercise[] {
 export function getKirundiVocabItems(category: string): VocabItem[] {
   const all = vocab.vocabulary_items as RawVocabItem[];
   return all
-    .filter((v) => v.category === category && v.translation_en)
-    .map((v) => ({ term: v.term_kirundi, translation: v.translation_en }));
+    .filter((v) => v.category === category && tr(v))
+    .map((v) => ({ term: v.term_kirundi, translation: tr(v) }));
 }
