@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PHRASE_TOPIC_LABELS } from '@/lib/phrase-registry';
+import ScoreSaver from '@/components/ScoreSaver';
 
 function getMessage(score: number, total: number): string {
   const pct = score / total;
@@ -26,6 +27,7 @@ export default async function PhraseCompletePage({
 
   return (
     <main className="flex flex-col min-h-dvh px-6 pb-10 pt-16 max-w-md mx-auto">
+      <ScoreSaver lessonId={`phrases/${topic}`} score={score} total={total} />
       <div className="flex-1 flex flex-col items-center justify-center gap-5 text-center">
         <span className="text-7xl">{isPerfect ? '🎉' : score >= total * 0.6 ? '👏' : '💪'}</span>
         <div>

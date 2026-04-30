@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_LESSONS } from '@/lib/lesson-registry';
 import { PHRASE_TOPIC_LABELS, PHRASE_TOPICS } from '@/lib/phrase-registry';
+import { getBestScores, type BestScore } from '@/lib/scores';
 
 const PROFILES = [
   { name: 'Shaza',   year: '2007' },
@@ -25,6 +26,7 @@ export default function HomeClient() {
   const [profile, setProfile]     = useState<ProfileName | null>(null);
   const [lang, setLang]           = useState<Lang>('kirundi');
   const [showModal, setShowModal] = useState(false);
+  const [bestScores, setBestScores] = useState<Record<string, BestScore>>({});
   const [active, setActive]       = useState<ProfileName | null>(null);
   const [pin, setPin]             = useState('');
   const [error, setError]         = useState(false);
@@ -34,6 +36,11 @@ export default function HomeClient() {
     const saved = localStorage.getItem('jambo_profile') as ProfileName | null;
     if (saved && PROFILES.some((p) => p.name === saved)) setProfile(saved);
   }, []);
+
+  useEffect(() => {
+    if (!profile) { setBestScores({}); return; }
+    getBestScores(profile).then(setBestScores);
+  }, [profile]);
 
   const openModal = () => { setShowModal(true); setActive(null); setPin(''); setError(false); };
   const closeModal = () => setShowModal(false);
@@ -61,6 +68,17 @@ export default function HomeClient() {
     setProfile(null);
     localStorage.removeItem('jambo_profile');
     closeModal();
+  };
+
+  const badge = (id: string) => {
+    const s = bestScores[id];
+    if (!s) return null;
+    const perfect = s.best === s.total;
+    return (
+      <span className={`text-xs font-bold ${perfect ? 'text-success' : 'text-accent'}`}>
+        {perfect ? '★' : `${s.best}/${s.total}`}
+      </span>
+    );
   };
 
   return (
@@ -92,9 +110,10 @@ export default function HomeClient() {
             <div className="grid grid-cols-2 gap-3">
               {KIRUNDI_CATEGORIES.map((cat) => (
                 <button key={cat} type="button" onClick={() => router.push(`/lesson/kirundi-${cat}`)}
-                  className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm"
+                  className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm flex flex-col gap-1"
                 >
-                  {CATEGORY_LABELS[cat]}
+                  <span>{CATEGORY_LABELS[cat]}</span>
+                  {badge(`kirundi-${cat}`)}
                 </button>
               ))}
             </div>
@@ -104,9 +123,10 @@ export default function HomeClient() {
             <div className="grid grid-cols-2 gap-3">
               {PHRASE_TOPICS.filter((t) => t !== 'dialogue_nikiza_jenny').map((topic) => (
                 <button key={topic} type="button" onClick={() => router.push(`/phrases/${topic}`)}
-                  className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm"
+                  className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm flex flex-col gap-1"
                 >
-                  {PHRASE_TOPIC_LABELS[topic]}
+                  <span>{PHRASE_TOPIC_LABELS[topic]}</span>
+                  {badge(`phrases/${topic}`)}
                 </button>
               ))}
             </div>
@@ -120,7 +140,10 @@ export default function HomeClient() {
               <button key={id} type="button" onClick={() => router.push(`/lesson/${id}`)}
                 className="w-full text-left py-4 px-5 rounded-xl border border-border bg-card hover:border-accent transition-all active:scale-[0.98] mb-3 shadow-sm"
               >
-                <p className="font-semibold text-ink">{title}</p>
+                <div className="flex items-center justify-between">
+                  <p className="font-semibold text-ink">{title}</p>
+                  {badge(id)}
+                </div>
                 <p className="text-sm text-muted mt-0.5">{count} mots</p>
               </button>
             ))}

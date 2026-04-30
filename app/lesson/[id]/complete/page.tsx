@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CATEGORY_LABELS } from '@/lib/lesson-registry';
+import ScoreSaver from '@/components/ScoreSaver';
 
 function getLessonTitle(id: string): string {
   if (id === 'lesson-1') return 'Salutations de base';
@@ -32,6 +33,7 @@ export default async function CompletePage({
 
   return (
     <main className="flex flex-col min-h-dvh px-6 pb-10 pt-16 max-w-md mx-auto">
+      <ScoreSaver lessonId={id} score={score} total={total} />
       <div className="flex-1 flex flex-col items-center justify-center gap-5 text-center">
         <span className="text-7xl">{isPerfect ? '🎉' : score >= total * 0.6 ? '👏' : '💪'}</span>
         <div>
