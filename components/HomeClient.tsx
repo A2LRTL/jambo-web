@@ -13,14 +13,21 @@ const PROFILES = [
 ] as const;
 
 type ProfileName = (typeof PROFILES)[number]['name'];
+type Lang = 'kirundi' | 'swahili';
+
+const LANGS: { id: Lang; label: string; flag: string }[] = [
+  { id: 'kirundi', label: 'Kirundi', flag: '🇧🇮' },
+  { id: 'swahili', label: 'Swahili', flag: '🇹🇿' },
+];
 
 export default function HomeClient() {
   const router = useRouter();
-  const [profile, setProfile]       = useState<ProfileName | null>(null);
-  const [showModal, setShowModal]   = useState(false);
-  const [active, setActive]         = useState<ProfileName | null>(null);
-  const [pin, setPin]               = useState('');
-  const [error, setError]           = useState(false);
+  const [profile, setProfile]     = useState<ProfileName | null>(null);
+  const [lang, setLang]           = useState<Lang>('kirundi');
+  const [showModal, setShowModal] = useState(false);
+  const [active, setActive]       = useState<ProfileName | null>(null);
+  const [pin, setPin]             = useState('');
+  const [error, setError]         = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -58,12 +65,14 @@ export default function HomeClient() {
 
   return (
     <>
-      <main className="max-w-md mx-auto px-6 pt-10 pb-12">
+      <main className="max-w-md mx-auto px-6 pt-10 pb-28">
         {/* Header */}
         <div className="flex items-start justify-between mb-8">
           <div>
             <h1 className="text-5xl font-bold text-accent">Jambo</h1>
-            <p className="text-muted text-sm mt-1">Kirundi & Swahili</p>
+            <p className="text-muted text-sm mt-1">
+              {LANGS.find((l) => l.id === lang)?.flag} {LANGS.find((l) => l.id === lang)?.label}
+            </p>
           </div>
           <button
             type="button"
@@ -76,41 +85,68 @@ export default function HomeClient() {
           </button>
         </div>
 
-        {/* Swahili */}
-        <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Swahili</p>
-        {SWAHILI_LESSONS.map(({ id, title, count }) => (
-          <button key={id} type="button" onClick={() => router.push(`/lesson/${id}`)}
-            className="w-full text-left py-4 px-5 rounded-xl border border-border bg-card hover:border-accent transition-all active:scale-[0.98] mb-3 shadow-sm"
-          >
-            <p className="font-semibold text-ink">{title}</p>
-            <p className="text-sm text-muted mt-0.5">{count} mots</p>
-          </button>
-        ))}
+        {lang === 'kirundi' && (
+          <>
+            {/* Kirundi vocab */}
+            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Vocabulaire</p>
+            <div className="grid grid-cols-2 gap-3">
+              {KIRUNDI_CATEGORIES.map((cat) => (
+                <button key={cat} type="button" onClick={() => router.push(`/lesson/kirundi-${cat}`)}
+                  className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm"
+                >
+                  {CATEGORY_LABELS[cat]}
+                </button>
+              ))}
+            </div>
 
-        {/* Kirundi */}
-        <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 mt-6">Kirundi</p>
-        <div className="grid grid-cols-2 gap-3">
-          {KIRUNDI_CATEGORIES.map((cat) => (
-            <button key={cat} type="button" onClick={() => router.push(`/lesson/kirundi-${cat}`)}
-              className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm"
-            >
-              {CATEGORY_LABELS[cat]}
-            </button>
-          ))}
-        </div>
+            {/* Phrases */}
+            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 mt-6">Phrases</p>
+            <div className="grid grid-cols-2 gap-3">
+              {PHRASE_TOPICS.filter((t) => t !== 'dialogue_nikiza_jenny').map((topic) => (
+                <button key={topic} type="button" onClick={() => router.push(`/phrases/${topic}`)}
+                  className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm"
+                >
+                  {PHRASE_TOPIC_LABELS[topic]}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
 
-        {/* Phrases */}
-        <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 mt-6">Phrases</p>
-        <div className="grid grid-cols-2 gap-3">
-          {PHRASE_TOPICS.filter((t) => t !== 'dialogue_nikiza_jenny').map((topic) => (
-            <button key={topic} type="button" onClick={() => router.push(`/phrases/${topic}`)}
-              className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm"
-            >
-              {PHRASE_TOPIC_LABELS[topic]}
-            </button>
-          ))}
-        </div>
+        {lang === 'swahili' && (
+          <>
+            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Leçons</p>
+            {SWAHILI_LESSONS.map(({ id, title, count }) => (
+              <button key={id} type="button" onClick={() => router.push(`/lesson/${id}`)}
+                className="w-full text-left py-4 px-5 rounded-xl border border-border bg-card hover:border-accent transition-all active:scale-[0.98] mb-3 shadow-sm"
+              >
+                <p className="font-semibold text-ink">{title}</p>
+                <p className="text-sm text-muted mt-0.5">{count} mots</p>
+              </button>
+            ))}
+          </>
+        )}
       </main>
+
+      {/* Language tab bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-cream border-t border-border">
+        <div className="max-w-md mx-auto flex">
+          {LANGS.map(({ id, label, flag }) => (
+            <button
+              key={id}
+              type="button"
+              onClick={() => setLang(id)}
+              className={`flex-1 flex flex-col items-center gap-1 py-3 transition-colors ${
+                lang === id ? 'text-accent' : 'text-muted hover:text-ink'
+              }`}
+            >
+              <span className="text-2xl leading-none">{flag}</span>
+              <span className={`text-xs font-semibold ${lang === id ? 'text-accent' : 'text-muted'}`}>{label}</span>
+              {lang === id && <span className="absolute bottom-0 w-12 h-0.5 bg-accent rounded-full" />}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Profile modal */}
       <div className={`fixed inset-0 z-50 transition-all duration-200 ${showModal ? 'pointer-events-auto' : 'pointer-events-none'}`}>
