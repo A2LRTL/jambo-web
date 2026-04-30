@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_LESSONS } from '@/lib/lesson-registry';
 import { PHRASE_TOPIC_LABELS, PHRASE_TOPICS } from '@/lib/phrase-registry';
 import { getBestScores, type BestScore } from '@/lib/scores';
+import Leaderboard from './Leaderboard';
 
 const PROFILES = [
   { name: 'Shaza',   year: '2007' },
@@ -14,11 +15,12 @@ const PROFILES = [
 ] as const;
 
 type ProfileName = (typeof PROFILES)[number]['name'];
-type Lang = 'kirundi' | 'swahili';
+type Lang = 'kirundi' | 'swahili' | 'scores';
 
 const LANGS: { id: Lang; label: string; flag: string }[] = [
   { id: 'kirundi', label: 'Kirundi', flag: '🇧🇮' },
   { id: 'swahili', label: 'Swahili', flag: '🇹🇿' },
+  { id: 'scores',  label: 'Scores',  flag: '🏆' },
 ];
 
 export default function HomeClient() {
@@ -89,7 +91,8 @@ export default function HomeClient() {
           <div>
             <h1 className="text-5xl font-bold text-accent">Jambo</h1>
             <p className="text-muted text-sm mt-1">
-              {LANGS.find((l) => l.id === lang)?.flag} {LANGS.find((l) => l.id === lang)?.label}
+              {lang !== 'scores' && <>{LANGS.find((l) => l.id === lang)?.flag} {LANGS.find((l) => l.id === lang)?.label}</>}
+              {lang === 'scores' && 'Classement'}
             </p>
           </div>
           <button
@@ -132,6 +135,8 @@ export default function HomeClient() {
             </div>
           </>
         )}
+
+        {lang === 'scores' && <Leaderboard />}
 
         {lang === 'swahili' && (
           <>
