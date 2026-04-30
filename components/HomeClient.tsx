@@ -1,24 +1,54 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PrimaryButton from './PrimaryButton';
 
-const PROFILES = ['Shaza', 'Gisabo', 'Ruta', 'Bambara'] as const;
-type Profile = (typeof PROFILES)[number];
+const PROFILES = [
+  { name: 'Shaza',   year: '2007' },
+  { name: 'Gisabo',  year: '2000' },
+  { name: 'Ruta',    year: '1998' },
+  { name: 'Bambara', year: '1995' },
+] as const;
+
+type ProfileName = (typeof PROFILES)[number]['name'];
 
 export default function HomeClient() {
   const router = useRouter();
-  const [selected, setSelected] = useState<Profile | null>(null);
+  const [active, setActive]       = useState<ProfileName | null>(null);
+  const [confirmed, setConfirmed] = useState<ProfileName | null>(null);
+  const [pin, setPin]             = useState('');
+  const [error, setError]         = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const saved = localStorage.getItem('jambo_profile') as Profile | null;
-    if (saved && (PROFILES as readonly string[]).includes(saved)) setSelected(saved);
+    const saved = localStorage.getItem('jambo_profile') as ProfileName | null;
+    if (saved && PROFILES.some((p) => p.name === saved)) setConfirmed(saved);
   }, []);
 
-  const handleSelect = (profile: Profile) => {
-    setSelected(profile);
-    localStorage.setItem('jambo_profile', profile);
+  const handleProfileClick = (name: ProfileName) => {
+    setActive(name);
+    setPin('');
+    setError(false);
+    setTimeout(() => inputRef.current?.focus(), 50);
+  };
+
+  const handlePinChange = (value: string) => {
+    if (!/^\d*$/.test(value) || value.length > 4) return;
+    setPin(value);
+    setError(false);
+
+    if (value.length === 4) {
+      const profile = PROFILES.find((p) => p.name === active);
+      if (profile?.year === value) {
+        setConfirmed(active);
+        localStorage.setItem('jambo_profile', active!);
+        setActive(null);
+      } else {
+        setError(true);
+        setPin('');
+      }
+    }
   };
 
   return (
@@ -34,28 +64,59 @@ export default function HomeClient() {
             Qui es-tu ?
           </p>
           <div className="grid grid-cols-2 gap-3">
-            {PROFILES.map((profile) => (
-              <button
-                key={profile}
-                type="button"
-                onClick={() => handleSelect(profile)}
-                className={`py-4 rounded-xl border text-lg font-semibold transition-all active:scale-[0.97] ${
-                  selected === profile
-                    ? 'bg-accent text-white border-accent shadow-md'
-                    : 'bg-card border-border text-ink hover:border-accent'
-                }`}
-              >
-                {profile}
-              </button>
-            ))}
+            {PROFILES.map(({ name }) => {
+              const isConfirmed = confirmed === name;
+              const isActive    = active === name;
+              return (
+                <button
+                  key={name}
+                  type="button"
+                  onClick={() => handleProfileClick(name)}
+                  className={`py-4 rounded-xl border text-lg font-semibold transition-all active:scale-[0.97] ${
+                    isConfirmed
+                      ? 'bg-accent text-white border-accent shadow-md'
+                      : isActive
+                      ? 'bg-cream border-accent text-accent'
+                      : 'bg-card border-border text-ink hover:border-accent'
+                  }`}
+                >
+                  {isConfirmed ? `${name} ✓` : name}
+                </button>
+              );
+            })}
           </div>
+
+          {active && (
+            <div className="mt-4">
+              <p className="text-center text-sm text-muted mb-2">
+                Année de naissance de {active}
+              </p>
+              <input
+                ref={inputRef}
+                type="tel"
+                inputMode="numeric"
+                maxLength={4}
+                value={pin}
+                onChange={(e) => handlePinChange(e.target.value)}
+                placeholder="_ _ _ _"
+                className={`w-full text-center text-2xl font-bold tracking-[0.5em] py-3 rounded-xl border bg-card outline-none transition-all ${
+                  error
+                    ? 'border-error text-error'
+                    : 'border-border text-ink focus:border-accent'
+                }`}
+              />
+              {error && (
+                <p className="text-center text-sm text-error mt-2">Code incorrect</p>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
       <PrimaryButton
         label="Commencer la leçon 1"
         onClick={() => router.push('/lesson/lesson-1')}
-        disabled={!selected}
+        disabled={!confirmed}
       />
     </main>
   );
