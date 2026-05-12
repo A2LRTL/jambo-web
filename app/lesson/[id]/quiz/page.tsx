@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Lesson } from '@/types';
 import ExerciseClient from '@/components/ExerciseClient';
 import lesson1 from '@/data/lesson-1.json';
-import { generateKirundiLesson, reverseLesson } from '@/lib/exercises';
+import { generateKirundiLesson, generateSwahiliLesson, reverseLesson } from '@/lib/exercises';
 
 export default async function QuizPage({
   params,
@@ -17,6 +17,7 @@ export default async function QuizPage({
   let lesson: Lesson | null = null;
   if (id === 'lesson-1') lesson = lesson1 as Lesson;
   else if (id.startsWith('kirundi-')) lesson = generateKirundiLesson(id.slice('kirundi-'.length));
+  else if (id.startsWith('swahili-')) lesson = generateSwahiliLesson(id.slice('swahili-'.length));
 
   if (!lesson) notFound();
   if (mode === 'reverse') lesson = reverseLesson(lesson);

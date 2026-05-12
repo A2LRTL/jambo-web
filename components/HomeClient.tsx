@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_LESSONS } from '@/lib/lesson-registry';
+import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_CATEGORIES, SWAHILI_CATEGORY_LABELS, SWAHILI_PHRASE_TOPICS, SWAHILI_PHRASE_TOPIC_LABELS } from '@/lib/lesson-registry';
 import { PHRASE_TOPIC_LABELS, PHRASE_TOPICS } from '@/lib/phrase-registry';
 import { getBestScores, type BestScore } from '@/lib/scores';
 import Leaderboard from './Leaderboard';
@@ -246,18 +246,29 @@ export default function HomeClient() {
 
         {lang === 'swahili' && (
           <>
-            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Leçons</p>
-            {SWAHILI_LESSONS.map(({ id, title, count }) => (
-              <button key={id} type="button" onClick={() => router.push(`/lesson/${id}`)}
-                className="w-full text-left py-4 px-5 rounded-xl border border-border bg-card hover:border-accent transition-all active:scale-[0.98] mb-3 shadow-sm"
-              >
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold text-ink">{title}</p>
-                  {badge(id)}
-                </div>
-                <p className="text-sm text-muted mt-0.5">{count} mots</p>
-              </button>
-            ))}
+            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Vocabulaire</p>
+            <div className="grid grid-cols-2 gap-3">
+              {SWAHILI_CATEGORIES.map((cat) => (
+                <button key={cat} type="button" onClick={() => router.push(`/lesson/swahili-${cat}`)}
+                  className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm flex flex-col gap-1"
+                >
+                  <span>{SWAHILI_CATEGORY_LABELS[cat]}</span>
+                  {badge(`swahili-${cat}`)}
+                </button>
+              ))}
+            </div>
+
+            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 mt-6">Phrases</p>
+            <div className="grid grid-cols-2 gap-3">
+              {SWAHILI_PHRASE_TOPICS.map((topic) => (
+                <button key={topic} type="button" onClick={() => router.push(`/phrases/sw/${topic}`)}
+                  className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm flex flex-col gap-1"
+                >
+                  <span>{SWAHILI_PHRASE_TOPIC_LABELS[topic]}</span>
+                  {badge(`phrases/sw/${topic}`)}
+                </button>
+              ))}
+            </div>
           </>
         )}
       </main>
