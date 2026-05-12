@@ -228,6 +228,17 @@ export default function HomeClient() {
                 </button>
               ))}
             </div>
+
+            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 mt-6">Dialogues</p>
+            <button type="button" onClick={() => router.push('/dialogue/nikiza_jenny')}
+              className="w-full py-4 px-5 rounded-xl border border-border bg-card text-left hover:border-accent transition-all active:scale-[0.97] shadow-sm flex items-center justify-between gap-3"
+            >
+              <div>
+                <p className="text-sm font-bold text-ink">Nikiza rencontre Marc</p>
+                <p className="text-xs text-muted mt-0.5">15 répliques · Lecture + entraînement</p>
+              </div>
+              <span className="text-2xl">💬</span>
+            </button>
           </>
         )}
 
