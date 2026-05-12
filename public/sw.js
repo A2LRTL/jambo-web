@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'ubuntu-v1';
+const CACHE_VERSION = 'ubuntu-v2';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const PAGES_CACHE   = `${CACHE_VERSION}-pages`;
 const API_CACHE     = `${CACHE_VERSION}-api`;
@@ -98,3 +98,36 @@ async function pageStrategy(request) {
     return offline ?? new Response('Hors-ligne', { status: 503 });
   }
 }
+
+// ── Notification reminder ─────────────────────────────────────────────────────
+
+let reminderTimer = null;
+
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'SCHEDULE_REMINDER') {
+    const delayMs = event.data.delayMs ?? 20 * 60 * 60 * 1000;
+    if (reminderTimer) clearTimeout(reminderTimer);
+    reminderTimer = setTimeout(() => {
+      self.registration.showNotification('Ubuntu 🇧🇮', {
+        body: 'Tu n\'as pas encore pratiqué aujourd\'hui !',
+        icon: '/favicon.ico',
+        badge: '/favicon.ico',
+        tag: 'daily-reminder',
+        renotify: false,
+        data: { url: '/' },
+      });
+    }, delayMs);
+  }
+});
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const url = event.notification.data?.url ?? '/';
+  event.waitUntil(
+    self.clients.matchAll({ type: 'window' }).then((clients) => {
+      const existing = clients.find((c) => c.url.includes(self.location.origin));
+      if (existing) return existing.focus();
+      return self.clients.openWindow(url);
+    })
+  );
+});

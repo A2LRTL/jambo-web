@@ -26,7 +26,7 @@ const ALL_LESSONS: { id: string; title: string; path: string }[] = [
   ...KIRUNDI_CATEGORIES.map((cat) => ({
     id: `kirundi-${cat}`,
     title: CATEGORY_LABELS[cat],
-    path: `/lesson/kirundi-${cat}/quiz`,
+    path: `/lesson/kirundi-${cat}/flashcards`,
   })),
   ...PHRASE_TOPICS.filter((t) => t !== 'dialogue_nikiza_jenny').map((topic) => ({
     id: `phrases/${topic}`,

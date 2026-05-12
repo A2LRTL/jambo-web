@@ -28,28 +28,30 @@ export default function VocabList({ id, title, items }: Props) {
         </div>
       </div>
 
-      <div className="flex gap-2 mb-6">
-        <button
-          type="button"
-          onClick={() => router.push(`/lesson/${id}/quiz`)}
-          className="flex-1 py-3 rounded-xl bg-accent text-white font-semibold text-sm shadow-sm hover:bg-accent-dark transition-all active:scale-[0.98]"
-        >
-          Quiz →
-        </button>
-        <button
-          type="button"
-          onClick={() => router.push(`/lesson/${id}/quiz?mode=reverse`)}
-          className="flex-1 py-3 rounded-xl bg-card border border-border text-ink font-semibold text-sm hover:border-accent transition-all active:scale-[0.98]"
-        >
-          Inversé ⇄
-        </button>
+      <div className="flex flex-col gap-2 mb-6">
         <button
           type="button"
           onClick={() => router.push(`/lesson/${id}/flashcards`)}
-          className="flex-1 py-3 rounded-xl bg-card border border-border text-ink font-semibold text-sm hover:border-accent transition-all active:scale-[0.98]"
+          className="w-full py-4 rounded-2xl bg-accent text-white font-bold text-base shadow-sm hover:bg-accent-dark transition-all active:scale-[0.98]"
         >
-          Cartes ✦
+          ✦ Apprendre (flashcards → quiz)
         </button>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => router.push(`/lesson/${id}/quiz`)}
+            className="flex-1 py-3 rounded-xl bg-card border border-border text-ink font-semibold text-sm hover:border-accent transition-all active:scale-[0.98]"
+          >
+            Quiz direct →
+          </button>
+          <button
+            type="button"
+            onClick={() => router.push(`/lesson/${id}/quiz?mode=reverse`)}
+            className="flex-1 py-3 rounded-xl bg-card border border-border text-ink font-semibold text-sm hover:border-accent transition-all active:scale-[0.98]"
+          >
+            Inversé ⇄
+          </button>
+        </div>
       </div>
 
       <div className="flex flex-col gap-2">

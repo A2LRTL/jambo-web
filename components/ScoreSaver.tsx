@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { saveScore } from '@/lib/scores';
+import { markPracticed } from './NotificationSetup';
 
 interface Props {
   lessonId: string;
@@ -18,6 +19,7 @@ export default function ScoreSaver({ lessonId, score, total }: Props) {
     const profile = localStorage.getItem('jambo_profile');
     if (!profile) return;
     saveScore(profile, lessonId, score, total);
+    markPracticed();
   }, [lessonId, score, total]);
 
   return null;

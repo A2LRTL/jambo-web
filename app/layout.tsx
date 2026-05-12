@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import NotificationSetup from '@/components/NotificationSetup';
 
 export const metadata: Metadata = {
   title: 'Ubuntu',
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <body className="min-h-dvh bg-cream text-ink">
         {children}
+        <NotificationSetup />
         <script
           dangerouslySetInnerHTML={{
             __html: `
