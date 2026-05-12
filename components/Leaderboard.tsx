@@ -2,6 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { getLeaderboard, type ProfileStats } from '@/lib/scores';
+import {
+  KIRUNDI_CATEGORIES,
+  SWAHILI_CATEGORIES,
+  SWAHILI_PHRASE_TOPICS,
+} from '@/lib/lesson-registry';
+import { PHRASE_TOPICS } from '@/lib/phrase-registry';
 
 const MEDALS = ['🥇', '🥈', '🥉', '4'];
 
@@ -20,7 +26,12 @@ export default function Leaderboard() {
     );
   }
 
-  const totalLessons = 42; // 19 kirundi + 1 swahili + 22 phrases
+  // Computed from registry — stays accurate as lessons are added/removed
+  const totalLessons =
+    KIRUNDI_CATEGORIES.length +
+    SWAHILI_CATEGORIES.length +
+    PHRASE_TOPICS.length +
+    SWAHILI_PHRASE_TOPICS.length;
 
   return (
     <div className="flex flex-col gap-4">
@@ -54,7 +65,7 @@ export default function Leaderboard() {
             <div className="h-2 rounded-full bg-border overflow-hidden">
               <div
                 className={`h-full rounded-full transition-all duration-500 ${
-                  perfect ? 'bg-success' : s.pct >= 0.8 ? 'bg-accent' : s.pct >= 0.5 ? 'bg-accent/70' : 'bg-border-dark'
+                  perfect ? 'bg-success' : s.pct >= 0.8 ? 'bg-accent' : s.pct >= 0.5 ? 'bg-accent/70' : 'bg-muted/40'
                 }`}
                 style={{ width: s.lessonsPlayed === 0 ? '0%' : `${pct}%` }}
               />

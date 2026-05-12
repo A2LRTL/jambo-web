@@ -3,17 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { Dialogue, DialogueLine } from '@/lib/dialogue';
-
-// ── helpers ──────────────────────────────────────────────────────────────────
-
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+import { shuffle } from '@/lib/utils';
 
 /** Lines the user must reconstruct (every other line, speaker b) */
 function quizLines(lines: DialogueLine[]): Set<string> {
@@ -210,18 +200,15 @@ function TrainPhase({
 
   const placeWord = (word: string) => {
     if (state.result !== 'idle') return;
-    setState((s) => ({
-      ...s,
-      placed: [...s.placed, word],
-      wordBank: s.wordBank.filter((_, i) => {
-        // remove first occurrence
-        let found = false;
-        return s.wordBank.slice(0, i + 1).filter((w) => {
-          if (w === word && !found) { found = true; return false; }
-          return true;
-        }).length > i;
-      }),
-    }));
+    setState((s) => {
+      // Remove only the first occurrence of `word` from the word bank — O(n)
+      let removed = false;
+      const wordBank = s.wordBank.filter((w) => {
+        if (!removed && w === word) { removed = true; return false; }
+        return true;
+      });
+      return { ...s, placed: [...s.placed, word], wordBank };
+    });
   };
 
   const removeWord = (idx: number) => {

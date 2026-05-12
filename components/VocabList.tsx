@@ -55,9 +55,9 @@ export default function VocabList({ id, title, items }: Props) {
       </div>
 
       <div className="flex flex-col gap-2">
-        {items.map((item, i) => (
+        {items.map((item) => (
           <div
-            key={i}
+            key={item.term}
             className="py-3 px-4 rounded-xl bg-card border border-border"
           >
             <div className="flex items-center justify-between">

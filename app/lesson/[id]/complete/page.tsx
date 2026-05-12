@@ -1,19 +1,12 @@
 import Link from 'next/link';
 import { CATEGORY_LABELS } from '@/lib/lesson-registry';
 import ScoreSaver from '@/components/ScoreSaver';
+import { getMessage } from '@/lib/utils';
 
 function getLessonTitle(id: string): string {
   if (id === 'lesson-1') return 'Salutations de base';
   if (id.startsWith('kirundi-')) return CATEGORY_LABELS[id.slice('kirundi-'.length)] ?? id;
   return id;
-}
-
-function getMessage(score: number, total: number): string {
-  const pct = score / total;
-  if (pct === 1) return 'Sans faute, beau travail !';
-  if (pct >= 0.8) return 'Excellent, encore un effort !';
-  if (pct >= 0.6) return 'Bien joué, continue comme ça.';
-  return 'Continue, tu progresses !';
 }
 
 export default async function CompletePage({

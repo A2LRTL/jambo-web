@@ -1,14 +1,7 @@
 import Link from 'next/link';
 import { PHRASE_TOPIC_LABELS } from '@/lib/phrase-registry';
 import ScoreSaver from '@/components/ScoreSaver';
-
-function getMessage(score: number, total: number): string {
-  const pct = score / total;
-  if (pct === 1) return 'Sans faute, beau travail !';
-  if (pct >= 0.8) return 'Excellent, encore un effort !';
-  if (pct >= 0.6) return 'Bien joué, continue comme ça.';
-  return 'Continue, tu progresses !';
-}
+import { getMessage } from '@/lib/utils';
 
 export default async function PhraseCompletePage({
   params,

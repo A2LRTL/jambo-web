@@ -1,10 +1,7 @@
 import { supabase } from './supabase';
+import type { BestScore, ProfileStats } from '@/types';
 
-export interface BestScore {
-  best: number;
-  total: number;
-  attempts: number;
-}
+export type { BestScore, ProfileStats };
 
 // ── Offline queue ─────────────────────────────────────────────────────────────
 
@@ -72,14 +69,6 @@ export async function saveScore(
     enqueue({ profile, lessonId, score, total, ts: Date.now() });
     console.error('saveScore:', error.message);
   }
-}
-
-export interface ProfileStats {
-  profile: string;
-  lessonsPlayed: number;
-  totalBest: number;
-  totalPossible: number;
-  pct: number;
 }
 
 const ALL_PROFILES = ['Shaza', 'Gisabo', 'Ruta', 'Bambara'];

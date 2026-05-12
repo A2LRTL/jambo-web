@@ -1,7 +1,10 @@
-import type { Lesson, Exercise } from '@/types';
+import type { Lesson, Exercise, VocabItem, PhraseExercise } from '@/types';
+import { shuffle, sample } from '@/lib/utils';
 import { CATEGORY_LABELS, SWAHILI_CATEGORY_LABELS } from './lesson-registry';
 import vocab from '@/data/kirundi-vocab.json';
 import swVocab from '@/data/swahili-vocab.json';
+
+// ── Kirundi raw types ─────────────────────────────────────────────────────────
 
 interface RawVocabItem {
   id: string;
@@ -11,50 +14,50 @@ interface RawVocabItem {
   category: string;
 }
 
-export interface VocabItem {
-  term: string;
-  translation: string;
-  example?: string;   // Swahili example sentence
-  exampleFr?: string; // French translation of example
+interface RawPhrase {
+  id: string;
+  phrase_kirundi: string;
+  translation_en: string;
+  translation_fr: string | null;
+  topic: string;
 }
 
 function tr(item: RawVocabItem): string {
   return item.translation_fr ?? item.translation_en;
 }
 
-function sample<T>(arr: T[], n: number): T[] {
-  const copy = [...arr];
-  const result: T[] = [];
-  while (result.length < n && copy.length > 0) {
-    const i = Math.floor(Math.random() * copy.length);
-    result.push(...copy.splice(i, 1));
-  }
-  return result;
+function trPhrase(p: RawPhrase): string {
+  return p.translation_fr ?? p.translation_en;
 }
 
-function shuffle<T>(arr: T[]): T[] {
-  const copy = [...arr];
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-}
+// ── Distractor picking ────────────────────────────────────────────────────────
 
+/**
+ * Score how "confusable" a candidate is with the correct answer.
+ * Higher = more similar (better decoy).
+ * Uses prefix match (×1.5), suffix match (×1.0), and length proximity (×0.5–1.0).
+ */
 function distractorScore(correct: string, candidate: string): number {
   const a = correct.toLowerCase();
   const b = candidate.toLowerCase();
   let score = 0;
+
+  // Prefix similarity
   let i = 0;
   while (i < a.length && i < b.length && a[i] === b[i]) i++;
   score += i * 1.5;
+
+  // Suffix similarity
   let j = 0;
   const maxSuffix = Math.min(a.length, b.length) - i;
   while (j < maxSuffix && a[a.length - 1 - j] === b[b.length - 1 - j]) j++;
   score += j * 1.0;
+
+  // Length proximity bonus
   const diff = Math.abs(a.length - b.length);
   if (diff <= 1) score += 1.0;
   else if (diff <= 2) score += 0.5;
+
   return score;
 }
 
@@ -65,6 +68,8 @@ function pickSmartDistractors(correct: string, pool: string[], n: number): strin
   scored.sort((a, b) => b.score - a.score);
   return scored.slice(0, n).map((s) => s.c);
 }
+
+// ── Kirundi lesson generation ─────────────────────────────────────────────────
 
 export function generateKirundiLesson(category: string, count = 10): Lesson | null {
   if (!(category in CATEGORY_LABELS)) return null;
@@ -106,25 +111,6 @@ export function reverseLesson(lesson: Lesson): Lesson {
   };
 }
 
-interface RawPhrase {
-  id: string;
-  phrase_kirundi: string;
-  translation_en: string;
-  translation_fr: string | null;
-  topic: string;
-}
-
-function trPhrase(p: RawPhrase): string {
-  return p.translation_fr ?? p.translation_en;
-}
-
-export interface PhraseExercise {
-  id: string;
-  phraseEN: string;
-  solution: string[];
-  allWords: string[];
-}
-
 export function getPhraseExercises(topic: string): PhraseExercise[] {
   const phrases = (vocab.phrases as RawPhrase[]).filter(
     (p) => p.topic === topic && p.phrase_kirundi && trPhrase(p),
@@ -156,8 +142,7 @@ export function getKirundiVocabItems(category: string): VocabItem[] {
     .map((v) => ({ term: v.term_kirundi, translation: tr(v) }));
 }
 
-
-// ── Swahili ───────────────────────────────────────────────────────────────────
+// ── Swahili raw types ─────────────────────────────────────────────────────────
 
 interface RawSwVocabItem {
   id: string;
@@ -187,6 +172,8 @@ function trSw(item: RawSwVocabItem): string {
 function trSwPhrase(p: RawSwPhrase): string {
   return p.translation_fr ?? p.translation_en;
 }
+
+// ── Swahili lesson generation ─────────────────────────────────────────────────
 
 export function generateSwahiliLesson(category: string, count = 10): Lesson | null {
   if (!(category in SWAHILI_CATEGORY_LABELS)) return null;
@@ -249,3 +236,6 @@ export function getSwahiliPhraseExercises(topic: string): PhraseExercise[] {
     };
   });
 }
+
+// Re-export shared types for consumers that import from this module
+export type { VocabItem, PhraseExercise };
