@@ -14,6 +14,8 @@ interface RawVocabItem {
 export interface VocabItem {
   term: string;
   translation: string;
+  example?: string;   // Swahili example sentence
+  exampleFr?: string; // French translation of example
 }
 
 function tr(item: RawVocabItem): string {
@@ -154,6 +156,7 @@ export function getKirundiVocabItems(category: string): VocabItem[] {
     .map((v) => ({ term: v.term_kirundi, translation: tr(v) }));
 }
 
+
 // ── Swahili ───────────────────────────────────────────────────────────────────
 
 interface RawSwVocabItem {
@@ -163,6 +166,9 @@ interface RawSwVocabItem {
   translation_en: string;
   translation_fr: string | null;
   category: string;
+  example_swahili?: string;
+  example_en?: string;
+  example_fr?: string | null;
 }
 
 interface RawSwPhrase {
@@ -212,7 +218,12 @@ export function getSwahiliVocabItems(category: string): VocabItem[] {
   const all = swVocab.vocabulary_items as RawSwVocabItem[];
   return all
     .filter((v) => v.category === category && trSw(v))
-    .map((v) => ({ term: v.term_swahili, translation: trSw(v) }));
+    .map((v) => ({
+      term: v.term_swahili,
+      translation: trSw(v),
+      example: v.example_swahili,
+      exampleFr: v.example_fr ?? undefined,
+    }));
 }
 
 export function getSwahiliPhraseExercises(topic: string): PhraseExercise[] {

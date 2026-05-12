@@ -18,6 +18,8 @@ export default function FlashcardClient({ lessonId, title, items }: Props) {
 
   const card = items[index];
   const isLast = index === items.length - 1;
+  const isSwahili = lessonId.startsWith('swahili-');
+  const termLabel = isSwahili ? 'Kiswahili' : 'Kirundi';
 
   const transition = (action: () => void) => {
     setFading(true);
@@ -61,7 +63,7 @@ export default function FlashcardClient({ lessonId, title, items }: Props) {
           className={`w-full rounded-3xl bg-card border-2 border-border shadow-md flex flex-col items-center justify-center gap-3 py-16 px-8 transition-opacity duration-150 ${fading ? 'opacity-0' : 'opacity-100'}`}
         >
           <p className="text-xs text-muted uppercase tracking-wider font-semibold">
-            {flipped ? 'Traduction' : 'Kirundi'}
+            {flipped ? 'Traduction' : termLabel}
           </p>
           <p className="text-4xl font-bold text-ink text-center leading-snug">
             {flipped ? card.translation : card.term}
@@ -71,6 +73,14 @@ export default function FlashcardClient({ lessonId, title, items }: Props) {
           )}
           {flipped && (
             <p className="text-xs text-accent font-semibold mt-2">{card.term}</p>
+          )}
+          {flipped && card.example && (
+            <div className="mt-4 px-4 py-3 rounded-xl bg-cream border border-border text-left w-full">
+              <p className="text-sm text-ink italic">{card.example}</p>
+              {card.exampleFr && (
+                <p className="text-xs text-muted mt-1">{card.exampleFr}</p>
+              )}
+            </div>
           )}
         </button>
       </div>

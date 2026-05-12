@@ -58,10 +58,20 @@ export default function VocabList({ id, title, items }: Props) {
         {items.map((item, i) => (
           <div
             key={i}
-            className="flex items-center justify-between py-3 px-4 rounded-xl bg-card border border-border"
+            className="py-3 px-4 rounded-xl bg-card border border-border"
           >
-            <span className="font-semibold text-ink">{item.term}</span>
-            <span className="text-muted text-sm ml-4 text-right">{item.translation}</span>
+            <div className="flex items-center justify-between">
+              <span className="font-semibold text-ink">{item.term}</span>
+              <span className="text-muted text-sm ml-4 text-right">{item.translation}</span>
+            </div>
+            {item.example && (
+              <p className="text-xs text-muted italic mt-1.5 border-t border-border pt-1.5">
+                {item.example}
+                {item.exampleFr && (
+                  <span className="block not-italic text-muted/70">{item.exampleFr}</span>
+                )}
+              </p>
+            )}
           </div>
         ))}
       </div>
