@@ -6,16 +6,72 @@ export interface BestScore {
   attempts: number;
 }
 
+// ── Offline queue ─────────────────────────────────────────────────────────────
+
+const QUEUE_KEY = 'ubuntu_score_queue';
+
+interface QueuedScore {
+  profile: string;
+  lessonId: string;
+  score: number;
+  total: number;
+  ts: number;
+}
+
+function enqueue(entry: QueuedScore) {
+  try {
+    const raw = localStorage.getItem(QUEUE_KEY);
+    const q: QueuedScore[] = raw ? JSON.parse(raw) : [];
+    q.push(entry);
+    localStorage.setItem(QUEUE_KEY, JSON.stringify(q));
+  } catch { /* ignore */ }
+}
+
+async function flushQueue() {
+  try {
+    const raw = localStorage.getItem(QUEUE_KEY);
+    if (!raw) return;
+    const q: QueuedScore[] = JSON.parse(raw);
+    if (q.length === 0) return;
+
+    const rows = q.map((e) => ({ profile: e.profile, lesson_id: e.lessonId, score: e.score, total: e.total }));
+    const { error } = await supabase.from('scores').insert(rows);
+    if (!error) {
+      localStorage.removeItem(QUEUE_KEY);
+    }
+  } catch { /* ignore */ }
+}
+
+// Sync queued scores whenever the user comes back online
+if (typeof window !== 'undefined') {
+  window.addEventListener('online', flushQueue);
+  // Also try on load (in case we're online already)
+  flushQueue();
+}
+
+// ── Public API ────────────────────────────────────────────────────────────────
+
 export async function saveScore(
   profile: string,
   lessonId: string,
   score: number,
   total: number,
 ): Promise<void> {
+  if (!navigator.onLine) {
+    enqueue({ profile, lessonId, score, total, ts: Date.now() });
+    return;
+  }
+  // Try to flush any pending queue first
+  await flushQueue();
+
   const { error } = await supabase
     .from('scores')
     .insert({ profile, lesson_id: lessonId, score, total });
-  if (error) console.error('saveScore:', error.message);
+  if (error) {
+    // Network failed despite navigator.onLine — enqueue as fallback
+    enqueue({ profile, lessonId, score, total, ts: Date.now() });
+    console.error('saveScore:', error.message);
+  }
 }
 
 export interface ProfileStats {

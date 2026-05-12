@@ -21,7 +21,22 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body className="min-h-dvh bg-cream text-ink">{children}</body>
+      <body className="min-h-dvh bg-cream text-ink">
+        {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').catch(function(err) {
+                    console.log('SW registration failed:', err);
+                  });
+                });
+              }
+            `,
+          }}
+        />
+      </body>
     </html>
   );
 }
