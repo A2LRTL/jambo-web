@@ -22,5 +22,5 @@ export default async function QuizPage({
   if (!lesson) notFound();
   if (mode === 'reverse') lesson = reverseLesson(lesson);
 
-  return <ExerciseClient lesson={lesson} lessonId={id} />;
+  return <ExerciseClient lesson={lesson} lessonId={id} mode={mode} />;
 }

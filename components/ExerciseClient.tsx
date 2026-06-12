@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { Lesson } from '@/types';
 import OptionButton from './OptionButton';
@@ -22,18 +22,45 @@ function shuffle<T>(arr: T[]): T[] {
 interface Props {
   lesson: Lesson;
   lessonId: string;
+  mode?: string;
 }
 
-export default function ExerciseClient({ lesson, lessonId }: Props) {
+export default function ExerciseClient({ lesson, lessonId, mode }: Props) {
   const router = useRouter();
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [score, setScore] = useState(0);
+  const [resumed, setResumed] = useState<number | null>(null);
 
   const exercise = lesson.exercises[index];
   const isLast = index === lesson.exercises.length - 1;
   const isAnswered = selected !== null;
   const isCorrect = selected === exercise.correctAnswer;
+
+  // ── Saved position (resume where you left off) ──────────────────────────────
+  const posKey = `jambo_quiz_pos_${lessonId}${mode === 'reverse' ? '_rev' : ''}`;
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(posKey);
+      if (raw) {
+        const { i, s } = JSON.parse(raw);
+        if (Number.isInteger(i) && i > 0 && i < lesson.exercises.length) {
+          setIndex(i);
+          setScore(typeof s === 'number' ? s : 0);
+          setResumed(i);
+        }
+      }
+    } catch { /* ignore */ }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const savePos = (i: number, s: number) => {
+    try {
+      if (i <= 0) localStorage.removeItem(posKey);
+      else localStorage.setItem(posKey, JSON.stringify({ i, s }));
+    } catch { /* ignore */ }
+  };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const options = useMemo(() => shuffle([exercise.correctAnswer, ...exercise.wrongAnswers]), [exercise.id]);
@@ -46,11 +73,18 @@ export default function ExerciseClient({ lesson, lessonId }: Props) {
 
   const handleNext = () => {
     if (isLast) {
+      savePos(0, 0); // deck finished — clear saved position
       router.push(`/lesson/${lessonId}/complete?score=${score}&total=${lesson.exercises.length}`);
     } else {
+      savePos(index + 1, score);
       setIndex((i) => i + 1);
       setSelected(null);
     }
+  };
+
+  const saveAndExit = () => {
+    savePos(isAnswered ? index + 1 : index, score);
+    router.push(`/lesson/${lessonId}`);
   };
 
   const getOptionState = (option: string) => {
@@ -75,6 +109,12 @@ export default function ExerciseClient({ lesson, lessonId }: Props) {
         </p>
         <div className="w-9" />
       </div>
+
+      {resumed !== null && index === resumed && (
+        <p className="text-center text-xs text-accent font-semibold mb-4">
+          ↩︎ Reprise à la question {resumed + 1}
+        </p>
+      )}
 
       <div className="flex-1 flex flex-col">
         <div className="flex flex-col items-center justify-center py-10">
@@ -106,6 +146,12 @@ export default function ExerciseClient({ lesson, lessonId }: Props) {
           variant={isAnswered ? 'primary' : 'secondary'}
           disabled={!isAnswered}
         />
+        {!isLast && (
+          <button type="button" onClick={saveAndExit}
+            className="w-full py-3 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent active:scale-[0.98] transition-all">
+            💾 Sauvegarder et quitter
+          </button>
+        )}
       </div>
     </main>
   );

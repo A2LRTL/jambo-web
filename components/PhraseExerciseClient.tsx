@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { PhraseExercise } from '@/lib/exercises';
 
@@ -16,11 +16,42 @@ export default function PhraseExerciseClient({ topic, title, exercises }: Props)
   const [placed, setPlaced] = useState<number[]>([]);
   const [checked, setChecked] = useState(false);
   const [score, setScore] = useState(0);
+  const [resumed, setResumed] = useState<number | null>(null);
 
   const exercise = exercises[index];
   const isLast = index === exercises.length - 1;
   const placedWords = placed.map((i) => exercise.allWords[i]);
   const isCorrect = checked && placedWords.join(' ') === exercise.solution.join(' ');
+
+  // ── Saved position (resume where you left off) ──────────────────────────────
+  const posKey = `jambo_phrase_pos_${topic}`;
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(posKey);
+      if (raw) {
+        const { i, s } = JSON.parse(raw);
+        if (Number.isInteger(i) && i > 0 && i < exercises.length) {
+          setIndex(i);
+          setScore(typeof s === 'number' ? s : 0);
+          setResumed(i);
+        }
+      }
+    } catch { /* ignore */ }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const savePos = (i: number, s: number) => {
+    try {
+      if (i <= 0) localStorage.removeItem(posKey);
+      else localStorage.setItem(posKey, JSON.stringify({ i, s }));
+    } catch { /* ignore */ }
+  };
+
+  const saveAndExit = () => {
+    savePos(checked ? index + 1 : index, score);
+    router.push('/');
+  };
 
   const tapAvailable = (wordIndex: number) => {
     if (checked) return;
@@ -40,8 +71,10 @@ export default function PhraseExerciseClient({ topic, title, exercises }: Props)
 
   const handleNext = () => {
     if (isLast) {
+      savePos(0, 0); // deck finished — clear saved position
       router.push(`/phrases/${topic}/complete?score=${score}&total=${exercises.length}`);
     } else {
+      savePos(index + 1, score);
       setIndex((i) => i + 1);
       setPlaced([]);
       setChecked(false);
@@ -65,6 +98,12 @@ export default function PhraseExerciseClient({ topic, title, exercises }: Props)
         <p className="flex-1 text-center text-sm text-muted font-medium truncate">{title}</p>
         <p className="text-sm text-muted w-9 text-right">{index + 1}/{exercises.length}</p>
       </div>
+
+      {resumed !== null && index === resumed && (
+        <p className="text-center text-xs text-accent font-semibold mb-4">
+          ↩︎ Reprise à la phrase {resumed + 1}
+        </p>
+      )}
 
       <div className="flex-1 flex flex-col">
         <div className="flex flex-col items-center justify-center py-8">
@@ -137,6 +176,12 @@ export default function PhraseExerciseClient({ topic, title, exercises }: Props)
             className="w-full py-4 rounded-xl bg-accent text-white font-semibold text-lg transition-all active:scale-[0.98]"
           >
             {isLast ? 'Terminer' : 'Continuer'}
+          </button>
+        )}
+        {!isLast && (
+          <button type="button" onClick={saveAndExit}
+            className="w-full py-3 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent active:scale-[0.98] transition-all">
+            💾 Sauvegarder et quitter
           </button>
         )}
       </div>

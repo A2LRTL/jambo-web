@@ -73,8 +73,8 @@
       "translation_en": "to close",
       "translation_fr": "fermer",
       "category": "verbs_actions",
-      "example_swahili": "to cry",
-      "example_en": "In East Africa, Muslims on average will fast for 13 Afrika Mashariki, Waislamu kwa wastani watafunga saa",
+      "example_swahili": "Nilifunga mlango.",
+      "example_en": "I closed the door.",
       "example_fr": "J'ai fermé la porte."
     },
     {
@@ -119,7 +119,7 @@
       "category": "verbs_actions",
       "example_swahili": "Safari hii itachukua muda gani?",
       "example_en": "How long will this journey take?",
-      "example_fr": "Tu peux prendre les œufs."
+      "example_fr": "Combien de temps prendra ce voyage ?"
     },
     {
       "id": "sw_0012",
@@ -128,9 +128,9 @@
       "translation_en": "to take somewhere, to send",
       "translation_fr": "emmener, envoyer",
       "category": "verbs_actions",
-      "example_swahili": "Unaweza kupeleka mayai",
+      "example_swahili": "Unaweza kupeleka mayai.",
       "example_en": "You can take the eggs",
-      "example_fr": "Il m'a emmené à la gare."
+      "example_fr": "Tu peux apporter les œufs."
     },
     {
       "id": "sw_0013",
@@ -185,7 +185,7 @@
       "category": "verbs_actions",
       "example_swahili": "Nitapata maji baadaye.",
       "example_en": "I will get water later.",
-      "example_fr": "Où puis-je trouver de l'eau ?"
+      "example_fr": "Je trouverai de l’eau plus tard."
     },
     {
       "id": "sw_0018",
@@ -196,7 +196,7 @@
       "category": "verbs_actions",
       "example_swahili": "Umeleta pesa?",
       "example_en": "Did you bring money?",
-      "example_fr": "Apporte-moi un verre d'eau."
+      "example_fr": "As-tu apporté l’argent ?"
     },
     {
       "id": "sw_0019",
@@ -240,7 +240,7 @@
       "category": "verbs_actions",
       "example_swahili": "Niliacha kazi yangu!",
       "example_en": "I quit my job!",
-      "example_fr": "Laisse-le ici."
+      "example_fr": "J’ai quitté mon travail !"
     },
     {
       "id": "sw_0023",
@@ -260,7 +260,7 @@
       "translation_en": "to mix",
       "translation_fr": "mélanger",
       "category": "verbs_actions",
-      "example_swahili": "Sipendi kuchaganya vyakula tofauti.",
+      "example_swahili": "Sipendi kuchanganya vyakula tofauti.",
       "example_en": "I don’t like to mix different foods",
       "example_fr": "Je n'aime pas mélanger les aliments."
     },
@@ -383,7 +383,7 @@
       "category": "verbs_actions",
       "example_swahili": "Niliyagusa macho.",
       "example_en": "I touched my eyes.",
-      "example_fr": "Ne touche pas ça."
+      "example_fr": "J’ai touché mes yeux."
     },
     {
       "id": "sw_0036",
@@ -403,8 +403,8 @@
       "translation_en": "to rent out",
       "translation_fr": "louer (donner en location)",
       "category": "verbs_actions",
-      "example_swahili": "Do you rent (out) motorcycles here?",
-      "example_en": "to rent (receive) -kodishwa",
+      "example_swahili": "Mnakodisha pikipiki hapa?",
+      "example_en": "Do you rent out motorcycles here?",
       "example_fr": "Vous louez des motos ici ?"
     },
     {
@@ -425,7 +425,7 @@
       "translation_en": "to call someone",
       "translation_fr": "appeler quelqu'un",
       "category": "verbs_actions",
-      "example_swahili": "Unaitwa nini? (itwa = passive form of ita)",
+      "example_swahili": "Unaitwa nani?",
       "example_en": "What do they call you?",
       "example_fr": "Comment t'appellent-ils ?"
     },
@@ -447,9 +447,9 @@
       "translation_en": "to give, to take out",
       "translation_fr": "donner, sortir, retirer",
       "category": "verbs_actions",
-      "example_swahili": "nimetoa talaka",
+      "example_swahili": "Nimetoa talaka.",
       "example_en": "I got divorced",
-      "example_fr": "Ils leur ont donné de l'argent."
+      "example_fr": "J’ai divorcé."
     },
     {
       "id": "sw_0042",
@@ -458,8 +458,8 @@
       "translation_en": "to look like, to resemble",
       "translation_fr": "ressembler à",
       "category": "verbs_actions",
-      "example_swahili": "You look like your brother",
-      "example_en": "to look like (sw) kama/na",
+      "example_swahili": "Mnafanana sana.",
+      "example_en": "You two look very alike.",
       "example_fr": "Vous vous ressemblez beaucoup."
     },
     {
@@ -469,7 +469,7 @@
       "translation_en": "to strengthen",
       "translation_fr": "renforcer, fortifier",
       "category": "verbs_actions",
-      "example_swahili": "Mazoezi ya kuimarisha moyo ni muhimu sama",
+      "example_swahili": "Mazoezi ya kuimarisha moyo ni muhimu sana.",
       "example_en": "Cardio exercise (exercise that strengthens the",
       "example_fr": "Le sport cardio renforce le cœur."
     },
@@ -601,8 +601,8 @@
       "translation_en": "to recommend",
       "translation_fr": "recommander",
       "category": "verbs_comms",
-      "example_swahili": "to be (in a",
-      "example_en": "to be",
+      "example_swahili": "Unasifia chakula gani?",
+      "example_en": "Which dish do you recommend?",
       "example_fr": "Quel plat recommandes-tu ?"
     },
     {
@@ -623,8 +623,8 @@
       "translation_en": "to confirm, to make sure",
       "translation_fr": "confirmer, s'assurer",
       "category": "verbs_comms",
-      "example_swahili": "to explain",
-      "example_en": "to read, to study -soma",
+      "example_swahili": "Ninahitaji kuhakikisha jambo.",
+      "example_en": "I need to confirm something.",
       "example_fr": "Je dois confirmer quelque chose."
     },
     {
@@ -656,7 +656,7 @@
       "translation_en": "to be called, to be named",
       "translation_fr": "s'appeler, être nommé",
       "category": "verbs_comms",
-      "example_swahili": "Ninaitwa dana, unaitwa nani?",
+      "example_swahili": "Ninaitwa Dana, unaitwa nani?",
       "example_en": "My name is Dana, what’s your name?",
       "example_fr": "Je m'appelle Dana, et toi ?"
     },
@@ -700,8 +700,8 @@
       "translation_en": "to hear",
       "translation_fr": "entendre",
       "category": "verbs_comms",
-      "example_swahili": "Najisikia vizuri kuwa hapa.",
-      "example_en": "I feel good being here.",
+      "example_swahili": "Unasikia sauti ya ndege huyu?",
+      "example_en": "Do you hear this bird’s sound?",
       "example_fr": "Tu entends le bruit de cet oiseau ?"
     },
     {
@@ -755,9 +755,9 @@
       "translation_en": "to realise, to recognise",
       "translation_fr": "réaliser, reconnaître",
       "category": "verbs_comms",
-      "example_swahili": "Nilitambua kwamba hii ni si kweli.",
+      "example_swahili": "Nilitambua kwamba hii si kweli.",
       "example_en": "I realized it was not true.",
-      "example_fr": "Je n'arrive pas à reconnaître cet endroit."
+      "example_fr": "J’ai réalisé que ce n’était pas vrai."
     },
     {
       "id": "sw_0124",
@@ -768,7 +768,7 @@
       "category": "verbs_comms",
       "example_swahili": "Nipigia simu kesho.",
       "example_en": "Call me tomorrow.",
-      "example_fr": "Je t'appelle maintenant."
+      "example_fr": "Appelle-moi demain."
     },
     {
       "id": "sw_0125",
@@ -810,9 +810,9 @@
       "translation_en": "to live",
       "translation_fr": "vivre, habiter",
       "category": "verbs_move",
-      "example_swahili": "Ni mara ya kwanza wameishi nje ya nyumba",
+      "example_swahili": "Ni mara ya kwanza wameishi nje ya nyumba.",
       "example_en": "It’s the first time they lived outside the house",
-      "example_fr": "Nous vivons ensemble."
+      "example_fr": "C’est la première fois qu’ils vivent hors de chez eux."
     },
     {
       "id": "sw_0204",
@@ -933,7 +933,7 @@
       "category": "verbs_move",
       "example_swahili": "Tunaweza kuingia kwa hapa?",
       "example_en": "Can we go inside here?",
-      "example_fr": "Entre, s'il te plaît."
+      "example_fr": "On peut entrer ici ?"
     },
     {
       "id": "sw_0215",
@@ -953,9 +953,9 @@
       "translation_en": "to approach, to be about to",
       "translation_fr": "s'approcher, être sur le point de",
       "category": "verbs_move",
-      "example_swahili": "Ninakaribia kuwa mzee",
+      "example_swahili": "Ninakaribia kuwa mzee.",
       "example_en": "I’m approaching old age",
-      "example_fr": "Nous approchons de la ville."
+      "example_fr": "Je suis sur le point de devenir vieux."
     },
     {
       "id": "sw_0217",
@@ -1019,7 +1019,7 @@
       "translation_en": "to drink",
       "translation_fr": "boire",
       "category": "verbs_daily",
-      "example_swahili": "Kunywa! (pronounced kunioa)",
+      "example_swahili": "Kunywa!",
       "example_en": "Drink!",
       "example_fr": "Bois !"
     },
@@ -1107,9 +1107,9 @@
       "translation_en": "to wear, to get dressed",
       "translation_fr": "porter un vêtement, s'habiller",
       "category": "verbs_daily",
-      "example_swahili": "Vaa kofia",
+      "example_swahili": "Vaa kofia.",
       "example_en": "Put on a hat",
-      "example_fr": "Mets tes chaussures."
+      "example_fr": "Mets ton chapeau."
     },
     {
       "id": "sw_0311",
@@ -1140,9 +1140,9 @@
       "translation_en": "to pay",
       "translation_fr": "payer",
       "category": "verbs_daily",
-      "example_swahili": "Sikutaka kulipa pesa",
+      "example_swahili": "Sikutaka kulipa pesa.",
       "example_en": "I didn’t want to pay",
-      "example_fr": "Je veux payer maintenant."
+      "example_fr": "Je ne voulais pas payer."
     },
     {
       "id": "sw_0314",
@@ -1164,7 +1164,7 @@
       "category": "verbs_daily",
       "example_swahili": "Unasali mara tano kwa siku?",
       "example_en": "Do you pray five times a day?",
-      "example_fr": "Il prie chaque matin."
+      "example_fr": "Tu pries cinq fois par jour ?"
     },
     {
       "id": "sw_0316",
@@ -1195,9 +1195,9 @@
       "translation_en": "to grow, to grow up",
       "translation_fr": "grandir, pousser",
       "category": "verbs_daily",
-      "example_swahili": "Mwaka ijayo nitakuwa mwanafunzi.",
-      "example_en": "I will be a student next year.",
-      "example_fr": null
+      "example_swahili": "Mtoto amekua haraka.",
+      "example_en": "The child has grown quickly.",
+      "example_fr": "L’enfant a grandi vite."
     },
     {
       "id": "sw_0319",
@@ -1250,9 +1250,9 @@
       "translation_en": "to fear, to be scared",
       "translation_fr": "avoir peur, craindre",
       "category": "verbs_emotions",
-      "example_swahili": "Ninaogopa ajali",
+      "example_swahili": "Ninaogopa ajali.",
       "example_en": "I am afraid of accidents",
-      "example_fr": "N'aie pas peur !"
+      "example_fr": "J’ai peur des accidents."
     },
     {
       "id": "sw_0404",
@@ -1263,7 +1263,7 @@
       "category": "verbs_emotions",
       "example_swahili": "Umefurahi?",
       "example_en": "Are you happy?",
-      "example_fr": "Je suis très heureux aujourd'hui."
+      "example_fr": "Tu es content ?"
     },
     {
       "id": "sw_0405",
@@ -1327,7 +1327,7 @@
       "translation_en": "to wish, to desire",
       "translation_fr": "souhaiter, désirer",
       "category": "verbs_emotions",
-      "example_swahili": "Ninatamani niwe pesa zaidi",
+      "example_swahili": "Ninatamani niwe na pesa zaidi.",
       "example_en": "I wish I had more money",
       "example_fr": "Je souhaite avoir plus d'argent."
     },
@@ -1349,9 +1349,9 @@
       "translation_en": "to feel",
       "translation_fr": "ressentir, sentir",
       "category": "verbs_emotions",
-      "example_swahili": "Nahisi joto",
+      "example_swahili": "Nahisi joto.",
       "example_en": "I feel hot",
-      "example_fr": "Comment tu te sens ?"
+      "example_fr": "Je ressens la chaleur."
     },
     {
       "id": "sw_0413",
@@ -1373,7 +1373,7 @@
       "category": "verbs_emotions",
       "example_swahili": "Unaona njaa?",
       "example_en": "Are you hungry?",
-      "example_fr": "J'ai très faim."
+      "example_fr": "Tu as faim ?"
     },
     {
       "id": "sw_0415",
@@ -1382,9 +1382,9 @@
       "translation_en": "to be thirsty",
       "translation_fr": "avoir soif",
       "category": "verbs_emotions",
-      "example_swahili": "Natuone…",
-      "example_en": "Let’s see…",
-      "example_fr": null
+      "example_swahili": "Unaona kiu?",
+      "example_en": "Are you thirsty?",
+      "example_fr": "Tu as soif ?"
     },
     {
       "id": "sw_0416",
@@ -1549,7 +1549,7 @@
       "category": "verbs_think",
       "example_swahili": "Leo natarajia kuja saa nane.",
       "example_en": "Today I expect to come at 2",
-      "example_fr": "Je m'attendais à mieux."
+      "example_fr": "Aujourd’hui, je prévois de venir à 14h."
     },
     {
       "id": "sw_0513",
@@ -1582,7 +1582,7 @@
       "category": "verbs_think",
       "example_swahili": "Ninajaribu kuzungumza na kila mtu.",
       "example_en": "I try to speak with everyone.",
-      "example_fr": "Essaie encore une fois."
+      "example_fr": "J’essaie de parler avec tout le monde."
     },
     {
       "id": "sw_0516",
@@ -1591,7 +1591,7 @@
       "translation_en": "to see",
       "translation_fr": "voir",
       "category": "verbs_think",
-      "example_swahili": "Natuone…",
+      "example_swahili": "Tuone…",
       "example_en": "Let’s see…",
       "example_fr": "Voyons…"
     },
@@ -1690,7 +1690,7 @@
       "translation_en": "to sing",
       "translation_fr": "chanter",
       "category": "verbs_social",
-      "example_swahili": "Yeye Nni mzuri katika kuimba",
+      "example_swahili": "Yeye ni mzuri katika kuimba.",
       "example_en": "She is good at singing",
       "example_fr": "Elle chante très bien."
     },
@@ -1703,7 +1703,7 @@
       "category": "verbs_social",
       "example_swahili": "Chekeni!",
       "example_en": "Smile! (to group)",
-      "example_fr": "Pourquoi tu ris ?"
+      "example_fr": "Riez !"
     },
     {
       "id": "sw_0609",
@@ -1712,9 +1712,9 @@
       "translation_en": "to play, to dance",
       "translation_fr": "jouer, danser",
       "category": "verbs_social",
-      "example_swahili": "Mnacheza mchezo gani?Naweza kucheza na ninyi?",
+      "example_swahili": "Mnacheza mchezo gani? Naweza kucheza na ninyi?",
       "example_en": "What game are you playing?",
-      "example_fr": "Les enfants jouent dehors."
+      "example_fr": "Vous jouez à quel jeu ? Je peux jouer avec vous ?"
     },
     {
       "id": "sw_0610",
@@ -1725,7 +1725,7 @@
       "category": "verbs_social",
       "example_swahili": "Tafadhali endelea.",
       "example_en": "Continue, please.",
-      "example_fr": "Continue à travailler dur."
+      "example_fr": "Continue, s’il te plaît."
     },
     {
       "id": "sw_0611",
@@ -1800,9 +1800,9 @@
       "translation_en": "to apologise",
       "translation_fr": "s'excuser, demander pardon",
       "category": "verbs_social",
-      "example_swahili": "Naomba ndizi na nyama.",
-      "example_en": "I’d like [to order] bananas and meat.",
-      "example_fr": null
+      "example_swahili": "Naomba msamaha kwa kuchelewa.",
+      "example_en": "I’m sorry for being late.",
+      "example_fr": "Je m’excuse pour le retard."
     },
     {
       "id": "sw_0618",

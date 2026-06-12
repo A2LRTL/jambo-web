@@ -17,7 +17,7 @@ export default function ScoreSaver({ lessonId, score, total }: Props) {
     if (saved.current) return;
     saved.current = true;
     const profile = localStorage.getItem('jambo_profile');
-    if (!profile) return;
+    if (!profile || profile === 'guest') return;
     saveScore(profile, lessonId, score, total);
     markPracticed();
   }, [lessonId, score, total]);
