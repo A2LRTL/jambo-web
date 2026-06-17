@@ -1,5 +1,5 @@
-import type { Lesson, Exercise, VocabItem, PhraseExercise } from '@/types';
-import { shuffle, sample } from '@/lib/utils';
+import type { Lesson, Exercise, VocabItem, PhraseExercise, DistractorCandidate } from '@/types';
+import { shuffle, sample, distractorScore, rankDistractors } from '@/lib/utils';
 import { CATEGORY_LABELS, SWAHILI_CATEGORY_LABELS } from './lesson-registry';
 import vocab from '@/data/kirundi-vocab.json';
 import swVocab from '@/data/swahili-vocab.json';
@@ -32,34 +32,9 @@ function trPhrase(p: RawPhrase): string {
 
 // ── Distractor picking ────────────────────────────────────────────────────────
 
-/**
- * Score how "confusable" a candidate is with the correct answer.
- * Higher = more similar (better decoy).
- * Uses prefix match (×1.5), suffix match (×1.0), and length proximity (×0.5–1.0).
- */
-function distractorScore(correct: string, candidate: string): number {
-  const a = correct.toLowerCase();
-  const b = candidate.toLowerCase();
-  let score = 0;
-
-  // Prefix similarity
-  let i = 0;
-  while (i < a.length && i < b.length && a[i] === b[i]) i++;
-  score += i * 1.5;
-
-  // Suffix similarity
-  let j = 0;
-  const maxSuffix = Math.min(a.length, b.length) - i;
-  while (j < maxSuffix && a[a.length - 1 - j] === b[b.length - 1 - j]) j++;
-  score += j * 1.0;
-
-  // Length proximity bonus
-  const diff = Math.abs(a.length - b.length);
-  if (diff <= 1) score += 1.0;
-  else if (diff <= 2) score += 0.5;
-
-  return score;
-}
+// Most confusable candidates to ship to the client per question. The client
+// then drops words the learner already knows and picks the final decoys.
+const POOL_CAP = 20;
 
 function pickSmartDistractors(correct: string, pool: string[], n: number): string[] {
   const scored = pool
@@ -67,6 +42,23 @@ function pickSmartDistractors(correct: string, pool: string[], n: number): strin
     .map((c) => ({ c, score: distractorScore(correct, c) + Math.random() }));
   scored.sort((a, b) => b.score - a.score);
   return scored.slice(0, n).map((s) => s.c);
+}
+
+/**
+ * Build the candidate decoy pool for a question: the best traps (same-category
+ * first, then most confusable), deduped by display value and capped. Each is
+ * tagged with its SRS term key so the client can skip already-known words.
+ */
+function buildDistractorPool(
+  correct: string,
+  correctCategory: string | undefined,
+  candidates: DistractorCandidate[],
+): DistractorCandidate[] {
+  const seen = new Set<string>();
+  const unique = candidates.filter(
+    (c) => c.value !== correct && !seen.has(c.value) && seen.add(c.value),
+  );
+  return rankDistractors(correct, correctCategory, unique).slice(0, POOL_CAP);
 }
 
 // ── Kirundi lesson generation ─────────────────────────────────────────────────
@@ -77,16 +69,20 @@ export function generateKirundiLesson(category: string, count = 10): Lesson | nu
   const pool = all.filter((v) => v.category === category && tr(v));
   if (pool.length < 2) return null;
   const selected = sample(pool, Math.min(count, pool.length));
-  const fallback = all.filter((v) => v.category !== category && tr(v)).map(tr);
+  const candidatesAll = all.filter((v) => tr(v));
   const exercises: Exercise[] = selected.map((item) => {
-    const samePool = pool.filter((v) => v.id !== item.id).map(tr);
-    const wrongPool = [...new Set([...samePool, ...fallback])].filter((t) => t !== tr(item));
+    const candidates: DistractorCandidate[] = candidatesAll
+      .filter((v) => v.id !== item.id)
+      .map((v) => ({ value: tr(v), term: v.term_kirundi, category: v.category }));
+    const distractorPool = buildDistractorPool(tr(item), item.category, candidates);
     return {
       id: item.id,
       type: 'multiple_choice' as const,
       prompt: item.term_kirundi,
       correctAnswer: tr(item),
-      wrongAnswers: pickSmartDistractors(tr(item), wrongPool, 3),
+      correctCategory: item.category,
+      wrongAnswers: pickSmartDistractors(tr(item), distractorPool.map((d) => d.value), 3),
+      distractorPool,
     };
   });
   return { id: `kirundi-${category}`, language: 'kirundi', title: CATEGORY_LABELS[category], exercises };
@@ -97,17 +93,25 @@ export function reverseLesson(lesson: Lesson): Lesson {
   return {
     ...lesson,
     id: `${lesson.id}-reverse`,
-    exercises: lesson.exercises.map((ex) => ({
-      ...ex,
-      id: `${ex.id}-r`,
-      prompt: ex.correctAnswer,
-      correctAnswer: ex.prompt,
-      wrongAnswers: pickSmartDistractors(
-        ex.prompt,
-        prompts.filter((p) => p !== ex.prompt),
-        Math.min(3, prompts.length - 1),
-      ),
-    })),
+    exercises: lesson.exercises.map((ex) => {
+      // In reverse mode the answer IS the term, so value and SRS key match.
+      const candidates: DistractorCandidate[] = lesson.exercises
+        .filter((o) => o.prompt !== ex.prompt)
+        .map((o) => ({ value: o.prompt, term: o.prompt, category: o.correctCategory }));
+      const distractorPool = buildDistractorPool(ex.prompt, ex.correctCategory, candidates);
+      return {
+        ...ex,
+        id: `${ex.id}-r`,
+        prompt: ex.correctAnswer,
+        correctAnswer: ex.prompt,
+        wrongAnswers: pickSmartDistractors(
+          ex.prompt,
+          prompts.filter((p) => p !== ex.prompt),
+          Math.min(3, prompts.length - 1),
+        ),
+        distractorPool,
+      };
+    }),
   };
 }
 
@@ -181,16 +185,20 @@ export function generateSwahiliLesson(category: string, count = 10): Lesson | nu
   const pool = all.filter((v) => v.category === category && trSw(v));
   if (pool.length < 2) return null;
   const selected = sample(pool, Math.min(count, pool.length));
-  const fallback = all.filter((v) => v.category !== category && trSw(v)).map(trSw);
+  const candidatesAll = all.filter((v) => trSw(v));
   const exercises: Exercise[] = selected.map((item) => {
-    const samePool = pool.filter((v) => v.id !== item.id).map(trSw);
-    const wrongPool = [...new Set([...samePool, ...fallback])].filter((t) => t !== trSw(item));
+    const candidates: DistractorCandidate[] = candidatesAll
+      .filter((v) => v.id !== item.id)
+      .map((v) => ({ value: trSw(v), term: v.term_swahili, category: v.category }));
+    const distractorPool = buildDistractorPool(trSw(item), item.category, candidates);
     return {
       id: item.id,
       type: 'multiple_choice' as const,
       prompt: item.term_swahili,
       correctAnswer: trSw(item),
-      wrongAnswers: pickSmartDistractors(trSw(item), wrongPool, 3),
+      correctCategory: item.category,
+      wrongAnswers: pickSmartDistractors(trSw(item), distractorPool.map((d) => d.value), 3),
+      distractorPool,
     };
   });
   return {

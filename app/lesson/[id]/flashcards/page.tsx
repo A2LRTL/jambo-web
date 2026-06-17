@@ -11,6 +11,7 @@ export default async function FlashcardsPage({ params }: { params: Promise<{ id:
     const items = lesson1.exercises.map((ex) => ({
       term: ex.prompt,
       translation: ex.correctAnswer,
+      lessonId: id,
     }));
     return <FlashcardClient lessonId={id} title="Salutations de base" items={items} />;
   }
@@ -18,14 +19,14 @@ export default async function FlashcardsPage({ params }: { params: Promise<{ id:
   if (id.startsWith('kirundi-')) {
     const category = id.slice('kirundi-'.length);
     if (!(category in CATEGORY_LABELS)) notFound();
-    const items = getKirundiVocabItems(category);
+    const items = getKirundiVocabItems(category).map((it) => ({ ...it, lessonId: id }));
     return <FlashcardClient lessonId={id} title={CATEGORY_LABELS[category]} items={items} />;
   }
 
   if (id.startsWith('swahili-')) {
     const category = id.slice('swahili-'.length);
     if (!(category in SWAHILI_CATEGORY_LABELS)) notFound();
-    const items = getSwahiliVocabItems(category);
+    const items = getSwahiliVocabItems(category).map((it) => ({ ...it, lessonId: id }));
     return <FlashcardClient lessonId={id} title={SWAHILI_CATEGORY_LABELS[category]} items={items} />;
   }
 
