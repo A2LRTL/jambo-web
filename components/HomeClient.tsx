@@ -5,7 +5,13 @@ import { useRouter } from 'next/navigation';
 import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_CATEGORIES, SWAHILI_CATEGORY_LABELS, SWAHILI_PHRASE_TOPICS, SWAHILI_PHRASE_TOPIC_LABELS } from '@/lib/lesson-registry';
 import { PHRASE_TOPIC_LABELS, PHRASE_TOPICS } from '@/lib/phrase-registry';
 import { getBestScores, type BestScore } from '@/lib/scores';
+import { isDue, loadStore } from '@/lib/srs';
 import Leaderboard from './Leaderboard';
+
+function countDue(lessonId: string, now: number): number {
+  const store = loadStore(lessonId);
+  return Object.values(store).filter((c) => isDue(c, now)).length;
+}
 
 const PROFILES = ['Shaza', 'Gisabo', 'Ruta', 'Bambara'] as const;
 type ProfileName = (typeof PROFILES)[number];
@@ -39,7 +45,14 @@ function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function buildSuggestion(scores: Record<string, BestScore>): Suggestion {
+function buildSuggestion(
+  scores: Record<string, BestScore>,
+  dueCounts: Record<string, number>,
+): Suggestion {
+  // Spaced repetition wins: if cards are due, revise them before anything else.
+  const due = ALL_LESSONS.filter((l) => (dueCounts[l.id] ?? 0) > 0);
+  if (due.length > 0) return { ...pick(due), type: 'revision' };
+
   const unplayed   = ALL_LESSONS.filter((l) => !scores[l.id]);
   const toRevise   = ALL_LESSONS.filter((l) => scores[l.id] && scores[l.id].best / scores[l.id].total < 0.8);
   const mastered   = ALL_LESSONS.filter((l) => scores[l.id] && scores[l.id].best / scores[l.id].total >= 0.8);
@@ -79,27 +92,47 @@ export default function HomeClient() {
   const [showSwitch, setShowSwitch]   = useState(false);
   const [bestScores, setBestScores]   = useState<Record<string, BestScore>>({});
   const [suggestion, setSuggestion]   = useState<Suggestion | null>(null);
+  const [dueCounts, setDueCounts]     = useState<Record<string, number>>({});
+
+  // Spaced-repetition cards due now, per lesson (from localStorage).
+  useEffect(() => {
+    const now = Date.now();
+    const counts: Record<string, number> = {};
+    for (const cat of KIRUNDI_CATEGORIES) counts[`kirundi-${cat}`] = countDue(`kirundi-${cat}`, now);
+    for (const cat of SWAHILI_CATEGORIES) counts[`swahili-${cat}`] = countDue(`swahili-${cat}`, now);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setDueCounts(counts);
+  }, []);
+
+  const langDue = (prefix: 'kirundi' | 'swahili') =>
+    Object.entries(dueCounts).reduce((sum, [id, n]) => (id.startsWith(`${prefix}-`) ? sum + n : sum), 0);
 
   useEffect(() => {
     const saved = localStorage.getItem('jambo_profile');
+    /* eslint-disable react-hooks/set-state-in-effect */
     if (saved === 'guest') { setProfile('guest'); setReady(true); return; }
     if (saved && (PROFILES as readonly string[]).includes(saved)) {
       setProfile(saved as ProfileName); setReady(true); return;
     }
     setProfile(null); setReady(true);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (!profile || profile === 'guest') { setBestScores({}); return; }
-    getBestScores(profile).then((scores) => {
-      setBestScores(scores);
-      setSuggestion(buildSuggestion(scores));
-    });
+    getBestScores(profile).then(setBestScores);
   }, [profile]);
 
+  // Rebuild the suggestion whenever scores or due cards change.
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setSuggestion(buildSuggestion(bestScores, dueCounts));
+  }, [bestScores, dueCounts]);
+
   const refreshSuggestion = useCallback(() => {
-    setSuggestion(buildSuggestion(bestScores));
-  }, [bestScores]);
+    setSuggestion(buildSuggestion(bestScores, dueCounts));
+  }, [bestScores, dueCounts]);
 
   const selectProfile = (name: ProfileName | 'guest') => {
     setProfile(name);
@@ -115,6 +148,33 @@ export default function HomeClient() {
       <span className={`text-xs font-bold ${perfect ? 'text-success' : 'text-accent'}`}>
         {perfect ? '★' : `${s.best}/${s.total}`}
       </span>
+    );
+  };
+
+  // Best-score badge + a "due now" pill for spaced-repetition revisions.
+  const tileBadges = (id: string) => {
+    const due = dueCounts[id];
+    return (
+      <span className="flex items-center gap-2">
+        {due ? <span className="text-xs font-bold text-accent">🔔 {due}</span> : null}
+        {badge(id)}
+      </span>
+    );
+  };
+
+  const reviewBanner = (prefix: 'kirundi' | 'swahili') => {
+    const n = langDue(prefix);
+    if (!n) return null;
+    return (
+      <button type="button" onClick={() => router.push(`/review/${prefix}`)}
+        className="mb-6 w-full p-4 rounded-2xl bg-accent text-white shadow-sm flex items-center justify-between gap-3 hover:bg-accent-dark active:scale-[0.99] transition-all"
+      >
+        <div className="text-left">
+          <p className="text-xs font-semibold uppercase tracking-wider opacity-80">Révision du jour</p>
+          <p className="font-bold text-base">{n} carte{n > 1 ? 's' : ''} à réviser →</p>
+        </div>
+        <span className="text-2xl">🔔</span>
+      </button>
     );
   };
 
@@ -177,6 +237,8 @@ export default function HomeClient() {
 
         {lang === 'kirundi' && (
           <>
+            {reviewBanner('kirundi')}
+
             {/* Suggestion card */}
             {suggestion && (
               <div className="mb-6 p-4 rounded-2xl border border-border bg-card shadow-sm">
@@ -212,7 +274,7 @@ export default function HomeClient() {
                   className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm flex flex-col gap-1"
                 >
                   <span>{CATEGORY_LABELS[cat]}</span>
-                  {badge(`kirundi-${cat}`)}
+                  {tileBadges(`kirundi-${cat}`)}
                 </button>
               ))}
             </div>
@@ -246,6 +308,8 @@ export default function HomeClient() {
 
         {lang === 'swahili' && (
           <>
+            {reviewBanner('swahili')}
+
             <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Vocabulaire</p>
             <div className="grid grid-cols-2 gap-3">
               {SWAHILI_CATEGORIES.map((cat) => (
@@ -253,7 +317,7 @@ export default function HomeClient() {
                   className="py-4 px-4 rounded-xl border border-border bg-card text-sm font-semibold text-ink hover:border-accent transition-all active:scale-[0.97] text-left shadow-sm flex flex-col gap-1"
                 >
                   <span>{SWAHILI_CATEGORY_LABELS[cat]}</span>
-                  {badge(`swahili-${cat}`)}
+                  {tileBadges(`swahili-${cat}`)}
                 </button>
               ))}
             </div>

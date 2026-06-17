@@ -6,6 +6,20 @@ export interface MultipleChoiceExercise {
   prompt: string;
   correctAnswer: string;
   wrongAnswers: string[];
+  /** Category of the answer word, used to prefer same-category (semantic) decoys. */
+  correctCategory?: string;
+  /**
+   * Candidate decoys ranked by confusability, for client-side selection.
+   * `value` is the answer shown; `term` is the SRS key used to skip words
+   * the learner already knows. Absent on static lessons (uses wrongAnswers).
+   */
+  distractorPool?: DistractorCandidate[];
+}
+
+export interface DistractorCandidate {
+  value: string;
+  term: string;
+  category?: string;
 }
 
 export type Exercise = MultipleChoiceExercise;
