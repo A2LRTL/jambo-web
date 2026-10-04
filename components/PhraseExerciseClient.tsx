@@ -1,6 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useIsClient } from '@/lib/useIsClient';
+import { readSavedPos } from '@/lib/resume';
 import { useRouter } from 'next/navigation';
 import type { PhraseExercise } from '@/lib/exercises';
 
@@ -10,13 +12,21 @@ interface Props {
   exercises: PhraseExercise[];
 }
 
-export default function PhraseExerciseClient({ topic, title, exercises }: Props) {
+// The saved position lives in localStorage, so render only once on the client
+export default function PhraseExerciseClient(props: Props) {
+  const isClient = useIsClient();
+  return isClient ? <PhraseExercises {...props} /> : null;
+}
+
+function PhraseExercises({ topic, title, exercises }: Props) {
   const router = useRouter();
-  const [index, setIndex] = useState(0);
+  const posKey = `jambo_phrase_pos_${topic}`;
+  const [saved] = useState(() => readSavedPos(posKey, exercises.length));
+  const [index, setIndex] = useState(saved?.i ?? 0);
   const [placed, setPlaced] = useState<number[]>([]);
   const [checked, setChecked] = useState(false);
-  const [score, setScore] = useState(0);
-  const [resumed, setResumed] = useState<number | null>(null);
+  const [score, setScore] = useState(saved?.s ?? 0);
+  const resumed = saved?.i ?? null;
 
   const exercise = exercises[index];
   const isLast = index === exercises.length - 1;
@@ -24,23 +34,6 @@ export default function PhraseExerciseClient({ topic, title, exercises }: Props)
   const isCorrect = checked && placedWords.join(' ') === exercise.solution.join(' ');
 
   // ── Saved position (resume where you left off) ──────────────────────────────
-  const posKey = `jambo_phrase_pos_${topic}`;
-
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(posKey);
-      if (raw) {
-        const { i, s } = JSON.parse(raw);
-        if (Number.isInteger(i) && i > 0 && i < exercises.length) {
-          setIndex(i);
-          setScore(typeof s === 'number' ? s : 0);
-          setResumed(i);
-        }
-      }
-    } catch { /* ignore */ }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const savePos = (i: number, s: number) => {
     try {
       if (i <= 0) localStorage.removeItem(posKey);

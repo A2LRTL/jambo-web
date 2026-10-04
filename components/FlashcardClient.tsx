@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useIsClient } from '@/lib/useIsClient';
 import { useRouter } from 'next/navigation';
 import type { VocabItem } from '@/lib/exercises';
 import { saveReport } from '@/lib/reports';
@@ -11,13 +12,28 @@ interface Props {
   items: VocabItem[];
 }
 
-export default function FlashcardClient({ lessonId, title, items }: Props) {
+function readSavedCard(key: string, length: number): number | null {
+  try {
+    const saved = parseInt(localStorage.getItem(key) ?? '', 10);
+    if (Number.isInteger(saved) && saved > 0 && saved < length) return saved;
+  } catch { /* ignore */ }
+  return null;
+}
+
+// The saved card lives in localStorage, so render only once on the client
+export default function FlashcardClient(props: Props) {
+  const isClient = useIsClient();
+  return isClient ? <Flashcards {...props} /> : null;
+}
+
+function Flashcards({ lessonId, title, items }: Props) {
   const router = useRouter();
-  const [index, setIndex]     = useState(0);
+  const posKey = `jambo_fc_pos_${lessonId}`;
+  const [resumed] = useState(() => readSavedCard(posKey, items.length));
+  const [index, setIndex]     = useState(resumed ?? 0);
   const [flipped, setFlipped] = useState(false);
   const [fading, setFading]   = useState(false);
   const [showExampleTerm, setShowExampleTerm] = useState(false);
-  const [resumed, setResumed] = useState<number | null>(null);
   const [reportState, setReportState] = useState<'idle' | 'saving' | 'done' | 'error'>('idle');
 
   const card = items[index];
@@ -26,21 +42,6 @@ export default function FlashcardClient({ lessonId, title, items }: Props) {
   const termLabel = isSwahili ? 'Kiswahili' : 'Kirundi';
 
   // ── Saved position (resume where you left off) ──────────────────────────────
-  const posKey = `jambo_fc_pos_${lessonId}`;
-
-  // Restore saved card on first mount
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(posKey);
-      const saved = raw ? parseInt(raw, 10) : 0;
-      if (Number.isInteger(saved) && saved > 0 && saved < items.length) {
-        setIndex(saved);
-        setResumed(saved);
-      }
-    } catch { /* ignore */ }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   // Persist position; clear it once the deck is finished or back at the start
   const savePos = (i: number) => {
     try {
@@ -54,11 +55,10 @@ export default function FlashcardClient({ lessonId, title, items }: Props) {
     setTimeout(() => { action(); setFading(false); }, 150);
   };
 
-  useEffect(() => { setReportState('idle'); }, [index]);
-
   const goTo = (i: number) => transition(() => {
     savePos(i);
     setIndex(i);
+    setReportState('idle');
     setFlipped(false);
     setShowExampleTerm(false);
   });
