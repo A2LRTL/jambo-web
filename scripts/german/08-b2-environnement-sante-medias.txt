@@ -1,0 +1,103 @@
+# theme: environnement
+N|der|Umweltschutz|null|la protection de l'environnement|||Jeder kann etwas für den Umweltschutz tun.|Chacun peut faire quelque chose pour l'environnement.|B2
+N|die|Umweltverschmutzung|null|la pollution|||Die Umweltverschmutzung in den Städten ist ein großes Problem.|La pollution en ville est un gros problème.|B2
+N|die|Erderwärmung|null|le réchauffement climatique|||Die Erderwärmung führt zu mehr Hitzewellen.|Le réchauffement entraîne plus de canicules.|B2
+N|der|Treibhauseffekt|null|l'effet de serre|||CO2 verstärkt den Treibhauseffekt.|Le CO2 renforce l'effet de serre.|B2
+N|der|Ausstoß|null|l'émission (de gaz)|||Der CO2-Ausstoß muss sinken.|Les émissions de CO2 doivent baisser.|B2
+N|die|Energie|-n|l'énergie|||Wir sollten weniger Energie verbrauchen.|Nous devrions consommer moins d'énergie.|B2
+N|die|erneuerbaren Energien|null|les énergies renouvelables|||Erneuerbare Energien werden immer wichtiger.|Les énergies renouvelables deviennent de plus en plus importantes.|B2
+N|der|Verbrauch|null|la consommation|||Der Verbrauch von Plastik ist zu hoch.|La consommation de plastique est trop élevée.|B2
+N|die|Ressource|-n|la ressource|||Wasser ist eine kostbare Ressource.|L'eau est une ressource précieuse.|B2
+N|der|Abfall|¨-e|le déchet|||Abfall sollte man vermeiden.|Il faut éviter les déchets.|B2
+N|die|Verpackung|-en|l'emballage|||Diese Verpackung ist aus recyceltem Papier.|Cet emballage est en papier recyclé.|B2
+N|die|Nachhaltigkeit|null|la durabilité|||Nachhaltigkeit ist für viele Kunden wichtig.|La durabilité compte pour beaucoup de clients.|B2
+N|die|Natur|null|la nature|||Am Wochenende sind wir gern in der Natur.|Le week-end, nous aimons être dans la nature.|B2
+N|die|Tierart|-en|l'espèce animale|||Viele Tierarten sind vom Aussterben bedroht.|Beaucoup d'espèces animales sont menacées d'extinction.|B2
+N|die|Dürre|-n|la sécheresse|||Die Dürre hat der Ernte geschadet.|La sécheresse a nui à la récolte.|B2
+N|die|Überschwemmung|-en|l'inondation|||Nach dem Regen gab es Überschwemmungen.|Après la pluie, il y a eu des inondations.|B2
+N|die|Katastrophe|-n|la catastrophe|||Das war eine echte Naturkatastrophe.|C'était une vraie catastrophe naturelle.|B2
+N|die|Forschung|-en|la recherche (scientifique)|||Die Forschung braucht mehr Geld.|La recherche a besoin de plus d'argent.|B2
+N|die|Wissenschaft|-en|la science|||Die Wissenschaft ist sich einig.|Les scientifiques sont d'accord.|B2
+N|die|Studie|-n|l'étude|||Eine neue Studie zeigt, dass Sport glücklich macht.|Une nouvelle étude montre que le sport rend heureux.|B2
+N|das|Ergebnis|-se|le résultat|||Die Ergebnisse sind überraschend.|Les résultats sont surprenants.|B2
+N|die|Erfindung|-en|l'invention|||Das Internet war eine revolutionäre Erfindung.|Internet a été une invention révolutionnaire.|B2
+N|die|Technik|-en|la technique, la technologie|||Die Technik entwickelt sich rasant.|La technologie évolue à toute vitesse.|B2
+N|die|Digitalisierung|null|la numérisation|||Die Digitalisierung verändert die Arbeitswelt.|La numérisation transforme le monde du travail.|B2
+N|die|künstliche Intelligenz|null|l'intelligence artificielle|||Künstliche Intelligenz wird viele Berufe verändern.|L'intelligence artificielle va changer beaucoup de métiers.|B2
+N|der|Datenschutz|null|la protection des données|||Datenschutz ist in Deutschland sehr wichtig.|La protection des données est très importante en Allemagne.|B2
+N|die|Gefahr|-en|le danger|||Rauchen ist eine Gefahr für die Gesundheit.|Fumer est un danger pour la santé.|B2
+N|das|Risiko|Risiken|le risque|||Das Risiko ist mir zu hoch.|Le risque est trop élevé pour moi.|B2
+V|null|verschmutzen|null|polluer|verschmutzt, verschmutzte, hat verschmutzt||Fabriken verschmutzen die Flüsse.|Les usines polluent les rivières.|B2
+V|null|vermeiden|null|éviter|vermeidet, vermied, hat vermieden||Wir versuchen, Plastik zu vermeiden.|Nous essayons d'éviter le plastique.|B2
+V|null|verbrauchen|null|consommer|verbraucht, verbrauchte, hat verbraucht||Das alte Auto verbraucht zu viel Benzin.|La vieille voiture consomme trop d'essence.|B2
+V|null|recyceln|null|recycler|recycelt, recycelte, hat recycelt||Glas kann man gut recyceln.|Le verre se recycle bien.|B2
+V|null|retten|null|sauver|rettet, rettete, hat gerettet||Wir müssen das Klima retten.|Nous devons sauver le climat.|B2
+V|null|zerstören|null|détruire|zerstört, zerstörte, hat zerstört||Der Sturm hat viele Häuser zerstört.|La tempête a détruit beaucoup de maisons.|B2
+V|null|bedrohen|null|menacer|bedroht, bedrohte, hat bedroht||Der Klimawandel bedroht viele Arten.|Le changement climatique menace beaucoup d'espèces.|B2
+V|null|aussterben|null|disparaître (espèce)|stirbt aus, starb aus, ist ausgestorben||Die Dinosaurier sind vor Millionen Jahren ausgestorben.|Les dinosaures ont disparu il y a des millions d'années.|B2
+V|null|forschen|null|faire des recherches|forscht, forschte, hat geforscht||Sie forscht an einem neuen Impfstoff.|Elle fait des recherches sur un nouveau vaccin.|B2
+V|null|entdecken|null|découvrir|entdeckt, entdeckte, hat entdeckt||Die Forscher haben etwas Neues entdeckt.|Les chercheurs ont découvert quelque chose de nouveau.|B2
+V|null|entwickeln|null|développer|entwickelt, entwickelte, hat entwickelt||Die Firma entwickelt eine neue App.|L'entreprise développe une nouvelle appli.|B2
+V|null|beweisen|null|prouver|beweist, bewies, hat bewiesen||Die Studie beweist, dass Bewegung gesund ist.|L'étude prouve que l'exercice est bon pour la santé.|B2
+V|null|sich auswirken|null|avoir des répercussions|wirkt sich aus, wirkte sich aus, hat sich ausgewirkt|sich auf + Akk ~|Der Klimawandel wirkt sich auf die Landwirtschaft aus.|Le changement climatique a des répercussions sur l'agriculture.|B2
+A|null|klimafreundlich|null|bon pour le climat|||Die Bahn ist klimafreundlicher als das Flugzeug.|Le train est meilleur pour le climat que l'avion.|B2
+A|null|schädlich|null|nocif|||Rauchen ist schädlich für die Gesundheit.|Fumer est nocif pour la santé.|B2
+A|null|bedroht|null|menacé|||Der Eisbär ist vom Klimawandel bedroht.|L'ours polaire est menacé par le changement climatique.|B2
+A|null|wissenschaftlich|null|scientifique|||Das ist wissenschaftlich bewiesen.|C'est scientifiquement prouvé.|B2
+A|null|digital|null|numérique|||Viele Behördengänge sind jetzt digital.|Beaucoup de démarches administratives sont maintenant numériques.|B2
+A|null|erneuerbar|null|renouvelable|||Strom aus erneuerbaren Quellen wird billiger.|L'électricité de sources renouvelables devient moins chère.|B2
+A|null|weltweit|null|mondial, dans le monde entier|||Das Problem betrifft Menschen weltweit.|Le problème touche des gens dans le monde entier.|B2
+D|null|langfristig|null|à long terme|||Langfristig lohnt sich die Investition.|À long terme, l'investissement vaut la peine.|B2
+D|null|kurzfristig|null|à court terme ; au dernier moment|||Der Termin wurde kurzfristig abgesagt.|Le rendez-vous a été annulé au dernier moment.|B2
+# theme: sante
+N|der|Stress|null|le stress|||Zu viel Stress macht krank.|Trop de stress rend malade.|B2
+N|die|Psyche|-n|le psychisme|||Bewegung tut auch der Psyche gut.|L'exercice fait aussi du bien au moral.|B2
+N|die|Depression|-en|la dépression|||Sie leidet seit Monaten an einer Depression.|Elle souffre de dépression depuis des mois.|B2
+N|das|Burnout|-s|le burn-out|||Nach dem Burnout hat er seine Arbeitszeit reduziert.|Après son burn-out, il a réduit son temps de travail.|B2
+N|die|Diagnose|-n|le diagnostic|||Die Diagnose war zum Glück nicht schlimm.|Le diagnostic n'était heureusement pas grave.|B2
+N|die|Therapie|-n|la thérapie|||Die Therapie hat ihr sehr geholfen.|La thérapie l'a beaucoup aidée.|B2
+N|die|Vorsorge|null|la prévention, le dépistage|||Regelmäßige Vorsorge ist wichtig.|Le dépistage régulier est important.|B2
+N|die|Beschwerden|null|les troubles, les maux|||Welche Beschwerden haben Sie?|De quels maux souffrez-vous ?|B2
+N|die|Pflege|null|les soins|||Die Pflege der Großmutter ist anstrengend.|S'occuper de la grand-mère est épuisant.|B2
+N|das|Wohlbefinden|null|le bien-être|||Schlaf ist wichtig für das Wohlbefinden.|Le sommeil est important pour le bien-être.|B2
+N|die|Sucht|¨-e|la dépendance, l'addiction|||Handysucht ist bei Jugendlichen verbreitet.|L'addiction au portable est répandue chez les jeunes.|B2
+N|die|Heilung|-en|la guérison|||Die Heilung dauert einige Wochen.|La guérison prend quelques semaines.|B2
+V|null|heilen|null|guérir|heilt, heilte, hat geheilt||Die Wunde ist gut geheilt.|La blessure a bien guéri.|B2
+V|null|pflegen|null|soigner, prendre soin de|pflegt, pflegte, hat gepflegt||Sie pflegt ihre kranke Mutter.|Elle s'occupe de sa mère malade.|B2
+V|null|sich entspannen|null|se détendre|entspannt sich, entspannte sich, hat sich entspannt||Beim Yoga kann ich mich gut entspannen.|Au yoga, j'arrive bien à me détendre.|B2
+V|null|überweisen|null|adresser (à un spécialiste)|überweist, überwies, hat überwiesen|an + Akk ~|Die Ärztin hat mich an einen Orthopäden überwiesen.|La médecin m'a adressé à un orthopédiste.|B2
+V|null|sich anstecken|null|être contaminé, attraper|steckt sich an, steckte sich an, hat sich angesteckt|sich bei jdm. ~|Ich habe mich bei meinem Sohn angesteckt.|J'ai attrapé ça de mon fils.|B2
+V|null|schlucken|null|avaler|schluckt, schluckte, hat geschluckt||Ich kann kaum schlucken.|J'ai du mal à avaler.|B2
+A|null|chronisch|null|chronique|||Er hat chronische Rückenschmerzen.|Il a des douleurs chroniques au dos.|B2
+A|null|psychisch|null|psychique|||Psychische Krankheiten werden oft unterschätzt.|Les maladies psychiques sont souvent sous-estimées.|B2
+A|null|körperlich|null|physique|||Die Arbeit ist körperlich anstrengend.|Le travail est physiquement épuisant.|B2
+A|null|ausgeglichen|null|équilibré, serein|||Seit dem Urlaub bin ich viel ausgeglichener.|Depuis les vacances, je suis bien plus serein.|B2
+A|null|süchtig|null|accro, dépendant|||Viele sind süchtig nach ihrem Handy.|Beaucoup sont accros à leur portable.|B2
+A|null|gesundheitlich|null|de santé|||Aus gesundheitlichen Gründen muss er aufhören.|Pour raisons de santé, il doit arrêter.|B2
+A|null|heilbar|null|guérissable|||Die Krankheit ist heute heilbar.|La maladie est guérissable aujourd'hui.|B2
+# theme: medias
+N|die|Quelle|-n|la source|||Woher hast du diese Information? Nenn mir die Quelle.|D'où tiens-tu cette information ? Donne-moi la source.|B2
+N|die|Falschmeldung|-en|la fausse information|||Im Internet verbreiten sich Falschmeldungen schnell.|Sur Internet, les fausses infos se propagent vite.|B2
+N|die|Berichterstattung|null|la couverture médiatique|||Die Berichterstattung war sehr einseitig.|La couverture médiatique était très partiale.|B2
+N|die|Pressefreiheit|null|la liberté de la presse|||Die Pressefreiheit ist in Gefahr.|La liberté de la presse est menacée.|B2
+N|die|Schlagzeile|-n|le gros titre|||Der Skandal macht heute Schlagzeilen.|Le scandale fait les gros titres aujourd'hui.|B2
+N|die|Öffentlichkeit|null|le public, l'opinion publique|||Die Öffentlichkeit hat ein Recht auf Information.|Le public a droit à l'information.|B2
+N|die|sozialen Medien|null|les réseaux sociaux|||Jugendliche verbringen viel Zeit in den sozialen Medien.|Les jeunes passent beaucoup de temps sur les réseaux sociaux.|B2
+N|der|Beitrag|¨-e|la publication, le post|||Sein Beitrag wurde tausendmal geteilt.|Sa publication a été partagée mille fois.|B2
+N|die|Kritik|-en|la critique|||Die Regierung steht unter Kritik.|Le gouvernement est critiqué.|B2
+N|der|Vorwurf|¨-e|le reproche, l'accusation|||Er weist alle Vorwürfe zurück.|Il rejette toutes les accusations.|B2
+N|die|Behauptung|-en|l'affirmation|||Diese Behauptung ist nicht bewiesen.|Cette affirmation n'est pas prouvée.|B2
+N|die|Tatsache|-n|le fait|||Das ist eine Tatsache, keine Meinung.|C'est un fait, pas une opinion.|B2
+V|null|veröffentlichen|null|publier|veröffentlicht, veröffentlichte, hat veröffentlicht||Die Zeitung hat den Artikel gestern veröffentlicht.|Le journal a publié l'article hier.|B2
+V|null|verbreiten|null|répandre, diffuser|verbreitet, verbreitete, hat verbreitet||Er verbreitet Gerüchte über seine Kollegen.|Il répand des rumeurs sur ses collègues.|B2
+V|null|teilen|null|partager|teilt, teilte, hat geteilt||Sie hat das Video auf Instagram geteilt.|Elle a partagé la vidéo sur Instagram.|B2
+V|null|überprüfen|null|vérifier|überprüft, überprüfte, hat überprüft||Man sollte jede Quelle überprüfen.|Il faudrait vérifier chaque source.|B2
+V|null|zurückweisen|null|rejeter, réfuter|weist zurück, wies zurück, hat zurückgewiesen||Der Minister weist die Kritik zurück.|Le ministre rejette les critiques.|B2
+V|null|sich äußern|null|s'exprimer, prendre position|äußert sich, äußerte sich, hat sich geäußert|sich zu + Dat ~|Der Politiker wollte sich nicht zu dem Thema äußern.|Le politicien n'a pas voulu s'exprimer sur le sujet.|B2
+V|null|betonen|null|souligner|betont, betonte, hat betont||Sie betonte, wie wichtig Bildung ist.|Elle a souligné l'importance de l'éducation.|B2
+V|null|erwähnen|null|mentionner|erwähnt, erwähnte, hat erwähnt||Er hat das Problem nicht erwähnt.|Il n'a pas mentionné le problème.|B2
+A|null|seriös|null|sérieux, fiable|||Ist diese Zeitung seriös?|Ce journal est-il sérieux ?|B2
+A|null|einseitig|null|partial, unilatéral|||Der Bericht war mir zu einseitig.|Le reportage était trop partial à mon goût.|B2
+A|null|objektiv|null|objectif|||Journalisten sollten objektiv berichten.|Les journalistes devraient informer objectivement.|B2
+A|null|glaubwürdig|null|crédible|||Die Zeugin wirkt glaubwürdig.|La témoin paraît crédible.|B2
+A|null|fragwürdig|null|douteux, discutable|||Seine Methoden sind fragwürdig.|Ses méthodes sont discutables.|B2

@@ -1,0 +1,103 @@
+# theme: expressions
+O|null|eine Entscheidung treffen|null|prendre une décision|||Wir müssen bis Freitag eine Entscheidung treffen.|Nous devons prendre une décision d'ici vendredi.|B2
+O|null|eine Rolle spielen|null|jouer un rôle|||Geld spielt dabei keine Rolle.|L'argent ne joue aucun rôle là-dedans.|B2
+O|null|in Frage kommen|null|entrer en ligne de compte|||Diese Wohnung kommt für uns nicht in Frage.|Cet appartement n'entre pas en ligne de compte pour nous.|B2
+O|null|zur Verfügung stehen|null|être à disposition|||Bei Fragen stehe ich Ihnen gern zur Verfügung.|Je reste à votre disposition pour toute question.|B2
+O|null|zur Verfügung stellen|null|mettre à disposition|||Die Firma stellt uns einen Laptop zur Verfügung.|L'entreprise met un ordinateur portable à notre disposition.|B2
+O|null|einen Antrag stellen|null|déposer une demande|||Ich habe einen Antrag auf Elterngeld gestellt.|J'ai déposé une demande d'allocation parentale.|B2
+O|null|eine Frage stellen|null|poser une question|||Darf ich Ihnen eine Frage stellen?|Puis-je vous poser une question ?|B2
+O|null|Kritik üben|null|critiquer||~ an + Dat|Die Opposition übt scharfe Kritik an der Regierung.|L'opposition critique vivement le gouvernement.|B2
+O|null|Rücksicht nehmen|null|tenir compte de, ménager||~ auf + Akk|Bitte nehmt Rücksicht auf die Nachbarn.|Merci de penser aux voisins.|B2
+O|null|Einfluss nehmen|null|exercer une influence||~ auf + Akk|Eltern nehmen großen Einfluss auf ihre Kinder.|Les parents exercent une grande influence sur leurs enfants.|B2
+O|null|Abschied nehmen|null|faire ses adieux||~ von + Dat|Wir mussten Abschied von unserem Hund nehmen.|Nous avons dû dire adieu à notre chien.|B2
+O|null|in Anspruch nehmen|null|recourir à ; prendre (du temps)|||Die Renovierung hat viel Zeit in Anspruch genommen.|La rénovation a pris beaucoup de temps.|B2
+O|null|zur Kenntnis nehmen|null|prendre acte de|||Ich habe Ihre Beschwerde zur Kenntnis genommen.|J'ai pris acte de votre réclamation.|B2
+O|null|Stellung nehmen|null|prendre position||~ zu + Dat|Der Minister hat zu den Vorwürfen Stellung genommen.|Le ministre a pris position sur les accusations.|B2
+O|null|Bezug nehmen|null|se référer à||~ auf + Akk|Ich nehme Bezug auf Ihre E-Mail vom 3. Mai.|Je me réfère à votre e-mail du 3 mai.|B2
+O|null|Verantwortung übernehmen|null|assumer la responsabilité||~ für + Akk|Er übernimmt die Verantwortung für den Fehler.|Il assume la responsabilité de l'erreur.|B2
+O|null|einen Vorschlag machen|null|faire une proposition|||Darf ich einen Vorschlag machen?|Puis-je faire une proposition ?|B2
+O|null|sich Mühe geben|null|faire des efforts|||Er gibt sich wirklich Mühe mit seinem Deutsch.|Il fait vraiment des efforts en allemand.|B2
+O|null|Fortschritte machen|null|faire des progrès|||Du hast große Fortschritte gemacht!|Tu as fait de gros progrès !|B2
+O|null|Erfahrungen sammeln|null|acquérir de l'expérience|||Im Praktikum habe ich viele Erfahrungen gesammelt.|Pendant le stage, j'ai acquis beaucoup d'expérience.|B2
+O|null|einen Eindruck machen|null|faire une impression|||Der Bewerber hat einen guten Eindruck gemacht.|Le candidat a fait bonne impression.|B2
+O|null|in Kontakt bleiben|null|rester en contact||~ mit + Dat|Lass uns in Kontakt bleiben!|Restons en contact !|B2
+O|null|zum Ausdruck bringen|null|exprimer|||Er brachte seine Enttäuschung deutlich zum Ausdruck.|Il a clairement exprimé sa déception.|B2
+O|null|zur Sprache bringen|null|aborder (un sujet)|||Ich werde das Problem in der Sitzung zur Sprache bringen.|J'aborderai le problème lors de la réunion.|B2
+O|null|in Ordnung bringen|null|mettre en ordre, arranger|||Wir müssen das bis morgen in Ordnung bringen.|Nous devons arranger ça d'ici demain.|B2
+O|null|zu Ende bringen|null|mener à terme|||Ich will das Projekt noch zu Ende bringen.|Je veux encore mener le projet à terme.|B2
+O|null|zu Ende gehen|null|toucher à sa fin|||Der Urlaub geht leider zu Ende.|Les vacances touchent malheureusement à leur fin.|B2
+O|null|ums Leben kommen|null|perdre la vie|||Bei dem Unfall kamen zwei Menschen ums Leben.|Deux personnes ont perdu la vie dans l'accident.|B2
+O|null|unter Druck setzen|null|mettre la pression|||Lass dich nicht unter Druck setzen!|Ne te laisse pas mettre la pression !|B2
+O|null|unter Druck stehen|null|être sous pression|||Vor der Prüfung stehe ich unter großem Druck.|Avant l'examen, je suis sous forte pression.|B2
+O|null|in Betracht ziehen|null|envisager|||Wir ziehen einen Umzug in Betracht.|Nous envisageons un déménagement.|B2
+O|null|Konsequenzen ziehen|null|tirer les conséquences|||Nach dem Skandal zog der Minister die Konsequenzen.|Après le scandale, le ministre en a tiré les conséquences.|B2
+O|null|Bilanz ziehen|null|faire le bilan|||Nach einem Jahr ziehen wir Bilanz.|Au bout d'un an, nous faisons le bilan.|B2
+O|null|Wert legen|null|attacher de l'importance à||~ auf + Akk|Ich lege großen Wert auf Pünktlichkeit.|J'attache beaucoup d'importance à la ponctualité.|B2
+O|null|Interesse haben|null|être intéressé par||~ an + Dat|Haben Sie Interesse an unserem Angebot?|Êtes-vous intéressé par notre offre ?|B2
+O|null|eine Prüfung ablegen|null|passer un examen|||Sie hat die Prüfung mit Erfolg abgelegt.|Elle a réussi son examen.|B2
+O|null|ein Ziel verfolgen|null|poursuivre un objectif|||Mit dem Kurs verfolge ich ein klares Ziel.|Avec ce cours, je poursuis un objectif clair.|B2
+O|null|einen Beitrag leisten|null|apporter sa contribution||~ zu + Dat|Jeder kann einen Beitrag zum Klimaschutz leisten.|Chacun peut contribuer à la protection du climat.|B2
+O|null|Hilfe leisten|null|porter secours, aider|||Nach dem Unfall hat er sofort Erste Hilfe geleistet.|Après l'accident, il a tout de suite porté les premiers secours.|B2
+O|null|Widerstand leisten|null|opposer une résistance||~ gegen + Akk|Die Bürger leisten Widerstand gegen das Projekt.|Les citoyens s'opposent au projet.|B2
+O|null|Maßnahmen ergreifen|null|prendre des mesures|||Die Stadt muss endlich Maßnahmen ergreifen.|La ville doit enfin prendre des mesures.|B2
+O|null|die Initiative ergreifen|null|prendre l'initiative|||Niemand hat die Initiative ergriffen.|Personne n'a pris l'initiative.|B2
+O|null|Platz nehmen|null|prendre place, s'asseoir|||Bitte nehmen Sie Platz!|Asseyez-vous, je vous en prie !|B2
+O|null|eine Lösung finden|null|trouver une solution|||Wir finden bestimmt eine Lösung.|Nous trouverons sûrement une solution.|B2
+O|null|Anerkennung finden|null|être reconnu|||Ihre Arbeit hat endlich Anerkennung gefunden.|Son travail a enfin été reconnu.|B2
+O|null|in Gefahr geraten|null|se retrouver en danger|||Durch den Sturm gerieten die Wanderer in Gefahr.|À cause de la tempête, les randonneurs se sont retrouvés en danger.|B2
+O|null|außer Frage stehen|null|être hors de question (évident)|||Seine Kompetenz steht außer Frage.|Sa compétence ne fait aucun doute.|B2
+O|null|Bedeutung haben|null|avoir de l'importance||~ für + Akk|Diese Entscheidung hat große Bedeutung für uns.|Cette décision a une grande importance pour nous.|B2
+O|null|Angst machen|null|faire peur|||Die Zukunft macht mir manchmal Angst.|L'avenir me fait parfois peur.|B2
+O|null|Mut machen|null|donner du courage|||Deine Worte haben mir Mut gemacht.|Tes mots m'ont donné du courage.|B2
+# theme: connecteurs
+D|null|daher|null|c'est pourquoi, de ce fait|||Es hat geregnet, daher ist das Fest ausgefallen.|Il a plu, c'est pourquoi la fête a été annulée.|B2
+D|null|somit|null|ainsi, par conséquent|||Die Frist ist abgelaufen, somit ist der Antrag ungültig.|Le délai a expiré, la demande n'est donc plus valable.|B2
+D|null|demnach|null|d'après cela, par conséquent|||Demnach hätte er Anspruch auf Urlaub.|D'après cela, il aurait droit à des congés.|B2
+D|null|infolgedessen|null|en conséquence|||Er war lange krank, infolgedessen hat er die Prüfung verpasst.|Il a été longtemps malade, en conséquence il a manqué l'examen.|B2
+D|null|zudem|null|de plus, en outre|||Die Wohnung ist zu klein, zudem ist sie laut.|L'appartement est trop petit, en plus il est bruyant.|B2
+D|null|ebenfalls|null|également|||Ich wünsche Ihnen ebenfalls ein schönes Wochenende.|Je vous souhaite également un bon week-end.|B2
+D|null|durchaus|null|tout à fait, absolument|||Das ist durchaus möglich.|C'est tout à fait possible.|B2
+D|null|keineswegs|null|nullement, pas du tout|||Das ist keineswegs selbstverständlich.|Ce n'est nullement évident.|B2
+D|null|ansonsten|null|sinon, à part ça|||Ansonsten ist alles in Ordnung.|À part ça, tout va bien.|B2
+D|null|letztendlich|null|en fin de compte|||Letztendlich musst du selbst entscheiden.|En fin de compte, c'est à toi de décider.|B2
+D|null|beziehungsweise|null|ou plutôt ; respectivement (bzw.)|||Ich komme am Montag beziehungsweise am Dienstag.|Je viendrai lundi, ou plutôt mardi.|B2
+O|null|zumal|null|d'autant plus que|||Ich bleibe zu Hause, zumal es regnet.|Je reste à la maison, d'autant plus qu'il pleut.|B2
+O|null|sofern|null|pour autant que, à condition que|||Sofern nichts dazwischenkommt, sind wir um acht da.|Sauf imprévu, nous serons là à huit heures.|B2
+O|null|soweit|null|dans la mesure où|||Soweit ich weiß, ist das Büro geschlossen.|Pour autant que je sache, le bureau est fermé.|B2
+O|null|wohingegen|null|tandis que, alors que|||Er liebt die Stadt, wohingegen sie das Land bevorzugt.|Il aime la ville, alors qu'elle préfère la campagne.|B2
+O|null|wobei|null|sachant que, bien que|||Das Hotel war schön, wobei das Frühstück enttäuschend war.|L'hôtel était beau, même si le petit-déjeuner était décevant.|B2
+O|null|angesichts|null|vu, face à (+ Gen)|||Angesichts der Lage müssen wir handeln.|Vu la situation, nous devons agir.|B2
+O|null|hinsichtlich|null|en ce qui concerne (+ Gen)|||Hinsichtlich der Kosten gibt es noch Fragen.|En ce qui concerne les coûts, il reste des questions.|B2
+O|null|anhand|null|à l'aide de, sur la base de (+ Gen)|||Anhand dieses Beispiels erkläre ich die Regel.|À l'aide de cet exemple, j'explique la règle.|B2
+O|null|mithilfe|null|à l'aide de (+ Gen)|||Mithilfe einer App lerne ich jeden Tag Vokabeln.|À l'aide d'une appli, j'apprends du vocabulaire chaque jour.|B2
+O|null|dank|null|grâce à (+ Gen/Dat)|||Dank deiner Hilfe habe ich es geschafft.|Grâce à ton aide, j'ai réussi.|B2
+O|null|gegenüber|null|envers ; en face de (+ Dat)|||Sie ist mir gegenüber sehr freundlich.|Elle est très aimable envers moi.|B2
+O|null|vor allem|null|surtout|||Vor allem im Winter fehlt mir die Sonne.|Surtout en hiver, le soleil me manque.|B2
+O|null|unter anderem|null|entre autres|||Wir haben unter anderem über Politik gesprochen.|Nous avons parlé entre autres de politique.|B2
+O|null|im Grunde|null|au fond|||Im Grunde hast du recht.|Au fond, tu as raison.|B2
+# theme: relations
+N|die|Erleichterung|-en|le soulagement|||Zu meiner Erleichterung war alles in Ordnung.|À mon grand soulagement, tout allait bien.|B2
+N|das|Mitgefühl|null|la compassion|||Ich möchte Ihnen mein Mitgefühl aussprechen.|Je voudrais vous exprimer ma compassion.|B2
+N|das|Verständnis|null|la compréhension||~ haben für + Akk|Ich habe Verständnis für deine Situation.|Je comprends ta situation.|B2
+N|der|Zweifel|-|le doute|||Ich habe Zweifel an seiner Ehrlichkeit.|J'ai des doutes sur son honnêteté.|B2
+N|die|Rücksicht|null|les égards, la considération|||Er zeigt keine Rücksicht auf andere.|Il n'a aucun égard pour les autres.|B2
+N|der|Neid|null|l'envie, la jalousie|||Neid zerstört Freundschaften.|L'envie détruit les amitiés.|B2
+N|die|Auseinandersetzung|-en|la dispute, le débat|||Es gab eine heftige Auseinandersetzung.|Il y a eu une violente dispute.|B2
+N|die|Zuneigung|null|l'affection|||Er zeigt seine Zuneigung durch kleine Gesten.|Il montre son affection par de petits gestes.|B2
+N|die|Scham|null|la honte|||Vor Scham wurde er ganz rot.|Il est devenu tout rouge de honte.|B2
+V|null|sich schämen|null|avoir honte|schämt sich, schämte sich, hat sich geschämt|sich für + Akk ~|Ich schäme mich für mein Verhalten.|J'ai honte de mon comportement.|B2
+V|null|bereuen|null|regretter|bereut, bereute, hat bereut||Ich bereue nichts.|Je ne regrette rien.|B2
+V|null|verzeihen|null|pardonner|verzeiht, verzieh, hat verziehen|jdm. etw. ~|Kannst du mir verzeihen?|Peux-tu me pardonner ?|B2
+V|null|beneiden|null|envier|beneidet, beneidete, hat beneidet|jdn. um + Akk ~|Ich beneide dich um deine Geduld.|Je t'envie ta patience.|B2
+V|null|bewundern|null|admirer|bewundert, bewunderte, hat bewundert||Ich bewundere ihren Mut.|J'admire son courage.|B2
+V|null|schätzen|null|apprécier ; estimer|schätzt, schätzte, hat geschätzt||Ich schätze deine Ehrlichkeit sehr.|J'apprécie beaucoup ton honnêteté.|B2
+V|null|kränken|null|blesser, vexer|kränkt, kränkte, hat gekränkt||Seine Bemerkung hat mich gekränkt.|Sa remarque m'a blessé.|B2
+V|null|sich aufregen|null|s'énerver|regt sich auf, regte sich auf, hat sich aufgeregt|sich über + Akk ~|Reg dich nicht so auf!|Ne t'énerve pas comme ça !|B2
+V|null|sich anfreunden|null|se lier d'amitié|freundet sich an, freundete sich an, hat sich angefreundet|sich mit + Dat ~|Im Kurs habe ich mich mit einer Spanierin angefreundet.|Au cours, je me suis liée d'amitié avec une Espagnole.|B2
+A|null|erleichtert|null|soulagé|||Ich bin erleichtert, dass alles gut gegangen ist.|Je suis soulagé que tout se soit bien passé.|B2
+A|null|dankbar|null|reconnaissant|||Ich bin dir sehr dankbar für deine Hilfe.|Je te suis très reconnaissant pour ton aide.|B2
+A|null|rücksichtsvoll|null|attentionné, respectueux|||Unsere Nachbarn sind sehr rücksichtsvoll.|Nos voisins sont très respectueux.|B2
+A|null|verständnisvoll|null|compréhensif|||Mein Chef war sehr verständnisvoll.|Mon chef a été très compréhensif.|B2
+A|null|misstrauisch|null|méfiant|||Nach dem Betrug ist sie misstrauisch geworden.|Après l'arnaque, elle est devenue méfiante.|B2
+A|null|gelassen|null|serein, calme|||Sie bleibt auch in Stresssituationen gelassen.|Elle reste sereine même dans les situations stressantes.|B2
+A|null|empfindlich|null|sensible, susceptible|||Sei nicht so empfindlich!|Ne sois pas si susceptible !|B2

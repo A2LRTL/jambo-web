@@ -10,6 +10,9 @@ export const GERMAN_THEME_LABELS: Record<string, string> = {
   medias:         'Médias & opinions',
   connecteurs:    'Connecteurs & mots outils',
   prepositions:   'Verbes à préposition',
+  societe:        'Société & politique',
+  environnement:  'Environnement & sciences',
+  expressions:    'Expressions verbe + nom',
 };
 
 export const GERMAN_THEMES = Object.keys(GERMAN_THEME_LABELS);

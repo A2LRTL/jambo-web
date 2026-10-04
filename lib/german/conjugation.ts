@@ -16,8 +16,8 @@ const SEIN = ['bin', 'bist', 'ist', 'sind', 'seid', 'sind'];
 
 /** Reflexive verbs whose pronoun is dative (ich leiste mir …). */
 const DATIVE_REFLEXIVE = new Set(['sich leisten']);
-/** Only used impersonally (es handelt sich um …). */
-const IMPERSONAL = new Set(['sich handeln um']);
+/** Only used in the 3rd person (es handelt sich um …, das wirkt sich auf … aus). */
+const IMPERSONAL = new Set(['sich handeln um', 'sich auswirken']);
 
 export type Table = Record<Tense, string[]>;
 

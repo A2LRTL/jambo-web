@@ -1,0 +1,101 @@
+# theme: travail
+N|der|Arbeitsmarkt|¨-e|le marché du travail|||Die Lage auf dem Arbeitsmarkt hat sich verbessert.|La situation sur le marché du travail s'est améliorée.|B2
+N|die|Arbeitslosigkeit|null|le chômage|||Die Arbeitslosigkeit ist im letzten Jahr gesunken.|Le chômage a baissé l'année dernière.|B2
+N|die|Fachkraft|¨-e|le travailleur qualifié|||In der Pflege fehlen viele Fachkräfte.|Il manque beaucoup de personnel qualifié dans les soins.|B2
+N|die|Qualifikation|-en|la qualification|||Für die Stelle fehlt mir eine wichtige Qualifikation.|Il me manque une qualification importante pour ce poste.|B2
+N|die|Kenntnisse|null|les connaissances|||Gute Englischkenntnisse sind Voraussetzung.|De bonnes connaissances en anglais sont exigées.|B2
+N|die|Fähigkeit|-en|la capacité, la compétence|||Teamfähigkeit ist eine wichtige Fähigkeit.|L'esprit d'équipe est une compétence importante.|B2
+N|die|Herausforderung|-en|le défi|||Die neue Stelle ist eine echte Herausforderung.|Le nouveau poste est un vrai défi.|B2
+N|die|Belastung|-en|la charge, le fardeau|||Die ständigen Überstunden sind eine große Belastung.|Les heures sup permanentes sont une lourde charge.|B2
+N|die|Arbeitsbedingungen|null|les conditions de travail|||Die Gewerkschaft fordert bessere Arbeitsbedingungen.|Le syndicat réclame de meilleures conditions de travail.|B2
+N|die|Gewerkschaft|-en|le syndicat|||Er ist seit Jahren Mitglied der Gewerkschaft.|Il est membre du syndicat depuis des années.|B2
+N|der|Streik|-s|la grève|||Wegen des Streiks fallen viele Züge aus.|À cause de la grève, beaucoup de trains sont supprimés.|B2
+N|die|Beförderung|-en|la promotion (professionnelle)|||Nach zwei Jahren hat sie eine Beförderung bekommen.|Au bout de deux ans, elle a obtenu une promotion.|B2
+N|die|Gehaltserhöhung|-en|l'augmentation de salaire|||Ich möchte um eine Gehaltserhöhung bitten.|Je voudrais demander une augmentation.|B2
+N|die|Probezeit|-en|la période d'essai|||Die Probezeit dauert sechs Monate.|La période d'essai dure six mois.|B2
+N|das|Unternehmen|-|l'entreprise|||Das Unternehmen hat 200 Mitarbeiter.|L'entreprise compte 200 employés.|B2
+N|der|Mitarbeiter|-|le collaborateur, l'employé|||Alle Mitarbeiter wurden informiert.|Tous les employés ont été informés.|B2
+N|die|Führungskraft|¨-e|le cadre, le manager|||Gute Führungskräfte hören ihrem Team zu.|Les bons managers écoutent leur équipe.|B2
+N|der|Auftrag|¨-e|la commande, la mission|||Wir haben einen großen Auftrag bekommen.|Nous avons décroché une grosse commande.|B2
+N|der|Kunde|-n|le client|||Der Kunde ist mit dem Ergebnis zufrieden.|Le client est satisfait du résultat.|B2
+N|der|Umsatz|¨-e|le chiffre d'affaires|||Der Umsatz ist um zehn Prozent gestiegen.|Le chiffre d'affaires a augmenté de dix pour cent.|B2
+N|die|Konkurrenz|null|la concurrence|||Die Konkurrenz ist in dieser Branche groß.|La concurrence est forte dans ce secteur.|B2
+N|die|Branche|-n|le secteur, la branche|||In welcher Branche arbeiten Sie?|Dans quel secteur travaillez-vous ?|B2
+N|der|Ablauf|¨-e|le déroulement, le processus|||Der Ablauf des Projekts ist gut organisiert.|Le déroulement du projet est bien organisé.|B2
+N|die|Zusammenarbeit|null|la collaboration|||Vielen Dank für die gute Zusammenarbeit!|Merci beaucoup pour la bonne collaboration !|B2
+N|das|Ziel|-e|l'objectif|||Wir haben unser Ziel erreicht.|Nous avons atteint notre objectif.|B2
+V|null|sich weiterbilden|null|se former, suivre une formation continue|bildet sich weiter, bildete sich weiter, hat sich weitergebildet||Sie bildet sich abends im Bereich Marketing weiter.|Le soir, elle suit une formation en marketing.|B2
+V|null|befördern|null|promouvoir ; transporter|befördert, beförderte, hat befördert||Er wurde zum Abteilungsleiter befördert.|Il a été promu chef de service.|B2
+V|null|streiken|null|faire grève|streikt, streikte, hat gestreikt||Die Piloten streiken seit Montag.|Les pilotes sont en grève depuis lundi.|B2
+V|null|fordern|null|exiger, réclamer|fordert, forderte, hat gefordert||Die Mitarbeiter fordern mehr Gehalt.|Les employés réclament un meilleur salaire.|B2
+V|null|delegieren|null|déléguer|delegiert, delegierte, hat delegiert||Eine gute Chefin kann Aufgaben delegieren.|Une bonne cheffe sait déléguer.|B2
+V|null|überarbeiten|null|retravailler, réviser|überarbeitet, überarbeitete, hat überarbeitet||Kannst du den Bericht bis morgen überarbeiten?|Peux-tu retravailler le rapport d'ici demain ?|B2
+V|null|sich durchsetzen|null|s'imposer|setzt sich durch, setzte sich durch, hat sich durchgesetzt|sich gegen + Akk ~|Sie konnte sich gegen die anderen Bewerber durchsetzen.|Elle a réussi à s'imposer face aux autres candidats.|B2
+V|null|umsetzen|null|mettre en œuvre|setzt um, setzte um, hat umgesetzt||Wir müssen die Ideen jetzt umsetzen.|Nous devons maintenant mettre les idées en œuvre.|B2
+V|null|erweitern|null|élargir, étendre|erweitert, erweiterte, hat erweitert||Die Firma will ihr Angebot erweitern.|L'entreprise veut élargir son offre.|B2
+V|null|bewältigen|null|surmonter, venir à bout de|bewältigt, bewältigte, hat bewältigt||Wie bewältigst du den ganzen Stress?|Comment gères-tu tout ce stress ?|B2
+A|null|qualifiziert|null|qualifié|||Wir suchen qualifizierte Mitarbeiter.|Nous cherchons des employés qualifiés.|B2
+A|null|belastbar|null|résistant (au stress)|||Für diesen Job muss man sehr belastbar sein.|Pour ce poste, il faut bien résister au stress.|B2
+A|null|kompetent|null|compétent|||Die Beratung war sehr kompetent.|Le conseil était très compétent.|B2
+A|null|unbefristet|null|à durée indéterminée|||Endlich habe ich einen unbefristeten Vertrag!|Enfin, j'ai un CDI !|B2
+A|null|beruflich|null|professionnel|||Ich bin beruflich oft unterwegs.|Je voyage souvent pour le travail.|B2
+# theme: societe
+N|die|Bevölkerung|-en|la population|||Die Bevölkerung der Stadt wächst.|La population de la ville augmente.|B2
+N|der|Bürger|-|le citoyen|||Die Bürger können ihre Meinung äußern.|Les citoyens peuvent exprimer leur opinion.|B2
+N|die|Demokratie|-n|la démocratie|||Freie Wahlen sind die Grundlage der Demokratie.|Les élections libres sont la base de la démocratie.|B2
+N|das|Gesetz|-e|la loi|||Das neue Gesetz tritt nächstes Jahr in Kraft.|La nouvelle loi entre en vigueur l'an prochain.|B2
+N|das|Recht|-e|le droit|||Jeder hat das Recht auf Bildung.|Chacun a droit à l'éducation.|B2
+N|die|Pflicht|-en|le devoir, l'obligation|||Es ist unsere Pflicht, zu helfen.|C'est notre devoir d'aider.|B2
+N|die|Partei|-en|le parti|||Welche Partei hast du gewählt?|Pour quel parti as-tu voté ?|B2
+N|der|Politiker|-|l'homme politique|||Viele Politiker versprechen zu viel.|Beaucoup de politiciens promettent trop.|B2
+N|die|Gleichberechtigung|null|l'égalité des droits|||Die Gleichberechtigung von Mann und Frau ist noch nicht erreicht.|L'égalité entre hommes et femmes n'est pas encore atteinte.|B2
+N|die|Integration|null|l'intégration|||Sprache ist der Schlüssel zur Integration.|La langue est la clé de l'intégration.|B2
+N|die|Migration|null|la migration|||Migration ist ein wichtiges politisches Thema.|La migration est un thème politique important.|B2
+N|die|Armut|null|la pauvreté|||Armut betrifft auch viele Kinder.|La pauvreté touche aussi beaucoup d'enfants.|B2
+N|der|Wohlstand|null|la prospérité|||Der Wohlstand ist ungleich verteilt.|La prospérité est inégalement répartie.|B2
+N|die|Ungleichheit|-en|l'inégalité|||Die soziale Ungleichheit nimmt zu.|Les inégalités sociales augmentent.|B2
+N|die|Bildung|null|l'éducation, la formation|||Bildung sollte kostenlos sein.|L'éducation devrait être gratuite.|B2
+N|die|Gewalt|null|la violence|||Gewalt ist keine Lösung.|La violence n'est pas une solution.|B2
+N|die|Sicherheit|-en|la sécurité|||Die Sicherheit der Bürger hat Vorrang.|La sécurité des citoyens est prioritaire.|B2
+N|die|Freiheit|-en|la liberté|||Die Meinungsfreiheit ist ein Grundrecht.|La liberté d'expression est un droit fondamental.|B2
+N|die|Würde|null|la dignité|||Die Würde des Menschen ist unantastbar.|La dignité humaine est inviolable.|B2
+N|die|Generation|-en|la génération|||Die junge Generation denkt anders.|La jeune génération pense différemment.|B2
+N|die|Rente|-n|la retraite (pension)|||Die Rente reicht oft nicht zum Leben.|La retraite ne suffit souvent pas pour vivre.|B2
+N|das|Vorurteil|-e|le préjugé|||Wir müssen gegen Vorurteile kämpfen.|Nous devons lutter contre les préjugés.|B2
+N|die|Toleranz|null|la tolérance|||Toleranz ist die Basis des Zusammenlebens.|La tolérance est la base du vivre-ensemble.|B2
+N|das|Ehrenamt|¨-er|le bénévolat|||Sie arbeitet im Ehrenamt bei der Tafel.|Elle est bénévole à la banque alimentaire.|B2
+N|der|Verein|-e|l'association, le club|||Er ist Mitglied in einem Sportverein.|Il est membre d'un club de sport.|B2
+N|die|Wirtschaft|null|l'économie|||Die Wirtschaft wächst nur langsam.|L'économie ne croît que lentement.|B2
+N|die|Inflation|null|l'inflation|||Die Inflation macht das Leben teurer.|L'inflation rend la vie plus chère.|B2
+N|die|Krise|-n|la crise|||Viele Familien leiden unter der Krise.|Beaucoup de familles souffrent de la crise.|B2
+N|die|Abstimmung|-en|le vote, le scrutin|||Die Abstimmung findet am Sonntag statt.|Le vote a lieu dimanche.|B2
+N|die|Mehrheit|-en|la majorité|||Die Mehrheit ist gegen das Projekt.|La majorité est contre le projet.|B2
+N|die|Minderheit|-en|la minorité|||Auch Minderheiten haben Rechte.|Les minorités ont aussi des droits.|B2
+N|die|Forderung|-en|la revendication, l'exigence|||Die Forderungen der Demonstranten sind klar.|Les revendications des manifestants sont claires.|B2
+N|die|Demonstration|-en|la manifestation|||Tausende nahmen an der Demonstration teil.|Des milliers de personnes ont participé à la manifestation.|B2
+N|der|Kompromiss|-e|le compromis||einen ~ finden|Am Ende haben wir einen Kompromiss gefunden.|Finalement, nous avons trouvé un compromis.|B2
+N|der|Konflikt|-e|le conflit|||Der Konflikt dauert schon Jahre.|Le conflit dure depuis des années.|B2
+V|null|wählen|null|voter ; choisir|wählt, wählte, hat gewählt||Wen wirst du bei der nächsten Wahl wählen?|Pour qui vas-tu voter aux prochaines élections ?|B2
+V|null|regieren|null|gouverner|regiert, regierte, hat regiert||Die Partei regiert seit acht Jahren.|Le parti gouverne depuis huit ans.|B2
+V|null|abschaffen|null|abolir, supprimer|schafft ab, schaffte ab, hat abgeschafft||Die Gebühren wurden abgeschafft.|Les frais ont été supprimés.|B2
+V|null|einführen|null|introduire, instaurer|führt ein, führte ein, hat eingeführt||Die Stadt will eine neue Steuer einführen.|La ville veut instaurer une nouvelle taxe.|B2
+V|null|verbieten|null|interdire|verbietet, verbot, hat verboten||Rauchen ist hier verboten.|Il est interdit de fumer ici.|B2
+V|null|erlauben|null|permettre, autoriser|erlaubt, erlaubte, hat erlaubt||Erlauben Sie mir eine Frage?|Vous me permettez une question ?|B2
+V|null|unterstützen|null|soutenir|unterstützt, unterstützte, hat unterstützt||Wir unterstützen das Projekt finanziell.|Nous soutenons financièrement le projet.|B2
+V|null|sich engagieren|null|s'engager|engagiert sich, engagierte sich, hat sich engagiert|sich für + Akk ~|Sie engagiert sich für Flüchtlinge.|Elle s'engage pour les réfugiés.|B2
+V|null|benachteiligen|null|désavantager, discriminer|benachteiligt, benachteiligte, hat benachteiligt||Frauen werden oft beim Gehalt benachteiligt.|Les femmes sont souvent désavantagées pour le salaire.|B2
+V|null|sich ändern|null|changer, évoluer|ändert sich, änderte sich, hat sich geändert||Die Gesellschaft ändert sich schnell.|La société change vite.|B2
+V|null|steigen|null|augmenter, monter|steigt, stieg, ist gestiegen||Die Preise sind stark gestiegen.|Les prix ont fortement augmenté.|B2
+V|null|sinken|null|baisser, diminuer|sinkt, sank, ist gesunken||Die Zahl der Unfälle ist gesunken.|Le nombre d'accidents a baissé.|B2
+V|null|wachsen|null|croître, grandir|wächst, wuchs, ist gewachsen||Die Stadt wächst jedes Jahr.|La ville grandit chaque année.|B2
+V|null|sich verschlechtern|null|se dégrader|verschlechtert sich, verschlechterte sich, hat sich verschlechtert||Die Situation hat sich verschlechtert.|La situation s'est dégradée.|B2
+V|null|sich verbessern|null|s'améliorer|verbessert sich, verbesserte sich, hat sich verbessert||Mein Deutsch hat sich deutlich verbessert.|Mon allemand s'est nettement amélioré.|B2
+A|null|gerecht|null|juste, équitable|||Das ist nicht gerecht!|Ce n'est pas juste !|B2
+A|null|ungerecht|null|injuste|||Viele finden die Reform ungerecht.|Beaucoup trouvent la réforme injuste.|B2
+A|null|sozial|null|social|||Soziale Probleme müssen gelöst werden.|Les problèmes sociaux doivent être résolus.|B2
+A|null|wirtschaftlich|null|économique|||Die wirtschaftliche Lage ist schwierig.|La situation économique est difficile.|B2
+A|null|gesellschaftlich|null|sociétal|||Das ist ein gesellschaftliches Problem.|C'est un problème de société.|B2
+A|null|demokratisch|null|démocratique|||Die Wahl war frei und demokratisch.|L'élection était libre et démocratique.|B2
+A|null|zahlreich|null|nombreux|||Zahlreiche Bürger haben protestiert.|De nombreux citoyens ont protesté.|B2
+A|null|vielfältig|null|varié, divers|||Berlin ist eine vielfältige Stadt.|Berlin est une ville variée.|B2
+A|null|benachteiligt|null|défavorisé|||Benachteiligte Kinder brauchen mehr Unterstützung.|Les enfants défavorisés ont besoin de plus de soutien.|B2
