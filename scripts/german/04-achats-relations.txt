@@ -1,0 +1,96 @@
+# theme: achats
+N|das|Angebot|-e|l'offre, la promotion||im ~|Butter ist diese Woche im Angebot.|Le beurre est en promotion cette semaine.
+N|die|Rechnung|-en|la facture, l'addition|||Die Rechnung, bitte!|L'addition, s'il vous plaît !
+N|der|Kassenbon|-s|le ticket de caisse|||Bitte heben Sie den Kassenbon auf.|Veuillez conserver le ticket de caisse.
+N|die|Quittung|-en|le reçu|||Kann ich eine Quittung bekommen?|Puis-je avoir un reçu ?
+N|der|Umtausch|null|l'échange (d'un article)|||Ein Umtausch ist nur mit Kassenbon möglich.|Un échange n'est possible qu'avec le ticket.
+N|die|Reklamation|-en|la réclamation|||Ich habe eine Reklamation wegen eines defekten Geräts.|J'ai une réclamation pour un appareil défectueux.
+N|die|Garantie|-n|la garantie|||Das Handy hat zwei Jahre Garantie.|Le portable a deux ans de garantie.
+N|die|Lieferung|-en|la livraison|||Die Lieferung dauert drei bis fünf Werktage.|La livraison prend trois à cinq jours ouvrés.
+N|die|Bestellung|-en|la commande|||Meine Bestellung ist noch nicht angekommen.|Ma commande n'est pas encore arrivée.
+N|der|Rabatt|-e|la remise, la réduction|||Studenten bekommen zehn Prozent Rabatt.|Les étudiants ont dix pour cent de réduction.
+N|die|Ware|-n|la marchandise|||Die Ware wird morgen geliefert.|La marchandise sera livrée demain.
+N|die|Marke|-n|la marque|||Welche Marke ist am besten?|Quelle marque est la meilleure ?
+N|die|Qualität|-en|la qualité|||Die Qualität ist ihren Preis wert.|La qualité vaut son prix.
+N|die|Größe|-n|la taille|||Haben Sie die Jacke eine Größe größer?|Avez-vous la veste une taille au-dessus ?
+N|die|Umkleidekabine|-n|la cabine d'essayage|||Die Umkleidekabinen sind hinten links.|Les cabines d'essayage sont au fond à gauche.
+N|das|Bargeld|null|l'argent liquide|||Haben Sie Bargeld dabei?|Avez-vous du liquide sur vous ?
+N|die|Kreditkarte|-n|la carte de crédit|||Kann ich mit Kreditkarte bezahlen?|Puis-je payer par carte de crédit ?
+N|die|Ausgabe|-n|la dépense|||Unsere Ausgaben sind diesen Monat gestiegen.|Nos dépenses ont augmenté ce mois-ci.
+N|die|Ersparnisse|null|les économies (argent)|||Für das Auto haben wir unsere Ersparnisse benutzt.|Nous avons utilisé nos économies pour la voiture.
+N|das|Schnäppchen|-|la bonne affaire|||Die Schuhe waren ein echtes Schnäppchen.|Les chaussures étaient une vraie bonne affaire.
+N|der|Flohmarkt|¨-e|le marché aux puces|||Am Sonntag gehen wir auf den Flohmarkt.|Dimanche, nous allons au marché aux puces.
+N|die|Öffnungszeiten|null|les horaires d'ouverture|||Wie sind die Öffnungszeiten am Samstag?|Quels sont les horaires d'ouverture le samedi ?
+V|null|bestellen|null|commander|bestellt, bestellte, hat bestellt||Ich habe die Bücher online bestellt.|J'ai commandé les livres en ligne.
+V|null|liefern|null|livrer|liefert, lieferte, hat geliefert||Wann wird das Sofa geliefert?|Quand le canapé sera-t-il livré ?
+V|null|umtauschen|null|échanger (un article)|tauscht um, tauschte um, hat umgetauscht||Kann ich das Hemd umtauschen?|Puis-je échanger la chemise ?
+V|null|zurückgeben|null|rendre, retourner|gibt zurück, gab zurück, hat zurückgegeben||Ich möchte diese Hose zurückgeben.|Je voudrais rendre ce pantalon.
+V|null|reklamieren|null|faire une réclamation|reklamiert, reklamierte, hat reklamiert||Ich möchte die kaputte Lampe reklamieren.|Je voudrais faire une réclamation pour la lampe cassée.
+V|null|anprobieren|null|essayer (un vêtement)|probiert an, probierte an, hat anprobiert||Darf ich die Schuhe anprobieren?|Puis-je essayer les chaussures ?
+V|null|sparen|null|économiser|spart, sparte, hat gespart|auf / für + Akk ~|Wir sparen auf ein neues Auto.|Nous économisons pour une nouvelle voiture.
+V|null|ausgeben|null|dépenser|gibt aus, gab aus, hat ausgegeben|Geld für + Akk ~|Er gibt viel Geld für Kleidung aus.|Il dépense beaucoup d'argent en vêtements.
+V|null|sich leisten|null|s'offrir, se permettre|leistet sich, leistete sich, hat sich geleistet||Das kann ich mir im Moment nicht leisten.|Je ne peux pas me le permettre en ce moment.
+V|null|kosten|null|coûter|kostet, kostete, hat gekostet||Wie viel kostet das?|Combien ça coûte ?
+V|null|vergleichen|null|comparer|vergleicht, verglich, hat verglichen||Vor dem Kauf vergleiche ich immer die Preise.|Avant d'acheter, je compare toujours les prix.
+V|null|sich lohnen|null|valoir la peine|lohnt sich, lohnte sich, hat sich gelohnt||Es lohnt sich, früh zu buchen.|Ça vaut la peine de réserver tôt.
+V|null|abheben|null|retirer (de l'argent)|hebt ab, hob ab, hat abgehoben||Ich muss noch Geld abheben.|Je dois encore retirer de l'argent.
+V|null|leihen|null|prêter ; emprunter|leiht, lieh, hat geliehen|sich etw. ~|Kannst du mir zehn Euro leihen?|Peux-tu me prêter dix euros ?
+A|null|günstig|null|avantageux, bon marché|||Im Internet ist es oft günstiger.|Sur Internet, c'est souvent moins cher.
+A|null|teuer|null|cher|||Das Restaurant ist gut, aber teuer.|Le restaurant est bon, mais cher.
+A|null|reduziert|null|soldé, réduit|||Alle Winterjacken sind reduziert.|Toutes les vestes d'hiver sont soldées.
+A|null|defekt|null|défectueux|||Das Gerät war schon beim Kauf defekt.|L'appareil était déjà défectueux à l'achat.
+A|null|ausverkauft|null|épuisé, vendu|||Die Konzertkarten sind ausverkauft.|Les billets du concert sont épuisés.
+A|null|erhältlich|null|disponible (à la vente)|||Das Buch ist in jeder Buchhandlung erhältlich.|Le livre est disponible dans toutes les librairies.
+A|null|verschuldet|null|endetté|||Nach dem Hauskauf waren sie hoch verschuldet.|Après l'achat de la maison, ils étaient très endettés.
+O|null|es geht um|null|il s'agit de|||Es geht um Ihre Bestellung vom Montag.|Il s'agit de votre commande de lundi.
+O|null|im Voraus|null|à l'avance|||Die Miete muss im Voraus bezahlt werden.|Le loyer doit être payé d'avance.
+# theme: relations
+N|die|Beziehung|-en|la relation|||Sie haben eine sehr enge Beziehung.|Ils ont une relation très proche.
+N|die|Freundschaft|-en|l'amitié|||Unsere Freundschaft besteht seit der Schulzeit.|Notre amitié remonte à l'école.
+N|der|Bekannte|-n|la connaissance (personne)|||Ein Bekannter hat mir die Wohnung empfohlen.|Une connaissance m'a recommandé l'appartement.
+N|der|Partner|-|le partenaire, le conjoint|||Mein Partner und ich leben seit drei Jahren zusammen.|Mon compagnon et moi vivons ensemble depuis trois ans.
+N|die|Ehe|-n|le mariage (union)|||Ihre Ehe hat dreißig Jahre gehalten.|Leur mariage a duré trente ans.
+N|die|Hochzeit|-en|le mariage (fête)|||Wir sind zu einer Hochzeit eingeladen.|Nous sommes invités à un mariage.
+N|die|Trennung|-en|la séparation|||Nach der Trennung ist sie umgezogen.|Après la séparation, elle a déménagé.
+N|das|Vertrauen|null|la confiance|||Vertrauen ist die Basis jeder Beziehung.|La confiance est la base de toute relation.
+N|der|Streit|-s|la dispute|||Sie hatten Streit wegen des Geldes.|Ils se sont disputés à cause de l'argent.
+N|das|Missverständnis|-se|le malentendu|||Das war nur ein Missverständnis.|Ce n'était qu'un malentendu.
+N|das|Gefühl|-e|le sentiment|||Ich habe ein gutes Gefühl bei der Sache.|J'ai un bon pressentiment.
+N|die|Sorge|-n|le souci, l'inquiétude||sich Sorgen machen|Mach dir keine Sorgen!|Ne t'inquiète pas !
+N|die|Enttäuschung|-en|la déception|||Das Ergebnis war eine große Enttäuschung.|Le résultat a été une grosse déception.
+N|die|Geduld|null|la patience|||Mit Kindern braucht man viel Geduld.|Avec les enfants, il faut beaucoup de patience.
+N|die|Eifersucht|null|la jalousie|||Eifersucht kann eine Beziehung zerstören.|La jalousie peut détruire une relation.
+N|der|Respekt|null|le respect|||Wir behandeln uns mit Respekt.|Nous nous traitons avec respect.
+N|die|Einladung|-en|l'invitation|||Vielen Dank für die Einladung!|Merci beaucoup pour l'invitation !
+V|null|sich verlieben|null|tomber amoureux|verliebt sich, verliebte sich, hat sich verliebt|sich in + Akk ~|Er hat sich in seine Kollegin verliebt.|Il est tombé amoureux de sa collègue.
+V|null|sich trennen|null|se séparer|trennt sich, trennte sich, hat sich getrennt|sich von + Dat ~|Sie hat sich von ihrem Freund getrennt.|Elle s'est séparée de son copain.
+V|null|heiraten|null|se marier, épouser|heiratet, heiratete, hat geheiratet||Wir heiraten im Juni.|Nous nous marions en juin.
+V|null|sich streiten|null|se disputer|streitet sich, stritt sich, hat sich gestritten|sich mit jdm. über + Akk ~|Die Kinder streiten sich ständig.|Les enfants se disputent sans arrêt.
+V|null|sich versöhnen|null|se réconcilier|versöhnt sich, versöhnte sich, hat sich versöhnt||Nach dem Streit haben sie sich versöhnt.|Après la dispute, ils se sont réconciliés.
+V|null|sich entschuldigen|null|s'excuser|entschuldigt sich, entschuldigte sich, hat sich entschuldigt|sich bei jdm. für + Akk ~|Ich möchte mich bei dir entschuldigen.|Je voudrais m'excuser auprès de toi.
+V|null|vertrauen|null|faire confiance|vertraut, vertraute, hat vertraut|+ Dat ~|Ich vertraue dir völlig.|Je te fais entièrement confiance.
+V|null|vermissen|null|manquer (qqn à qqn)|vermisst, vermisste, hat vermisst||Ich vermisse dich.|Tu me manques.
+V|null|sich freuen auf|null|se réjouir de (à venir)|freut sich, freute sich, hat sich gefreut|sich auf + Akk ~|Ich freue mich auf das Wochenende.|J'ai hâte d'être au week-end.
+V|null|sich freuen über|null|se réjouir de (présent, passé)|freut sich, freute sich, hat sich gefreut|sich über + Akk ~|Sie hat sich über das Geschenk gefreut.|Elle a été contente du cadeau.
+V|null|sich ärgern|null|s'énerver, être contrarié|ärgert sich, ärgerte sich, hat sich geärgert|sich über + Akk ~|Ich ärgere mich über den Lärm.|Le bruit m'agace.
+V|null|sich Sorgen machen|null|s'inquiéter|macht sich Sorgen, machte sich Sorgen, hat sich Sorgen gemacht|sich um + Akk ~|Meine Mutter macht sich immer Sorgen um mich.|Ma mère s'inquiète toujours pour moi.
+V|null|enttäuschen|null|décevoir|enttäuscht, enttäuschte, hat enttäuscht||Du hast mich sehr enttäuscht.|Tu m'as beaucoup déçu.
+V|null|sich verstehen|null|bien s'entendre|versteht sich, verstand sich, hat sich verstanden|sich gut mit jdm. ~|Ich verstehe mich gut mit meiner Schwester.|Je m'entends bien avec ma sœur.
+V|null|kennenlernen|null|faire la connaissance de|lernt kennen, lernte kennen, hat kennengelernt||Wo habt ihr euch kennengelernt?|Où vous êtes-vous rencontrés ?
+V|null|einladen|null|inviter|lädt ein, lud ein, hat eingeladen|jdn. zu + Dat ~|Ich lade dich zum Essen ein.|Je t'invite à manger.
+V|null|trösten|null|consoler|tröstet, tröstete, hat getröstet||Sie hat ihre traurige Freundin getröstet.|Elle a consolé son amie triste.
+V|null|sich verlassen|null|compter sur|verlässt sich, verließ sich, hat sich verlassen|sich auf + Akk ~|Auf ihn kann man sich verlassen.|On peut compter sur lui.
+A|null|eifersüchtig|null|jaloux|||Er ist schnell eifersüchtig.|Il est vite jaloux.
+A|null|verliebt|null|amoureux|||Die beiden sind total verliebt.|Ils sont complètement amoureux.
+A|null|enttäuscht|null|déçu|||Ich bin enttäuscht von seiner Reaktion.|Je suis déçu par sa réaction.
+A|null|stolz|null|fier|||Wir sind sehr stolz auf dich.|Nous sommes très fiers de toi.
+A|null|neidisch|null|envieux|||Sei nicht neidisch auf deinen Bruder.|Ne sois pas envieux de ton frère.
+A|null|zufrieden|null|satisfait, content|||Bist du mit deinem neuen Job zufrieden?|Es-tu satisfait de ton nouveau travail ?
+A|null|einsam|null|seul, solitaire|||Seit dem Umzug fühlt sie sich einsam.|Depuis le déménagement, elle se sent seule.
+A|null|ehrlich|null|honnête, franc|||Sei bitte ehrlich zu mir.|Sois honnête avec moi, s'il te plaît.
+A|null|hilfsbereit|null|serviable|||Unsere Nachbarin ist immer hilfsbereit.|Notre voisine est toujours serviable.
+A|null|verheiratet|null|marié|||Sind Sie verheiratet?|Êtes-vous marié ?
+A|null|geschieden|null|divorcé|||Seine Eltern sind seit zehn Jahren geschieden.|Ses parents sont divorcés depuis dix ans.
+A|null|beleidigt|null|vexé|||Warum bist du so beleidigt?|Pourquoi es-tu si vexé ?
+O|null|auf jeden Fall|null|en tout cas, absolument|||Wir kommen auf jeden Fall zu deiner Party.|Nous viendrons absolument à ta fête.
+O|null|Lust haben|null|avoir envie|||Hast du Lust, ins Kino zu gehen?|Tu as envie d'aller au cinéma ?

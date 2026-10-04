@@ -1,0 +1,97 @@
+# theme: administration
+N|die|Behörde|-n|l'administration, l'autorité|||Für den Antrag musst du zur Behörde gehen.|Pour la demande, tu dois aller à l'administration.
+N|das|Amt|¨-er|l'office, le service public|||Das Amt ist nur vormittags geöffnet.|Le service n'est ouvert que le matin.
+N|der|Antrag|¨-e|la demande (officielle)||einen ~ stellen|Ich habe einen Antrag auf Kindergeld gestellt.|J'ai fait une demande d'allocations familiales.
+N|das|Formular|-e|le formulaire||ein ~ ausfüllen|Bitte füllen Sie dieses Formular aus.|Veuillez remplir ce formulaire.
+N|die|Unterschrift|-en|la signature|||Hier fehlt noch Ihre Unterschrift.|Il manque encore votre signature ici.
+N|der|Ausweis|-e|la carte d'identité|||Kann ich bitte Ihren Ausweis sehen?|Puis-je voir votre carte d'identité, s'il vous plaît ?
+N|der|Reisepass|¨-e|le passeport|||Mein Reisepass läuft nächsten Monat ab.|Mon passeport expire le mois prochain.
+N|die|Anmeldung|-en|l'inscription, la déclaration de domicile|||Die Anmeldung beim Bürgeramt ist Pflicht.|La déclaration de domicile à la mairie est obligatoire.
+N|die|Aufenthaltserlaubnis|-se|le titre de séjour|||Sie hat ihre Aufenthaltserlaubnis verlängert.|Elle a prolongé son titre de séjour.
+N|die|Bescheinigung|-en|l'attestation, le certificat|||Ich brauche eine Bescheinigung vom Arbeitgeber.|J'ai besoin d'une attestation de l'employeur.
+N|die|Gebühr|-en|les frais, la taxe|||Die Gebühr beträgt 30 Euro.|Les frais s'élèvent à 30 euros.
+N|die|Unterlagen|null|les documents, le dossier|||Haben Sie alle Unterlagen dabei?|Avez-vous tous les documents ?
+N|die|Steuer|-n|l'impôt, la taxe|||Wie viel Steuern zahlst du?|Combien d'impôts paies-tu ?
+N|die|Steuererklärung|-en|la déclaration d'impôts|||Ich mache meine Steuererklärung immer im Mai.|Je fais toujours ma déclaration d'impôts en mai.
+N|die|Versicherung|-en|l'assurance|||Die Versicherung zahlt den Schaden.|L'assurance paie les dégâts.
+N|der|Beitrag|¨-e|la cotisation ; la contribution|||Der Beitrag wird monatlich abgebucht.|La cotisation est prélevée tous les mois.
+N|die|Staatsangehörigkeit|-en|la nationalité|||Welche Staatsangehörigkeit haben Sie?|Quelle est votre nationalité ?
+N|der|Wohnsitz|-e|le domicile|||Bitte geben Sie Ihren Wohnsitz an.|Veuillez indiquer votre domicile.
+N|die|Wartenummer|-n|le numéro d'attente|||Ziehen Sie bitte eine Wartenummer.|Prenez un numéro d'attente, s'il vous plaît.
+N|die|Bestätigung|-en|la confirmation|||Sie bekommen die Bestätigung per E-Mail.|Vous recevrez la confirmation par e-mail.
+N|der|Bescheid|-e|la notification, la décision officielle|||Den Bescheid vom Finanzamt habe ich noch nicht.|Je n'ai pas encore l'avis du fisc.
+N|die|Vorschrift|-en|la règle, la prescription|||Das ist leider Vorschrift.|C'est malheureusement le règlement.
+N|die|Voraussetzung|-en|la condition (préalable)|||Gute Deutschkenntnisse sind eine Voraussetzung.|De bonnes connaissances en allemand sont une condition.
+N|das|Konto|Konten|le compte (bancaire)||ein ~ eröffnen|Ich möchte ein Konto eröffnen.|Je voudrais ouvrir un compte.
+N|der|Nachweis|-e|la preuve, le justificatif|||Als Nachweis reicht eine Kopie des Vertrags.|Une copie du contrat suffit comme justificatif.
+V|null|beantragen|null|demander (officiellement)|beantragt, beantragte, hat beantragt||Ich habe ein Visum beantragt.|J'ai demandé un visa.
+V|null|ausfüllen|null|remplir (un formulaire)|füllt aus, füllte aus, hat ausgefüllt||Füllen Sie bitte alle Felder aus.|Remplissez tous les champs, s'il vous plaît.
+V|null|unterschreiben|null|signer|unterschreibt, unterschrieb, hat unterschrieben||Unterschreiben Sie bitte hier unten.|Signez ici en bas, s'il vous plaît.
+V|null|einreichen|null|déposer, remettre (un dossier)|reicht ein, reichte ein, hat eingereicht||Die Unterlagen müssen bis Ende Mai eingereicht werden.|Les documents doivent être déposés avant fin mai.
+V|null|sich anmelden|null|s'inscrire, déclarer son domicile|meldet sich an, meldete sich an, hat sich angemeldet|sich für + Akk ~|Ich habe mich für den Kurs angemeldet.|Je me suis inscrit au cours.
+V|null|sich abmelden|null|se désinscrire|meldet sich ab, meldete sich ab, hat sich abgemeldet||Vor dem Umzug musst du dich abmelden.|Avant le déménagement, tu dois te désinscrire.
+V|null|verlängern|null|prolonger, renouveler|verlängert, verlängerte, hat verlängert||Ich muss meinen Pass verlängern lassen.|Je dois faire renouveler mon passeport.
+V|null|ablaufen|null|expirer|läuft ab, lief ab, ist abgelaufen||Mein Visum läuft im Juli ab.|Mon visa expire en juillet.
+V|null|genehmigen|null|autoriser, approuver|genehmigt, genehmigte, hat genehmigt||Der Antrag wurde genehmigt.|La demande a été approuvée.
+V|null|ablehnen|null|refuser|lehnt ab, lehnte ab, hat abgelehnt||Leider wurde mein Antrag abgelehnt.|Malheureusement, ma demande a été refusée.
+V|null|widersprechen|null|contester, contredire|widerspricht, widersprach, hat widersprochen|+ Dat ~|Gegen den Bescheid kann man widersprechen.|On peut contester cette décision.
+V|null|nachweisen|null|prouver, justifier|weist nach, wies nach, hat nachgewiesen||Sie müssen Ihr Einkommen nachweisen.|Vous devez justifier vos revenus.
+V|null|vorlegen|null|présenter (un document)|legt vor, legte vor, hat vorgelegt||Bitte legen Sie Ihren Ausweis vor.|Veuillez présenter votre pièce d'identité.
+V|null|ausstellen|null|délivrer (un document)|stellt aus, stellte aus, hat ausgestellt||Der Pass wurde in Paris ausgestellt.|Le passeport a été délivré à Paris.
+V|null|überweisen|null|virer (de l'argent)|überweist, überwies, hat überwiesen||Ich überweise dir das Geld morgen.|Je te vire l'argent demain.
+V|null|abbuchen|null|prélever|bucht ab, buchte ab, hat abgebucht||Die Miete wird am Monatsanfang abgebucht.|Le loyer est prélevé en début de mois.
+V|null|zustehen|null|revenir de droit à|steht zu, stand zu, hat zugestanden|jdm. ~|Dir steht mehr Urlaub zu.|Tu as droit à plus de congés.
+A|null|gültig|null|valide|||Ihr Ausweis ist nicht mehr gültig.|Votre carte d'identité n'est plus valide.
+A|null|zuständig|null|compétent, responsable|||Welches Amt ist dafür zuständig?|Quel service est compétent pour cela ?
+A|null|erforderlich|null|nécessaire, requis|||Ein Termin ist erforderlich.|Un rendez-vous est nécessaire.
+A|null|vollständig|null|complet|||Die Unterlagen sind nicht vollständig.|Le dossier n'est pas complet.
+A|null|verpflichtet|null|obligé, tenu de|||Sie sind verpflichtet, sich anzumelden.|Vous êtes tenu de déclarer votre domicile.
+A|null|persönlich|null|en personne|||Sie müssen persönlich erscheinen.|Vous devez vous présenter en personne.
+A|null|kostenlos|null|gratuit|||Die Beratung ist kostenlos.|Le conseil est gratuit.
+O|null|in Kraft treten|null|entrer en vigueur|||Das Gesetz tritt im Januar in Kraft.|La loi entre en vigueur en janvier.
+# theme: voyages
+N|die|Reise|-n|le voyage|||Die Reise nach Wien hat sich gelohnt.|Le voyage à Vienne en valait la peine.
+N|die|Unterkunft|¨-e|l'hébergement|||Wir suchen noch eine günstige Unterkunft.|Nous cherchons encore un hébergement pas cher.
+N|die|Buchung|-en|la réservation|||Die Buchung ist leider nicht mehr kostenlos stornierbar.|La réservation n'est malheureusement plus annulable gratuitement.
+N|die|Abfahrt|-en|le départ (véhicule)|||Die Abfahrt ist um 7:15 Uhr.|Le départ est à 7 h 15.
+N|die|Ankunft|¨-e|l'arrivée|||Bei der Ankunft rufe ich dich an.|Je t'appelle à l'arrivée.
+N|der|Anschluss|¨-e|la correspondance|||Ich habe meinen Anschluss in Köln verpasst.|J'ai raté ma correspondance à Cologne.
+N|das|Gleis|-e|la voie, le quai|||Der Zug fährt heute von Gleis 5 ab.|Le train part aujourd'hui de la voie 5.
+N|die|Fahrkarte|-n|le billet (transport)|||Die Fahrkarte kann man auch online kaufen.|On peut aussi acheter le billet en ligne.
+N|die|Verbindung|-en|la liaison, la connexion|||Gibt es eine direkte Verbindung nach Zürich?|Y a-t-il une liaison directe pour Zurich ?
+N|der|Stau|-s|l'embouteillage||im ~ stehen|Wir standen zwei Stunden im Stau.|Nous sommes restés deux heures dans les bouchons.
+N|die|Umleitung|-en|la déviation|||Wegen Bauarbeiten gibt es eine Umleitung.|À cause de travaux, il y a une déviation.
+N|die|Strecke|-n|le trajet, la ligne|||Auf dieser Strecke gibt es oft Verspätungen.|Sur cette ligne, il y a souvent des retards.
+N|der|Führerschein|-e|le permis de conduire||den ~ machen|Ich habe meinen Führerschein mit 18 gemacht.|J'ai passé mon permis à 18 ans.
+N|die|Tankstelle|-n|la station-service|||Wir müssen an der nächsten Tankstelle tanken.|Nous devons faire le plein à la prochaine station.
+N|das|Gepäck|null|les bagages|||Wie viel Gepäck darf ich mitnehmen?|Combien de bagages puis-je emporter ?
+N|die|Sehenswürdigkeit|-en|le site touristique, la curiosité|||Wir haben alle Sehenswürdigkeiten der Stadt besichtigt.|Nous avons visité tous les sites de la ville.
+N|die|Grenze|-n|la frontière|||An der Grenze gab es keine Kontrollen.|Il n'y avait pas de contrôles à la frontière.
+N|der|Aufenthalt|-e|le séjour|||Wir wünschen Ihnen einen angenehmen Aufenthalt.|Nous vous souhaitons un agréable séjour.
+N|die|Rundfahrt|-en|le circuit, la visite guidée (en véhicule)|||Wir haben eine Rundfahrt durch den Hafen gemacht.|Nous avons fait un tour du port.
+N|der|Flug|¨-e|le vol|||Der Flug wurde wegen Nebel gestrichen.|Le vol a été annulé à cause du brouillard.
+N|die|Fahrt|-en|le trajet (en véhicule)|||Gute Fahrt!|Bonne route !
+N|der|Fahrgast|¨-e|le passager|||Die Fahrgäste mussten aussteigen.|Les passagers ont dû descendre.
+V|null|buchen|null|réserver|bucht, buchte, hat gebucht||Ich habe ein Hotel am Meer gebucht.|J'ai réservé un hôtel au bord de la mer.
+V|null|stornieren|null|annuler (une réservation)|storniert, stornierte, hat storniert||Kann ich die Buchung noch stornieren?|Puis-je encore annuler la réservation ?
+V|null|umsteigen|null|changer (de train, etc.)|steigt um, stieg um, ist umgestiegen||In Frankfurt müssen Sie umsteigen.|À Francfort, vous devez changer.
+V|null|verpassen|null|rater, manquer|verpasst, verpasste, hat verpasst||Beeil dich, sonst verpassen wir den Zug!|Dépêche-toi, sinon on va rater le train !
+V|null|abfahren|null|partir (véhicule)|fährt ab, fuhr ab, ist abgefahren||Der Bus fährt in fünf Minuten ab.|Le bus part dans cinq minutes.
+V|null|ankommen|null|arriver|kommt an, kam an, ist angekommen||Wann kommt der Zug in Berlin an?|Quand le train arrive-t-il à Berlin ?
+V|null|tanken|null|faire le plein|tankt, tankte, hat getankt||Ich muss noch tanken.|Je dois encore faire le plein.
+V|null|besichtigen|null|visiter (un lieu)|besichtigt, besichtigte, hat besichtigt||Morgen besichtigen wir das Schloss.|Demain, nous visitons le château.
+V|null|sich verlaufen|null|se perdre (à pied)|verläuft sich, verlief sich, hat sich verlaufen||Ohne Karte habe ich mich verlaufen.|Sans carte, je me suis perdu.
+V|null|sich verfahren|null|se perdre (en voiture)|verfährt sich, verfuhr sich, hat sich verfahren||Wir haben uns in der Altstadt verfahren.|Nous nous sommes perdus en voiture dans la vieille ville.
+V|null|einchecken|null|faire l'enregistrement|checkt ein, checkte ein, hat eingecheckt||Wir können ab 15 Uhr einchecken.|Nous pouvons nous enregistrer à partir de 15 h.
+V|null|packen|null|faire (ses bagages)|packt, packte, hat gepackt|den Koffer ~|Hast du deinen Koffer schon gepackt?|As-tu déjà fait ta valise ?
+V|null|übernachten|null|passer la nuit|übernachtet, übernachtete, hat übernachtet||Wir übernachten in einer Jugendherberge.|Nous passons la nuit dans une auberge de jeunesse.
+V|null|sich erkundigen|null|se renseigner|erkundigt sich, erkundigte sich, hat sich erkundigt|sich nach + Dat ~|Ich erkundige mich nach den Abfahrtszeiten.|Je me renseigne sur les horaires de départ.
+A|null|ausgebucht|null|complet (réservations)|||Das Hotel ist leider ausgebucht.|L'hôtel est malheureusement complet.
+A|null|verspätet|null|en retard|||Der Flug ist um eine Stunde verspätet.|Le vol a une heure de retard.
+A|null|direkt|null|direct|||Gibt es einen direkten Zug?|Y a-t-il un train direct ?
+A|null|einfach|null|aller simple ; simple||einfache Fahrt|Einmal einfach nach Bonn, bitte.|Un aller simple pour Bonn, s'il vous plaît.
+A|null|unterwegs|null|en route, en déplacement|||Ich bin gerade unterwegs, ich rufe dich später an.|Je suis en route, je te rappelle plus tard.
+A|null|sehenswert|null|qui vaut le détour|||Die Altstadt ist wirklich sehenswert.|La vieille ville vaut vraiment le détour.
+A|null|überfüllt|null|bondé|||Der Zug war total überfüllt.|Le train était complètement bondé.
+O|null|hin und zurück|null|aller-retour|||Eine Fahrkarte hin und zurück, bitte.|Un billet aller-retour, s'il vous plaît.
+O|null|gute Reise|null|bon voyage|||Gute Reise und meldet euch, wenn ihr angekommen seid!|Bon voyage, et donnez des nouvelles à l'arrivée !

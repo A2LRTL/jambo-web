@@ -1,0 +1,102 @@
+# theme: travail
+N|die|Stelle|-n|le poste, l'emploi||sich auf eine ~ bewerben|Ich habe eine neue Stelle in München gefunden.|J'ai trouvé un nouveau poste à Munich.
+N|die|Bewerbung|-en|la candidature|||Ich schicke meine Bewerbung heute ab.|J'envoie ma candidature aujourd'hui.
+N|der|Lebenslauf|¨-e|le CV|||Dein Lebenslauf sollte nicht länger als zwei Seiten sein.|Ton CV ne devrait pas dépasser deux pages.
+N|das|Vorstellungsgespräch|-e|l'entretien d'embauche|||Morgen habe ich ein Vorstellungsgespräch.|Demain, j'ai un entretien d'embauche.
+N|der|Arbeitgeber|-|l'employeur|||Mein Arbeitgeber bezahlt das Jobticket.|Mon employeur paie l'abonnement de transport.
+N|der|Arbeitnehmer|-|le salarié|||Arbeitnehmer haben ein Recht auf Urlaub.|Les salariés ont droit à des congés.
+N|der|Kollege|-n|le collègue|||Meine Kollegen sind sehr nett.|Mes collègues sont très sympas.
+N|der|Vorgesetzte|-n|le supérieur hiérarchique|||Ich muss das mit meinem Vorgesetzten besprechen.|Je dois en parler avec mon supérieur.
+N|die|Abteilung|-en|le service, le département|||Sie arbeitet in der Marketingabteilung.|Elle travaille au service marketing.
+N|die|Besprechung|-en|la réunion|||Die Besprechung dauert bis elf Uhr.|La réunion dure jusqu'à onze heures.
+N|die|Aufgabe|-n|la tâche|||Das gehört nicht zu meinen Aufgaben.|Ça ne fait pas partie de mes tâches.
+N|die|Erfahrung|-en|l'expérience||~ sammeln|Sie hat viel Erfahrung im Verkauf.|Elle a beaucoup d'expérience dans la vente.
+N|das|Gehalt|¨-er|le salaire|||Wir haben über das Gehalt verhandelt.|Nous avons négocié le salaire.
+N|die|Überstunde|-n|l'heure supplémentaire||Überstunden machen|Diese Woche habe ich viele Überstunden gemacht.|Cette semaine, j'ai fait beaucoup d'heures sup.
+N|die|Kündigung|-en|le licenciement, la démission|||Er hat seine Kündigung eingereicht.|Il a remis sa démission.
+N|die|Ausbildung|-en|la formation (professionnelle)||eine ~ machen|Sie macht eine Ausbildung als Krankenpflegerin.|Elle fait une formation d'infirmière.
+N|die|Weiterbildung|-en|la formation continue|||Die Firma bietet viele Weiterbildungen an.|L'entreprise propose de nombreuses formations continues.
+N|das|Praktikum|Praktika|le stage||ein ~ machen|Ich mache ein Praktikum bei einer Bank.|Je fais un stage dans une banque.
+N|die|Frist|-en|le délai, l'échéance||eine ~ einhalten|Die Frist endet am Freitag.|Le délai expire vendredi.
+N|der|Vertrag|¨-e|le contrat|||Der Vertrag ist auf ein Jahr befristet.|Le contrat est à durée déterminée d'un an.
+N|die|Teilzeit|null|le temps partiel||in ~ arbeiten|Seit der Geburt arbeite ich in Teilzeit.|Depuis la naissance, je travaille à temps partiel.
+N|das|Homeoffice|null|le télétravail||im ~ arbeiten|Zweimal pro Woche arbeite ich im Homeoffice.|Deux fois par semaine, je télétravaille.
+N|die|Leistung|-en|la performance, le travail fourni|||Der Chef ist mit unserer Leistung zufrieden.|Le chef est satisfait de notre travail.
+N|der|Erfolg|-e|le succès||~ haben|Das Projekt war ein großer Erfolg.|Le projet a été un grand succès.
+N|die|Verantwortung|-en|la responsabilité||~ übernehmen|Sie trägt die Verantwortung für das Team.|Elle porte la responsabilité de l'équipe.
+V|null|sich bewerben|null|postuler|bewirbt sich, bewarb sich, hat sich beworben|sich um / auf + Akk ~|Ich bewerbe mich um die Stelle als Projektleiter.|Je postule au poste de chef de projet.
+V|null|einstellen|null|embaucher|stellt ein, stellte ein, hat eingestellt||Die Firma stellt zehn neue Mitarbeiter ein.|L'entreprise embauche dix nouveaux employés.
+V|null|entlassen|null|licencier|entlässt, entließ, hat entlassen||Wegen der Krise wurden viele entlassen.|À cause de la crise, beaucoup ont été licenciés.
+V|null|verdienen|null|gagner (de l'argent)|verdient, verdiente, hat verdient||Sie verdient gut, aber arbeitet viel.|Elle gagne bien, mais travaille beaucoup.
+V|null|verhandeln|null|négocier|verhandelt, verhandelte, hat verhandelt|über + Akk ~|Wir verhandeln noch über den Preis.|Nous négocions encore le prix.
+V|null|besprechen|null|discuter de, examiner|bespricht, besprach, hat besprochen||Lass uns das morgen in Ruhe besprechen.|Discutons-en tranquillement demain.
+V|null|leiten|null|diriger|leitet, leitete, hat geleitet||Sie leitet ein Team von zwölf Leuten.|Elle dirige une équipe de douze personnes.
+V|null|sich konzentrieren|null|se concentrer|konzentriert sich, konzentrierte sich, hat sich konzentriert|sich auf + Akk ~|Im Großraumbüro kann ich mich schlecht konzentrieren.|Dans l'open space, j'ai du mal à me concentrer.
+V|null|zuständig sein|null|être responsable de|ist zuständig, war zuständig, ist zuständig gewesen|für + Akk ~|Wer ist für die Rechnungen zuständig?|Qui s'occupe des factures ?
+V|null|einhalten|null|respecter (délai, règle)|hält ein, hielt ein, hat eingehalten||Wir müssen den Termin unbedingt einhalten.|Nous devons absolument respecter la date.
+V|null|übernehmen|null|prendre en charge, reprendre|übernimmt, übernahm, hat übernommen||Kannst du meine Schicht am Montag übernehmen?|Peux-tu prendre mon service lundi ?
+V|null|kündigen|null|démissionner|kündigt, kündigte, hat gekündigt||Er hat nach fünf Jahren gekündigt.|Il a démissionné après cinq ans.
+V|null|sich krankmelden|null|se déclarer malade|meldet sich krank, meldete sich krank, hat sich krankgemeldet||Ich muss mich heute leider krankmelden.|Je dois malheureusement me déclarer malade aujourd'hui.
+V|null|teilnehmen|null|participer|nimmt teil, nahm teil, hat teilgenommen|an + Dat ~|Ich nehme an einem Deutschkurs teil.|Je participe à un cours d'allemand.
+V|null|erreichen|null|atteindre ; joindre (qqn)|erreicht, erreichte, hat erreicht||Ich habe dich gestern nicht erreicht.|Je n'ai pas réussi à te joindre hier.
+A|null|befristet|null|à durée déterminée|||Ich habe nur einen befristeten Vertrag.|Je n'ai qu'un contrat à durée déterminée.
+A|null|selbstständig|null|indépendant, autonome|||Seit zwei Jahren bin ich selbstständig.|Je suis indépendant depuis deux ans.
+A|null|zuverlässig|null|fiable|||Er ist ein sehr zuverlässiger Mitarbeiter.|C'est un employé très fiable.
+A|null|erfahren|null|expérimenté|||Wir suchen einen erfahrenen Koch.|Nous cherchons un cuisinier expérimenté.
+A|null|arbeitslos|null|au chômage|||Nach der Schließung war er ein Jahr arbeitslos.|Après la fermeture, il a été au chômage pendant un an.
+A|null|stressig|null|stressant|||Die Zeit vor Weihnachten ist immer stressig.|La période avant Noël est toujours stressante.
+A|null|flexibel|null|flexible|||Meine Arbeitszeiten sind ziemlich flexibel.|Mes horaires sont assez flexibles.
+A|null|gleichzeitig|null|simultané, en même temps|||Ich kann nicht zwei Dinge gleichzeitig machen.|Je ne peux pas faire deux choses en même temps.
+O|null|in Rente gehen|null|partir à la retraite|||Mein Vater geht nächstes Jahr in Rente.|Mon père part à la retraite l'année prochaine.
+O|null|Bescheid sagen|null|prévenir, tenir au courant|||Sag mir bitte Bescheid, wenn du fertig bist.|Préviens-moi quand tu as fini, s'il te plaît.
+# theme: sante
+N|die|Gesundheit|null|la santé|||Gesundheit ist wichtiger als Geld.|La santé est plus importante que l'argent.
+N|die|Krankheit|-en|la maladie|||Er hat sich von seiner Krankheit gut erholt.|Il s'est bien remis de sa maladie.
+N|der|Schmerz|-en|la douleur|||Ich habe seit gestern starke Rückenschmerzen.|J'ai de fortes douleurs au dos depuis hier.
+N|die|Erkältung|-en|le rhume|||Ich habe mir eine Erkältung eingefangen.|J'ai attrapé un rhume.
+N|das|Fieber|null|la fièvre||~ haben|Das Kind hat hohes Fieber.|L'enfant a beaucoup de fièvre.
+N|die|Verletzung|-en|la blessure|||Die Verletzung ist zum Glück nicht schlimm.|Heureusement, la blessure n'est pas grave.
+N|die|Untersuchung|-en|l'examen (médical)|||Die Untersuchung hat nichts Schlimmes gezeigt.|L'examen n'a rien montré de grave.
+N|die|Behandlung|-en|le traitement|||Die Behandlung dauert etwa drei Wochen.|Le traitement dure environ trois semaines.
+N|das|Medikament|-e|le médicament||ein ~ einnehmen|Nehmen Sie das Medikament nach dem Essen.|Prenez le médicament après le repas.
+N|die|Nebenwirkung|-en|l'effet secondaire|||Hat das Medikament Nebenwirkungen?|Le médicament a-t-il des effets secondaires ?
+N|die|Apotheke|-n|la pharmacie|||Die Apotheke hat am Sonntag Notdienst.|La pharmacie est de garde le dimanche.
+N|die|Krankenkasse|-n|la caisse d'assurance maladie|||Zahlt die Krankenkasse die Brille?|La caisse maladie rembourse-t-elle les lunettes ?
+N|die|Krankmeldung|-en|l'arrêt maladie (certificat)|||Ich brauche eine Krankmeldung für meinen Arbeitgeber.|J'ai besoin d'un arrêt maladie pour mon employeur.
+N|die|Praxis|Praxen|le cabinet (médical)|||Die Praxis ist mittwochs nachmittags geschlossen.|Le cabinet est fermé le mercredi après-midi.
+N|die|Sprechstunde|-n|les heures de consultation|||Die Sprechstunde beginnt um acht Uhr.|Les consultations commencent à huit heures.
+N|der|Notfall|¨-e|l'urgence|||Im Notfall wählen Sie die 112.|En cas d'urgence, composez le 112.
+N|die|Notaufnahme|-n|les urgences (hôpital)|||Wir mussten nachts in die Notaufnahme.|Nous avons dû aller aux urgences la nuit.
+N|die|Allergie|-n|l'allergie|||Ich habe eine Allergie gegen Nüsse.|J'ai une allergie aux noix.
+N|die|Ernährung|null|l'alimentation|||Eine gesunde Ernährung ist wichtig.|Une alimentation saine est importante.
+N|die|Bewegung|-en|le mouvement, l'activité physique|||Du brauchst mehr Bewegung an der frischen Luft.|Tu as besoin de plus d'exercice au grand air.
+N|der|Zustand|¨-e|l'état|||Sein Zustand hat sich verbessert.|Son état s'est amélioré.
+N|die|Operation|-en|l'opération (chirurgicale)|||Die Operation ist gut verlaufen.|L'opération s'est bien passée.
+N|die|Überweisung|-en|la lettre d'orientation ; le virement|||Für den Facharzt brauchen Sie eine Überweisung.|Pour le spécialiste, il vous faut une lettre d'orientation.
+N|die|Impfung|-en|la vaccination|||Die Impfung ist kostenlos.|La vaccination est gratuite.
+V|null|sich erkälten|null|prendre froid|erkältet sich, erkältete sich, hat sich erkältet||Zieh eine Jacke an, sonst erkältest du dich.|Mets une veste, sinon tu vas prendre froid.
+V|null|sich verletzen|null|se blesser|verletzt sich, verletzte sich, hat sich verletzt||Ich habe mich beim Fußball am Knie verletzt.|Je me suis blessé au genou au foot.
+V|null|wehtun|null|faire mal|tut weh, tat weh, hat wehgetan||Mir tut der Kopf weh.|J'ai mal à la tête.
+V|null|untersuchen|null|examiner|untersucht, untersuchte, hat untersucht||Der Arzt hat mich gründlich untersucht.|Le médecin m'a examiné soigneusement.
+V|null|behandeln|null|traiter, soigner|behandelt, behandelte, hat behandelt||Welcher Arzt behandelt Sie?|Quel médecin vous suit ?
+V|null|verschreiben|null|prescrire|verschreibt, verschrieb, hat verschrieben||Die Ärztin hat mir Tabletten verschrieben.|La médecin m'a prescrit des comprimés.
+V|null|einnehmen|null|prendre (un médicament)|nimmt ein, nahm ein, hat eingenommen||Nehmen Sie die Tabletten dreimal täglich ein.|Prenez les comprimés trois fois par jour.
+V|null|sich erholen|null|se remettre, se reposer|erholt sich, erholte sich, hat sich erholt|sich von + Dat ~|Hast du dich gut von der Grippe erholt?|Tu t'es bien remis de la grippe ?
+V|null|leiden|null|souffrir|leidet, litt, hat gelitten|an / unter + Dat ~|Sie leidet unter Schlafstörungen.|Elle souffre de troubles du sommeil.
+V|null|husten|null|tousser|hustet, hustete, hat gehustet||Er hustet schon seit einer Woche.|Il tousse depuis une semaine.
+V|null|sich übergeben|null|vomir|übergibt sich, übergab sich, hat sich übergeben||Mir war so schlecht, dass ich mich übergeben musste.|J'avais tellement mal au cœur que j'ai dû vomir.
+V|null|abnehmen|null|maigrir|nimmt ab, nahm ab, hat abgenommen||Er hat fünf Kilo abgenommen.|Il a perdu cinq kilos.
+V|null|zunehmen|null|grossir|nimmt zu, nahm zu, hat zugenommen||Im Urlaub habe ich zugenommen.|J'ai pris du poids en vacances.
+V|null|sich ernähren|null|se nourrir|ernährt sich, ernährte sich, hat sich ernährt||Sie ernährt sich vegetarisch.|Elle a une alimentation végétarienne.
+V|null|vorbeugen|null|prévenir (une maladie)|beugt vor, beugte vor, hat vorgebeugt|+ Dat ~|Sport kann vielen Krankheiten vorbeugen.|Le sport peut prévenir beaucoup de maladies.
+V|null|sich fühlen|null|se sentir|fühlt sich, fühlte sich, hat sich gefühlt||Ich fühle mich heute nicht so gut.|Je ne me sens pas très bien aujourd'hui.
+A|null|krank|null|malade|||Ich bin seit Montag krank.|Je suis malade depuis lundi.
+A|null|gesund|null|en bonne santé, sain|||Iss mehr Gemüse, das ist gesund!|Mange plus de légumes, c'est sain !
+A|null|ansteckend|null|contagieux|||Ist die Krankheit ansteckend?|La maladie est-elle contagieuse ?
+A|null|schwindelig|null|pris de vertiges||mir ist ~|Mir ist plötzlich schwindelig geworden.|J'ai eu soudain des vertiges.
+A|null|übel|null|nauséeux||mir ist ~|Nach der Bootsfahrt war mir übel.|Après le tour en bateau, j'avais la nausée.
+A|null|verschreibungspflichtig|null|sur ordonnance|||Dieses Medikament ist verschreibungspflichtig.|Ce médicament est sur ordonnance.
+A|null|müde|null|fatigué|||Ich bin so müde, ich gehe früh ins Bett.|Je suis si fatigué que je me couche tôt.
+A|null|schwanger|null|enceinte|||Meine Schwester ist im fünften Monat schwanger.|Ma sœur est enceinte de cinq mois.
+O|null|gute Besserung|null|bon rétablissement|||Gute Besserung, und ruh dich gut aus!|Bon rétablissement, et repose-toi bien !
+O|null|krankgeschrieben sein|null|être en arrêt maladie|||Ich bin bis Freitag krankgeschrieben.|Je suis en arrêt maladie jusqu'à vendredi.

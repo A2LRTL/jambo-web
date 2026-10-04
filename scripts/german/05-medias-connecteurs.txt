@@ -1,0 +1,112 @@
+# theme: medias
+N|die|Nachricht|-en|la nouvelle, le message|||Hast du die Nachrichten heute gesehen?|As-tu vu les informations aujourd'hui ?
+N|die|Meinung|-en|l'opinion||meiner ~ nach|Meiner Meinung nach hast du recht.|À mon avis, tu as raison.
+N|die|Ansicht|-en|le point de vue||der ~ sein|Ich bin der Ansicht, dass wir mehr tun müssen.|Je suis d'avis que nous devons faire plus.
+N|der|Standpunkt|-e|le point de vue, la position|||Ich verstehe deinen Standpunkt, aber ich sehe es anders.|Je comprends ton point de vue, mais je vois les choses autrement.
+N|das|Argument|-e|l'argument|||Das ist ein überzeugendes Argument.|C'est un argument convaincant.
+N|der|Vorteil|-e|l'avantage|||Ein Vorteil der Stadt ist der gute Nahverkehr.|Un avantage de la ville, ce sont les bons transports.
+N|der|Nachteil|-e|l'inconvénient|||Der Nachteil ist, dass es teuer ist.|L'inconvénient, c'est que c'est cher.
+N|die|Diskussion|-en|la discussion, le débat|||Die Diskussion wurde sehr emotional.|Le débat est devenu très émotionnel.
+N|die|Umfrage|-n|le sondage|||Laut einer Umfrage arbeiten viele gern von zu Hause.|Selon un sondage, beaucoup aiment travailler de chez eux.
+N|der|Artikel|-|l'article|||Ich habe einen interessanten Artikel darüber gelesen.|J'ai lu un article intéressant là-dessus.
+N|die|Zeitschrift|-en|le magazine, la revue|||Sie liest jede Woche eine Wissenschaftszeitschrift.|Elle lit une revue scientifique chaque semaine.
+N|die|Sendung|-en|l'émission|||Die Sendung läuft jeden Sonntag um acht.|L'émission passe tous les dimanches à huit heures.
+N|die|Werbung|null|la publicité|||Ich hasse die Werbung im Fernsehen.|Je déteste la pub à la télé.
+N|die|Gesellschaft|-en|la société|||Die Gesellschaft wird immer älter.|La société vieillit de plus en plus.
+N|die|Umwelt|null|l'environnement|||Wir müssen mehr für die Umwelt tun.|Nous devons faire plus pour l'environnement.
+N|der|Klimawandel|null|le changement climatique|||Der Klimawandel betrifft uns alle.|Le changement climatique nous concerne tous.
+N|die|Entwicklung|-en|le développement, l'évolution|||Diese Entwicklung finde ich bedenklich.|Je trouve cette évolution inquiétante.
+N|die|Wahl|-en|l'élection ; le choix|||Die nächste Wahl ist im Herbst.|La prochaine élection est à l'automne.
+N|die|Regierung|-en|le gouvernement|||Die Regierung hat neue Maßnahmen beschlossen.|Le gouvernement a adopté de nouvelles mesures.
+N|die|Maßnahme|-n|la mesure|||Welche Maßnahmen helfen gegen die Inflation?|Quelles mesures aident contre l'inflation ?
+N|das|Problem|-e|le problème|||Das eigentliche Problem liegt woanders.|Le vrai problème est ailleurs.
+N|die|Lösung|-en|la solution|||Wir müssen eine Lösung finden.|Nous devons trouver une solution.
+N|die|Folge|-n|la conséquence|||Das hat schwere Folgen für die Umwelt.|Cela a de lourdes conséquences pour l'environnement.
+N|die|Ursache|-n|la cause|||Die Ursache des Unfalls ist noch unklar.|La cause de l'accident est encore floue.
+N|der|Einfluss|¨-e|l'influence||~ auf + Akk|Soziale Medien haben großen Einfluss auf Jugendliche.|Les réseaux sociaux ont une grande influence sur les jeunes.
+V|null|meinen|null|penser, être d'avis|meint, meinte, hat gemeint||Was meinst du dazu?|Qu'en penses-tu ?
+V|null|behaupten|null|prétendre, affirmer|behauptet, behauptete, hat behauptet||Er behauptet, dass er nichts gewusst hat.|Il prétend qu'il ne savait rien.
+V|null|zustimmen|null|être d'accord, approuver|stimmt zu, stimmte zu, hat zugestimmt|+ Dat ~|Da stimme ich dir völlig zu.|Là, je suis entièrement d'accord avec toi.
+V|null|überzeugen|null|convaincre|überzeugt, überzeugte, hat überzeugt|jdn. von + Dat ~|Du hast mich überzeugt.|Tu m'as convaincu.
+V|null|sich einsetzen|null|s'engager pour|setzt sich ein, setzte sich ein, hat sich eingesetzt|sich für + Akk ~|Sie setzt sich für den Umweltschutz ein.|Elle s'engage pour la protection de l'environnement.
+V|null|diskutieren|null|discuter, débattre|diskutiert, diskutierte, hat diskutiert|über + Akk ~|Wir haben lange über Politik diskutiert.|Nous avons longuement débattu de politique.
+V|null|kritisieren|null|critiquer|kritisiert, kritisierte, hat kritisiert||Viele kritisieren die neue Regel.|Beaucoup critiquent la nouvelle règle.
+V|null|berichten|null|rapporter, faire un reportage|berichtet, berichtete, hat berichtet|über + Akk ~|Die Zeitung berichtet über den Streik.|Le journal parle de la grève.
+V|null|sich informieren|null|s'informer|informiert sich, informierte sich, hat sich informiert|sich über + Akk ~|Ich informiere mich meistens online.|Je m'informe surtout en ligne.
+V|null|beeinflussen|null|influencer|beeinflusst, beeinflusste, hat beeinflusst||Werbung beeinflusst unser Kaufverhalten.|La publicité influence nos achats.
+V|null|betreffen|null|concerner|betrifft, betraf, hat betroffen||Das Problem betrifft vor allem junge Leute.|Le problème concerne surtout les jeunes.
+V|null|sich handeln um|null|s'agir de|handelt sich, handelte sich, hat sich gehandelt|es handelt sich um + Akk|Es handelt sich um ein Missverständnis.|Il s'agit d'un malentendu.
+V|null|vorschlagen|null|proposer|schlägt vor, schlug vor, hat vorgeschlagen||Ich schlage vor, dass wir eine Pause machen.|Je propose que nous fassions une pause.
+V|null|zweifeln|null|douter|zweifelt, zweifelte, hat gezweifelt|an + Dat ~|Ich zweifle an seiner Ehrlichkeit.|Je doute de son honnêteté.
+V|null|halten von|null|penser de (avis)|hält, hielt, hat gehalten|viel / wenig von + Dat ~|Was hältst du von dem neuen Film?|Que penses-tu du nouveau film ?
+A|null|überzeugend|null|convaincant|||Seine Argumente waren nicht überzeugend.|Ses arguments n'étaient pas convaincants.
+A|null|umstritten|null|controversé|||Das Thema ist sehr umstritten.|Le sujet est très controversé.
+A|null|aktuell|null|actuel|||Das ist ein sehr aktuelles Thema.|C'est un sujet très actuel.
+A|null|öffentlich|null|public|||Die Diskussion ist öffentlich.|Le débat est public.
+A|null|politisch|null|politique|||Er ist politisch sehr engagiert.|Il est très engagé politiquement.
+A|null|umweltfreundlich|null|écologique|||Das Fahrrad ist das umweltfreundlichste Verkehrsmittel.|Le vélo est le moyen de transport le plus écologique.
+A|null|nachhaltig|null|durable|||Wir sollten nachhaltiger leben.|Nous devrions vivre de façon plus durable.
+O|null|meiner Meinung nach|null|à mon avis|||Meiner Meinung nach ist das zu teuer.|À mon avis, c'est trop cher.
+O|null|Recht haben|null|avoir raison|||Da hast du absolut Recht.|Là, tu as tout à fait raison.
+O|null|einerseits … andererseits|null|d'un côté … de l'autre|||Einerseits ist die Stadt teuer, andererseits gibt es viele Jobs.|D'un côté la ville est chère, de l'autre il y a beaucoup d'emplois.
+# theme: connecteurs
+O|null|obwohl|null|bien que (+ verbe à la fin)|||Obwohl es regnet, gehen wir spazieren.|Bien qu'il pleuve, nous allons nous promener.
+D|null|trotzdem|null|quand même, malgré tout|||Es regnet, trotzdem gehen wir spazieren.|Il pleut, nous allons quand même nous promener.
+D|null|deshalb|null|c'est pourquoi|||Ich war krank, deshalb bin ich nicht gekommen.|J'étais malade, c'est pourquoi je ne suis pas venu.
+D|null|deswegen|null|c'est pour ça que|||Der Zug hatte Verspätung, deswegen bin ich zu spät.|Le train avait du retard, c'est pour ça que je suis en retard.
+D|null|außerdem|null|en outre, de plus|||Die Wohnung ist groß, außerdem ist sie günstig.|L'appartement est grand, et en plus il est bon marché.
+O|null|je … desto|null|plus … plus|||Je mehr ich übe, desto besser spreche ich.|Plus je m'entraîne, mieux je parle.
+O|null|sowohl … als auch|null|aussi bien … que|||Sie spricht sowohl Englisch als auch Spanisch.|Elle parle aussi bien anglais qu'espagnol.
+O|null|weder … noch|null|ni … ni|||Ich habe weder Zeit noch Geld.|Je n'ai ni le temps ni l'argent.
+O|null|entweder … oder|null|soit … soit|||Entweder kommst du mit, oder du bleibst hier.|Soit tu viens, soit tu restes ici.
+O|null|nicht nur … sondern auch|null|non seulement … mais aussi|||Er ist nicht nur klug, sondern auch witzig.|Il est non seulement intelligent, mais aussi drôle.
+O|null|zwar … aber|null|certes … mais|||Das Auto ist zwar alt, aber es fährt noch gut.|La voiture est certes vieille, mais elle roule encore bien.
+O|null|damit|null|afin que, pour que|||Ich spreche langsam, damit alle mich verstehen.|Je parle lentement pour que tout le monde me comprenne.
+O|null|sodass|null|si bien que|||Es hat stark geschneit, sodass die Schule geschlossen war.|Il a beaucoup neigé, si bien que l'école était fermée.
+O|null|falls|null|au cas où|||Falls du Hilfe brauchst, ruf mich an.|Au cas où tu aurais besoin d'aide, appelle-moi.
+O|null|sobald|null|dès que|||Sobald ich zu Hause bin, schreibe ich dir.|Dès que je suis à la maison, je t'écris.
+O|null|solange|null|tant que|||Solange es nicht regnet, sitzen wir draußen.|Tant qu'il ne pleut pas, nous restons dehors.
+O|null|während|null|pendant que (conj.) ; pendant (+ Gen)|||Während ich koche, deckst du den Tisch.|Pendant que je cuisine, tu mets la table.
+O|null|nachdem|null|après que|||Nachdem wir gegessen hatten, sind wir spazieren gegangen.|Après avoir mangé, nous sommes allés nous promener.
+O|null|bevor|null|avant que, avant de|||Bevor du gehst, mach bitte das Licht aus.|Avant de partir, éteins la lumière s'il te plaît.
+O|null|seitdem|null|depuis que|||Seitdem er Sport macht, schläft er besser.|Depuis qu'il fait du sport, il dort mieux.
+O|null|indem|null|en (+ participe présent)|||Man lernt eine Sprache, indem man viel spricht.|On apprend une langue en parlant beaucoup.
+O|null|anstatt … zu|null|au lieu de|||Anstatt zu lernen, hat er den ganzen Tag gespielt.|Au lieu d'étudier, il a joué toute la journée.
+O|null|ohne … zu|null|sans (+ infinitif)|||Er ist gegangen, ohne sich zu verabschieden.|Il est parti sans dire au revoir.
+D|null|stattdessen|null|à la place|||Das Kino war voll, stattdessen sind wir essen gegangen.|Le cinéma était plein, nous sommes allés manger à la place.
+D|null|allerdings|null|toutefois, cependant|||Das Hotel ist schön, allerdings etwas laut.|L'hôtel est beau, toutefois un peu bruyant.
+D|null|jedoch|null|cependant|||Wir haben angerufen, jedoch hat niemand geantwortet.|Nous avons appelé, cependant personne n'a répondu.|B2
+D|null|dennoch|null|néanmoins|||Die Aufgabe war schwer, dennoch hat sie es geschafft.|La tâche était difficile, elle a néanmoins réussi.|B2
+D|null|nämlich|null|en effet, car (explication)|||Ich kann nicht kommen, ich bin nämlich krank.|Je ne peux pas venir, car je suis malade.
+D|null|also|null|donc|||Es ist schon spät, also gehen wir nach Hause.|Il est déjà tard, donc nous rentrons.
+D|null|folglich|null|par conséquent|||Er hat nicht gelernt, folglich ist er durchgefallen.|Il n'a pas étudié, par conséquent il a échoué.|B2
+D|null|sonst|null|sinon|||Beeil dich, sonst kommen wir zu spät.|Dépêche-toi, sinon nous serons en retard.
+D|null|eigentlich|null|en fait, au fond|||Eigentlich wollte ich heute früh schlafen gehen.|En fait, je voulais me coucher tôt aujourd'hui.
+D|null|übrigens|null|au fait, d'ailleurs|||Übrigens, hast du schon die neue Wohnung gesehen?|Au fait, tu as déjà vu le nouvel appartement ?
+D|null|sowieso|null|de toute façon|||Ich komme mit, ich muss sowieso in die Stadt.|Je viens avec toi, de toute façon je dois aller en ville.
+D|null|kaum|null|à peine, presque pas|||Ich habe kaum geschlafen.|J'ai à peine dormi.
+D|null|eher|null|plutôt|||Ich trinke eher Tee als Kaffee.|Je bois plutôt du thé que du café.
+D|null|ziemlich|null|assez, plutôt|||Der Film war ziemlich langweilig.|Le film était assez ennuyeux.
+D|null|schließlich|null|finalement ; après tout|||Schließlich haben wir doch ein Hotel gefunden.|Finalement, nous avons quand même trouvé un hôtel.
+D|null|immerhin|null|au moins, tout de même|||Immerhin hat es nicht geregnet.|Au moins, il n'a pas plu.
+D|null|jedenfalls|null|en tout cas|||Ich weiß es nicht, jedenfalls nicht genau.|Je ne sais pas, en tout cas pas exactement.
+D|null|zumindest|null|du moins, au moins|||Ruf zumindest kurz an, wenn du später kommst.|Appelle au moins rapidement si tu arrives plus tard.
+D|null|tatsächlich|null|effectivement, vraiment|||Er ist tatsächlich pünktlich gekommen!|Il est vraiment arrivé à l'heure !
+D|null|offenbar|null|apparemment, manifestement|||Offenbar hat niemand die E-Mail gelesen.|Apparemment, personne n'a lu l'e-mail.|B2
+D|null|angeblich|null|soi-disant, prétendument|||Er ist angeblich krank.|Il est soi-disant malade.|B2
+D|null|vermutlich|null|probablement, sans doute|||Der Zug kommt vermutlich später.|Le train arrivera sans doute plus tard.
+D|null|allmählich|null|peu à peu|||Allmählich verstehe ich die Grammatik.|Peu à peu, je comprends la grammaire.|B2
+D|null|ausgerechnet|null|justement (ironique), précisément|||Ausgerechnet heute ist das Auto kaputt!|Il fallait que la voiture tombe en panne justement aujourd'hui !|B2
+D|null|ohnehin|null|de toute façon|||Das Geschäft ist ohnehin geschlossen.|Le magasin est de toute façon fermé.|B2
+D|null|hingegen|null|en revanche|||Er mag Berge, sie hingegen liebt das Meer.|Il aime la montagne, elle en revanche adore la mer.|B2
+O|null|trotz|null|malgré (+ Gen)|||Trotz des Regens sind wir gewandert.|Malgré la pluie, nous avons fait de la randonnée.
+O|null|wegen|null|à cause de (+ Gen)|||Wegen des Streiks fahren keine Züge.|À cause de la grève, aucun train ne circule.
+O|null|aufgrund|null|en raison de (+ Gen)|||Aufgrund des schlechten Wetters wurde das Spiel abgesagt.|En raison du mauvais temps, le match a été annulé.|B2
+O|null|laut|null|selon, d'après (+ Dat)|||Laut Wetterbericht wird es morgen sonnig.|Selon la météo, il fera beau demain.
+O|null|bezüglich|null|concernant (+ Gen)|||Bezüglich Ihrer Anfrage melde ich mich morgen.|Concernant votre demande, je vous recontacte demain.|B2
+O|null|statt|null|au lieu de (+ Gen)|||Statt eines Autos hat er ein Fahrrad gekauft.|Au lieu d'une voiture, il a acheté un vélo.
+O|null|innerhalb|null|en l'espace de, à l'intérieur de (+ Gen)|||Bitte antworten Sie innerhalb einer Woche.|Merci de répondre dans un délai d'une semaine.
+O|null|außerhalb|null|en dehors de (+ Gen)|||Wir wohnen außerhalb der Stadt.|Nous habitons en dehors de la ville.
+O|null|zum Beispiel|null|par exemple|||Viele Länder, zum Beispiel Schweden, sind teuer.|Beaucoup de pays, par exemple la Suède, sont chers.
+O|null|im Gegenteil|null|au contraire|||Ich bin nicht müde, im Gegenteil!|Je ne suis pas fatigué, au contraire !
+O|null|im Großen und Ganzen|null|dans l'ensemble|||Im Großen und Ganzen bin ich zufrieden.|Dans l'ensemble, je suis satisfait.|B2
