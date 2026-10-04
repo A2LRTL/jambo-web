@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
 import { useGermanProgress } from '@/lib/german/progress';
 import { verbKind, type VerbKind } from '@/lib/german/verbs';
+import { conjugate, TENSES } from '@/lib/german/conjugation';
+import ConjugationTable from './ConjugationTable';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
 import { GrammarLine, Headword, headword, progressBadge, SpeakButton } from './WordView';
@@ -36,6 +38,7 @@ function List({ profile, verbs }: { profile: string; verbs: GermanWord[] }) {
   const progress = useGermanProgress(profile);
   const [filter, setFilter] = useState<Filter>('all');
   const [query, setQuery] = useState('');
+  const [openId, setOpenId] = useState<string | null>(null);
   const [kinds] = useState(() => new Map(verbs.map((v) => [v.id, verbKind(v)])));
 
   if (!progress) return null;
@@ -62,6 +65,11 @@ function List({ profile, verbs }: { profile: string; verbs: GermanWord[] }) {
         <p className="font-bold">S&apos;entraîner : verbe + préposition →</p>
         <p className="text-xs text-white/80 mt-0.5">warten auf + Akk, denken an + Akk… · {prepCount} verbes</p>
       </button>
+      <button type="button" onClick={() => router.push('/de/verbs/conjugation')}
+        className="w-full mb-4 py-4 px-5 rounded-2xl border border-accent bg-card text-left shadow-sm hover:bg-cream active:scale-[0.98] transition-all">
+        <p className="font-bold text-accent">S&apos;entraîner : conjugaison →</p>
+        <p className="text-xs text-muted mt-0.5">Présent, prétérit, parfait · ich nehme, du nahmst, er hat genommen…</p>
+      </button>
 
       <input type="search" value={query} onChange={(e) => setQuery(e.target.value)}
         placeholder="Chercher (allemand ou français)"
@@ -79,8 +87,9 @@ function List({ profile, verbs }: { profile: string; verbs: GermanWord[] }) {
         {shown.map((v) => {
           const kind = kinds.get(v.id)!;
           const badge = progressBadge(progress[v.id]);
+          const table = openId === v.id ? conjugate(v) : null;
           return (
-            <li key={v.id} className="p-4 rounded-xl border border-border bg-card flex items-start gap-3">
+            <li key={v.id} className="p-4 rounded-xl border border-border bg-card flex flex-wrap items-start gap-3">
               <div className="flex-1 min-w-0 flex flex-col gap-1">
                 <div className="flex items-center gap-2 flex-wrap">
                   <Headword word={v} size="text-base" />
@@ -91,8 +100,19 @@ function List({ profile, verbs }: { profile: string; verbs: GermanWord[] }) {
                 </div>
                 <p className="text-sm text-ink">{v.fr}</p>
                 <GrammarLine word={v} />
+                {conjugate(v) && (
+                  <button type="button" onClick={() => setOpenId(openId === v.id ? null : v.id)}
+                    className="self-start mt-1 text-xs font-semibold text-accent">
+                    {openId === v.id ? 'Masquer la conjugaison ▴' : 'Conjuguer ▾'}
+                  </button>
+                )}
               </div>
               <SpeakButton text={headword(v)} />
+              {table && (
+                <div className="basis-full pt-3 border-t border-border animate-fade-in">
+                  <ConjugationTable table={table} tenses={TENSES} />
+                </div>
+              )}
             </li>
           );
         })}

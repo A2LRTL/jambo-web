@@ -49,7 +49,7 @@ function infinitive(lemma: string): string {
   return tokens[tokens.length - 1];
 }
 
-function separablePrefix(word: GermanWord): string | null {
+export function separablePrefix(word: GermanWord): string | null {
   const present = (word.forms ?? '').split(',')[0].trim().split(' ');
   const last = present[present.length - 1];
   const inf = infinitive(word.lemma);
@@ -58,12 +58,20 @@ function separablePrefix(word: GermanWord): string | null {
     : null;
 }
 
+/** machen → mach, ändern → änder, tun → tu. */
+export function verbStem(inf: string): string {
+  return inf.endsWith('en') ? inf.slice(0, -2) : inf.slice(0, -1);
+}
+
 /** Regular (weak) preterite of an infinitive: machen → machte, arbeiten → arbeitete. */
 export function weakPreterite(inf: string): string {
-  const stem = inf.endsWith('en') ? inf.slice(0, -2) : inf.slice(0, -1);
-  // -t/-d stems (arbeitete) and consonant + m/n (atmete, öffnete, rechnete) — but not lernte, wohnte, träumte
-  const needsE = /[dt]$/.test(stem) || /(?:[^aeiouyäöülrmnh]|[^aeiouyäöü]h)[mn]$/.test(stem);
-  return stem + (needsE ? 'ete' : 'te');
+  const stem = verbStem(inf);
+  return stem + (needsLinkingE(stem) ? 'ete' : 'te');
+}
+
+/** -t/-d stems (arbeitet) and consonant + m/n (atmet, öffnet, rechnet) take a linking e — but not lernt, wohnt, träumt. */
+export function needsLinkingE(stem: string): boolean {
+  return /[dt]$/.test(stem) || /(?:[^aeiouyäöülrmnh]|[^aeiouyäöü]h)[mn]$/.test(stem);
 }
 
 export interface VerbKind {
