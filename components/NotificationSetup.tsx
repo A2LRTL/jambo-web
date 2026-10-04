@@ -31,16 +31,14 @@ export default function NotificationSetup() {
     const granted = Notification.permission === 'granted';
 
     // Show reminder banner if granted and hasn't practiced in 20h+
-    if (granted && hours !== null && hours >= 20) {
-      setBanner('reminder');
-      return;
-    }
+    const showReminder = granted && hours !== null && hours >= 20;
     // Ask for permission once if never asked and no practice yet today
-    if (!asked && Notification.permission === 'default') {
-      // Wait a bit before asking (not on first second of the session)
-      const t = setTimeout(() => setBanner('ask'), 3000);
-      return () => clearTimeout(t);
-    }
+    const showAsk = !asked && Notification.permission === 'default';
+    if (!showReminder && !showAsk) return;
+
+    // Wait a bit before showing (not on first second of the session)
+    const t = setTimeout(() => setBanner(showReminder ? 'reminder' : 'ask'), showReminder ? 1000 : 3000);
+    return () => clearTimeout(t);
   }, [dismissed]);
 
   const requestPermission = async () => {

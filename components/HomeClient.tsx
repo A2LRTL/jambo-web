@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
 import { useRouter } from 'next/navigation';
 import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_CATEGORIES, SWAHILI_CATEGORY_LABELS, SWAHILI_PHRASE_TOPICS, SWAHILI_PHRASE_TOPIC_LABELS } from '@/lib/lesson-registry';
 import { PHRASE_TOPIC_LABELS, PHRASE_TOPICS } from '@/lib/phrase-registry';
@@ -22,29 +22,46 @@ const LANGS: { id: Lang; label: string; flag: string }[] = [
 type SuggestionType = 'new' | 'revision' | 'review';
 interface Suggestion { id: string; title: string; path: string; type: SuggestionType; }
 
-const ALL_LESSONS: { id: string; title: string; path: string }[] = [
-  ...KIRUNDI_CATEGORIES.map((cat) => ({
-    id: `kirundi-${cat}`,
-    title: CATEGORY_LABELS[cat],
-    path: `/lesson/kirundi-${cat}/flashcards`,
-  })),
-  ...PHRASE_TOPICS.filter((t) => t !== 'dialogue_nikiza_jenny').map((topic) => ({
-    id: `phrases/${topic}`,
-    title: PHRASE_TOPIC_LABELS[topic],
-    path: `/phrases/${topic}`,
-  })),
-];
+type StudyLang = Exclude<Lang, 'scores'>;
+type LessonRef = { id: string; title: string; path: string };
+
+const LESSONS_BY_LANG: Record<StudyLang, LessonRef[]> = {
+  kirundi: [
+    ...KIRUNDI_CATEGORIES.map((cat) => ({
+      id: `kirundi-${cat}`,
+      title: CATEGORY_LABELS[cat],
+      path: `/lesson/kirundi-${cat}/flashcards`,
+    })),
+    ...PHRASE_TOPICS.filter((t) => t !== 'dialogue_nikiza_jenny').map((topic) => ({
+      id: `phrases/${topic}`,
+      title: PHRASE_TOPIC_LABELS[topic],
+      path: `/phrases/${topic}`,
+    })),
+  ],
+  swahili: [
+    ...SWAHILI_CATEGORIES.map((cat) => ({
+      id: `swahili-${cat}`,
+      title: SWAHILI_CATEGORY_LABELS[cat],
+      path: `/lesson/swahili-${cat}/flashcards`,
+    })),
+    ...SWAHILI_PHRASE_TOPICS.map((topic) => ({
+      id: `phrases/sw/${topic}`,
+      title: SWAHILI_PHRASE_TOPIC_LABELS[topic],
+      path: `/phrases/sw/${topic}`,
+    })),
+  ],
+};
 
 function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function buildSuggestion(scores: Record<string, BestScore>): Suggestion {
-  const unplayed   = ALL_LESSONS.filter((l) => !scores[l.id]);
-  const toRevise   = ALL_LESSONS.filter((l) => scores[l.id] && scores[l.id].best / scores[l.id].total < 0.8);
-  const mastered   = ALL_LESSONS.filter((l) => scores[l.id] && scores[l.id].best / scores[l.id].total >= 0.8);
+function buildSuggestion(scores: Record<string, BestScore>, lessons: LessonRef[]): Suggestion {
+  const unplayed   = lessons.filter((l) => !scores[l.id]);
+  const toRevise   = lessons.filter((l) => scores[l.id] && scores[l.id].best / scores[l.id].total < 0.8);
+  const mastered   = lessons.filter((l) => scores[l.id] && scores[l.id].best / scores[l.id].total >= 0.8);
 
-  let pool: typeof ALL_LESSONS;
+  let pool: LessonRef[];
   let type: SuggestionType;
 
   if (unplayed.length > 0 && (toRevise.length === 0 || Math.random() < 0.6)) {
@@ -52,7 +69,7 @@ function buildSuggestion(scores: Record<string, BestScore>): Suggestion {
   } else if (toRevise.length > 0) {
     pool = toRevise; type = 'revision';
   } else {
-    pool = mastered.length > 0 ? mastered : ALL_LESSONS; type = 'review';
+    pool = mastered.length > 0 ? mastered : lessons; type = 'review';
   }
 
   return { ...pick(pool), type };
@@ -69,41 +86,85 @@ const TYPE_COLOR: Record<SuggestionType, string> = {
   review:   'text-muted bg-border border-border',
 };
 
+// ── Profile (persisted in localStorage) ─────────────────────────────────────
+
+const PROFILE_KEY = 'jambo_profile';
+const PROFILE_EVENT = 'jambo-profile-change';
+type Profile = ProfileName | 'guest';
+
+function readProfile(): Profile | null {
+  try {
+    const saved = localStorage.getItem(PROFILE_KEY);
+    if (saved === 'guest' || (PROFILES as readonly string[]).includes(saved ?? '')) return saved as Profile;
+  } catch { /* ignore */ }
+  return null;
+}
+
+function writeProfile(name: Profile) {
+  try { localStorage.setItem(PROFILE_KEY, name); } catch { /* ignore */ }
+  window.dispatchEvent(new Event(PROFILE_EVENT));
+}
+
+function subscribeProfile(onChange: () => void) {
+  window.addEventListener('storage', onChange);
+  window.addEventListener(PROFILE_EVENT, onChange);
+  return () => {
+    window.removeEventListener('storage', onChange);
+    window.removeEventListener(PROFILE_EVENT, onChange);
+  };
+}
+
+/** `undefined` on the server / before hydration, `null` when no profile is chosen yet. */
+function useProfile(): Profile | null | undefined {
+  return useSyncExternalStore(subscribeProfile, readProfile, () => undefined);
+}
+
 // ───────────────────────────────────────────────────────────────────────────
+
+interface ProfileData {
+  profile: ProfileName;
+  bestScores: Record<string, BestScore>;
+  suggestions: Partial<Record<StudyLang, Suggestion>>;
+}
 
 export default function HomeClient() {
   const router = useRouter();
-  const [profile, setProfile]         = useState<ProfileName | null | 'guest'>('guest');
-  const [ready, setReady]             = useState(false);
+  const profile = useProfile();
   const [lang, setLang]               = useState<Lang>('kirundi');
   const [showSwitch, setShowSwitch]   = useState(false);
-  const [bestScores, setBestScores]   = useState<Record<string, BestScore>>({});
-  const [suggestion, setSuggestion]   = useState<Suggestion | null>(null);
+  const [data, setData]               = useState<ProfileData | null>(null);
 
   useEffect(() => {
-    const saved = localStorage.getItem('jambo_profile');
-    if (saved === 'guest') { setProfile('guest'); setReady(true); return; }
-    if (saved && (PROFILES as readonly string[]).includes(saved)) {
-      setProfile(saved as ProfileName); setReady(true); return;
-    }
-    setProfile(null); setReady(true);
-  }, []);
-
-  useEffect(() => {
-    if (!profile || profile === 'guest') { setBestScores({}); return; }
+    if (!profile || profile === 'guest') return;
+    let cancelled = false;
     getBestScores(profile).then((scores) => {
-      setBestScores(scores);
-      setSuggestion(buildSuggestion(scores));
+      if (cancelled) return;
+      setData({
+        profile,
+        bestScores: scores,
+        suggestions: {
+          kirundi: buildSuggestion(scores, LESSONS_BY_LANG.kirundi),
+          swahili: buildSuggestion(scores, LESSONS_BY_LANG.swahili),
+        },
+      });
     });
+    return () => { cancelled = true; };
   }, [profile]);
 
-  const refreshSuggestion = useCallback(() => {
-    setSuggestion(buildSuggestion(bestScores));
-  }, [bestScores]);
+  // Ignore data loaded for a previous profile (or when playing as guest)
+  const current     = data?.profile === profile ? data : null;
+  const bestScores  = current?.bestScores ?? {};
+  const suggestions = current?.suggestions ?? {};
 
-  const selectProfile = (name: ProfileName | 'guest') => {
-    setProfile(name);
-    localStorage.setItem('jambo_profile', name);
+  const refreshSuggestion = useCallback((l: StudyLang) => {
+    setData((prev) => prev && {
+      ...prev,
+      suggestions: { ...prev.suggestions, [l]: buildSuggestion(prev.bestScores, LESSONS_BY_LANG[l]) },
+    });
+  }, []);
+
+  const selectProfile = (name: Profile) => {
+    writeProfile(name);
     setShowSwitch(false);
   };
 
@@ -118,7 +179,38 @@ export default function HomeClient() {
     );
   };
 
-  if (!ready) return null;
+  const suggestionCard = (l: StudyLang) => {
+    const suggestion = suggestions[l];
+    if (!suggestion) return null;
+    return (
+      <div className="mb-6 p-4 rounded-2xl border border-border bg-card shadow-sm">
+        <div className="flex items-start justify-between gap-3 mb-3">
+          <div>
+            <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-1">Suggestion</p>
+            <p className="font-bold text-ink text-base leading-snug">{suggestion.title}</p>
+          </div>
+          <span className={`shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full border ${TYPE_COLOR[suggestion.type]}`}>
+            {TYPE_LABEL[suggestion.type]}
+          </span>
+        </div>
+        <div className="flex gap-2">
+          <button type="button" onClick={() => refreshSuggestion(l)}
+            className="p-2 rounded-xl border border-border text-muted hover:text-ink hover:border-accent transition-all text-base"
+            aria-label="Autre suggestion"
+          >
+            🔀
+          </button>
+          <button type="button" onClick={() => router.push(suggestion.path)}
+            className="flex-1 py-2 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-dark active:scale-[0.98] transition-all"
+          >
+            Commencer →
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  if (profile === undefined) return null;
 
   // ── Intro screen ────────────────────────────────────────────────────────
   if (profile === null) {
@@ -177,33 +269,7 @@ export default function HomeClient() {
 
         {lang === 'kirundi' && (
           <>
-            {/* Suggestion card */}
-            {suggestion && (
-              <div className="mb-6 p-4 rounded-2xl border border-border bg-card shadow-sm">
-                <div className="flex items-start justify-between gap-3 mb-3">
-                  <div>
-                    <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-1">Suggestion</p>
-                    <p className="font-bold text-ink text-base leading-snug">{suggestion.title}</p>
-                  </div>
-                  <span className={`shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full border ${TYPE_COLOR[suggestion.type]}`}>
-                    {TYPE_LABEL[suggestion.type]}
-                  </span>
-                </div>
-                <div className="flex gap-2">
-                  <button type="button" onClick={refreshSuggestion}
-                    className="p-2 rounded-xl border border-border text-muted hover:text-ink hover:border-accent transition-all text-base"
-                    aria-label="Autre suggestion"
-                  >
-                    🔀
-                  </button>
-                  <button type="button" onClick={() => router.push(suggestion.path)}
-                    className="flex-1 py-2 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-dark active:scale-[0.98] transition-all"
-                  >
-                    Commencer →
-                  </button>
-                </div>
-              </div>
-            )}
+            {suggestionCard('kirundi')}
 
             <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Vocabulaire</p>
             <div className="grid grid-cols-2 gap-3">
@@ -246,6 +312,8 @@ export default function HomeClient() {
 
         {lang === 'swahili' && (
           <>
+            {suggestionCard('swahili')}
+
             <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Vocabulaire</p>
             <div className="grid grid-cols-2 gap-3">
               {SWAHILI_CATEGORIES.map((cat) => (

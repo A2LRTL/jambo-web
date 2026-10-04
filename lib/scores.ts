@@ -24,7 +24,15 @@ function enqueue(entry: QueuedScore) {
   } catch { /* ignore */ }
 }
 
-async function flushQueue() {
+// Single in-flight flush — the 'online' event and saveScore() can fire together
+let flushing: Promise<void> | null = null;
+
+function flushQueue(): Promise<void> {
+  flushing ??= doFlush().finally(() => { flushing = null; });
+  return flushing;
+}
+
+async function doFlush() {
   try {
     const raw = localStorage.getItem(QUEUE_KEY);
     if (!raw) return;
@@ -34,7 +42,11 @@ async function flushQueue() {
     const rows = q.map((e) => ({ profile: e.profile, lesson_id: e.lessonId, score: e.score, total: e.total }));
     const { error } = await supabase.from('scores').insert(rows);
     if (!error) {
-      localStorage.removeItem(QUEUE_KEY);
+      // Keep any entries enqueued while the insert was in flight
+      const after: QueuedScore[] = JSON.parse(localStorage.getItem(QUEUE_KEY) ?? '[]');
+      const rest = after.slice(q.length);
+      if (rest.length > 0) localStorage.setItem(QUEUE_KEY, JSON.stringify(rest));
+      else localStorage.removeItem(QUEUE_KEY);
     }
   } catch { /* ignore */ }
 }

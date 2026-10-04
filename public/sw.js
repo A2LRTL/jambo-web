@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'ubuntu-v2';
+const CACHE_VERSION = 'ubuntu-v3';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const PAGES_CACHE   = `${CACHE_VERSION}-pages`;
 const API_CACHE     = `${CACHE_VERSION}-api`;
@@ -110,7 +110,7 @@ self.addEventListener('message', (event) => {
     reminderTimer = setTimeout(() => {
       self.registration.showNotification('Ubuntu 🇧🇮', {
         body: 'Tu n\'as pas encore pratiqué aujourd\'hui !',
-        icon: '/favicon.ico',
+        icon: '/icon-192.png',
         badge: '/favicon.ico',
         tag: 'daily-reminder',
         renotify: false,

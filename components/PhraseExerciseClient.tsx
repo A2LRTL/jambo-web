@@ -72,7 +72,7 @@ export default function PhraseExerciseClient({ topic, title, exercises }: Props)
   const handleNext = () => {
     if (isLast) {
       savePos(0, 0); // deck finished — clear saved position
-      router.push(`/phrases/${topic}/complete?score=${score}&total=${exercises.length}`);
+      router.push(`/phrases/${topic}/complete?score=${score}&total=${exercises.length}&t=${Date.now()}`);
     } else {
       savePos(index + 1, score);
       setIndex((i) => i + 1);

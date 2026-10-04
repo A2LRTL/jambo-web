@@ -74,7 +74,7 @@ export default function ExerciseClient({ lesson, lessonId, mode }: Props) {
   const handleNext = () => {
     if (isLast) {
       savePos(0, 0); // deck finished — clear saved position
-      router.push(`/lesson/${lessonId}/complete?score=${score}&total=${lesson.exercises.length}`);
+      router.push(`/lesson/${lessonId}/complete?score=${score}&total=${lesson.exercises.length}&t=${Date.now()}`);
     } else {
       savePos(index + 1, score);
       setIndex((i) => i + 1);

@@ -272,7 +272,6 @@ function TrainPhase({
   }
 
   if (!currentLine) return null;
-  const solution = currentLine.kirundi.split(/\s+/).filter(Boolean);
 
   // The "context" lines before this quiz line (the read-only bubbles)
   const contextLine = dialogue.lines.find((l) => l.order === currentLine.order - 1);

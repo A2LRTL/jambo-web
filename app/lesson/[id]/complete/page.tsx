@@ -14,10 +14,10 @@ export default async function CompletePage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ score?: string; total?: string }>;
+  searchParams: Promise<{ score?: string; total?: string; t?: string }>;
 }) {
   const { id } = await params;
-  const { score: rawScore, total: rawTotal } = await searchParams;
+  const { score: rawScore, total: rawTotal, t: attemptId } = await searchParams;
 
   const score = parseInt(rawScore ?? '0', 10);
   const total = parseInt(rawTotal ?? '10', 10);
@@ -26,7 +26,7 @@ export default async function CompletePage({
 
   return (
     <main className="flex flex-col min-h-dvh px-6 pb-10 pt-16 max-w-md mx-auto">
-      <ScoreSaver lessonId={id} score={score} total={total} />
+      <ScoreSaver lessonId={id} score={score} total={total} attemptId={attemptId} />
       <div className="flex-1 flex flex-col items-center justify-center gap-5 text-center">
         <span className="text-7xl">{isPerfect ? '🎉' : score >= total * 0.6 ? '👏' : '💪'}</span>
         <div>
