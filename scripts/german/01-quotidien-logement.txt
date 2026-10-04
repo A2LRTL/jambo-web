@@ -1,0 +1,102 @@
+# theme: quotidien
+N|der|Alltag|null|le quotidien||im ~|Im Alltag spreche ich leider wenig Deutsch.|Au quotidien, je parle malheureusement peu allemand.
+N|die|Gewohnheit|-en|l'habitude||sich etw. zur ~ machen|Früh aufzustehen ist eine gute Gewohnheit.|Se lever tôt est une bonne habitude.
+N|der|Termin|-e|le rendez-vous||einen ~ vereinbaren|Ich habe morgen einen Termin beim Zahnarzt.|J'ai un rendez-vous chez le dentiste demain.
+N|die|Verabredung|-en|le rendez-vous (entre amis)||eine ~ haben|Heute Abend habe ich eine Verabredung mit Paul.|Ce soir, j'ai rendez-vous avec Paul.
+N|die|Freizeit|null|le temps libre||in der ~|Was machst du in deiner Freizeit?|Que fais-tu pendant ton temps libre ?
+N|der|Haushalt|-e|le ménage, le foyer||den ~ machen|Wir teilen uns die Arbeit im Haushalt.|Nous nous partageons les tâches ménagères.
+N|die|Wäsche|null|le linge, la lessive||die ~ waschen|Kannst du heute die Wäsche aufhängen?|Peux-tu étendre le linge aujourd'hui ?
+N|der|Einkauf|¨-e|l'achat, les courses||Einkäufe erledigen|Ich erledige die Einkäufe immer am Samstag.|Je fais toujours les courses le samedi.
+N|die|Besorgung|-en|la course, la commission||Besorgungen machen|Ich muss in der Stadt noch ein paar Besorgungen machen.|Je dois encore faire quelques courses en ville.
+N|das|Gericht|-e|le plat (cuisine)|||Mein Lieblingsgericht ist Gulasch mit Knödeln.|Mon plat préféré est le goulasch avec des boulettes.
+N|die|Mahlzeit|-en|le repas|||Drei Mahlzeiten am Tag reichen mir.|Trois repas par jour me suffisent.
+N|die|Zutat|-en|l'ingrédient|||Für den Kuchen fehlt mir noch eine Zutat.|Il me manque encore un ingrédient pour le gâteau.
+N|das|Rezept|-e|la recette ; l'ordonnance|||Kannst du mir das Rezept für die Suppe geben?|Peux-tu me donner la recette de la soupe ?
+N|der|Feierabend|-e|la fin de la journée de travail||~ machen|Nach Feierabend gehe ich oft joggen.|Après le travail, je vais souvent courir.
+N|das|Wochenende|-n|le week-end||am ~|Am Wochenende schlafe ich gerne aus.|Le week-end, j'aime faire la grasse matinée.
+N|die|Pünktlichkeit|null|la ponctualité|||In Deutschland ist Pünktlichkeit sehr wichtig.|En Allemagne, la ponctualité est très importante.
+N|die|Verspätung|-en|le retard||~ haben|Entschuldigung für die Verspätung!|Désolé pour le retard !
+N|die|Erholung|null|le repos, la détente|||Nach dieser Woche brauche ich dringend Erholung.|Après cette semaine, j'ai vraiment besoin de repos.
+V|null|erledigen|null|régler, s'occuper de|erledigt, erledigte, hat erledigt||Ich muss heute noch ein paar Sachen erledigen.|Je dois encore régler quelques affaires aujourd'hui.
+V|null|aufräumen|null|ranger|räumt auf, räumte auf, hat aufgeräumt||Am Sonntag räumen wir die Wohnung auf.|Le dimanche, nous rangeons l'appartement.
+V|null|putzen|null|nettoyer|putzt, putzte, hat geputzt||Ich putze zweimal pro Woche das Bad.|Je nettoie la salle de bains deux fois par semaine.
+V|null|sich ausruhen|null|se reposer|ruht sich aus, ruhte sich aus, hat sich ausgeruht||Nach dem Sport ruhe ich mich kurz aus.|Après le sport, je me repose un peu.
+V|null|sich beeilen|null|se dépêcher|beeilt sich, beeilte sich, hat sich beeilt||Beeil dich, der Bus kommt gleich!|Dépêche-toi, le bus arrive !
+V|null|verschlafen|null|ne pas se réveiller à temps|verschläft, verschlief, hat verschlafen||Heute habe ich leider verschlafen.|Aujourd'hui, malheureusement, je ne me suis pas réveillé.
+V|null|sich verabreden|null|se donner rendez-vous|verabredet sich, verabredete sich, hat sich verabredet|sich mit jdm. ~|Ich habe mich mit Anna zum Kaffee verabredet.|J'ai donné rendez-vous à Anna pour un café.
+V|null|absagen|null|annuler (un rendez-vous)|sagt ab, sagte ab, hat abgesagt||Leider muss ich den Termin absagen.|Malheureusement, je dois annuler le rendez-vous.
+V|null|verschieben|null|reporter, décaler|verschiebt, verschob, hat verschoben|etw. auf + Akk ~|Können wir das Treffen auf Freitag verschieben?|Pouvons-nous reporter la réunion à vendredi ?
+V|null|sich kümmern|null|s'occuper de|kümmert sich, kümmerte sich, hat sich gekümmert|sich um + Akk ~|Wer kümmert sich um die Kinder?|Qui s'occupe des enfants ?
+V|null|vorbereiten|null|préparer|bereitet vor, bereitete vor, hat vorbereitet|sich auf + Akk ~|Ich bereite das Abendessen vor.|Je prépare le dîner.
+V|null|zubereiten|null|préparer (un plat)|bereitet zu, bereitete zu, hat zubereitet||Er bereitet das Essen immer frisch zu.|Il prépare toujours les repas avec des produits frais.
+V|null|sich gewöhnen|null|s'habituer|gewöhnt sich, gewöhnte sich, hat sich gewöhnt|sich an + Akk ~|Ich habe mich an das frühe Aufstehen gewöhnt.|Je me suis habitué à me lever tôt.
+V|null|verbringen|null|passer (du temps)|verbringt, verbrachte, hat verbracht||Wir verbringen den Sommer bei meinen Eltern.|Nous passons l'été chez mes parents.
+V|null|unternehmen|null|entreprendre, faire (une sortie)|unternimmt, unternahm, hat unternommen|etwas ~|Wollen wir am Wochenende etwas unternehmen?|On fait quelque chose ce week-end ?
+V|null|sich langweilen|null|s'ennuyer|langweilt sich, langweilte sich, hat sich gelangweilt||Am Sonntag langweile ich mich manchmal.|Le dimanche, je m'ennuie parfois.
+V|null|vergessen|null|oublier|vergisst, vergaß, hat vergessen||Ich habe meinen Schlüssel vergessen.|J'ai oublié ma clé.
+V|null|sich erinnern|null|se souvenir|erinnert sich, erinnerte sich, hat sich erinnert|sich an + Akk ~|Erinnerst du dich an unseren ersten Urlaub?|Te souviens-tu de nos premières vacances ?
+V|null|erinnern|null|rappeler (à qqn)|erinnert, erinnerte, hat erinnert|jdn. an + Akk ~|Kannst du mich an den Termin erinnern?|Peux-tu me rappeler le rendez-vous ?
+V|null|ausgehen|null|sortir (le soir)|geht aus, ging aus, ist ausgegangen||Am Freitag gehen wir oft aus.|Le vendredi, nous sortons souvent.
+V|null|abholen|null|aller chercher|holt ab, holte ab, hat abgeholt||Ich hole dich um acht am Bahnhof ab.|Je viens te chercher à huit heures à la gare.
+V|null|sich anziehen|null|s'habiller|zieht sich an, zog sich an, hat sich angezogen||Zieh dich warm an, es ist kalt!|Habille-toi chaudement, il fait froid !
+A|null|pünktlich|null|ponctuel, à l'heure|||Der Zug ist heute pünktlich.|Le train est à l'heure aujourd'hui.
+A|null|anstrengend|null|fatigant, épuisant|||Der Tag war ziemlich anstrengend.|La journée a été assez fatigante.
+A|null|gemütlich|null|confortable, convivial|||Wir hatten einen gemütlichen Abend zu Hause.|Nous avons passé une soirée agréable à la maison.
+A|null|erschöpft|null|épuisé|||Nach der Arbeit bin ich völlig erschöpft.|Après le travail, je suis complètement épuisé.
+A|null|beschäftigt|null|occupé|||Tut mir leid, ich bin gerade sehr beschäftigt.|Désolé, je suis très occupé en ce moment.
+D|null|regelmäßig|null|régulièrement|||Ich gehe regelmäßig ins Fitnessstudio.|Je vais régulièrement à la salle de sport.
+D|null|ab und zu|null|de temps en temps|||Ab und zu koche ich für Freunde.|De temps en temps, je cuisine pour des amis.
+D|null|neulich|null|récemment, l'autre jour|||Neulich habe ich deinen Bruder getroffen.|L'autre jour, j'ai croisé ton frère.
+D|null|rechtzeitig|null|à temps|||Bitte sei rechtzeitig am Bahnhof.|Sois à la gare à temps, s'il te plaît.
+D|null|inzwischen|null|entre-temps, désormais|||Inzwischen wohne ich in Berlin.|Entre-temps, j'ai déménagé à Berlin.
+# theme: logement
+N|die|Miete|-n|le loyer||die ~ zahlen|Die Miete ist in dieser Stadt sehr hoch.|Le loyer est très élevé dans cette ville.
+N|der|Vermieter|-|le propriétaire (bailleur)|||Der Vermieter will die Heizung reparieren lassen.|Le propriétaire veut faire réparer le chauffage.
+N|der|Mieter|-|le locataire|||Die Mieter beschweren sich über den Lärm.|Les locataires se plaignent du bruit.
+N|der|Mietvertrag|¨-e|le bail||einen ~ unterschreiben|Ich habe den Mietvertrag gestern unterschrieben.|J'ai signé le bail hier.
+N|die|Kaution|-en|la caution, le dépôt de garantie|||Die Kaution beträgt drei Monatsmieten.|La caution s'élève à trois mois de loyer.
+N|die|Nebenkosten|null|les charges|||Sind die Nebenkosten in der Miete enthalten?|Les charges sont-elles comprises dans le loyer ?
+N|die|Wohngemeinschaft|-en|la colocation (WG)|||Als Student habe ich in einer Wohngemeinschaft gewohnt.|Étudiant, j'ai vécu en colocation.
+N|der|Umzug|¨-e|le déménagement|||Der Umzug war anstrengender als gedacht.|Le déménagement a été plus fatigant que prévu.
+N|der|Nachbar|-n|le voisin|||Unsere Nachbarn sind sehr hilfsbereit.|Nos voisins sont très serviables.
+N|die|Nachbarschaft|-en|le voisinage, le quartier|||In unserer Nachbarschaft gibt es viele Familien.|Il y a beaucoup de familles dans notre quartier.
+N|die|Heizung|-en|le chauffage|||Die Heizung funktioniert seit gestern nicht.|Le chauffage ne marche plus depuis hier.
+N|der|Strom|null|l'électricité, le courant|||Der Strom ist wieder teurer geworden.|L'électricité a encore augmenté.
+N|der|Schaden|¨-|le dommage, le dégât|||Der Wasserschaden muss schnell repariert werden.|Le dégât des eaux doit être réparé rapidement.
+N|die|Reparatur|-en|la réparation|||Wer bezahlt die Reparatur?|Qui paie la réparation ?
+N|der|Hausmeister|-|le gardien, le concierge|||Ruf doch den Hausmeister an!|Appelle donc le gardien !
+N|das|Erdgeschoss|-e|le rez-de-chaussée||im ~|Wir wohnen im Erdgeschoss.|Nous habitons au rez-de-chaussée.
+N|der|Stock|null|l'étage||im ersten ~|Die Wohnung liegt im dritten Stock.|L'appartement est au troisième étage.
+N|der|Aufzug|¨-e|l'ascenseur|||Der Aufzug ist leider kaputt.|L'ascenseur est malheureusement en panne.
+N|der|Keller|-|la cave|||Die Fahrräder stehen im Keller.|Les vélos sont à la cave.
+N|der|Balkon|-e|le balcon|||Im Sommer frühstücken wir auf dem Balkon.|En été, nous prenons le petit-déjeuner sur le balcon.
+N|die|Einrichtung|-en|l'aménagement, le mobilier|||Die Einrichtung ist modern und hell.|L'aménagement est moderne et lumineux.
+N|das|Möbel|-|le meuble|||Wir haben neue Möbel gekauft.|Nous avons acheté de nouveaux meubles.
+N|der|Müll|null|les ordures, les déchets||den ~ trennen|In Deutschland trennt man den Müll sorgfältig.|En Allemagne, on trie soigneusement les déchets.
+N|die|Mülltonne|-n|la poubelle (conteneur)|||Die gelbe Mülltonne ist für Plastik.|La poubelle jaune est pour le plastique.
+N|die|Hausordnung|-en|le règlement intérieur|||Laut Hausordnung ist ab 22 Uhr Ruhe.|Selon le règlement, le silence est de rigueur à partir de 22 h.
+N|der|Lärm|null|le bruit|||Der Lärm von der Baustelle stört mich.|Le bruit du chantier me dérange.
+N|die|Lage|-n|la situation, l'emplacement|||Die Wohnung ist teuer, aber die Lage ist super.|L'appartement est cher, mais l'emplacement est génial.
+N|die|Anzeige|-n|l'annonce|||Ich habe die Wohnung über eine Anzeige gefunden.|J'ai trouvé l'appartement grâce à une annonce.
+N|die|Besichtigung|-en|la visite (d'un logement)|||Die Besichtigung ist am Montag um 18 Uhr.|La visite a lieu lundi à 18 h.
+N|der|Schlüssel|-|la clé|||Ich habe meinen Schlüssel in der Wohnung vergessen.|J'ai oublié ma clé dans l'appartement.
+V|null|mieten|null|louer (en tant que locataire)|mietet, mietete, hat gemietet||Wir möchten eine größere Wohnung mieten.|Nous aimerions louer un appartement plus grand.
+V|null|vermieten|null|louer (en tant que propriétaire)|vermietet, vermietete, hat vermietet||Sie vermietet ihr Zimmer an Studenten.|Elle loue sa chambre à des étudiants.
+V|null|umziehen|null|déménager|zieht um, zog um, ist umgezogen|nach / in + Akk ~|Nächsten Monat ziehen wir nach Hamburg um.|Le mois prochain, nous déménageons à Hambourg.
+V|null|einziehen|null|emménager|zieht ein, zog ein, ist eingezogen||Wann könnt ihr in die neue Wohnung einziehen?|Quand pouvez-vous emménager dans le nouvel appartement ?
+V|null|ausziehen|null|déménager (quitter)|zieht aus, zog aus, ist ausgezogen||Mein Mitbewohner zieht Ende Mai aus.|Mon colocataire part fin mai.
+V|null|kündigen|null|résilier, donner son préavis|kündigt, kündigte, hat gekündigt||Ich habe die Wohnung zum 1. Juli gekündigt.|J'ai donné mon préavis pour le 1er juillet.
+V|null|einrichten|null|aménager, meubler|richtet ein, richtete ein, hat eingerichtet||Wir haben die Küche neu eingerichtet.|Nous avons réaménagé la cuisine.
+V|null|reparieren|null|réparer|repariert, reparierte, hat repariert||Kannst du den Wasserhahn reparieren?|Peux-tu réparer le robinet ?
+V|null|sich beschweren|null|se plaindre|beschwert sich, beschwerte sich, hat sich beschwert|sich über + Akk ~|Die Nachbarn haben sich über die Musik beschwert.|Les voisins se sont plaints de la musique.
+V|null|stören|null|déranger|stört, störte, hat gestört||Störe ich gerade?|Je te dérange ?
+V|null|heizen|null|chauffer|heizt, heizte, hat geheizt||Im Winter heizen wir nur das Wohnzimmer.|En hiver, nous ne chauffons que le salon.
+V|null|lüften|null|aérer|lüftet, lüftete, hat gelüftet||Bitte lüfte morgens kurz das Schlafzimmer.|S'il te plaît, aère un peu la chambre le matin.
+V|null|trennen|null|séparer, trier|trennt, trennte, hat getrennt||Wir trennen Papier, Glas und Plastik.|Nous trions le papier, le verre et le plastique.
+V|null|klingeln|null|sonner|klingelt, klingelte, hat geklingelt||Es hat an der Tür geklingelt.|On a sonné à la porte.
+A|null|möbliert|null|meublé|||Ich suche ein möbliertes Zimmer.|Je cherche une chambre meublée.
+A|null|hell|null|lumineux, clair|||Das Wohnzimmer ist schön hell.|Le salon est bien lumineux.
+A|null|ruhig|null|calme|||Die Straße ist sehr ruhig.|La rue est très calme.
+A|null|zentral|null|central|||Die Wohnung liegt zentral, nahe am Bahnhof.|L'appartement est central, près de la gare.
+A|null|kaputt|null|cassé, en panne|||Die Waschmaschine ist schon wieder kaputt.|La machine à laver est encore en panne.
+A|null|preiswert|null|bon marché, avantageux|||Wir haben eine preiswerte Wohnung gefunden.|Nous avons trouvé un appartement abordable.

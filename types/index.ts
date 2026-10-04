@@ -50,3 +50,31 @@ export interface ProfileStats {
   totalPossible: number;
   pct: number;
 }
+
+// ── German (spaced repetition) types ───────────────────────────────────────────
+
+export type GermanPos = 'noun' | 'verb' | 'adj' | 'adv' | 'other';
+
+export interface GermanWord {
+  id: string;
+  lemma: string;
+  article: 'der' | 'die' | 'das' | null;
+  plural: string | null;   // e.g. "-en", "¨-e", "–" (no plural)
+  pos: GermanPos;
+  level: 'B1' | 'B2';
+  theme: string;
+  fr: string;
+  forms: string | null;    // verbs: "entscheidet, entschied, hat entschieden"
+  governs: string | null;  // construction: "sich ~ für + Akk"
+  example_de: string;
+  example_fr: string;
+}
+
+export interface WordProgress {
+  wordId: string;
+  box: number;        // Leitner box 0–7 (0 = learning, same session)
+  due: string;        // ISO date
+  reps: number;
+  lapses: number;
+  updatedAt: string;  // ISO date — last write wins when syncing
+}

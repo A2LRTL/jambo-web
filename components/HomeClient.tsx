@@ -1,19 +1,20 @@
 'use client';
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_CATEGORIES, SWAHILI_CATEGORY_LABELS, SWAHILI_PHRASE_TOPICS, SWAHILI_PHRASE_TOPIC_LABELS } from '@/lib/lesson-registry';
 import { PHRASE_TOPIC_LABELS, PHRASE_TOPICS } from '@/lib/phrase-registry';
 import { getBestScores, type BestScore } from '@/lib/scores';
+import { GERMAN_PROFILE, PROFILES, useProfile, writeProfile, type Profile, type ProfileName } from '@/lib/profile';
 import Leaderboard from './Leaderboard';
+import GermanTab from './german/GermanTab';
 
-const PROFILES = ['Shaza', 'Gisabo', 'Ruta', 'Bambara'] as const;
-type ProfileName = (typeof PROFILES)[number];
-type Lang = 'kirundi' | 'swahili' | 'scores';
+type Lang = 'kirundi' | 'swahili' | 'german' | 'scores';
 
 const LANGS: { id: Lang; label: string; flag: string }[] = [
   { id: 'kirundi', label: 'Kirundi', flag: '🇧🇮' },
   { id: 'swahili', label: 'Swahili', flag: '🇹🇿' },
+  { id: 'german',  label: 'Deutsch', flag: '🇩🇪' },
   { id: 'scores',  label: 'Scores',  flag: '🏆' },
 ];
 
@@ -22,7 +23,7 @@ const LANGS: { id: Lang; label: string; flag: string }[] = [
 type SuggestionType = 'new' | 'revision' | 'review';
 interface Suggestion { id: string; title: string; path: string; type: SuggestionType; }
 
-type StudyLang = Exclude<Lang, 'scores'>;
+type StudyLang = 'kirundi' | 'swahili';
 type LessonRef = { id: string; title: string; path: string };
 
 const LESSONS_BY_LANG: Record<StudyLang, LessonRef[]> = {
@@ -86,39 +87,6 @@ const TYPE_COLOR: Record<SuggestionType, string> = {
   review:   'text-muted bg-border border-border',
 };
 
-// ── Profile (persisted in localStorage) ─────────────────────────────────────
-
-const PROFILE_KEY = 'jambo_profile';
-const PROFILE_EVENT = 'jambo-profile-change';
-type Profile = ProfileName | 'guest';
-
-function readProfile(): Profile | null {
-  try {
-    const saved = localStorage.getItem(PROFILE_KEY);
-    if (saved === 'guest' || (PROFILES as readonly string[]).includes(saved ?? '')) return saved as Profile;
-  } catch { /* ignore */ }
-  return null;
-}
-
-function writeProfile(name: Profile) {
-  try { localStorage.setItem(PROFILE_KEY, name); } catch { /* ignore */ }
-  window.dispatchEvent(new Event(PROFILE_EVENT));
-}
-
-function subscribeProfile(onChange: () => void) {
-  window.addEventListener('storage', onChange);
-  window.addEventListener(PROFILE_EVENT, onChange);
-  return () => {
-    window.removeEventListener('storage', onChange);
-    window.removeEventListener(PROFILE_EVENT, onChange);
-  };
-}
-
-/** `undefined` on the server / before hydration, `null` when no profile is chosen yet. */
-function useProfile(): Profile | null | undefined {
-  return useSyncExternalStore(subscribeProfile, readProfile, () => undefined);
-}
-
 // ───────────────────────────────────────────────────────────────────────────
 
 interface ProfileData {
@@ -130,9 +98,14 @@ interface ProfileData {
 export default function HomeClient() {
   const router = useRouter();
   const profile = useProfile();
-  const [lang, setLang]               = useState<Lang>('kirundi');
+  const [selectedLang, setLang]       = useState<Lang>('kirundi');
   const [showSwitch, setShowSwitch]   = useState(false);
   const [data, setData]               = useState<ProfileData | null>(null);
+
+  // German is only offered to its learner; fall back if the profile changes
+  const hasGerman = profile === GERMAN_PROFILE;
+  const langs = LANGS.filter((l) => l.id !== 'german' || hasGerman);
+  const lang: Lang = selectedLang === 'german' && !hasGerman ? 'kirundi' : selectedLang;
 
   useEffect(() => {
     if (!profile || profile === 'guest') return;
@@ -310,6 +283,8 @@ export default function HomeClient() {
 
         {lang === 'scores' && <Leaderboard />}
 
+        {lang === 'german' && hasGerman && <GermanTab profile={profile} />}
+
         {lang === 'swahili' && (
           <>
             {suggestionCard('swahili')}
@@ -344,7 +319,7 @@ export default function HomeClient() {
       {/* Language tab bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-cream border-t border-border">
         <div className="max-w-md mx-auto flex">
-          {LANGS.map(({ id, label, flag }) => (
+          {langs.map(({ id, label, flag }) => (
             <button key={id} type="button" onClick={() => setLang(id)}
               className={`flex-1 flex flex-col items-center gap-1 py-3 transition-colors ${
                 lang === id ? 'text-accent' : 'text-muted hover:text-ink'
