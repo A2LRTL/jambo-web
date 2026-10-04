@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
-import { buildPrepQuestion, highlightPrep, parsePrep, type PrepQuestion } from '@/lib/german/verbs';
+import { buildPrepQuestion, highlightPrep, parsePrep, stripPrep, type PrepQuestion } from '@/lib/german/verbs';
 import { shuffle } from '@/lib/utils';
 import { speak } from '@/lib/speech';
 import { markPracticed } from '@/components/NotificationSetup';
@@ -45,12 +45,20 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [mistakes, setMistakes] = useState<string[]>([]);
+  const [learning, setLearning] = useState(true); // flashcards of the round's verbs come first
+
+  if (learning) {
+    return (
+      <LearnCards verbs={round.map((q) => byId.get(q.wordId)!)}
+        onDone={() => setLearning(false)} onBack={() => router.push('/de/verbs')} />
+    );
+  }
 
   const finished = index >= round.length;
 
   if (finished) {
     const score = round.length - mistakes.length;
-    const restart = () => { setRound(pickRound(verbs)); setIndex(0); setSelected(null); setMistakes([]); };
+    const restart = () => { setRound(pickRound(verbs)); setIndex(0); setSelected(null); setMistakes([]); setLearning(true); };
     return (
       <main className="flex flex-col min-h-dvh px-6 pb-10 pt-12 max-w-md mx-auto">
         <div className="flex flex-col items-center gap-3 text-center mb-8">
@@ -153,6 +161,96 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
       <div className="mt-auto pt-6">
         <PrimaryButton label={index === round.length - 1 ? 'Terminer' : 'Suivant'} onClick={next}
           variant={answered ? 'primary' : 'secondary'} disabled={!answered} />
+      </div>
+    </main>
+  );
+}
+
+/** Flashcards of the round's verbs: French first, then the verb with its preposition, case and example. */
+function LearnCards({ verbs, onDone, onBack }: { verbs: GermanWord[]; onDone: () => void; onBack: () => void }) {
+  const [i, setI] = useState(0);
+  const [revealed, setRevealed] = useState(false);
+  const verb = verbs[i];
+  const preps = parsePrep(verb.governs)!.preps;
+  const isLast = i === verbs.length - 1;
+
+  const reveal = () => {
+    if (revealed) return;
+    setRevealed(true);
+    speak(verb.example_de);
+  };
+  const go = (next: number) => { setI(next); setRevealed(false); };
+
+  const highlighted = (text: string) =>
+    highlightPrep(text, preps).map((part, k) =>
+      part.hit ? <strong key={k} className="text-accent">{part.text}</strong> : part.text,
+    );
+
+  return (
+    <main className="flex flex-col min-h-dvh max-w-md mx-auto px-6 pb-10">
+      <div className="flex items-center gap-3 pt-6 pb-4">
+        <button type="button" onClick={onBack} aria-label="Retour"
+          className="p-2 rounded-lg text-muted hover:text-ink hover:bg-border transition-colors text-xl leading-none">
+          ←
+        </button>
+        <div className="flex-1">
+          <p className="text-xs text-muted uppercase tracking-wider">À retenir avant le test</p>
+          <h1 className="text-xl font-bold text-ink">Verbe + préposition</h1>
+        </div>
+        <p className="text-sm text-muted font-medium">{i + 1} / {verbs.length}</p>
+      </div>
+
+      <div className="h-1 rounded-full bg-border mb-6 overflow-hidden">
+        <div className="h-full bg-accent rounded-full transition-all duration-300"
+          style={{ width: `${((i + 1) / verbs.length) * 100}%` }} />
+      </div>
+
+      <div className="flex-1 flex items-center">
+        <button type="button" onClick={reveal}
+          className="w-full rounded-3xl bg-card border-2 border-border shadow-md flex flex-col gap-4 py-10 px-6 text-left">
+          <div>
+            <p className="text-xs text-muted uppercase tracking-wider font-semibold mb-1">Comment dit-on…</p>
+            <p className="text-3xl font-bold text-ink leading-snug">{verb.fr}</p>
+            <p className="text-sm text-muted italic mt-3">{verb.example_fr}</p>
+          </div>
+          {revealed ? (
+            <div className="flex flex-col gap-3 border-t border-border pt-4 animate-fade-in">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-2xl font-bold text-ink">{stripPrep(verb.lemma)}</p>
+                  <p className="text-lg font-semibold text-ink">{highlighted(verb.governs ?? '')}</p>
+                </div>
+                <SpeakButton text={`${stripPrep(verb.lemma)}, ${verb.example_de}`} />
+              </div>
+              {verb.forms && <p className="text-sm text-muted">{verb.forms}</p>}
+              <p className="px-4 py-3 rounded-xl bg-cream border border-border text-sm text-ink italic">
+                {highlighted(verb.example_de)}
+              </p>
+            </div>
+          ) : (
+            <p className="text-xs text-muted">Appuie pour voir le verbe allemand et sa préposition.</p>
+          )}
+        </button>
+      </div>
+
+      <div className="flex flex-col gap-3 mt-8">
+        {isLast && revealed ? (
+          <PrimaryButton label="Commencer le test →" onClick={onDone} />
+        ) : (
+          <div className="flex gap-3">
+            <button type="button" onClick={() => go(i - 1)} disabled={i === 0}
+              className="flex-1 py-4 rounded-xl border border-border bg-card font-semibold text-ink disabled:opacity-30 hover:border-accent transition-all active:scale-[0.98]">
+              ← Précédent
+            </button>
+            <button type="button" onClick={() => (revealed ? go(i + 1) : reveal())}
+              className="flex-1 py-4 rounded-xl bg-accent text-white font-semibold hover:bg-accent-dark transition-all active:scale-[0.98]">
+              {revealed ? 'Suivant →' : 'Voir'}
+            </button>
+          </div>
+        )}
+        <button type="button" onClick={onDone} className="text-center text-xs text-muted hover:text-ink transition-colors">
+          Passer les cartes → test direct
+        </button>
       </div>
     </main>
   );
