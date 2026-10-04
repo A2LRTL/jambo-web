@@ -76,11 +76,11 @@ function TriageRunner({ profile, deck }: { profile: string; deck: GermanWord[] }
         <>
           <div className="flex-1 flex flex-col">
             <div key={word.id} className="w-full rounded-3xl bg-card border-2 border-border shadow-md flex flex-col gap-4 py-8 px-6 animate-fade-in">
+              <p className="text-2xl font-bold text-ink leading-snug">{word.fr}</p>
               <div className="flex items-start justify-between gap-3">
-                <Headword word={word} />
+                <Headword word={word} size="text-2xl" />
                 <SpeakButton text={headword(word)} />
               </div>
-              <p className="text-xl font-bold text-accent">{word.fr}</p>
               <GrammarLine word={word} />
               <Example word={word} />
             </div>

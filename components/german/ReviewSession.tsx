@@ -3,14 +3,14 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
-import { buildSession, direction, markKnown, QUEUED_BOX, review, type Grade } from '@/lib/german/srs';
+import { buildSession, markKnown, QUEUED_BOX, review, type Grade } from '@/lib/german/srs';
 import { addNewIntroduced, getNewPerDay, getProgress, newIntroducedToday, updateProgress } from '@/lib/german/progress';
 import { shuffle } from '@/lib/utils';
 import { speak } from '@/lib/speech';
 import { markPracticed } from '@/components/NotificationSetup';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
-import { Example, GrammarLine, Headword, headword, SpeakButton } from './WordView';
+import { GrammarLine, Headword, headword, SpeakButton } from './WordView';
 
 export default function ReviewSession({ deck }: { deck: GermanWord[] }) {
   const profile = useGermanAccess();
@@ -44,13 +44,6 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
   const word = queue.length > 0 ? byId.get(queue[0]) : undefined;
   const prev = word ? getProgress(profile)[word.id] : undefined;
   const isNew = !prev || prev.box === QUEUED_BOX;
-  const dir = direction(prev);
-
-  // Recognition cards: say the word as soon as it appears
-  useEffect(() => {
-    if (word && dir === 'de-fr') speak(headword(word));
-  }, [word, dir]);
-
   useEffect(() => {
     if (total > 0 && queue.length === 0) markPracticed();
   }, [queue.length, total]);
@@ -74,7 +67,7 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
 
   const reveal = () => {
     setRevealed(true);
-    if (dir === 'fr-de') speak(headword(word));
+    speak(headword(word));
   };
 
   const answer = (grade: Grade | 'known') => {
@@ -104,35 +97,27 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
       {/* Card */}
       <div className="flex-1 flex flex-col">
         <div className="w-full rounded-3xl bg-card border-2 border-border shadow-md flex flex-col gap-4 py-8 px-6">
-          {dir === 'de-fr' ? (
-            <div className="flex items-start justify-between gap-3">
-              <Headword word={word} />
-              <SpeakButton text={headword(word)} />
-            </div>
-          ) : (
-            <div>
-              <p className="text-xs text-muted uppercase tracking-wider font-semibold mb-1">Comment dit-on…</p>
-              <p className="text-3xl font-bold text-ink leading-snug">{word.fr}</p>
-            </div>
-          )}
+          {/* French first — the German only appears once revealed */}
+          <div>
+            <p className="text-xs text-muted uppercase tracking-wider font-semibold mb-1">Comment dit-on…</p>
+            <p className="text-3xl font-bold text-ink leading-snug">{word.fr}</p>
+            <p className="text-sm text-muted italic mt-3">{word.example_fr}</p>
+          </div>
 
           {revealed ? (
             <div className="flex flex-col gap-4 border-t border-border pt-4 animate-fade-in">
-              {dir === 'de-fr' ? (
-                <p className="text-2xl font-bold text-accent">{word.fr}</p>
-              ) : (
-                <div className="flex items-start justify-between gap-3">
-                  <Headword word={word} size="text-2xl" />
-                  <SpeakButton text={headword(word)} />
-                </div>
-              )}
+              <div className="flex items-start justify-between gap-3">
+                <Headword word={word} size="text-2xl" />
+                <SpeakButton text={headword(word)} />
+              </div>
               <GrammarLine word={word} />
-              <Example word={word} />
+              <div className="px-4 py-3 rounded-xl bg-cream border border-border flex items-start gap-3">
+                <p className="flex-1 text-sm text-ink italic">{word.example_de}</p>
+                <SpeakButton text={word.example_de} />
+              </div>
             </div>
           ) : (
-            <p className="text-xs text-muted">
-              {dir === 'de-fr' ? 'Que veut dire ce mot ?' : 'Dis-le en allemand, avec l\'article.'}
-            </p>
+            <p className="text-xs text-muted">Dis-le en allemand, avec l&apos;article si c&apos;est un nom.</p>
           )}
         </div>
       </div>

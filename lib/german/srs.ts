@@ -10,11 +10,8 @@ export const MAX_BOX = INTERVALS.length - 1;
 export const KNOWN_BOX = 5;
 /** Pseudo-box for a word marked "à apprendre" but never studied yet. */
 export const QUEUED_BOX = -1;
-/** From this box on, cards are asked French → German (active recall). */
-export const PRODUCTION_BOX = 3;
 
 export type Grade = 'again' | 'hard' | 'good';
-export type Direction = 'de-fr' | 'fr-de';
 export type ProgressMap = Record<string, WordProgress>;
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -56,11 +53,6 @@ export function markToLearn(prev: WordProgress | undefined, wordId: string, now:
 
 export function isDue(p: WordProgress, now: Date): boolean {
   return p.box >= 0 && new Date(p.due).getTime() <= now.getTime();
-}
-
-/** Recognition (DE → FR) while the word is fresh, production (FR → DE) once it is settled. */
-export function direction(p: WordProgress | undefined): Direction {
-  return p && p.box >= PRODUCTION_BOX ? 'fr-de' : 'de-fr';
 }
 
 export interface SessionOptions {

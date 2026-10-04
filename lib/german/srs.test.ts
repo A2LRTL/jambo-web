@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  review, markKnown, markToLearn, buildSession, deckStats, direction,
+  review, markKnown, markToLearn, buildSession, deckStats,
   INTERVALS, KNOWN_BOX, MAX_BOX, QUEUED_BOX, type ProgressMap,
 } from './srs.ts';
 
@@ -62,12 +62,6 @@ test('session: overdue reviews first, queued before untriaged, limits respected'
   assert.deepEqual(plan.fresh, ['q', 'u1']);
 
   assert.deepEqual(buildSession(progress, deck, NOW, { newLimit: 0, maxReviews: 1 }), { reviews: ['b'], fresh: [] });
-});
-
-test('direction: recognition until box 3, then production', () => {
-  assert.equal(direction(undefined), 'de-fr');
-  assert.equal(direction(review(undefined, 'w', 'good', NOW)), 'de-fr');
-  assert.equal(direction(markKnown(undefined, 'w', NOW)), 'fr-de');
 });
 
 test('deck stats', () => {
