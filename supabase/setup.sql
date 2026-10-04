@@ -31,3 +31,24 @@ create table if not exists reports (
 
 alter table reports enable row level security;
 create policy "Public insert reports" on reports for insert with check (true);
+
+
+-- ─── German progress ─────────────────────────────────────────────────────────
+-- Per-word spaced-repetition state for the German section (lib/german/progress.ts).
+-- The app keeps working offline without it; rows are upserted on every review.
+
+create table if not exists de_progress (
+  profile    text        not null,
+  word_id    text        not null,
+  box        int         not null,
+  due        timestamptz not null,
+  reps       int         not null default 0,
+  lapses     int         not null default 0,
+  updated_at timestamptz not null default now(),
+  primary key (profile, word_id)
+);
+
+alter table de_progress enable row level security;
+create policy "Public read de_progress"   on de_progress for select using (true);
+create policy "Public insert de_progress" on de_progress for insert with check (true);
+create policy "Public update de_progress" on de_progress for update using (true) with check (true);
