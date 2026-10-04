@@ -75,7 +75,7 @@ V|null|sich freuen über|null|se réjouir de (présent, passé)|freut sich, freu
 V|null|sich ärgern|null|s'énerver, être contrarié|ärgert sich, ärgerte sich, hat sich geärgert|sich über + Akk ~|Ich ärgere mich über den Lärm.|Le bruit m'agace.
 V|null|sich Sorgen machen|null|s'inquiéter|macht sich Sorgen, machte sich Sorgen, hat sich Sorgen gemacht|sich um + Akk ~|Meine Mutter macht sich immer Sorgen um mich.|Ma mère s'inquiète toujours pour moi.
 V|null|enttäuschen|null|décevoir|enttäuscht, enttäuschte, hat enttäuscht||Du hast mich sehr enttäuscht.|Tu m'as beaucoup déçu.
-V|null|sich verstehen|null|bien s'entendre|versteht sich, verstand sich, hat sich verstanden|sich gut mit jdm. ~|Ich verstehe mich gut mit meiner Schwester.|Je m'entends bien avec ma sœur.
+V|null|sich verstehen|null|bien s'entendre|versteht sich, verstand sich, hat sich verstanden|sich gut mit + Dat ~|Ich verstehe mich gut mit meiner Schwester.|Je m'entends bien avec ma sœur.
 V|null|kennenlernen|null|faire la connaissance de|lernt kennen, lernte kennen, hat kennengelernt||Wo habt ihr euch kennengelernt?|Où vous êtes-vous rencontrés ?
 V|null|einladen|null|inviter|lädt ein, lud ein, hat eingeladen|jdn. zu + Dat ~|Ich lade dich zum Essen ein.|Je t'invite à manger.
 V|null|trösten|null|consoler|tröstet, tröstete, hat getröstet||Sie hat ihre traurige Freundin getröstet.|Elle a consolé son amie triste.

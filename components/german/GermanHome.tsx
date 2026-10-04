@@ -86,6 +86,11 @@ function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] })
           <p className="text-sm font-bold text-ink">Trier des mots</p>
           <p className="text-xs text-muted mt-0.5">« Je connais » ou « À apprendre », par lots de 20</p>
         </button>
+        <button type="button" onClick={() => router.push('/de/verbs')}
+          className="w-full py-4 px-5 rounded-xl border border-border bg-card text-left hover:border-accent transition-all active:scale-[0.98] shadow-sm">
+          <p className="text-sm font-bold text-ink">Verbes</p>
+          <p className="text-xs text-muted mt-0.5">Réfléchis, séparables, irréguliers · entraînement verbe + préposition</p>
+        </button>
         <button type="button" onClick={() => router.push('/de/words')}
           className="w-full py-4 px-5 rounded-xl border border-border bg-card text-left hover:border-accent transition-all active:scale-[0.98] shadow-sm">
           <p className="text-sm font-bold text-ink">Liste des mots</p>

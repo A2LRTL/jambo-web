@@ -23,7 +23,7 @@ V|null|putzen|null|nettoyer|putzt, putzte, hat geputzt||Ich putze zweimal pro Wo
 V|null|sich ausruhen|null|se reposer|ruht sich aus, ruhte sich aus, hat sich ausgeruht||Nach dem Sport ruhe ich mich kurz aus.|Après le sport, je me repose un peu.
 V|null|sich beeilen|null|se dépêcher|beeilt sich, beeilte sich, hat sich beeilt||Beeil dich, der Bus kommt gleich!|Dépêche-toi, le bus arrive !
 V|null|verschlafen|null|ne pas se réveiller à temps|verschläft, verschlief, hat verschlafen||Heute habe ich leider verschlafen.|Aujourd'hui, malheureusement, je ne me suis pas réveillé.
-V|null|sich verabreden|null|se donner rendez-vous|verabredet sich, verabredete sich, hat sich verabredet|sich mit jdm. ~|Ich habe mich mit Anna zum Kaffee verabredet.|J'ai donné rendez-vous à Anna pour un café.
+V|null|sich verabreden|null|se donner rendez-vous|verabredet sich, verabredete sich, hat sich verabredet|sich mit + Dat ~|Ich habe mich mit Anna zum Kaffee verabredet.|J'ai donné rendez-vous à Anna pour un café.
 V|null|absagen|null|annuler (un rendez-vous)|sagt ab, sagte ab, hat abgesagt||Leider muss ich den Termin absagen.|Malheureusement, je dois annuler le rendez-vous.
 V|null|verschieben|null|reporter, décaler|verschiebt, verschob, hat verschoben|etw. auf + Akk ~|Können wir das Treffen auf Freitag verschieben?|Pouvons-nous reporter la réunion à vendredi ?
 V|null|sich kümmern|null|s'occuper de|kümmert sich, kümmerte sich, hat sich gekümmert|sich um + Akk ~|Wer kümmert sich um die Kinder?|Qui s'occupe des enfants ?
@@ -82,7 +82,7 @@ N|die|Besichtigung|-en|la visite (d'un logement)|||Die Besichtigung ist am Monta
 N|der|Schlüssel|-|la clé|||Ich habe meinen Schlüssel in der Wohnung vergessen.|J'ai oublié ma clé dans l'appartement.
 V|null|mieten|null|louer (en tant que locataire)|mietet, mietete, hat gemietet||Wir möchten eine größere Wohnung mieten.|Nous aimerions louer un appartement plus grand.
 V|null|vermieten|null|louer (en tant que propriétaire)|vermietet, vermietete, hat vermietet||Sie vermietet ihr Zimmer an Studenten.|Elle loue sa chambre à des étudiants.
-V|null|umziehen|null|déménager|zieht um, zog um, ist umgezogen|nach / in + Akk ~|Nächsten Monat ziehen wir nach Hamburg um.|Le mois prochain, nous déménageons à Hambourg.
+V|null|umziehen|null|déménager|zieht um, zog um, ist umgezogen|nach Berlin / in eine Wohnung ~|Nächsten Monat ziehen wir nach Hamburg um.|Le mois prochain, nous déménageons à Hambourg.
 V|null|einziehen|null|emménager|zieht ein, zog ein, ist eingezogen||Wann könnt ihr in die neue Wohnung einziehen?|Quand pouvez-vous emménager dans le nouvel appartement ?
 V|null|ausziehen|null|déménager (quitter)|zieht aus, zog aus, ist ausgezogen||Mein Mitbewohner zieht Ende Mai aus.|Mon colocataire part fin mai.
 V|null|kündigen|null|résilier, donner son préavis|kündigt, kündigte, hat gekündigt||Ich habe die Wohnung zum 1. Juli gekündigt.|J'ai donné mon préavis pour le 1er juillet.

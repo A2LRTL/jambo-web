@@ -9,6 +9,7 @@ export const GERMAN_THEME_LABELS: Record<string, string> = {
   relations:      'Relations & sentiments',
   medias:         'Médias & opinions',
   connecteurs:    'Connecteurs & mots outils',
+  prepositions:   'Verbes à préposition',
 };
 
 export const GERMAN_THEMES = Object.keys(GERMAN_THEME_LABELS);

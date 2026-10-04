@@ -1,0 +1,66 @@
+# theme: prepositions
+V|null|warten|null|attendre|wartet, wartete, hat gewartet|auf + Akk ~|Ich warte schon seit zwanzig Minuten auf den Bus.|J'attends le bus depuis vingt minutes.
+V|null|achten|null|faire attention à|achtet, achtete, hat geachtet|auf + Akk ~|Achte bitte auf die Kinder!|Fais attention aux enfants, s'il te plaît !
+V|null|aufpassen|null|surveiller, faire attention à|passt auf, passte auf, hat aufgepasst|auf + Akk ~|Kannst du heute Abend auf meinen Hund aufpassen?|Peux-tu garder mon chien ce soir ?
+V|null|antworten|null|répondre à (une question, un mail)|antwortet, antwortete, hat geantwortet|auf + Akk ~|Er hat noch nicht auf meine E-Mail geantwortet.|Il n'a pas encore répondu à mon e-mail.
+V|null|reagieren|null|réagir à|reagiert, reagierte, hat reagiert|auf + Akk ~|Wie hat sie auf die Nachricht reagiert?|Comment a-t-elle réagi à la nouvelle ?
+V|null|hoffen|null|espérer|hofft, hoffte, hat gehofft|auf + Akk ~|Wir hoffen auf besseres Wetter.|Nous espérons un meilleur temps.
+V|null|verzichten|null|renoncer à|verzichtet, verzichtete, hat verzichtet|auf + Akk ~|Ich verzichte diesen Monat auf Süßigkeiten.|Ce mois-ci, je renonce aux sucreries.
+V|null|sich vorbereiten|null|se préparer à|bereitet sich vor, bereitete sich vor, hat sich vorbereitet|sich auf + Akk ~|Sie bereitet sich auf die Prüfung vor.|Elle se prépare à l'examen.
+V|null|ankommen auf|null|dépendre de (es kommt auf … an)|kommt an, kam an, ist angekommen|es kommt auf + Akk an|Es kommt auf das Wetter an.|Ça dépend du temps.
+V|null|sich beziehen|null|se référer à|bezieht sich, bezog sich, hat sich bezogen|sich auf + Akk ~|Ich beziehe mich auf Ihr Schreiben vom 3. Mai.|Je me réfère à votre courrier du 3 mai.|B2
+V|null|denken|null|penser à|denkt, dachte, hat gedacht|an + Akk ~|Ich denke oft an meine Kindheit.|Je pense souvent à mon enfance.
+V|null|glauben|null|croire en|glaubt, glaubte, hat geglaubt|an + Akk ~|Glaubst du an die große Liebe?|Crois-tu au grand amour ?
+V|null|sich wenden|null|s'adresser à|wendet sich, wandte sich, hat sich gewandt|sich an + Akk ~|Bei Fragen wenden Sie sich bitte an die Rezeption.|Pour toute question, adressez-vous à la réception.
+V|null|sich halten|null|respecter, s'en tenir à|hält sich, hielt sich, hat sich gehalten|sich an + Akk ~|Bitte halten Sie sich an die Regeln.|Veuillez respecter les règles.
+V|null|sich anpassen|null|s'adapter à|passt sich an, passte sich an, hat sich angepasst|sich an + Akk ~|Kinder passen sich schnell an neue Situationen an.|Les enfants s'adaptent vite aux nouvelles situations.
+V|null|schreiben|null|écrire à|schreibt, schrieb, hat geschrieben|an + Akk ~|Ich schreibe einen Brief an meine Großmutter.|J'écris une lettre à ma grand-mère.
+V|null|arbeiten|null|travailler à|arbeitet, arbeitete, hat gearbeitet|an + Dat ~|Wir arbeiten gerade an einem neuen Projekt.|Nous travaillons en ce moment sur un nouveau projet.
+V|null|sich beteiligen|null|participer à|beteiligt sich, beteiligte sich, hat sich beteiligt|sich an + Dat ~|Alle haben sich an den Kosten beteiligt.|Tout le monde a participé aux frais.|B2
+V|null|sterben|null|mourir de|stirbt, starb, ist gestorben|an + Dat ~|Er ist an einem Herzinfarkt gestorben.|Il est mort d'une crise cardiaque.
+V|null|nachdenken|null|réfléchir à|denkt nach, dachte nach, hat nachgedacht|über + Akk ~|Ich muss noch über dein Angebot nachdenken.|Je dois encore réfléchir à ta proposition.
+V|null|sprechen|null|parler de|spricht, sprach, hat gesprochen|mit jdm. über + Akk ~|Wir müssen über das Problem sprechen.|Nous devons parler du problème.
+V|null|sich unterhalten|null|discuter, converser|unterhält sich, unterhielt sich, hat sich unterhalten|sich mit jdm. über + Akk ~|Wir haben uns lange über den Urlaub unterhalten.|Nous avons longuement parlé des vacances.
+V|null|sich wundern|null|s'étonner de|wundert sich, wunderte sich, hat sich gewundert|sich über + Akk ~|Ich wundere mich über seine Reaktion.|Je m'étonne de sa réaction.
+V|null|lachen|null|rire de|lacht, lachte, hat gelacht|über + Akk ~|Alle haben über den Witz gelacht.|Tout le monde a ri de la blague.
+V|null|klagen|null|se plaindre de|klagt, klagte, hat geklagt|über + Akk ~|Viele Patienten klagen über Kopfschmerzen.|Beaucoup de patients se plaignent de maux de tête.|B2
+V|null|verfügen|null|disposer de|verfügt, verfügte, hat verfügt|über + Akk ~|Das Hotel verfügt über einen großen Pool.|L'hôtel dispose d'une grande piscine.|B2
+V|null|sich interessieren|null|s'intéresser à|interessiert sich, interessierte sich, hat sich interessiert|sich für + Akk ~|Ich interessiere mich für Geschichte.|Je m'intéresse à l'histoire.
+V|null|sich entscheiden|null|se décider pour, choisir|entscheidet sich, entschied sich, hat sich entschieden|sich für + Akk ~|Wir haben uns für die kleinere Wohnung entschieden.|Nous avons choisi le plus petit appartement.
+V|null|sich bedanken|null|remercier pour|bedankt sich, bedankte sich, hat sich bedankt|sich bei jdm. für + Akk ~|Ich möchte mich für Ihre Hilfe bedanken.|Je voudrais vous remercier pour votre aide.
+V|null|danken|null|remercier pour|dankt, dankte, hat gedankt|jdm. für + Akk ~|Ich danke dir für das schöne Geschenk.|Je te remercie pour ce beau cadeau.
+V|null|sorgen|null|veiller à, s'occuper de|sorgt, sorgte, hat gesorgt|für + Akk ~|Wer sorgt für das Essen auf der Party?|Qui s'occupe de la nourriture pour la fête ?
+V|null|kämpfen|null|se battre pour / contre|kämpft, kämpfte, hat gekämpft|für / gegen + Akk ~|Die Gewerkschaft kämpft für höhere Löhne.|Le syndicat se bat pour des salaires plus élevés.
+V|null|protestieren|null|protester contre|protestiert, protestierte, hat protestiert|gegen + Akk ~|Tausende protestieren gegen das neue Gesetz.|Des milliers de personnes protestent contre la nouvelle loi.
+V|null|sich wehren|null|se défendre contre|wehrt sich, wehrte sich, hat sich gewehrt|sich gegen + Akk ~|Sie hat sich gegen die Vorwürfe gewehrt.|Elle s'est défendue contre les accusations.|B2
+V|null|bitten|null|demander (qqch à qqn)|bittet, bat, hat gebeten|jdn. um + Akk ~|Darf ich Sie um einen Gefallen bitten?|Puis-je vous demander un service ?
+V|null|sich bemühen|null|s'efforcer d'obtenir|bemüht sich, bemühte sich, hat sich bemüht|sich um + Akk ~|Er bemüht sich um eine bessere Stelle.|Il s'efforce de trouver un meilleur poste.|B2
+V|null|abhängen|null|dépendre de|hängt ab, hing ab, hat abgehangen|von + Dat ~|Das hängt vom Preis ab.|Ça dépend du prix.
+V|null|träumen|null|rêver de|träumt, träumte, hat geträumt|von + Dat ~|Sie träumt von einem Haus am Meer.|Elle rêve d'une maison au bord de la mer.
+V|null|erzählen|null|raconter, parler de|erzählt, erzählte, hat erzählt|von + Dat ~|Erzähl mir von deiner Reise!|Raconte-moi ton voyage !
+V|null|sich verabschieden|null|dire au revoir à|verabschiedet sich, verabschiedete sich, hat sich verabschiedet|sich von + Dat ~|Ich muss mich noch von meinen Kollegen verabschieden.|Je dois encore dire au revoir à mes collègues.
+V|null|handeln von|null|traiter de, parler de (livre, film)|handelt, handelte, hat gehandelt|von + Dat ~|Der Film handelt von einer Familie in Berlin.|Le film parle d'une famille à Berlin.
+V|null|fragen|null|demander (des nouvelles de, le chemin)|fragt, fragte, hat gefragt|nach + Dat ~|Ein Tourist hat mich nach dem Weg gefragt.|Un touriste m'a demandé le chemin.
+V|null|suchen|null|chercher|sucht, suchte, hat gesucht|nach + Dat ~|Ich suche schon lange nach einer Wohnung.|Je cherche un appartement depuis longtemps.
+V|null|sich sehnen|null|aspirer à, avoir la nostalgie de|sehnt sich, sehnte sich, hat sich gesehnt|sich nach + Dat ~|Im Winter sehne ich mich nach der Sonne.|En hiver, j'ai envie de soleil.|B2
+V|null|riechen|null|sentir (une odeur de)|riecht, roch, hat gerochen|nach + Dat ~|Hier riecht es nach frischem Brot.|Ici, ça sent le pain frais.
+V|null|schmecken|null|avoir un goût de|schmeckt, schmeckte, hat geschmeckt|nach + Dat ~|Der Tee schmeckt nach Zitrone.|Le thé a un goût de citron.
+V|null|sich beschäftigen|null|s'occuper de, s'intéresser à|beschäftigt sich, beschäftigte sich, hat sich beschäftigt|sich mit + Dat ~|In meiner Freizeit beschäftige ich mich mit Fotografie.|Pendant mon temps libre, je m'intéresse à la photographie.
+V|null|aufhören|null|arrêter (de faire qqch)|hört auf, hörte auf, hat aufgehört|mit + Dat ~|Er hat mit dem Rauchen aufgehört.|Il a arrêté de fumer.
+V|null|anfangen|null|commencer (par qqch)|fängt an, fing an, hat angefangen|mit + Dat ~|Wann fängst du mit dem Kurs an?|Quand commences-tu le cours ?
+V|null|rechnen|null|s'attendre à, compter sur|rechnet, rechnete, hat gerechnet|mit + Dat ~|Mit so viel Verkehr habe ich nicht gerechnet.|Je ne m'attendais pas à autant de circulation.
+V|null|umgehen|null|gérer, s'y prendre avec|geht um, ging um, ist umgegangen|mit + Dat ~|Sie kann gut mit Kindern umgehen.|Elle sait bien s'y prendre avec les enfants.|B2
+V|null|telefonieren|null|téléphoner à|telefoniert, telefonierte, hat telefoniert|mit + Dat ~|Ich habe gestern lange mit meiner Mutter telefoniert.|Hier, j'ai longuement téléphoné à ma mère.
+V|null|sich auseinandersetzen|null|se confronter à, étudier à fond|setzt sich auseinander, setzte sich auseinander, hat sich auseinandergesetzt|sich mit + Dat ~|Wir müssen uns mit diesem Thema auseinandersetzen.|Nous devons nous pencher sérieusement sur ce sujet.|B2
+V|null|einverstanden sein|null|être d'accord avec|ist einverstanden, war einverstanden, ist einverstanden gewesen|mit + Dat ~|Bist du mit dem Vorschlag einverstanden?|Es-tu d'accord avec la proposition ?
+V|null|gehören|null|faire partie de|gehört, gehörte, hat gehört|zu + Dat ~|Das gehört zu meinen Aufgaben.|Ça fait partie de mes tâches.
+V|null|passen|null|aller avec|passt, passte, hat gepasst|zu + Dat ~|Die Schuhe passen gut zu deinem Kleid.|Les chaussures vont bien avec ta robe.
+V|null|gratulieren|null|féliciter pour|gratuliert, gratulierte, hat gratuliert|jdm. zu + Dat ~|Wir gratulieren dir zum Geburtstag!|Nous te souhaitons un joyeux anniversaire !
+V|null|beitragen|null|contribuer à|trägt bei, trug bei, hat beigetragen|zu + Dat ~|Jeder kann zum Umweltschutz beitragen.|Chacun peut contribuer à la protection de l'environnement.|B2
+V|null|sich fürchten|null|avoir peur de|fürchtet sich, fürchtete sich, hat sich gefürchtet|sich vor + Dat ~|Das Kind fürchtet sich vor dem Hund.|L'enfant a peur du chien.
+V|null|Angst haben|null|avoir peur de|hat Angst, hatte Angst, hat Angst gehabt|vor + Dat ~|Ich habe Angst vor Spinnen.|J'ai peur des araignées.
+V|null|warnen|null|mettre en garde contre|warnt, warnte, hat gewarnt|jdn. vor + Dat ~|Die Polizei warnt vor Taschendieben.|La police met en garde contre les pickpockets.
+V|null|schützen|null|protéger de|schützt, schützte, hat geschützt|vor + Dat ~|Die Creme schützt vor der Sonne.|La crème protège du soleil.
+V|null|bestehen aus|null|se composer de|besteht, bestand, hat bestanden|aus + Dat ~|Das Team besteht aus fünf Personen.|L'équipe se compose de cinq personnes.
+V|null|bestehen auf|null|insister sur|besteht, bestand, hat bestanden|auf + Dat ~|Er besteht auf einer Entschuldigung.|Il exige des excuses.|B2
+V|null|sich irren|null|se tromper (de)|irrt sich, irrte sich, hat sich geirrt|sich in + Dat ~|Entschuldigung, ich habe mich in der Hausnummer geirrt.|Pardon, je me suis trompé de numéro.|B2

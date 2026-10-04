@@ -1,25 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import type { GermanWord, WordProgress } from '@/types';
-import { KNOWN_BOX, QUEUED_BOX } from '@/lib/german/srs';
+import type { GermanWord } from '@/types';
 import { useGermanProgress } from '@/lib/german/progress';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
 import ThemeChips from './ThemeChips';
-import { GrammarLine, Headword, headword, SpeakButton } from './WordView';
+import { GrammarLine, Headword, headword, progressBadge, SpeakButton } from './WordView';
 
 export default function WordList({ deck }: { deck: GermanWord[] }) {
   const profile = useGermanAccess();
   if (!profile) return null;
   return <List profile={profile} deck={deck} />;
-}
-
-function status(p: WordProgress | undefined): { label: string; className: string } | null {
-  if (!p) return null;
-  if (p.box === QUEUED_BOX) return { label: 'à apprendre', className: 'text-muted bg-border' };
-  if (p.box >= KNOWN_BOX)   return { label: 'connu',       className: 'text-success bg-success-bg' };
-  return { label: `en cours · ${p.box}/${KNOWN_BOX}`, className: 'text-accent bg-error-bg' };
 }
 
 function List({ profile, deck }: { profile: string; deck: GermanWord[] }) {
@@ -48,7 +40,7 @@ function List({ profile, deck }: { profile: string; deck: GermanWord[] }) {
 
       <ul className="flex flex-col gap-2">
         {words.map((w) => {
-          const s = status(progress[w.id]);
+          const s = progressBadge(progress[w.id]);
           return (
             <li key={w.id} className="p-4 rounded-xl border border-border bg-card flex items-start gap-3">
               <div className="flex-1 min-w-0 flex flex-col gap-1">

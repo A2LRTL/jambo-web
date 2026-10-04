@@ -1,6 +1,7 @@
 'use client';
 
-import type { GermanWord } from '@/types';
+import type { GermanWord, WordProgress } from '@/types';
+import { KNOWN_BOX, QUEUED_BOX } from '@/lib/german/srs';
 import { speak } from '@/lib/speech';
 
 const ARTICLE_COLOR = { der: 'text-blue-600', die: 'text-red-600', das: 'text-green-600' } as const;
@@ -58,4 +59,12 @@ export function Example({ word }: { word: GermanWord }) {
       <SpeakButton text={word.example_de} />
     </div>
   );
+}
+
+/** Small label for a word's learning state, or null if never triaged. */
+export function progressBadge(p: WordProgress | undefined): { label: string; className: string } | null {
+  if (!p) return null;
+  if (p.box === QUEUED_BOX) return { label: 'à apprendre', className: 'text-muted bg-border' };
+  if (p.box >= KNOWN_BOX)   return { label: 'connu',       className: 'text-success bg-success-bg' };
+  return { label: `en cours · ${p.box}/${KNOWN_BOX}`, className: 'text-accent bg-error-bg' };
 }

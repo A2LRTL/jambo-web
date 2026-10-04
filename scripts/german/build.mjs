@@ -18,7 +18,7 @@ const dir = dirname(fileURLToPath(import.meta.url));
 const OUT = join(dir, '../../data/german-vocab.json');
 
 const POS = { N: 'noun', V: 'verb', A: 'adj', D: 'adv', O: 'other' };
-const THEMES = ['quotidien', 'logement', 'travail', 'sante', 'administration', 'voyages', 'achats', 'relations', 'medias', 'connecteurs'];
+const THEMES = ['quotidien', 'logement', 'travail', 'sante', 'administration', 'voyages', 'achats', 'relations', 'medias', 'connecteurs', 'prepositions'];
 
 const slug = (s) => s.toLowerCase()
   .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
