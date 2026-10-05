@@ -1,0 +1,698 @@
+{
+ "expressions": [
+  {
+   "id": "a-priori",
+   "latin": "a priori",
+   "literal": "à partir de ce qui est avant",
+   "fr": "au premier abord, avant toute vérification",
+   "example": "A priori, le projet semble rentable.",
+   "level": "courant"
+  },
+  {
+   "id": "a-posteriori",
+   "latin": "a posteriori",
+   "literal": "à partir de ce qui vient après",
+   "fr": "après coup, une fois l'expérience faite",
+   "example": "On ne peut juger l'efficacité de la mesure qu'a posteriori.",
+   "level": "courant"
+  },
+  {
+   "id": "a-fortiori",
+   "latin": "a fortiori",
+   "literal": "à plus forte raison",
+   "fr": "à plus forte raison",
+   "example": "S'il ne peut pas marcher, a fortiori il ne peut pas courir.",
+   "level": "courant"
+  },
+  {
+   "id": "a-contrario",
+   "latin": "a contrario",
+   "literal": "par le contraire",
+   "fr": "à l'inverse, en raisonnant par le contraire",
+   "example": "Les grandes villes ont progressé ; a contrario, les campagnes ont reculé.",
+   "level": "courant"
+  },
+  {
+   "id": "ad-hoc",
+   "latin": "ad hoc",
+   "literal": "pour cela",
+   "fr": "fait spécialement pour un usage précis",
+   "example": "Une commission ad hoc a été créée pour l'enquête.",
+   "level": "courant"
+  },
+  {
+   "id": "alter-ego",
+   "latin": "alter ego",
+   "literal": "un autre moi",
+   "fr": "personne de confiance, double de quelqu'un",
+   "example": "Elle est son alter ego au sein de l'entreprise.",
+   "level": "courant"
+  },
+  {
+   "id": "alibi",
+   "latin": "alibi",
+   "literal": "ailleurs",
+   "fr": "preuve qu'on était ailleurs ; prétexte",
+   "example": "Le suspect avait un alibi solide.",
+   "level": "courant"
+  },
+  {
+   "id": "curriculum-vitae",
+   "latin": "curriculum vitae",
+   "literal": "le cours de la vie",
+   "fr": "CV, parcours professionnel",
+   "example": "Envoyez votre curriculum vitae avant vendredi.",
+   "level": "courant"
+  },
+  {
+   "id": "de-facto",
+   "latin": "de facto",
+   "literal": "de fait",
+   "fr": "dans les faits (même sans titre officiel)",
+   "example": "Il est de facto le chef de l'équipe.",
+   "level": "courant",
+   "note": "S'oppose à « de jure » (de droit)."
+  },
+  {
+   "id": "de-jure",
+   "latin": "de jure",
+   "literal": "de droit",
+   "fr": "selon le droit, officiellement",
+   "example": "Le territoire est de jure sous contrôle de l'État.",
+   "level": "courant"
+  },
+  {
+   "id": "et-cetera",
+   "latin": "et cetera",
+   "literal": "et les autres choses",
+   "fr": "et ainsi de suite (etc.)",
+   "example": "Il faut du pain, du lait, des œufs, et cetera.",
+   "level": "courant",
+   "note": "Jamais « etc… » : etc. contient déjà l'idée de suite."
+  },
+  {
+   "id": "ex-aequo",
+   "latin": "ex aequo",
+   "literal": "à égalité",
+   "fr": "à égalité de rang",
+   "example": "Les deux coureurs ont terminé ex aequo.",
+   "level": "courant"
+  },
+  {
+   "id": "grosso-modo",
+   "latin": "grosso modo",
+   "literal": "de manière grossière",
+   "fr": "en gros, approximativement",
+   "example": "Grosso modo, les travaux coûteront 5 000 euros.",
+   "level": "courant"
+  },
+  {
+   "id": "in-extremis",
+   "latin": "in extremis",
+   "literal": "dans les derniers moments",
+   "fr": "au tout dernier moment",
+   "example": "Il a attrapé son train in extremis.",
+   "level": "courant"
+  },
+  {
+   "id": "in-situ",
+   "latin": "in situ",
+   "literal": "sur place",
+   "fr": "dans son milieu d'origine",
+   "example": "Les fresques ont été restaurées in situ.",
+   "level": "courant"
+  },
+  {
+   "id": "in-vitro",
+   "latin": "in vitro",
+   "literal": "dans le verre",
+   "fr": "en laboratoire, hors de l'organisme",
+   "example": "Le médicament a d'abord été testé in vitro.",
+   "level": "courant"
+  },
+  {
+   "id": "lapsus",
+   "latin": "lapsus",
+   "literal": "glissement",
+   "fr": "erreur involontaire de langage",
+   "example": "Il a fait un lapsus en appelant sa femme par le nom de son ex.",
+   "level": "courant"
+  },
+  {
+   "id": "mea-culpa",
+   "latin": "mea culpa",
+   "literal": "par ma faute",
+   "fr": "aveu de sa propre faute",
+   "example": "Le ministre a fait son mea culpa devant les députés.",
+   "level": "courant"
+  },
+  {
+   "id": "nota-bene",
+   "latin": "nota bene",
+   "literal": "notez bien",
+   "fr": "remarque importante (N.B.)",
+   "example": "Nota bene : la réunion est avancée à 9 h.",
+   "level": "courant"
+  },
+  {
+   "id": "post-scriptum",
+   "latin": "post-scriptum",
+   "literal": "écrit après",
+   "fr": "ajout à la fin d'une lettre (P.-S.)",
+   "example": "Elle a ajouté un post-scriptum à sa lettre.",
+   "level": "courant"
+  },
+  {
+   "id": "quiproquo",
+   "latin": "quiproquo",
+   "literal": "quelque chose pour quelque chose",
+   "fr": "malentendu, méprise sur une personne ou une chose",
+   "example": "Toute la scène repose sur un quiproquo.",
+   "level": "courant",
+   "note": "En anglais, « quid pro quo » veut dire « donnant-donnant »."
+  },
+  {
+   "id": "recto-verso",
+   "latin": "recto verso",
+   "literal": "côté droit, côté tourné",
+   "fr": "des deux côtés de la feuille",
+   "example": "Imprimez le document en recto verso.",
+   "level": "courant"
+  },
+  {
+   "id": "statu-quo",
+   "latin": "statu quo",
+   "literal": "dans l'état où (les choses étaient)",
+   "fr": "situation actuelle, inchangée",
+   "example": "Les négociations ont abouti au statu quo.",
+   "level": "courant",
+   "note": "En français : « statu quo » ; « status quo » est la forme anglaise."
+  },
+  {
+   "id": "sine-qua-non",
+   "latin": "sine qua non",
+   "literal": "sans laquelle non",
+   "fr": "indispensable (condition)",
+   "example": "Parler anglais est une condition sine qua non pour ce poste.",
+   "level": "courant"
+  },
+  {
+   "id": "vice-versa",
+   "latin": "vice versa",
+   "literal": "la place étant inversée",
+   "fr": "réciproquement",
+   "example": "Il aide sa sœur en maths, et vice versa.",
+   "level": "courant"
+  },
+  {
+   "id": "versus",
+   "latin": "versus",
+   "literal": "tourné vers, contre",
+   "fr": "contre, opposé à (vs)",
+   "example": "Le débat ville versus campagne n'est pas nouveau.",
+   "level": "courant"
+  },
+  {
+   "id": "ad-vitam-aeternam",
+   "latin": "ad vitam aeternam",
+   "literal": "pour la vie éternelle",
+   "fr": "pour toujours",
+   "example": "On ne va pas attendre ad vitam aeternam !",
+   "level": "courant"
+  },
+  {
+   "id": "carpe-diem",
+   "latin": "carpe diem",
+   "literal": "cueille le jour",
+   "fr": "profite du moment présent",
+   "example": "Il vit selon la devise carpe diem.",
+   "level": "courant"
+  },
+  {
+   "id": "ex-nihilo",
+   "latin": "ex nihilo",
+   "literal": "à partir de rien",
+   "fr": "à partir de rien",
+   "example": "L'entreprise a été créée ex nihilo.",
+   "level": "courant"
+  },
+  {
+   "id": "idem",
+   "latin": "idem",
+   "literal": "le même",
+   "fr": "la même chose",
+   "example": "Lui veut une pizza, et moi idem.",
+   "level": "courant"
+  },
+  {
+   "id": "ipso-facto",
+   "latin": "ipso facto",
+   "literal": "par le fait même",
+   "fr": "automatiquement, par voie de conséquence",
+   "example": "Sans paiement, le contrat est annulé ipso facto.",
+   "level": "courant"
+  },
+  {
+   "id": "manu-militari",
+   "latin": "manu militari",
+   "literal": "par la main militaire",
+   "fr": "par la force",
+   "example": "Les manifestants ont été expulsés manu militari.",
+   "level": "courant"
+  },
+  {
+   "id": "persona-non-grata",
+   "latin": "persona non grata",
+   "literal": "personne non bienvenue",
+   "fr": "personne indésirable",
+   "example": "Depuis le scandale, il est persona non grata au club.",
+   "level": "courant"
+  },
+  {
+   "id": "quorum",
+   "latin": "quorum",
+   "literal": "desquels",
+   "fr": "nombre minimal de membres présents pour voter",
+   "example": "Le quorum n'étant pas atteint, le vote est reporté.",
+   "level": "courant"
+  },
+  {
+   "id": "veto",
+   "latin": "veto",
+   "literal": "j'interdis",
+   "fr": "droit de s'opposer à une décision",
+   "example": "La France a mis son veto à la proposition.",
+   "level": "courant"
+  },
+  {
+   "id": "in-fine",
+   "latin": "in fine",
+   "literal": "à la fin",
+   "fr": "en fin de compte, finalement",
+   "example": "In fine, c'est le client qui paie.",
+   "level": "courant"
+  },
+  {
+   "id": "a-minima",
+   "latin": "a minima",
+   "literal": "à partir du minimum",
+   "fr": "au minimum, le moins possible",
+   "example": "La loi a été appliquée a minima.",
+   "level": "courant"
+  },
+  {
+   "id": "per-capita",
+   "latin": "per capita",
+   "literal": "par tête",
+   "fr": "par habitant",
+   "example": "Le revenu per capita a doublé en dix ans.",
+   "level": "courant"
+  },
+  {
+   "id": "modus-operandi",
+   "latin": "modus operandi",
+   "literal": "manière d'opérer",
+   "fr": "mode opératoire, façon de procéder",
+   "example": "Les enquêteurs ont reconnu le modus operandi du cambrioleur.",
+   "level": "courant"
+  },
+  {
+   "id": "cf",
+   "latin": "cf. (confer)",
+   "literal": "compare",
+   "fr": "se reporter à",
+   "example": "Pour plus de détails, cf. chapitre 3.",
+   "level": "courant"
+  },
+  {
+   "id": "alea-jacta-est",
+   "latin": "alea jacta est",
+   "literal": "le sort en est jeté",
+   "fr": "la décision est prise, on ne peut plus reculer",
+   "example": "J'ai envoyé ma démission : alea jacta est.",
+   "level": "courant"
+  },
+  {
+   "id": "errare-humanum-est",
+   "latin": "errare humanum est",
+   "literal": "l'erreur est humaine",
+   "fr": "tout le monde peut se tromper",
+   "example": "Errare humanum est, mais ne recommence pas.",
+   "level": "courant",
+   "note": "La suite : « perseverare diabolicum » — persévérer est diabolique."
+  },
+  {
+   "id": "deus-ex-machina",
+   "latin": "deus ex machina",
+   "literal": "le dieu (descendu) de la machine",
+   "fr": "intervention inattendue qui résout tout",
+   "example": "L'héritage tombé du ciel est un vrai deus ex machina.",
+   "level": "courant"
+  },
+  {
+   "id": "tabula-rasa",
+   "latin": "tabula rasa",
+   "literal": "table rasée",
+   "fr": "faire table rase, repartir de zéro",
+   "example": "Le nouveau directeur veut faire tabula rasa.",
+   "level": "courant"
+  },
+  {
+   "id": "in-memoriam",
+   "latin": "in memoriam",
+   "literal": "en mémoire de",
+   "fr": "à la mémoire de (un défunt)",
+   "example": "Le concert était donné in memoriam de la chanteuse.",
+   "level": "courant"
+  },
+  {
+   "id": "mutatis-mutandis",
+   "latin": "mutatis mutandis",
+   "literal": "en changeant ce qui doit être changé",
+   "fr": "en faisant les adaptations nécessaires",
+   "example": "Mutatis mutandis, la règle s'applique aussi aux stagiaires.",
+   "level": "soutenu"
+  },
+  {
+   "id": "ad-nauseam",
+   "latin": "ad nauseam",
+   "literal": "jusqu'à la nausée",
+   "fr": "de façon répétée jusqu'à l'écœurement",
+   "example": "Il répète la même histoire ad nauseam.",
+   "level": "soutenu"
+  },
+  {
+   "id": "ad-libitum",
+   "latin": "ad libitum",
+   "literal": "à volonté",
+   "fr": "à volonté, au choix (ad lib.)",
+   "example": "Le café est servi ad libitum.",
+   "level": "soutenu"
+  },
+  {
+   "id": "ad-infinitum",
+   "latin": "ad infinitum",
+   "literal": "jusqu'à l'infini",
+   "fr": "à l'infini, sans fin",
+   "example": "On pourrait discuter ad infinitum.",
+   "level": "soutenu"
+  },
+  {
+   "id": "ad-hominem",
+   "latin": "ad hominem",
+   "literal": "contre l'homme",
+   "fr": "qui attaque la personne au lieu de ses arguments",
+   "example": "Au lieu de répondre, il a lancé une attaque ad hominem.",
+   "level": "soutenu"
+  },
+  {
+   "id": "pro-bono",
+   "latin": "pro bono",
+   "literal": "pour le bien (public)",
+   "fr": "gratuitement (service professionnel)",
+   "example": "L'avocate défend certaines associations pro bono.",
+   "level": "soutenu"
+  },
+  {
+   "id": "bona-fide",
+   "latin": "bona fide",
+   "literal": "de bonne foi",
+   "fr": "de bonne foi, authentique",
+   "example": "Il a agi bona fide, sans savoir que c'était illégal.",
+   "level": "soutenu"
+  },
+  {
+   "id": "casus-belli",
+   "latin": "casus belli",
+   "literal": "cas de guerre",
+   "fr": "motif de conflit, de rupture",
+   "example": "Ce désaccord est devenu un casus belli entre les associés.",
+   "level": "soutenu"
+  },
+  {
+   "id": "sui-generis",
+   "latin": "sui generis",
+   "literal": "de son propre genre",
+   "fr": "unique en son genre",
+   "example": "Son style est tout à fait sui generis.",
+   "level": "soutenu"
+  },
+  {
+   "id": "stricto-sensu",
+   "latin": "stricto sensu",
+   "literal": "au sens strict",
+   "fr": "au sens strict",
+   "example": "Stricto sensu, ce n'est pas un mensonge.",
+   "level": "soutenu"
+  },
+  {
+   "id": "lato-sensu",
+   "latin": "lato sensu",
+   "literal": "au sens large",
+   "fr": "au sens large",
+   "example": "Lato sensu, la culture inclut aussi la cuisine.",
+   "level": "soutenu"
+  },
+  {
+   "id": "intra-muros",
+   "latin": "intra-muros",
+   "literal": "à l'intérieur des murs",
+   "fr": "dans la ville même (hors banlieue)",
+   "example": "Les loyers sont très chers dans Paris intra-muros.",
+   "level": "soutenu"
+  },
+  {
+   "id": "non-sequitur",
+   "latin": "non sequitur",
+   "literal": "cela ne suit pas",
+   "fr": "conclusion sans lien logique",
+   "example": "Sa réponse était un non sequitur complet.",
+   "level": "soutenu"
+  },
+  {
+   "id": "primus-inter-pares",
+   "latin": "primus inter pares",
+   "literal": "premier parmi ses égaux",
+   "fr": "chef qui reste l'égal des autres",
+   "example": "Le président du conseil n'est qu'un primus inter pares.",
+   "level": "soutenu"
+  },
+  {
+   "id": "nec-plus-ultra",
+   "latin": "nec plus ultra",
+   "literal": "rien au-delà",
+   "fr": "ce qu'il y a de mieux",
+   "example": "Ce restaurant, c'est le nec plus ultra de la ville.",
+   "level": "soutenu"
+  },
+  {
+   "id": "sic",
+   "latin": "sic",
+   "literal": "ainsi",
+   "fr": "« tel quel » (signale une erreur dans une citation)",
+   "example": "Il a écrit : « Je suis aller (sic) au marché. »",
+   "level": "soutenu"
+  },
+  {
+   "id": "ibidem",
+   "latin": "ibidem",
+   "literal": "au même endroit",
+   "fr": "dans le même ouvrage, au même endroit (ibid.)",
+   "example": "Voir l'ouvrage cité plus haut, ibidem, p. 42.",
+   "level": "soutenu"
+  },
+  {
+   "id": "motu-proprio",
+   "latin": "motu proprio",
+   "literal": "de son propre mouvement",
+   "fr": "spontanément, de sa propre initiative",
+   "example": "Il a démissionné motu proprio.",
+   "level": "soutenu"
+  },
+  {
+   "id": "vade-mecum",
+   "latin": "vade-mecum",
+   "literal": "viens avec moi",
+   "fr": "guide pratique qu'on garde sur soi",
+   "example": "Ce petit livre est le vade-mecum du jeune parent.",
+   "level": "soutenu"
+  },
+  {
+   "id": "post-mortem",
+   "latin": "post mortem",
+   "literal": "après la mort",
+   "fr": "après le décès",
+   "example": "Il a été décoré à titre post mortem.",
+   "level": "soutenu"
+  },
+  {
+   "id": "in-medias-res",
+   "latin": "in medias res",
+   "literal": "au milieu des choses",
+   "fr": "en pleine action (début d'un récit)",
+   "example": "Le roman commence in medias res, en pleine bataille.",
+   "level": "soutenu"
+  },
+  {
+   "id": "in-absentia",
+   "latin": "in absentia",
+   "literal": "en l'absence",
+   "fr": "en son absence (jugé par défaut)",
+   "example": "L'accusé a été condamné in absentia.",
+   "level": "soutenu"
+  },
+  {
+   "id": "ex-cathedra",
+   "latin": "ex cathedra",
+   "literal": "du haut de la chaire",
+   "fr": "avec autorité, d'un ton doctoral",
+   "example": "Il parle toujours ex cathedra, sans écouter personne.",
+   "level": "soutenu"
+  },
+  {
+   "id": "de-visu",
+   "latin": "de visu",
+   "literal": "de vue",
+   "fr": "pour l'avoir vu soi-même",
+   "example": "J'ai pu constater les dégâts de visu.",
+   "level": "soutenu"
+  },
+  {
+   "id": "id-est",
+   "latin": "id est",
+   "literal": "c'est",
+   "fr": "c'est-à-dire (i.e.)",
+   "example": "Il faut un document officiel, id est un passeport.",
+   "level": "soutenu"
+  },
+  {
+   "id": "exempli-gratia",
+   "latin": "exempli gratia",
+   "literal": "pour l'amour de l'exemple",
+   "fr": "par exemple (e.g.)",
+   "example": "Des fruits rouges, exempli gratia fraises et framboises.",
+   "level": "soutenu"
+  },
+  {
+   "id": "quid-pro-quo",
+   "latin": "quid pro quo",
+   "literal": "quelque chose pour quelque chose",
+   "fr": "donnant-donnant, échange de faveurs (sens anglais)",
+   "example": "L'accord était un simple quid pro quo.",
+   "level": "soutenu",
+   "note": "Ne pas confondre avec « quiproquo » (malentendu) en français."
+  },
+  {
+   "id": "honoris-causa",
+   "latin": "honoris causa",
+   "literal": "pour l'honneur",
+   "fr": "à titre honorifique",
+   "example": "Elle a été faite docteur honoris causa.",
+   "level": "soutenu"
+  },
+  {
+   "id": "magna-cum-laude",
+   "latin": "magna cum laude",
+   "literal": "avec grande louange",
+   "fr": "avec mention très bien",
+   "example": "Il a obtenu son diplôme magna cum laude.",
+   "level": "soutenu"
+  },
+  {
+   "id": "per-se",
+   "latin": "per se",
+   "literal": "par soi",
+   "fr": "en soi, intrinsèquement",
+   "example": "L'argent n'est pas mauvais per se.",
+   "level": "soutenu"
+  },
+  {
+   "id": "pro-forma",
+   "latin": "pro forma",
+   "literal": "pour la forme",
+   "fr": "pour la forme ; facture provisoire",
+   "example": "Le fournisseur a envoyé une facture pro forma.",
+   "level": "soutenu"
+  },
+  {
+   "id": "annus-horribilis",
+   "latin": "annus horribilis",
+   "literal": "année horrible",
+   "fr": "année catastrophique",
+   "example": "2020 a été une annus horribilis pour le tourisme.",
+   "level": "soutenu"
+  },
+  {
+   "id": "memento-mori",
+   "latin": "memento mori",
+   "literal": "souviens-toi que tu vas mourir",
+   "fr": "rappel de la fragilité de la vie",
+   "example": "Le crâne sur le tableau est un memento mori.",
+   "level": "soutenu"
+  },
+  {
+   "id": "vox-populi",
+   "latin": "vox populi",
+   "literal": "voix du peuple",
+   "fr": "l'opinion publique",
+   "example": "Le gouvernement a fini par écouter la vox populi.",
+   "level": "soutenu"
+  },
+  {
+   "id": "urbi-et-orbi",
+   "latin": "urbi et orbi",
+   "literal": "à la ville et au monde",
+   "fr": "partout, à tout le monde",
+   "example": "Il a annoncé la nouvelle urbi et orbi.",
+   "level": "soutenu"
+  },
+  {
+   "id": "panem-et-circenses",
+   "latin": "panem et circenses",
+   "literal": "du pain et des jeux (du cirque)",
+   "fr": "distraire le peuple pour le faire tenir tranquille",
+   "example": "La télé-réalité, c'est panem et circenses.",
+   "level": "soutenu"
+  },
+  {
+   "id": "dura-lex-sed-lex",
+   "latin": "dura lex, sed lex",
+   "literal": "la loi est dure, mais c'est la loi",
+   "fr": "la loi s'applique même quand elle est sévère",
+   "example": "Tu as eu une amende ? Dura lex, sed lex.",
+   "level": "soutenu"
+  },
+  {
+   "id": "mens-sana-in-corpore-sano",
+   "latin": "mens sana in corpore sano",
+   "literal": "un esprit sain dans un corps sain",
+   "fr": "l'équilibre du corps et de l'esprit",
+   "example": "Il court tous les matins : mens sana in corpore sano.",
+   "level": "soutenu"
+  },
+  {
+   "id": "cogito-ergo-sum",
+   "latin": "cogito, ergo sum",
+   "literal": "je pense, donc je suis",
+   "fr": "je pense, donc je suis (Descartes)",
+   "example": "Le « cogito, ergo sum » fonde la philosophie de Descartes.",
+   "level": "soutenu"
+  },
+  {
+   "id": "veni-vidi-vici",
+   "latin": "veni, vidi, vici",
+   "literal": "je suis venu, j'ai vu, j'ai vaincu",
+   "fr": "victoire rapide et facile (César)",
+   "example": "Il a gagné le tournoi en une heure : veni, vidi, vici.",
+   "level": "soutenu"
+  },
+  {
+   "id": "terra-incognita",
+   "latin": "terra incognita",
+   "literal": "terre inconnue",
+   "fr": "domaine inconnu, inexploré",
+   "example": "Pour moi, la comptabilité est une terra incognita.",
+   "level": "soutenu"
+  }
+ ]
+}

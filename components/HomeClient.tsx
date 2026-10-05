@@ -9,14 +9,16 @@ import { PROFILES, hasGermanAccess, useProfile, writeProfile, type Profile, type
 import Leaderboard from './Leaderboard';
 import GermanTab from './german/GermanTab';
 import EnglishTab from './english/EnglishTab';
+import LatinTab from './latin/LatinTab';
 
-type Lang = 'kirundi' | 'swahili' | 'english' | 'german' | 'scores';
+type Lang = 'kirundi' | 'swahili' | 'english' | 'german' | 'latin' | 'scores';
 
 const LANGS: { id: Lang; label: string; flag: string }[] = [
   { id: 'kirundi', label: 'Kirundi', flag: '🇧🇮' },
   { id: 'swahili', label: 'Swahili', flag: '🇹🇿' },
   { id: 'english', label: 'English', flag: '🇬🇧' },
   { id: 'german',  label: 'Deutsch', flag: '🇩🇪' },
+  { id: 'latin',   label: 'Latin',   flag: '🏛️' },
   { id: 'scores',  label: 'Scores',  flag: '🏆' },
 ];
 
@@ -286,6 +288,8 @@ export default function HomeClient() {
         {lang === 'scores' && <Leaderboard />}
 
         {lang === 'english' && <EnglishTab />}
+
+        {lang === 'latin' && <LatinTab />}
 
         {lang === 'german' && hasGerman && <GermanTab profile={profile} />}
 

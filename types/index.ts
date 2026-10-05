@@ -90,3 +90,13 @@ export interface EnglishVerb {
   example_en: string;   // "It all depends [on] the weather."
   example_fr: string;
 }
+
+export interface LatinExpression {
+  id: string;
+  latin: string;     // "sine qua non"
+  literal: string;   // word-for-word translation
+  fr: string;        // what it means in use
+  example: string;   // French sentence using it
+  level: 'courant' | 'soutenu';
+  note?: string;     // common pitfall
+}
