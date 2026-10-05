@@ -13,7 +13,7 @@ import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
-import RoundCards from './RoundCards';
+import RoundCards from '@/components/RoundCards';
 import ConjugationTable from './ConjugationTable';
 import { SpeakButton } from './WordView';
 

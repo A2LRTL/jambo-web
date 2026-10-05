@@ -2,20 +2,21 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import type { GermanWord } from '@/types';
-import { buildPrepQuestion, highlightPrep, parsePrep, stripPrep, type PrepQuestion } from '@/lib/german/verbs';
+import type { EnglishVerb } from '@/types';
+import { accepted, buildQuestion, plain, type EnglishPrepQuestion } from '@/lib/english/preps';
 import { shuffle } from '@/lib/utils';
 import { speak } from '@/lib/speech';
 import { markPracticed } from '@/components/NotificationSetup';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
-import { useGermanAccess } from './useGermanAccess';
-import GermanHeader from './GermanHeader';
-import { SpeakButton } from './WordView';
 import RoundCards from '@/components/RoundCards';
+import GermanHeader from '@/components/german/GermanHeader';
+import { SpeakButton } from '@/components/german/WordView';
+import { Highlighted } from './EnglishVerbList';
 
 const ROUND = 10;
-const MISSED_KEY = 'ubuntu_de_prep_missed';
+const LANG = 'en-GB';
+const MISSED_KEY = 'ubuntu_en_prep_missed';
 
 function readMissed(): string[] {
   try { return JSON.parse(localStorage.getItem(MISSED_KEY) ?? '[]'); } catch { return []; }
@@ -26,20 +27,14 @@ function writeMissed(ids: string[]) {
 }
 
 /** Up to half the round comes from previously missed verbs, the rest at random. */
-function pickRound(verbs: GermanWord[]): PrepQuestion[] {
+function pickRound(verbs: EnglishVerb[]): EnglishPrepQuestion[] {
   const missed = new Set(readMissed());
   const retry = shuffle(verbs.filter((v) => missed.has(v.id))).slice(0, ROUND / 2);
   const rest = shuffle(verbs.filter((v) => !retry.includes(v))).slice(0, ROUND - retry.length);
-  return shuffle([...retry, ...rest]).map((v) => buildPrepQuestion(v)!);
+  return shuffle([...retry, ...rest]).map((v) => buildQuestion(v));
 }
 
-export default function PrepDrill({ verbs }: { verbs: GermanWord[] }) {
-  const profile = useGermanAccess();
-  if (!profile) return null;
-  return <Drill verbs={verbs} />;
-}
-
-function Drill({ verbs }: { verbs: GermanWord[] }) {
+export default function EnglishPrepDrill({ verbs }: { verbs: EnglishVerb[] }) {
   const router = useRouter();
   const [byId] = useState(() => new Map(verbs.map((v) => [v.id, v])));
   const [round, setRound] = useState(() => pickRound(verbs));
@@ -50,17 +45,16 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
 
   if (learning) {
     return (
-      <RoundCards verbs={round.map((q) => byId.get(q.wordId)!)} title="Verbe + préposition"
+      <RoundCards verbs={round.map((q) => byId.get(q.verbId)!)} title="Verb + preposition"
+        lang={LANG} revealHint="Appuie pour voir l'anglais."
         front={(v) => <p className="text-sm text-muted italic mt-3">{v.example_fr}</p>}
-        back={(v) => <PrepCardBack verb={v} />}
-        spoken={(v) => v.example_de}
-        onDone={() => setLearning(false)} onBack={() => router.push('/de/verbs')} />
+        back={(v) => <CardBack verb={v} />}
+        spoken={(v) => plain(v.example_en)}
+        onDone={() => setLearning(false)} onBack={() => router.push('/en')} />
     );
   }
 
-  const finished = index >= round.length;
-
-  if (finished) {
+  if (index >= round.length) {
     const score = round.length - mistakes.length;
     const restart = () => { setRound(pickRound(verbs)); setIndex(0); setSelected(null); setMistakes([]); setLearning(true); };
     return (
@@ -77,7 +71,7 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
                 const v = byId.get(id)!;
                 return (
                   <li key={id} className="p-3 rounded-xl border border-border bg-card">
-                    <p className="font-bold text-ink">{v.lemma} <span className="text-accent">{v.governs}</span></p>
+                    <p className="font-bold text-ink"><Highlighted text={v.pattern} /></p>
                     <p className="text-sm text-muted">{v.fr}</p>
                   </li>
                 );
@@ -87,25 +81,24 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
         )}
         <div className="flex flex-col gap-3 mt-8">
           <PrimaryButton label="Encore un tour" onClick={restart} />
-          <PrimaryButton label="Retour aux verbes" variant="secondary" onClick={() => router.push('/de/verbs')} />
+          <PrimaryButton label="Retour à la liste" variant="secondary" onClick={() => router.push('/en')} />
         </div>
       </main>
     );
   }
 
   const q = round[index];
-  const verb = byId.get(q.wordId)!;
-  const construction = parsePrep(verb.governs)!;
-  const accepted = new Set(construction.preps.map((p) => `${p} + ${construction.kase}`));
+  const verb = byId.get(q.verbId)!;
+  const right = new Set(accepted(verb));
   const answered = selected !== null;
-  const correct = answered && accepted.has(selected);
+  const correct = answered && right.has(selected);
 
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    speak(verb.example_de);
+    speak(plain(verb.example_en), LANG);
     const missed = new Set(readMissed());
-    if (accepted.has(option)) missed.delete(verb.id);
+    if (right.has(option)) missed.delete(verb.id);
     else { missed.add(verb.id); setMistakes((m) => [...m, verb.id]); }
     writeMissed([...missed]);
   };
@@ -118,23 +111,24 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
 
   const optionState = (option: string) => {
     if (!answered) return 'idle' as const;
-    if (accepted.has(option)) return 'correct' as const;
+    if (right.has(option)) return 'correct' as const;
     return option === selected ? 'wrong' as const : 'dimmed' as const;
   };
 
   return (
     <main className="flex flex-col min-h-dvh max-w-md mx-auto px-6 pb-10">
-      <GermanHeader kicker="Verbe + préposition" title={`${index + 1} / ${round.length}`} back="/de/verbs" />
+      <GermanHeader kicker="Verb + preposition" title={`${index + 1} / ${round.length}`} back="/en" />
 
       <div className="h-1 rounded-full bg-border mb-6 overflow-hidden">
         <div className="h-full bg-accent rounded-full transition-all duration-300"
           style={{ width: `${(index / round.length) * 100}%` }} />
       </div>
 
-      {/* French first, then the German verb with its gap */}
+      {/* French meaning, then the English pattern with its gap */}
       <div className="flex flex-col items-center text-center gap-2 py-6">
         <p className="text-muted text-base">{verb.fr}</p>
         <p className="text-3xl font-bold text-ink">{q.prompt}</p>
+        <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full text-muted bg-border">{verb.level}</span>
       </div>
 
       <div className="grid grid-cols-2 gap-3">
@@ -146,18 +140,14 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
       {answered && (
         <div className="mt-6 flex flex-col gap-2 animate-fade-in">
           <p className={`text-center font-semibold ${correct ? 'text-success' : 'text-error'}`}>
-            {correct ? 'Richtig !' : `Réponse : ${verb.governs}`}
+            {correct ? 'Right!' : `Réponse : ${plain(verb.pattern)}`}
           </p>
           <div className="px-4 py-3 rounded-xl bg-card border border-border flex items-start gap-3">
             <div className="flex-1">
-              <p className="text-sm text-ink italic">
-                {highlightPrep(verb.example_de, construction.preps).map((part, i) =>
-                  part.hit ? <strong key={i} className="text-accent not-italic">{part.text}</strong> : part.text,
-                )}
-              </p>
+              <p className="text-sm text-ink italic"><Highlighted text={verb.example_en} /></p>
               <p className="text-xs text-muted mt-1">{verb.example_fr}</p>
             </div>
-            <SpeakButton text={verb.example_de} />
+            <SpeakButton text={plain(verb.example_en)} lang={LANG} />
           </div>
         </div>
       )}
@@ -170,25 +160,17 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
   );
 }
 
-/** Back of a preposition card: verb + highlighted construction, forms, highlighted example. */
-function PrepCardBack({ verb }: { verb: GermanWord }) {
-  const preps = parsePrep(verb.governs)!.preps;
-  const highlighted = (text: string) =>
-    highlightPrep(text, preps).map((part, k) =>
-      part.hit ? <strong key={k} className="text-accent">{part.text}</strong> : part.text,
-    );
+/** Back of a flashcard: pattern + highlighted example + the French-calque warning. */
+function CardBack({ verb }: { verb: EnglishVerb }) {
   return (
     <>
       <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-2xl font-bold text-ink">{stripPrep(verb.lemma)}</p>
-          <p className="text-lg font-semibold text-ink">{highlighted(verb.governs ?? '')}</p>
-        </div>
-        <SpeakButton text={`${stripPrep(verb.lemma)}, ${verb.example_de}`} />
+        <p className="text-2xl font-bold text-ink"><Highlighted text={verb.pattern} /></p>
+        <SpeakButton text={`${plain(verb.pattern)}. ${plain(verb.example_en)}`} lang={LANG} />
       </div>
-      {verb.forms && <p className="text-sm text-muted">{verb.forms}</p>}
+      {verb.trap && <p className="text-sm text-error">✗ pas « {plain(verb.pattern).replace(verb.prep, verb.trap)} »</p>}
       <p className="px-4 py-3 rounded-xl bg-cream border border-border text-sm text-ink italic">
-        {highlighted(verb.example_de)}
+        <Highlighted text={verb.example_en} />
       </p>
     </>
   );

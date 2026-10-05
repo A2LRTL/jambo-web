@@ -78,3 +78,15 @@ export interface WordProgress {
   lapses: number;
   updatedAt: string;  // ISO date — last write wins when syncing
 }
+
+export interface EnglishVerb {
+  id: string;
+  pattern: string;      // "depend [on] sth" — the preposition is bracketed
+  prep: string;         // "on"
+  accept?: string[];    // other correct prepositions ("dream of / about")
+  trap?: string;        // the usual French-calque mistake ("depend of")
+  level: 'B2' | 'C1';
+  fr: string;
+  example_en: string;   // "It all depends [on] the weather."
+  example_fr: string;
+}

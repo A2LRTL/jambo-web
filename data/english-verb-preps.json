@@ -1,0 +1,1459 @@
+{
+ "verbs": [
+  {
+   "id": "depend-on",
+   "pattern": "depend [on] sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "dépendre de",
+   "example_en": "It all depends [on] the weather.",
+   "example_fr": "Tout dépend du temps.",
+   "trap": "of"
+  },
+  {
+   "id": "rely-on",
+   "pattern": "rely [on] sb/sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "compter sur",
+   "example_en": "You can always rely [on] me.",
+   "example_fr": "Tu peux toujours compter sur moi."
+  },
+  {
+   "id": "count-on",
+   "pattern": "count [on] sb",
+   "prep": "on",
+   "level": "B2",
+   "fr": "compter sur qn",
+   "example_en": "We're counting [on] you to finish the report.",
+   "example_fr": "On compte sur toi pour finir le rapport."
+  },
+  {
+   "id": "insist-on",
+   "pattern": "insist [on] sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "insister pour, tenir à",
+   "example_en": "He insisted [on] paying for dinner.",
+   "example_fr": "Il a tenu à payer le dîner."
+  },
+  {
+   "id": "concentrate-on",
+   "pattern": "concentrate [on] sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "se concentrer sur",
+   "example_en": "I can't concentrate [on] my work with this noise.",
+   "example_fr": "Je n'arrive pas à me concentrer sur mon travail avec ce bruit."
+  },
+  {
+   "id": "comment-on",
+   "pattern": "comment [on] sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "commenter",
+   "example_en": "The minister refused to comment [on] the rumours.",
+   "example_fr": "Le ministre a refusé de commenter les rumeurs.",
+   "trap": "about"
+  },
+  {
+   "id": "congratulate-on",
+   "pattern": "congratulate sb [on] sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "féliciter qn pour",
+   "example_en": "We congratulated her [on] her promotion.",
+   "example_fr": "Nous l'avons félicitée pour sa promotion.",
+   "trap": "for"
+  },
+  {
+   "id": "spend-money-on",
+   "pattern": "spend money [on] sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "dépenser de l'argent pour",
+   "example_en": "She spends a fortune [on] clothes.",
+   "example_fr": "Elle dépense une fortune en vêtements.",
+   "trap": "in"
+  },
+  {
+   "id": "be-based-on",
+   "pattern": "be based [on] sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "être basé sur",
+   "example_en": "The film is based [on] a true story.",
+   "example_fr": "Le film est basé sur une histoire vraie."
+  },
+  {
+   "id": "agree-with",
+   "pattern": "agree [with] sb",
+   "prep": "with",
+   "level": "B2",
+   "fr": "être d'accord avec qn",
+   "example_en": "I completely agree [with] you.",
+   "example_fr": "Je suis tout à fait d'accord avec toi."
+  },
+  {
+   "id": "agree-on",
+   "pattern": "agree [on] sth",
+   "prep": "on",
+   "level": "B2",
+   "fr": "se mettre d'accord sur",
+   "example_en": "We finally agreed [on] a date for the wedding.",
+   "example_fr": "Nous nous sommes enfin mis d'accord sur une date pour le mariage."
+  },
+  {
+   "id": "agree-to",
+   "pattern": "agree [to] sth",
+   "prep": "to",
+   "level": "B2",
+   "fr": "accepter (une proposition)",
+   "example_en": "The landlord agreed [to] our request.",
+   "example_fr": "Le propriétaire a accepté notre demande."
+  },
+  {
+   "id": "apologise-for",
+   "pattern": "apologise [for] sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "s'excuser de",
+   "example_en": "She apologised [for] being late.",
+   "example_fr": "Elle s'est excusée d'être en retard.",
+   "trap": "of"
+  },
+  {
+   "id": "apologise-to",
+   "pattern": "apologise [to] sb",
+   "prep": "to",
+   "level": "B2",
+   "fr": "s'excuser auprès de qn",
+   "example_en": "I apologised [to] my neighbour for the noise.",
+   "example_fr": "Je me suis excusé auprès de mon voisin pour le bruit."
+  },
+  {
+   "id": "complain-about",
+   "pattern": "complain [about] sth",
+   "prep": "about",
+   "level": "B2",
+   "fr": "se plaindre de",
+   "example_en": "Guests complained [about] the noise.",
+   "example_fr": "Les clients se sont plaints du bruit.",
+   "trap": "of"
+  },
+  {
+   "id": "think-about",
+   "pattern": "think [about] sth",
+   "prep": "about",
+   "level": "B2",
+   "fr": "penser à, réfléchir à",
+   "example_en": "I'm thinking [about] changing jobs.",
+   "example_fr": "Je pense à changer de travail.",
+   "trap": "to"
+  },
+  {
+   "id": "care-about",
+   "pattern": "care [about] sth",
+   "prep": "about",
+   "level": "B2",
+   "fr": "tenir à, se soucier de",
+   "example_en": "He really cares [about] the environment.",
+   "example_fr": "Il se soucie vraiment de l'environnement.",
+   "trap": "of"
+  },
+  {
+   "id": "worry-about",
+   "pattern": "worry [about] sth",
+   "prep": "about",
+   "level": "B2",
+   "fr": "s'inquiéter pour",
+   "example_en": "Don't worry [about] me, I'll be fine.",
+   "example_fr": "Ne t'inquiète pas pour moi, ça ira.",
+   "trap": "for"
+  },
+  {
+   "id": "argue-about",
+   "pattern": "argue [about] sth",
+   "prep": "about",
+   "level": "B2",
+   "fr": "se disputer à propos de",
+   "example_en": "They're always arguing [about] money.",
+   "example_fr": "Ils se disputent toujours à propos d'argent."
+  },
+  {
+   "id": "argue-with",
+   "pattern": "argue [with] sb",
+   "prep": "with",
+   "level": "B2",
+   "fr": "se disputer avec qn",
+   "example_en": "I don't want to argue [with] you.",
+   "example_fr": "Je ne veux pas me disputer avec toi."
+  },
+  {
+   "id": "consist-of",
+   "pattern": "consist [of] sth",
+   "prep": "of",
+   "level": "B2",
+   "fr": "se composer de",
+   "example_en": "The team consists [of] five engineers.",
+   "example_fr": "L'équipe se compose de cinq ingénieurs.",
+   "trap": "in"
+  },
+  {
+   "id": "approve-of",
+   "pattern": "approve [of] sth",
+   "prep": "of",
+   "level": "B2",
+   "fr": "approuver",
+   "example_en": "My parents don't approve [of] my choices.",
+   "example_fr": "Mes parents n'approuvent pas mes choix."
+  },
+  {
+   "id": "accuse-of",
+   "pattern": "accuse sb [of] sth",
+   "prep": "of",
+   "level": "B2",
+   "fr": "accuser qn de",
+   "example_en": "She accused him [of] lying.",
+   "example_fr": "Elle l'a accusé de mentir.",
+   "trap": "for"
+  },
+  {
+   "id": "remind-of",
+   "pattern": "remind sb [of] sb/sth",
+   "prep": "of",
+   "level": "B2",
+   "fr": "rappeler qn/qch à qn (ressemblance)",
+   "example_en": "You remind me [of] my sister.",
+   "example_fr": "Tu me rappelles ma sœur.",
+   "trap": "about"
+  },
+  {
+   "id": "dream-of",
+   "pattern": "dream [of] sth",
+   "prep": "of",
+   "level": "B2",
+   "fr": "rêver de",
+   "example_en": "She dreams [of] becoming a pilot.",
+   "example_fr": "Elle rêve de devenir pilote.",
+   "accept": [
+    "about"
+   ]
+  },
+  {
+   "id": "die-of",
+   "pattern": "die [of] sth",
+   "prep": "of",
+   "level": "B2",
+   "fr": "mourir de (maladie)",
+   "example_en": "He died [of] a heart attack.",
+   "example_fr": "Il est mort d'une crise cardiaque.",
+   "accept": [
+    "from"
+   ]
+  },
+  {
+   "id": "succeed-in",
+   "pattern": "succeed [in] doing sth",
+   "prep": "in",
+   "level": "B2",
+   "fr": "réussir à",
+   "example_en": "She succeeded [in] convincing the board.",
+   "example_fr": "Elle a réussi à convaincre le conseil.",
+   "trap": "to"
+  },
+  {
+   "id": "participate-in",
+   "pattern": "participate [in] sth",
+   "prep": "in",
+   "level": "B2",
+   "fr": "participer à",
+   "example_en": "Over 200 people participated [in] the survey.",
+   "example_fr": "Plus de 200 personnes ont participé à l'enquête.",
+   "trap": "to"
+  },
+  {
+   "id": "take-part-in",
+   "pattern": "take part [in] sth",
+   "prep": "in",
+   "level": "B2",
+   "fr": "prendre part à",
+   "example_en": "Will you take part [in] the race?",
+   "example_fr": "Vas-tu prendre part à la course ?",
+   "trap": "to"
+  },
+  {
+   "id": "believe-in",
+   "pattern": "believe [in] sth",
+   "prep": "in",
+   "level": "B2",
+   "fr": "croire en",
+   "example_en": "Do you believe [in] ghosts?",
+   "example_fr": "Tu crois aux fantômes ?",
+   "trap": "to"
+  },
+  {
+   "id": "invest-in",
+   "pattern": "invest [in] sth",
+   "prep": "in",
+   "level": "B2",
+   "fr": "investir dans",
+   "example_en": "They invested heavily [in] renewable energy.",
+   "example_fr": "Ils ont beaucoup investi dans les énergies renouvelables."
+  },
+  {
+   "id": "specialise-in",
+   "pattern": "specialise [in] sth",
+   "prep": "in",
+   "level": "B2",
+   "fr": "se spécialiser dans",
+   "example_en": "The firm specialises [in] tax law.",
+   "example_fr": "Le cabinet est spécialisé en droit fiscal."
+  },
+  {
+   "id": "result-in",
+   "pattern": "result [in] sth",
+   "prep": "in",
+   "level": "B2",
+   "fr": "entraîner, aboutir à",
+   "example_en": "The storm resulted [in] power cuts across the region.",
+   "example_fr": "La tempête a entraîné des coupures de courant dans toute la région.",
+   "trap": "to"
+  },
+  {
+   "id": "arrive-in",
+   "pattern": "arrive [in] a city/country",
+   "prep": "in",
+   "level": "B2",
+   "fr": "arriver à/en (ville, pays)",
+   "example_en": "They arrived [in] London late at night.",
+   "example_fr": "Ils sont arrivés à Londres tard le soir.",
+   "trap": "to"
+  },
+  {
+   "id": "arrive-at",
+   "pattern": "arrive [at] a place",
+   "prep": "at",
+   "level": "B2",
+   "fr": "arriver à (lieu précis)",
+   "example_en": "We arrived [at] the airport at six.",
+   "example_fr": "Nous sommes arrivés à l'aéroport à six heures.",
+   "trap": "to"
+  },
+  {
+   "id": "laugh-at",
+   "pattern": "laugh [at] sb/sth",
+   "prep": "at",
+   "level": "B2",
+   "fr": "rire de, se moquer de",
+   "example_en": "Everyone laughed [at] his joke.",
+   "example_fr": "Tout le monde a ri de sa blague.",
+   "trap": "of"
+  },
+  {
+   "id": "shout-at",
+   "pattern": "shout [at] sb",
+   "prep": "at",
+   "level": "B2",
+   "fr": "crier sur qn",
+   "example_en": "Stop shouting [at] me!",
+   "example_fr": "Arrête de me crier dessus !",
+   "trap": "on"
+  },
+  {
+   "id": "stare-at",
+   "pattern": "stare [at] sb/sth",
+   "prep": "at",
+   "level": "B2",
+   "fr": "fixer du regard",
+   "example_en": "Why are you staring [at] me?",
+   "example_fr": "Pourquoi tu me fixes ?"
+  },
+  {
+   "id": "aim-at",
+   "pattern": "aim [at] sb/sth",
+   "prep": "at",
+   "level": "B2",
+   "fr": "viser",
+   "example_en": "The campaign is aimed [at] young voters.",
+   "example_fr": "La campagne vise les jeunes électeurs."
+  },
+  {
+   "id": "suffer-from",
+   "pattern": "suffer [from] sth",
+   "prep": "from",
+   "level": "B2",
+   "fr": "souffrir de",
+   "example_en": "He suffers [from] migraines.",
+   "example_fr": "Il souffre de migraines.",
+   "trap": "of"
+  },
+  {
+   "id": "recover-from",
+   "pattern": "recover [from] sth",
+   "prep": "from",
+   "level": "B2",
+   "fr": "se remettre de",
+   "example_en": "It took her months to recover [from] the operation.",
+   "example_fr": "Il lui a fallu des mois pour se remettre de l'opération.",
+   "trap": "of"
+  },
+  {
+   "id": "prevent-from",
+   "pattern": "prevent sb [from] doing sth",
+   "prep": "from",
+   "level": "B2",
+   "fr": "empêcher qn de",
+   "example_en": "The rain prevented us [from] going out.",
+   "example_fr": "La pluie nous a empêchés de sortir.",
+   "trap": "of"
+  },
+  {
+   "id": "protect-from",
+   "pattern": "protect sb [from] sth",
+   "prep": "from",
+   "level": "B2",
+   "fr": "protéger de",
+   "example_en": "Sunscreen protects your skin [from] UV rays.",
+   "example_fr": "La crème solaire protège ta peau des UV.",
+   "trap": "of",
+   "accept": [
+    "against"
+   ]
+  },
+  {
+   "id": "hear-from",
+   "pattern": "hear [from] sb",
+   "prep": "from",
+   "level": "B2",
+   "fr": "avoir des nouvelles de",
+   "example_en": "Have you heard [from] Tom lately?",
+   "example_fr": "Tu as eu des nouvelles de Tom récemment ?",
+   "trap": "of"
+  },
+  {
+   "id": "differ-from",
+   "pattern": "differ [from] sth",
+   "prep": "from",
+   "level": "B2",
+   "fr": "différer de",
+   "example_en": "This version differs [from] the original.",
+   "example_fr": "Cette version diffère de l'original.",
+   "trap": "of"
+  },
+  {
+   "id": "benefit-from",
+   "pattern": "benefit [from] sth",
+   "prep": "from",
+   "level": "B2",
+   "fr": "bénéficier de",
+   "example_en": "Small businesses will benefit [from] the new law.",
+   "example_fr": "Les petites entreprises bénéficieront de la nouvelle loi.",
+   "trap": "of"
+  },
+  {
+   "id": "result-from",
+   "pattern": "result [from] sth",
+   "prep": "from",
+   "level": "B2",
+   "fr": "résulter de",
+   "example_en": "The delay resulted [from] a technical fault.",
+   "example_fr": "Le retard résultait d'une panne technique.",
+   "trap": "of"
+  },
+  {
+   "id": "borrow-from",
+   "pattern": "borrow sth [from] sb",
+   "prep": "from",
+   "level": "B2",
+   "fr": "emprunter qch à qn",
+   "example_en": "I borrowed a pen [from] my colleague.",
+   "example_fr": "J'ai emprunté un stylo à mon collègue.",
+   "trap": "to"
+  },
+  {
+   "id": "graduate-from",
+   "pattern": "graduate [from] a school",
+   "prep": "from",
+   "level": "B2",
+   "fr": "être diplômé de",
+   "example_en": "She graduated [from] Oxford in 2015.",
+   "example_fr": "Elle est diplômée d'Oxford depuis 2015.",
+   "trap": "of"
+  },
+  {
+   "id": "listen-to",
+   "pattern": "listen [to] sb/sth",
+   "prep": "to",
+   "level": "B2",
+   "fr": "écouter",
+   "example_en": "Listen [to] me carefully.",
+   "example_fr": "Écoute-moi attentivement."
+  },
+  {
+   "id": "belong-to",
+   "pattern": "belong [to] sb",
+   "prep": "to",
+   "level": "B2",
+   "fr": "appartenir à",
+   "example_en": "This bike belongs [to] my brother.",
+   "example_fr": "Ce vélo appartient à mon frère."
+  },
+  {
+   "id": "react-to",
+   "pattern": "react [to] sth",
+   "prep": "to",
+   "level": "B2",
+   "fr": "réagir à",
+   "example_en": "How did she react [to] the news?",
+   "example_fr": "Comment a-t-elle réagi à la nouvelle ?"
+  },
+  {
+   "id": "reply-to",
+   "pattern": "reply [to] sb/sth",
+   "prep": "to",
+   "level": "B2",
+   "fr": "répondre à",
+   "example_en": "Please reply [to] this email by Friday.",
+   "example_fr": "Merci de répondre à ce mail d'ici vendredi."
+  },
+  {
+   "id": "object-to",
+   "pattern": "object [to] sth",
+   "prep": "to",
+   "level": "B2",
+   "fr": "s'opposer à",
+   "example_en": "Many residents objected [to] the new road.",
+   "example_fr": "Beaucoup d'habitants se sont opposés à la nouvelle route."
+  },
+  {
+   "id": "contribute-to",
+   "pattern": "contribute [to] sth",
+   "prep": "to",
+   "level": "B2",
+   "fr": "contribuer à",
+   "example_en": "Everyone contributed [to] the project's success.",
+   "example_fr": "Tout le monde a contribué au succès du projet."
+  },
+  {
+   "id": "explain-to",
+   "pattern": "explain sth [to] sb",
+   "prep": "to",
+   "level": "B2",
+   "fr": "expliquer qch à qn",
+   "example_en": "Can you explain this [to] me?",
+   "example_fr": "Tu peux m'expliquer ça ?"
+  },
+  {
+   "id": "look-forward-to",
+   "pattern": "look forward [to] sth",
+   "prep": "to",
+   "level": "B2",
+   "fr": "avoir hâte de",
+   "example_en": "I look forward [to] hearing from you.",
+   "example_fr": "J'ai hâte d'avoir de tes nouvelles."
+  },
+  {
+   "id": "get-used-to",
+   "pattern": "get used [to] sth",
+   "prep": "to",
+   "level": "B2",
+   "fr": "s'habituer à",
+   "example_en": "I can't get used [to] the cold.",
+   "example_fr": "Je n'arrive pas à m'habituer au froid."
+  },
+  {
+   "id": "get-married-to",
+   "pattern": "get married [to] sb",
+   "prep": "to",
+   "level": "B2",
+   "fr": "se marier avec qn",
+   "example_en": "She got married [to] a doctor.",
+   "example_fr": "Elle s'est mariée avec un médecin.",
+   "trap": "with"
+  },
+  {
+   "id": "deal-with",
+   "pattern": "deal [with] sth",
+   "prep": "with",
+   "level": "B2",
+   "fr": "gérer, s'occuper de",
+   "example_en": "Who's going to deal [with] this problem?",
+   "example_fr": "Qui va s'occuper de ce problème ?",
+   "trap": "of"
+  },
+  {
+   "id": "cope-with",
+   "pattern": "cope [with] sth",
+   "prep": "with",
+   "level": "B2",
+   "fr": "faire face à",
+   "example_en": "She's coping [with] a lot of stress at work.",
+   "example_fr": "Elle fait face à beaucoup de stress au travail.",
+   "trap": "to"
+  },
+  {
+   "id": "provide-with",
+   "pattern": "provide sb [with] sth",
+   "prep": "with",
+   "level": "B2",
+   "fr": "fournir qch à qn",
+   "example_en": "The hotel provides guests [with] towels.",
+   "example_fr": "L'hôtel fournit des serviettes aux clients.",
+   "trap": "of"
+  },
+  {
+   "id": "charge-with",
+   "pattern": "charge sb [with] sth",
+   "prep": "with",
+   "level": "B2",
+   "fr": "inculper qn de",
+   "example_en": "He was charged [with] fraud.",
+   "example_fr": "Il a été inculpé de fraude.",
+   "trap": "of"
+  },
+  {
+   "id": "fall-in-love-with",
+   "pattern": "fall in love [with] sb",
+   "prep": "with",
+   "level": "B2",
+   "fr": "tomber amoureux de",
+   "example_en": "He fell in love [with] Paris.",
+   "example_fr": "Il est tombé amoureux de Paris.",
+   "trap": "of"
+  },
+  {
+   "id": "cooperate-with",
+   "pattern": "cooperate [with] sb",
+   "prep": "with",
+   "level": "B2",
+   "fr": "coopérer avec",
+   "example_en": "The witness agreed to cooperate [with] the police.",
+   "example_fr": "Le témoin a accepté de coopérer avec la police."
+  },
+  {
+   "id": "blame-for",
+   "pattern": "blame sb [for] sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "reprocher qch à qn",
+   "example_en": "Don't blame me [for] your mistakes.",
+   "example_fr": "Ne me reproche pas tes erreurs.",
+   "trap": "of"
+  },
+  {
+   "id": "thank-for",
+   "pattern": "thank sb [for] sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "remercier qn pour",
+   "example_en": "Thank you [for] your help.",
+   "example_fr": "Merci pour ton aide."
+  },
+  {
+   "id": "wait-for",
+   "pattern": "wait [for] sb/sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "attendre",
+   "example_en": "We waited [for] the bus for an hour.",
+   "example_fr": "Nous avons attendu le bus pendant une heure."
+  },
+  {
+   "id": "ask-for",
+   "pattern": "ask [for] sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "demander (qch)",
+   "example_en": "He asked [for] a glass of water.",
+   "example_fr": "Il a demandé un verre d'eau."
+  },
+  {
+   "id": "apply-for",
+   "pattern": "apply [for] a job",
+   "prep": "for",
+   "level": "B2",
+   "fr": "postuler à",
+   "example_en": "She applied [for] a job at the bank.",
+   "example_fr": "Elle a postulé à un poste à la banque.",
+   "trap": "to"
+  },
+  {
+   "id": "pay-for",
+   "pattern": "pay [for] sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "payer qch",
+   "example_en": "Who paid [for] the drinks?",
+   "example_fr": "Qui a payé les boissons ?"
+  },
+  {
+   "id": "search-for",
+   "pattern": "search [for] sb/sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "chercher",
+   "example_en": "Police are searching [for] the missing child.",
+   "example_fr": "La police recherche l'enfant disparu."
+  },
+  {
+   "id": "prepare-for",
+   "pattern": "prepare [for] sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "se préparer à",
+   "example_en": "I'm preparing [for] my exams.",
+   "example_fr": "Je prépare mes examens.",
+   "trap": "to"
+  },
+  {
+   "id": "fight-for",
+   "pattern": "fight [for] sth",
+   "prep": "for",
+   "level": "B2",
+   "fr": "se battre pour",
+   "example_en": "They fought [for] their rights.",
+   "example_fr": "Ils se sont battus pour leurs droits."
+  },
+  {
+   "id": "translate-into",
+   "pattern": "translate sth [into] a language",
+   "prep": "into",
+   "level": "B2",
+   "fr": "traduire en",
+   "example_en": "The book has been translated [into] 30 languages.",
+   "example_fr": "Le livre a été traduit en 30 langues.",
+   "trap": "in"
+  },
+  {
+   "id": "turn-into",
+   "pattern": "turn [into] sth",
+   "prep": "into",
+   "level": "B2",
+   "fr": "se transformer en",
+   "example_en": "The caterpillar turned [into] a butterfly.",
+   "example_fr": "La chenille s'est transformée en papillon.",
+   "trap": "in"
+  },
+  {
+   "id": "divide-into",
+   "pattern": "divide sth [into] parts",
+   "prep": "into",
+   "level": "B2",
+   "fr": "diviser en",
+   "example_en": "The class was divided [into] four groups.",
+   "example_fr": "La classe a été divisée en quatre groupes.",
+   "trap": "in"
+  },
+  {
+   "id": "insure-against",
+   "pattern": "insure sth [against] sth",
+   "prep": "against",
+   "level": "B2",
+   "fr": "assurer contre",
+   "example_en": "Is your house insured [against] flooding?",
+   "example_fr": "Ta maison est-elle assurée contre les inondations ?"
+  },
+  {
+   "id": "account-for",
+   "pattern": "account [for] sth",
+   "prep": "for",
+   "level": "C1",
+   "fr": "représenter (une part) ; expliquer",
+   "example_en": "Exports account [for] 40% of GDP.",
+   "example_fr": "Les exportations représentent 40 % du PIB."
+  },
+  {
+   "id": "opt-for",
+   "pattern": "opt [for] sth",
+   "prep": "for",
+   "level": "C1",
+   "fr": "opter pour",
+   "example_en": "Most students opted [for] the online course.",
+   "example_fr": "La plupart des étudiants ont opté pour le cours en ligne."
+  },
+  {
+   "id": "vouch-for",
+   "pattern": "vouch [for] sb",
+   "prep": "for",
+   "level": "C1",
+   "fr": "se porter garant de",
+   "example_en": "I can vouch [for] her honesty.",
+   "example_fr": "Je peux me porter garant de son honnêteté.",
+   "trap": "of"
+  },
+  {
+   "id": "atone-for",
+   "pattern": "atone [for] sth",
+   "prep": "for",
+   "level": "C1",
+   "fr": "expier, se racheter de",
+   "example_en": "He spent years trying to atone [for] his mistakes.",
+   "example_fr": "Il a passé des années à essayer de se racheter de ses erreurs.",
+   "trap": "of"
+  },
+  {
+   "id": "compensate-for",
+   "pattern": "compensate [for] sth",
+   "prep": "for",
+   "level": "C1",
+   "fr": "compenser",
+   "example_en": "Nothing can compensate [for] the loss of a child.",
+   "example_fr": "Rien ne peut compenser la perte d'un enfant."
+  },
+  {
+   "id": "strive-for",
+   "pattern": "strive [for] sth",
+   "prep": "for",
+   "level": "C1",
+   "fr": "s'efforcer d'atteindre",
+   "example_en": "We constantly strive [for] excellence.",
+   "example_fr": "Nous visons constamment l'excellence.",
+   "trap": "to"
+  },
+  {
+   "id": "yearn-for",
+   "pattern": "yearn [for] sth",
+   "prep": "for",
+   "level": "C1",
+   "fr": "aspirer à, désirer ardemment",
+   "example_en": "After years abroad, she yearned [for] home.",
+   "example_fr": "Après des années à l'étranger, elle aspirait à rentrer chez elle.",
+   "trap": "to"
+  },
+  {
+   "id": "cater-for",
+   "pattern": "cater [for] sb",
+   "prep": "for",
+   "level": "C1",
+   "fr": "répondre aux besoins de",
+   "example_en": "The hotel caters [for] business travellers.",
+   "example_fr": "L'hôtel s'adresse aux voyageurs d'affaires.",
+   "accept": [
+    "to"
+   ]
+  },
+  {
+   "id": "bargain-for",
+   "pattern": "bargain [for] sth",
+   "prep": "for",
+   "level": "C1",
+   "fr": "s'attendre à",
+   "example_en": "We got more than we bargained [for].",
+   "example_fr": "On a eu plus que ce à quoi on s'attendait."
+  },
+  {
+   "id": "abide-by",
+   "pattern": "abide [by] sth",
+   "prep": "by",
+   "level": "C1",
+   "fr": "respecter (une règle)",
+   "example_en": "All members must abide [by] the rules.",
+   "example_fr": "Tous les membres doivent respecter le règlement."
+  },
+  {
+   "id": "adhere-to",
+   "pattern": "adhere [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "adhérer à, respecter",
+   "example_en": "We strictly adhere [to] safety standards.",
+   "example_fr": "Nous respectons strictement les normes de sécurité."
+  },
+  {
+   "id": "conform-to",
+   "pattern": "conform [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "se conformer à",
+   "example_en": "The building doesn't conform [to] fire regulations.",
+   "example_fr": "Le bâtiment n'est pas conforme aux normes incendie.",
+   "accept": [
+    "with"
+   ]
+  },
+  {
+   "id": "succumb-to",
+   "pattern": "succumb [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "succomber à",
+   "example_en": "He finally succumbed [to] temptation.",
+   "example_fr": "Il a fini par succomber à la tentation."
+  },
+  {
+   "id": "yield-to",
+   "pattern": "yield [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "céder à",
+   "example_en": "The government refused to yield [to] pressure.",
+   "example_fr": "Le gouvernement a refusé de céder à la pression."
+  },
+  {
+   "id": "resort-to",
+   "pattern": "resort [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "recourir à",
+   "example_en": "They resorted [to] violence.",
+   "example_fr": "Ils ont eu recours à la violence."
+  },
+  {
+   "id": "subscribe-to",
+   "pattern": "subscribe [to] a view",
+   "prep": "to",
+   "level": "C1",
+   "fr": "adhérer à (une idée)",
+   "example_en": "I don't subscribe [to] that theory.",
+   "example_fr": "Je n'adhère pas à cette théorie."
+  },
+  {
+   "id": "allude-to",
+   "pattern": "allude [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "faire allusion à",
+   "example_en": "She alluded [to] problems within the company.",
+   "example_fr": "Elle a fait allusion à des problèmes au sein de l'entreprise."
+  },
+  {
+   "id": "attribute-to",
+   "pattern": "attribute sth [to] sb/sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "attribuer qch à",
+   "example_en": "The painting is attributed [to] Rembrandt.",
+   "example_fr": "Le tableau est attribué à Rembrandt."
+  },
+  {
+   "id": "pertain-to",
+   "pattern": "pertain [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "se rapporter à",
+   "example_en": "Please send all documents pertaining [to] the case.",
+   "example_fr": "Merci d'envoyer tous les documents relatifs à l'affaire."
+  },
+  {
+   "id": "testify-to",
+   "pattern": "testify [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "témoigner de, attester",
+   "example_en": "The long queues testify [to] the band's popularity.",
+   "example_fr": "Les longues files d'attente témoignent de la popularité du groupe.",
+   "trap": "of"
+  },
+  {
+   "id": "aspire-to",
+   "pattern": "aspire [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "aspirer à",
+   "example_en": "She aspires [to] a career in politics.",
+   "example_fr": "Elle aspire à une carrière politique."
+  },
+  {
+   "id": "relate-to",
+   "pattern": "relate [to] sb/sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "s'identifier à",
+   "example_en": "I can really relate [to] that character.",
+   "example_fr": "Je m'identifie vraiment à ce personnage.",
+   "trap": "with"
+  },
+  {
+   "id": "consent-to",
+   "pattern": "consent [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "consentir à",
+   "example_en": "The patient consented [to] the treatment.",
+   "example_fr": "Le patient a consenti au traitement."
+  },
+  {
+   "id": "revert-to",
+   "pattern": "revert [to] sth",
+   "prep": "to",
+   "level": "C1",
+   "fr": "revenir à (un état antérieur)",
+   "example_en": "After the crisis, prices reverted [to] normal.",
+   "example_fr": "Après la crise, les prix sont revenus à la normale."
+  },
+  {
+   "id": "refrain-from",
+   "pattern": "refrain [from] doing sth",
+   "prep": "from",
+   "level": "C1",
+   "fr": "s'abstenir de",
+   "example_en": "Please refrain [from] smoking.",
+   "example_fr": "Prière de s'abstenir de fumer.",
+   "trap": "of"
+  },
+  {
+   "id": "abstain-from",
+   "pattern": "abstain [from] sth",
+   "prep": "from",
+   "level": "C1",
+   "fr": "s'abstenir de",
+   "example_en": "Three members abstained [from] voting.",
+   "example_fr": "Trois membres se sont abstenus de voter.",
+   "trap": "of"
+  },
+  {
+   "id": "stem-from",
+   "pattern": "stem [from] sth",
+   "prep": "from",
+   "level": "C1",
+   "fr": "découler de, provenir de",
+   "example_en": "Her anxiety stems [from] her childhood.",
+   "example_fr": "Son anxiété vient de son enfance.",
+   "trap": "of"
+  },
+  {
+   "id": "derive-from",
+   "pattern": "derive [from] sth",
+   "prep": "from",
+   "level": "C1",
+   "fr": "provenir de, dériver de",
+   "example_en": "The word derives [from] Latin.",
+   "example_fr": "Le mot vient du latin.",
+   "trap": "of"
+  },
+  {
+   "id": "deviate-from",
+   "pattern": "deviate [from] sth",
+   "prep": "from",
+   "level": "C1",
+   "fr": "s'écarter de",
+   "example_en": "The pilot had to deviate [from] the planned route.",
+   "example_fr": "Le pilote a dû s'écarter de l'itinéraire prévu.",
+   "trap": "of"
+  },
+  {
+   "id": "detract-from",
+   "pattern": "detract [from] sth",
+   "prep": "from",
+   "level": "C1",
+   "fr": "nuire à, diminuer",
+   "example_en": "The scandal detracted [from] his achievements.",
+   "example_fr": "Le scandale a terni ses réussites.",
+   "trap": "to"
+  },
+  {
+   "id": "dwell-on",
+   "pattern": "dwell [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "s'attarder sur, ressasser",
+   "example_en": "There's no point dwelling [on] the past.",
+   "example_fr": "Ça ne sert à rien de ressasser le passé."
+  },
+  {
+   "id": "capitalise-on",
+   "pattern": "capitalise [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "tirer parti de",
+   "example_en": "The opposition capitalised [on] the scandal.",
+   "example_fr": "L'opposition a tiré parti du scandale.",
+   "trap": "of"
+  },
+  {
+   "id": "embark-on",
+   "pattern": "embark [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "se lancer dans",
+   "example_en": "She embarked [on] a new career at 50.",
+   "example_fr": "Elle s'est lancée dans une nouvelle carrière à 50 ans.",
+   "trap": "in"
+  },
+  {
+   "id": "elaborate-on",
+   "pattern": "elaborate [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "développer, préciser",
+   "example_en": "Could you elaborate [on] that point?",
+   "example_fr": "Pourriez-vous développer ce point ?"
+  },
+  {
+   "id": "hinge-on",
+   "pattern": "hinge [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "dépendre entièrement de",
+   "example_en": "Everything hinges [on] tomorrow's vote.",
+   "example_fr": "Tout dépend du vote de demain.",
+   "trap": "of"
+  },
+  {
+   "id": "border-on",
+   "pattern": "border [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "friser, confiner à",
+   "example_en": "His confidence borders [on] arrogance.",
+   "example_fr": "Son assurance frise l'arrogance."
+  },
+  {
+   "id": "frown-on",
+   "pattern": "frown [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "désapprouver, voir d'un mauvais œil",
+   "example_en": "Smoking indoors is frowned [on] here.",
+   "example_fr": "Ici, fumer à l'intérieur est mal vu.",
+   "accept": [
+    "upon"
+   ]
+  },
+  {
+   "id": "reflect-on",
+   "pattern": "reflect [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "réfléchir à, méditer sur",
+   "example_en": "Take some time to reflect [on] what happened.",
+   "example_fr": "Prends le temps de réfléchir à ce qui s'est passé.",
+   "trap": "to"
+  },
+  {
+   "id": "impose-on",
+   "pattern": "impose sth [on] sb",
+   "prep": "on",
+   "level": "C1",
+   "fr": "imposer qch à qn",
+   "example_en": "The EU imposed sanctions [on] the regime.",
+   "example_fr": "L'UE a imposé des sanctions au régime.",
+   "trap": "to"
+  },
+  {
+   "id": "touch-on",
+   "pattern": "touch [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "aborder (brièvement)",
+   "example_en": "The report only touches [on] the issue.",
+   "example_fr": "Le rapport n'aborde la question que brièvement."
+  },
+  {
+   "id": "prey-on",
+   "pattern": "prey [on] sb",
+   "prep": "on",
+   "level": "C1",
+   "fr": "s'en prendre à, exploiter",
+   "example_en": "Scammers prey [on] the elderly.",
+   "example_fr": "Les escrocs s'en prennent aux personnes âgées."
+  },
+  {
+   "id": "crack-down-on",
+   "pattern": "crack down [on] sth",
+   "prep": "on",
+   "level": "C1",
+   "fr": "sévir contre",
+   "example_en": "The police are cracking down [on] drink-driving.",
+   "example_fr": "La police sévit contre l'alcool au volant.",
+   "trap": "against"
+  },
+  {
+   "id": "confide-in",
+   "pattern": "confide [in] sb",
+   "prep": "in",
+   "level": "C1",
+   "fr": "se confier à",
+   "example_en": "She confided [in] her best friend.",
+   "example_fr": "Elle s'est confiée à sa meilleure amie.",
+   "trap": "to"
+  },
+  {
+   "id": "culminate-in",
+   "pattern": "culminate [in] sth",
+   "prep": "in",
+   "level": "C1",
+   "fr": "aboutir à, culminer par",
+   "example_en": "Months of protest culminated [in] a general strike.",
+   "example_fr": "Des mois de contestation ont abouti à une grève générale.",
+   "trap": "to"
+  },
+  {
+   "id": "indulge-in",
+   "pattern": "indulge [in] sth",
+   "prep": "in",
+   "level": "C1",
+   "fr": "se laisser aller à, s'offrir",
+   "example_en": "On Sundays I indulge [in] a long bath.",
+   "example_fr": "Le dimanche, je m'offre un long bain."
+  },
+  {
+   "id": "persist-in",
+   "pattern": "persist [in] doing sth",
+   "prep": "in",
+   "level": "C1",
+   "fr": "persister à",
+   "example_en": "He persisted [in] denying everything.",
+   "example_fr": "Il a persisté à tout nier.",
+   "trap": "to"
+  },
+  {
+   "id": "engage-in",
+   "pattern": "engage [in] sth",
+   "prep": "in",
+   "level": "C1",
+   "fr": "se livrer à, prendre part à",
+   "example_en": "They refused to engage [in] dialogue.",
+   "example_fr": "Ils ont refusé d'engager le dialogue."
+  },
+  {
+   "id": "excel-at",
+   "pattern": "excel [at] sth",
+   "prep": "at",
+   "level": "C1",
+   "fr": "exceller en",
+   "example_en": "She excels [at] languages.",
+   "example_fr": "Elle excelle en langues.",
+   "accept": [
+    "in"
+   ]
+  },
+  {
+   "id": "marvel-at",
+   "pattern": "marvel [at] sth",
+   "prep": "at",
+   "level": "C1",
+   "fr": "s'émerveiller de",
+   "example_en": "Tourists marvel [at] the cathedral's beauty.",
+   "example_fr": "Les touristes s'émerveillent de la beauté de la cathédrale.",
+   "trap": "of"
+  },
+  {
+   "id": "hint-at",
+   "pattern": "hint [at] sth",
+   "prep": "at",
+   "level": "C1",
+   "fr": "faire allusion à, laisser entendre",
+   "example_en": "The minister hinted [at] a tax cut.",
+   "example_fr": "Le ministre a laissé entendre une baisse d'impôts.",
+   "trap": "to"
+  },
+  {
+   "id": "grapple-with",
+   "pattern": "grapple [with] sth",
+   "prep": "with",
+   "level": "C1",
+   "fr": "se débattre avec",
+   "example_en": "Governments are grappling [with] rising debt.",
+   "example_fr": "Les gouvernements se débattent avec une dette croissante."
+  },
+  {
+   "id": "tamper-with",
+   "pattern": "tamper [with] sth",
+   "prep": "with",
+   "level": "C1",
+   "fr": "trafiquer, toucher à",
+   "example_en": "Someone had tampered [with] the brakes.",
+   "example_fr": "Quelqu'un avait trafiqué les freins."
+  },
+  {
+   "id": "side-with",
+   "pattern": "side [with] sb",
+   "prep": "with",
+   "level": "C1",
+   "fr": "prendre le parti de",
+   "example_en": "She always sides [with] her mother.",
+   "example_fr": "Elle prend toujours le parti de sa mère."
+  },
+  {
+   "id": "dispense-with",
+   "pattern": "dispense [with] sth",
+   "prep": "with",
+   "level": "C1",
+   "fr": "se passer de",
+   "example_en": "Let's dispense [with] the formalities.",
+   "example_fr": "Passons-nous des formalités.",
+   "trap": "of"
+  },
+  {
+   "id": "part-with",
+   "pattern": "part [with] sth",
+   "prep": "with",
+   "level": "C1",
+   "fr": "se séparer de (un objet)",
+   "example_en": "I can't bear to part [with] these old books.",
+   "example_fr": "Je ne supporte pas l'idée de me séparer de ces vieux livres.",
+   "trap": "of"
+  },
+  {
+   "id": "contend-with",
+   "pattern": "contend [with] sth",
+   "prep": "with",
+   "level": "C1",
+   "fr": "faire face à",
+   "example_en": "Farmers have to contend [with] drought.",
+   "example_fr": "Les agriculteurs doivent faire face à la sécheresse."
+  },
+  {
+   "id": "collude-with",
+   "pattern": "collude [with] sb",
+   "prep": "with",
+   "level": "C1",
+   "fr": "être de connivence avec",
+   "example_en": "Officials colluded [with] the smugglers.",
+   "example_fr": "Des fonctionnaires étaient de connivence avec les contrebandiers."
+  },
+  {
+   "id": "reckon-with",
+   "pattern": "reckon [with] sb",
+   "prep": "with",
+   "level": "C1",
+   "fr": "compter avec qn",
+   "example_en": "She's a force to be reckoned [with].",
+   "example_fr": "C'est quelqu'un avec qui il faut compter."
+  },
+  {
+   "id": "deprive-of",
+   "pattern": "deprive sb [of] sth",
+   "prep": "of",
+   "level": "C1",
+   "fr": "priver qn de",
+   "example_en": "The prisoners were deprived [of] sleep.",
+   "example_fr": "Les prisonniers étaient privés de sommeil."
+  },
+  {
+   "id": "dispose-of",
+   "pattern": "dispose [of] sth",
+   "prep": "of",
+   "level": "C1",
+   "fr": "se débarrasser de, jeter",
+   "example_en": "How should we dispose [of] old batteries?",
+   "example_fr": "Comment faut-il se débarrasser des vieilles piles ?"
+  },
+  {
+   "id": "conceive-of",
+   "pattern": "conceive [of] sth",
+   "prep": "of",
+   "level": "C1",
+   "fr": "concevoir, imaginer",
+   "example_en": "I can't conceive [of] a world without music.",
+   "example_fr": "Je ne peux pas imaginer un monde sans musique."
+  },
+  {
+   "id": "preside-over",
+   "pattern": "preside [over] sth",
+   "prep": "over",
+   "level": "C1",
+   "fr": "présider",
+   "example_en": "The judge presided [over] the trial.",
+   "example_fr": "Le juge a présidé le procès."
+  },
+  {
+   "id": "agonise-over",
+   "pattern": "agonise [over] sth",
+   "prep": "over",
+   "level": "C1",
+   "fr": "se torturer l'esprit sur",
+   "example_en": "She agonised [over] the decision for weeks.",
+   "example_fr": "Elle s'est torturé l'esprit pendant des semaines sur cette décision.",
+   "trap": "about"
+  },
+  {
+   "id": "prevail-over",
+   "pattern": "prevail [over] sb/sth",
+   "prep": "over",
+   "level": "C1",
+   "fr": "l'emporter sur",
+   "example_en": "In the end, reason prevailed [over] emotion.",
+   "example_fr": "Finalement, la raison l'a emporté sur l'émotion.",
+   "trap": "on"
+  },
+  {
+   "id": "rebel-against",
+   "pattern": "rebel [against] sb/sth",
+   "prep": "against",
+   "level": "C1",
+   "fr": "se rebeller contre",
+   "example_en": "Teenagers often rebel [against] their parents.",
+   "example_fr": "Les ados se rebellent souvent contre leurs parents."
+  },
+  {
+   "id": "discriminate-against",
+   "pattern": "discriminate [against] sb",
+   "prep": "against",
+   "level": "C1",
+   "fr": "discriminer",
+   "example_en": "It's illegal to discriminate [against] job applicants.",
+   "example_fr": "Il est illégal de discriminer des candidats à l'embauche."
+  },
+  {
+   "id": "caution-against",
+   "pattern": "caution [against] sth",
+   "prep": "against",
+   "level": "C1",
+   "fr": "mettre en garde contre",
+   "example_en": "Experts caution [against] drawing hasty conclusions.",
+   "example_fr": "Les experts mettent en garde contre les conclusions hâtives."
+  },
+  {
+   "id": "inquire-into",
+   "pattern": "inquire [into] sth",
+   "prep": "into",
+   "level": "C1",
+   "fr": "enquêter sur",
+   "example_en": "The committee will inquire [into] the matter.",
+   "example_fr": "La commission va enquêter sur l'affaire.",
+   "trap": "on"
+  },
+  {
+   "id": "delve-into",
+   "pattern": "delve [into] sth",
+   "prep": "into",
+   "level": "C1",
+   "fr": "creuser, fouiller dans",
+   "example_en": "The book delves [into] her childhood.",
+   "example_fr": "Le livre plonge dans son enfance.",
+   "trap": "in"
+  },
+  {
+   "id": "lapse-into",
+   "pattern": "lapse [into] sth",
+   "prep": "into",
+   "level": "C1",
+   "fr": "retomber dans, sombrer dans",
+   "example_en": "He lapsed [into] silence.",
+   "example_fr": "Il a sombré dans le silence.",
+   "trap": "in"
+  },
+  {
+   "id": "talk-into",
+   "pattern": "talk sb [into] doing sth",
+   "prep": "into",
+   "level": "C1",
+   "fr": "persuader qn de",
+   "example_en": "He talked me [into] buying a new car.",
+   "example_fr": "Il m'a persuadé d'acheter une nouvelle voiture.",
+   "trap": "of"
+  },
+  {
+   "id": "tap-into",
+   "pattern": "tap [into] sth",
+   "prep": "into",
+   "level": "C1",
+   "fr": "exploiter, puiser dans",
+   "example_en": "The brand tapped [into] a new market.",
+   "example_fr": "La marque a exploité un nouveau marché.",
+   "trap": "in"
+  },
+  {
+   "id": "distinguish-between",
+   "pattern": "distinguish [between] A and B",
+   "prep": "between",
+   "level": "C1",
+   "fr": "faire la différence entre",
+   "example_en": "Children must learn to distinguish [between] right and wrong.",
+   "example_fr": "Les enfants doivent apprendre à faire la différence entre le bien et le mal."
+  }
+ ]
+}

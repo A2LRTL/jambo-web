@@ -1,21 +1,26 @@
 'use client';
 
 import { useState } from 'react';
-import type { GermanWord } from '@/types';
 import { speak } from '@/lib/speech';
 import PrimaryButton from '@/components/PrimaryButton';
 
 /**
  * Flashcards shown before a drill round: French first (the `front`),
- * tap to reveal the German side (`back`). Ends with "Commencer le test".
+ * tap to reveal the foreign side (`back`). Ends with "Commencer le test".
+ * Shared by the German and English drills.
  */
-export default function RoundCards({ verbs, title, front, back, spoken, onDone, onBack }: {
-  verbs: GermanWord[];
+export default function RoundCards<T extends { fr: string }>({
+  verbs, title, front, back, spoken, lang, revealHint = 'Appuie pour voir l\'allemand.', onDone, onBack,
+}: {
+  verbs: T[];
   title: string;
-  front?: (verb: GermanWord) => React.ReactNode;
-  back: (verb: GermanWord) => React.ReactNode;
+  front?: (verb: T) => React.ReactNode;
+  back: (verb: T) => React.ReactNode;
   /** Text read aloud when a card is revealed. */
-  spoken: (verb: GermanWord) => string;
+  spoken: (verb: T) => string;
+  /** Speech language, e.g. "en-GB" (defaults to German). */
+  lang?: string;
+  revealHint?: string;
   onDone: () => void;
   onBack: () => void;
 }) {
@@ -27,7 +32,7 @@ export default function RoundCards({ verbs, title, front, back, spoken, onDone, 
   const reveal = () => {
     if (revealed) return;
     setRevealed(true);
-    speak(spoken(verb));
+    speak(spoken(verb), lang);
   };
   const go = (next: number) => { setI(next); setRevealed(false); };
 
@@ -61,7 +66,7 @@ export default function RoundCards({ verbs, title, front, back, spoken, onDone, 
           {revealed ? (
             <div className="flex flex-col gap-3 border-t border-border pt-4 animate-fade-in">{back(verb)}</div>
           ) : (
-            <p className="text-xs text-muted">Appuie pour voir l&apos;allemand.</p>
+            <p className="text-xs text-muted">{revealHint}</p>
           )}
         </button>
       </div>

@@ -15,10 +15,10 @@ export function headword(w: GermanWord): string {
   return w.article ? `${w.article} ${w.lemma}` : w.lemma;
 }
 
-export function SpeakButton({ text, className = '' }: { text: string; className?: string }) {
+export function SpeakButton({ text, lang, className = '' }: { text: string; lang?: string; className?: string }) {
   return (
     <button type="button" aria-label="Écouter"
-      onClick={(e) => { e.stopPropagation(); speak(text); }}
+      onClick={(e) => { e.stopPropagation(); speak(text, lang); }}
       className={`shrink-0 w-9 h-9 rounded-full border border-border bg-cream text-base hover:border-accent active:scale-95 transition-all ${className}`}>
       🔊
     </button>
