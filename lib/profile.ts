@@ -8,8 +8,12 @@ export const PROFILES = ['Shaza', 'Gisabo', 'Ruta', 'Bambara'] as const;
 export type ProfileName = (typeof PROFILES)[number];
 export type Profile = ProfileName | 'guest';
 
-/** The profile that has access to the German section. */
-export const GERMAN_PROFILE: ProfileName = 'Ruta';
+/** The profiles that have access to the German section. */
+export const GERMAN_PROFILES: readonly ProfileName[] = ['Ruta', 'Bambara'];
+
+export function hasGermanAccess(profile: Profile | null | undefined): profile is ProfileName {
+  return (GERMAN_PROFILES as readonly string[]).includes(profile ?? '');
+}
 
 const PROFILE_KEY = 'jambo_profile';
 const PROFILE_EVENT = 'jambo-profile-change';

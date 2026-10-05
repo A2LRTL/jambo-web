@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { CATEGORY_LABELS, KIRUNDI_CATEGORIES, SWAHILI_CATEGORIES, SWAHILI_CATEGORY_LABELS, SWAHILI_PHRASE_TOPICS, SWAHILI_PHRASE_TOPIC_LABELS } from '@/lib/lesson-registry';
 import { PHRASE_TOPIC_LABELS, PHRASE_TOPICS } from '@/lib/phrase-registry';
 import { getBestScores, type BestScore } from '@/lib/scores';
-import { GERMAN_PROFILE, PROFILES, useProfile, writeProfile, type Profile, type ProfileName } from '@/lib/profile';
+import { PROFILES, hasGermanAccess, useProfile, writeProfile, type Profile, type ProfileName } from '@/lib/profile';
 import Leaderboard from './Leaderboard';
 import GermanTab from './german/GermanTab';
 
@@ -102,8 +102,8 @@ export default function HomeClient() {
   const [showSwitch, setShowSwitch]   = useState(false);
   const [data, setData]               = useState<ProfileData | null>(null);
 
-  // German is only offered to its learner; fall back if the profile changes
-  const hasGerman = profile === GERMAN_PROFILE;
+  // German is only offered to its learners; fall back if the profile changes
+  const hasGerman = hasGermanAccess(profile);
   const langs = LANGS.filter((l) => l.id !== 'german' || hasGerman);
   const lang: Lang = selectedLang === 'german' && !hasGerman ? 'kirundi' : selectedLang;
 
