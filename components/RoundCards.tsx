@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { speak } from '@/lib/speech';
 import PrimaryButton from '@/components/PrimaryButton';
 
 /**
@@ -10,16 +9,12 @@ import PrimaryButton from '@/components/PrimaryButton';
  * Shared by the German and English drills.
  */
 export default function RoundCards<T extends { fr: string }>({
-  verbs, title, front, back, spoken, lang, revealHint = 'Appuie pour voir l\'allemand.', onDone, onBack,
+  verbs, title, front, back, revealHint = 'Appuie pour voir l\'allemand.', onDone, onBack,
 }: {
   verbs: T[];
   title: string;
   front?: (verb: T) => React.ReactNode;
   back: (verb: T) => React.ReactNode;
-  /** Text read aloud when a card is revealed. */
-  spoken: (verb: T) => string;
-  /** Speech language, e.g. "en-GB" (defaults to German). */
-  lang?: string;
   revealHint?: string;
   onDone: () => void;
   onBack: () => void;
@@ -29,11 +24,7 @@ export default function RoundCards<T extends { fr: string }>({
   const verb = verbs[i];
   const isLast = i === verbs.length - 1;
 
-  const reveal = () => {
-    if (revealed) return;
-    setRevealed(true);
-    speak(spoken(verb), lang);
-  };
+  const reveal = () => setRevealed(true);
   const go = (next: number) => { setI(next); setRevealed(false); };
 
   return (

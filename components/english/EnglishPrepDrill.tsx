@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import type { EnglishVerb } from '@/types';
 import { accepted, buildQuestion, plain, type EnglishPrepQuestion } from '@/lib/english/preps';
 import { shuffle } from '@/lib/utils';
-import { speak } from '@/lib/speech';
 import { markPracticed } from '@/components/NotificationSetup';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
@@ -46,10 +45,9 @@ export default function EnglishPrepDrill({ verbs }: { verbs: EnglishVerb[] }) {
   if (learning) {
     return (
       <RoundCards verbs={round.map((q) => byId.get(q.verbId)!)} title="Verb + preposition"
-        lang={LANG} revealHint="Appuie pour voir l'anglais."
+        revealHint="Appuie pour voir l'anglais."
         front={(v) => <p className="text-sm text-muted italic mt-3">{v.example_fr}</p>}
         back={(v) => <CardBack verb={v} />}
-        spoken={(v) => plain(v.example_en)}
         onDone={() => setLearning(false)} onBack={() => router.push('/en')} />
     );
   }
@@ -96,7 +94,6 @@ export default function EnglishPrepDrill({ verbs }: { verbs: EnglishVerb[] }) {
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    speak(plain(verb.example_en), LANG);
     const missed = new Set(readMissed());
     if (right.has(option)) missed.delete(verb.id);
     else { missed.add(verb.id); setMistakes((m) => [...m, verb.id]); }

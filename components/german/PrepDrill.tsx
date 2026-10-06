@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
 import { buildPrepQuestion, highlightPrep, parsePrep, stripPrep, type PrepQuestion } from '@/lib/german/verbs';
 import { shuffle } from '@/lib/utils';
-import { speak } from '@/lib/speech';
 import { markPracticed } from '@/components/NotificationSetup';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
@@ -53,7 +52,6 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
       <RoundCards verbs={round.map((q) => byId.get(q.wordId)!)} title="Verbe + préposition"
         front={(v) => <p className="text-sm text-muted italic mt-3">{v.example_fr}</p>}
         back={(v) => <PrepCardBack verb={v} />}
-        spoken={(v) => v.example_de}
         onDone={() => setLearning(false)} onBack={() => router.push('/de/verbs')} />
     );
   }
@@ -103,7 +101,6 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    speak(verb.example_de);
     const missed = new Set(readMissed());
     if (accepted.has(option)) missed.delete(verb.id);
     else { missed.add(verb.id); setMistakes((m) => [...m, verb.id]); }

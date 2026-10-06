@@ -7,7 +7,6 @@ import {
 } from '@/lib/german/conjugation';
 import { stripPrep, verbKind } from '@/lib/german/verbs';
 import { shuffle } from '@/lib/utils';
-import { speak } from '@/lib/speech';
 import { markPracticed } from '@/components/NotificationSetup';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
@@ -130,7 +129,6 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
             <ConjugationTable table={conjugate(v)!} tenses={roundTenses} />
           </>
         )}
-        spoken={(v) => stripPrep(v.lemma)}
         onDone={() => setPhase('quiz')} onBack={() => setPhase('setup')} />
     );
   }
@@ -177,7 +175,6 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    speak(withPerson(q.person, q.answer));
     const missed = new Set(readMissed());
     if (option === q.answer) missed.delete(verb.id);
     else { missed.add(verb.id); setMistakes((m) => [...m, q]); }
@@ -220,9 +217,12 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
       </div>
 
       {answered && (
-        <p className={`mt-6 text-center font-semibold animate-fade-in ${correct ? 'text-success' : 'text-error'}`}>
-          {correct ? 'Richtig !' : `Réponse : ${withPerson(q.person, q.answer)}`}
-        </p>
+        <div className="mt-6 flex items-center justify-center gap-3 animate-fade-in">
+          <p className={`text-center font-semibold ${correct ? 'text-success' : 'text-error'}`}>
+            {correct ? 'Richtig !' : `Réponse : ${withPerson(q.person, q.answer)}`}
+          </p>
+          <SpeakButton text={withPerson(q.person, q.answer)} />
+        </div>
       )}
 
       <div className="mt-auto pt-6">

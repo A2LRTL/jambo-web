@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import type { LatinExpression } from '@/types';
 import { buildQuestion, type LatinQuestion } from '@/lib/latin/quiz';
 import { shuffle } from '@/lib/utils';
-import { speak } from '@/lib/speech';
 import { markPracticed } from '@/components/NotificationSetup';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
@@ -47,7 +46,7 @@ export default function LatinDrill({ expressions }: { expressions: LatinExpressi
   if (learning) {
     return (
       <RoundCards verbs={round.map((q) => byId.get(q.id)!)} title="Expressions latines"
-        lang={LANG} revealHint="Appuie pour voir l'expression latine."
+        revealHint="Appuie pour voir l'expression latine."
         back={(e) => (
           <>
             <div className="flex items-start justify-between gap-3">
@@ -57,7 +56,6 @@ export default function LatinDrill({ expressions }: { expressions: LatinExpressi
             <LatinDetails expr={e} />
           </>
         )}
-        spoken={(e) => e.latin}
         onDone={() => setLearning(false)} onBack={() => router.push('/la')} />
     );
   }
@@ -103,7 +101,6 @@ export default function LatinDrill({ expressions }: { expressions: LatinExpressi
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    speak(expr.latin, LANG);
     const missed = new Set(readMissed());
     if (option === q.answer) missed.delete(expr.id);
     else { missed.add(expr.id); setMistakes((m) => [...m, expr.id]); }

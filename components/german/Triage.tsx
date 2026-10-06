@@ -1,12 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
 import { markKnown, markToLearn } from '@/lib/german/srs';
 import { getProgress, updateProgress, useGermanProgress } from '@/lib/german/progress';
 import { GERMAN_THEME_LABELS } from '@/lib/german/themes';
-import { speak } from '@/lib/speech';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
 import ThemeChips from './ThemeChips';
@@ -29,10 +28,6 @@ function TriageRunner({ profile, deck }: { profile: string; deck: GermanWord[] }
   // The current word is simply the first untriaged one: triaging it moves on
   const untriaged = deck.filter((w) => !progress?.[w.id] && (!theme || w.theme === theme));
   const word = doneInBatch < BATCH ? untriaged[0] : undefined;
-
-  useEffect(() => {
-    if (word) speak(headword(word));
-  }, [word]);
 
   if (!progress) return null;
 

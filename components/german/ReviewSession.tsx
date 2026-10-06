@@ -6,7 +6,6 @@ import type { GermanWord } from '@/types';
 import { buildSession, markKnown, QUEUED_BOX, review, type Grade } from '@/lib/german/srs';
 import { addNewIntroduced, getNewPerDay, getProgress, newIntroducedToday, updateProgress } from '@/lib/german/progress';
 import { shuffle } from '@/lib/utils';
-import { speak } from '@/lib/speech';
 import { markPracticed } from '@/components/NotificationSetup';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
@@ -65,10 +64,7 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
     );
   }
 
-  const reveal = () => {
-    setRevealed(true);
-    speak(headword(word));
-  };
+  const reveal = () => setRevealed(true);
 
   const answer = (grade: Grade | 'known') => {
     const now = new Date();
