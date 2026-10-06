@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { getLeaderboard, type ProfileStats } from '@/lib/scores';
 import {
+  DRILL_LESSONS,
   KIRUNDI_CATEGORIES,
   SWAHILI_CATEGORIES,
   SWAHILI_PHRASE_TOPICS,
@@ -31,7 +32,8 @@ export default function Leaderboard() {
     KIRUNDI_CATEGORIES.length +
     SWAHILI_CATEGORIES.length +
     PHRASE_TOPICS.length +
-    SWAHILI_PHRASE_TOPICS.length;
+    SWAHILI_PHRASE_TOPICS.length +
+    DRILL_LESSONS.length;
 
   return (
     <div className="flex flex-col gap-4">

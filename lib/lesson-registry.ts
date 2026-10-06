@@ -51,3 +51,12 @@ export const SWAHILI_PHRASE_TOPICS = Object.keys(SWAHILI_PHRASE_TOPIC_LABELS);
 export const SWAHILI_LESSONS = [
   { id: 'lesson-1', title: 'Salutations de base', count: 5 },
 ];
+
+// Drill rounds saved to the scores table (one id per level) — counted in the leaderboard
+export const DRILL_LESSON_LABELS: Record<string, string> = {
+  'en-prep-b2':  'Anglais · verbe + préposition B2',
+  'en-prep-c1':  'Anglais · verbe + préposition C1',
+  'la-courant':  'Latin · expressions courantes',
+  'la-soutenu':  'Latin · expressions soutenues',
+};
+export const DRILL_LESSONS = Object.keys(DRILL_LESSON_LABELS);

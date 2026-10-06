@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import type { LatinExpression } from '@/types';
 import data from '../../data/latin-expressions.json' with { type: 'json' };
-import { buildQuestion } from './quiz.ts';
+import { buildQuestion, gappedExample } from './quiz.ts';
 
 const all = data.expressions as LatinExpression[];
 
@@ -19,6 +19,15 @@ test('buildQuestion: both directions give 4 distinct options with the answer', (
     assert.equal(new Set(q.options).size, 4);
     assert.ok(q.options.includes(q.answer));
   }
+});
+
+test('sentence questions gap the expression in its example', () => {
+  const expr = all.find((e) => e.id === 'a-priori')!;
+  const q = buildQuestion(expr, all, 'sentence');
+  assert.equal(q.prompt, '___, le projet semble rentable.');
+  assert.equal(q.answer, 'a priori');
+  assert.ok(q.options.includes('a priori'));
+  for (const e of all) assert.ok(gappedExample(e)?.includes('___'), `no gap for ${e.id}`);
 });
 
 test('data: ids, Latin forms and meanings are unique and filled', () => {

@@ -9,5 +9,5 @@ export function generateStaticParams() {
 export default async function EnglishPrepDrillPage({ params }: { params: Promise<{ level: string }> }) {
   const { level } = await params;
   if (!(LEVELS as readonly string[]).includes(level)) notFound();
-  return <EnglishPrepDrill verbs={getVerbs(level as LevelFilter)} />;
+  return <EnglishPrepDrill verbs={getVerbs(level as LevelFilter)} lessonId={level === 'all' ? null : `en-prep-${level}`} />;
 }

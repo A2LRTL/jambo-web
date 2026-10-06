@@ -6,6 +6,9 @@ import type { EnglishVerb } from '@/types';
 import { accepted, buildQuestion, plain, type EnglishPrepQuestion } from '@/lib/english/preps';
 import { shuffle } from '@/lib/utils';
 import { markPracticed } from '@/components/NotificationSetup';
+import { readMissed, recordAnswer } from '@/lib/missed';
+import { saveScore } from '@/lib/scores';
+import { useProfile } from '@/lib/profile';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
 import RoundCards from '@/components/RoundCards';
@@ -15,28 +18,30 @@ import { Highlighted } from './EnglishVerbList';
 
 const ROUND = 10;
 const LANG = 'en-GB';
-const MISSED_KEY = 'ubuntu_en_prep_missed';
+const DRILL = 'en-prep';
 
-function readMissed(): string[] {
-  try { return JSON.parse(localStorage.getItem(MISSED_KEY) ?? '[]'); } catch { return []; }
-}
-
-function writeMissed(ids: string[]) {
-  try { localStorage.setItem(MISSED_KEY, JSON.stringify(ids)); } catch { /* ignore */ }
-}
-
-/** Up to half the round comes from previously missed verbs, the rest at random. */
-function pickRound(verbs: EnglishVerb[]): EnglishPrepQuestion[] {
-  const missed = new Set(readMissed());
+/**
+ * Up to half the round comes from the profile's previously missed verbs, the rest at random.
+ * Every other question gaps the example sentence instead of the bare pattern.
+ */
+function pickRound(verbs: EnglishVerb[], profile: string): EnglishPrepQuestion[] {
+  const missed = readMissed(DRILL, profile);
   const retry = shuffle(verbs.filter((v) => missed.has(v.id))).slice(0, ROUND / 2);
   const rest = shuffle(verbs.filter((v) => !retry.includes(v))).slice(0, ROUND - retry.length);
-  return shuffle([...retry, ...rest]).map((v) => buildQuestion(v));
+  return shuffle([...retry, ...rest]).map((v, i) => buildQuestion(v, i % 2 === 1));
 }
 
-export default function EnglishPrepDrill({ verbs }: { verbs: EnglishVerb[] }) {
+/** `lessonId` is set for single-level rounds, whose scores are saved for the leaderboard. */
+export default function EnglishPrepDrill({ verbs, lessonId }: { verbs: EnglishVerb[]; lessonId: string | null }) {
+  const profile = useProfile();
+  if (!profile) return null;
+  return <Drill key={profile} verbs={verbs} lessonId={lessonId} profile={profile} />;
+}
+
+function Drill({ verbs, lessonId, profile }: { verbs: EnglishVerb[]; lessonId: string | null; profile: string }) {
   const router = useRouter();
   const [byId] = useState(() => new Map(verbs.map((v) => [v.id, v])));
-  const [round, setRound] = useState(() => pickRound(verbs));
+  const [round, setRound] = useState(() => pickRound(verbs, profile));
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [mistakes, setMistakes] = useState<string[]>([]);
@@ -54,7 +59,7 @@ export default function EnglishPrepDrill({ verbs }: { verbs: EnglishVerb[] }) {
 
   if (index >= round.length) {
     const score = round.length - mistakes.length;
-    const restart = () => { setRound(pickRound(verbs)); setIndex(0); setSelected(null); setMistakes([]); setLearning(true); };
+    const restart = () => { setRound(pickRound(verbs, profile)); setIndex(0); setSelected(null); setMistakes([]); setLearning(true); };
     return (
       <main className="flex flex-col min-h-dvh px-6 pb-10 pt-12 max-w-md mx-auto">
         <div className="flex flex-col items-center gap-3 text-center mb-8">
@@ -94,14 +99,16 @@ export default function EnglishPrepDrill({ verbs }: { verbs: EnglishVerb[] }) {
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    const missed = new Set(readMissed());
-    if (right.has(option)) missed.delete(verb.id);
-    else { missed.add(verb.id); setMistakes((m) => [...m, verb.id]); }
-    writeMissed([...missed]);
+    recordAnswer(DRILL, profile, verb.id, right.has(option));
+    if (!right.has(option)) setMistakes((m) => [...m, verb.id]);
   };
 
   const next = () => {
-    if (index === round.length - 1) markPracticed();
+    if (index === round.length - 1) {
+      markPracticed();
+      // Guests practise without recording scores
+      if (lessonId && profile !== 'guest') void saveScore(profile, lessonId, round.length - mistakes.length, round.length);
+    }
     setIndex((i) => i + 1);
     setSelected(null);
   };
@@ -121,10 +128,10 @@ export default function EnglishPrepDrill({ verbs }: { verbs: EnglishVerb[] }) {
           style={{ width: `${(index / round.length) * 100}%` }} />
       </div>
 
-      {/* French meaning, then the English pattern with its gap */}
+      {/* French meaning (or the sentence's translation), then the English with its gap */}
       <div className="flex flex-col items-center text-center gap-2 py-6">
-        <p className="text-muted text-base">{verb.fr}</p>
-        <p className="text-3xl font-bold text-ink">{q.prompt}</p>
+        <p className="text-muted text-base">{q.sentence ? verb.example_fr : verb.fr}</p>
+        <p className={`font-bold text-ink ${q.sentence ? 'text-2xl leading-snug' : 'text-3xl'}`}>{q.prompt}</p>
         <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full text-muted bg-border">{verb.level}</span>
       </div>
 

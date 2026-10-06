@@ -9,5 +9,5 @@ export function generateStaticParams() {
 export default async function LatinQuizPage({ params }: { params: Promise<{ level: string }> }) {
   const { level } = await params;
   if (!(LEVELS as readonly string[]).includes(level)) notFound();
-  return <LatinDrill expressions={getExpressions(level as LevelFilter)} />;
+  return <LatinDrill expressions={getExpressions(level as LevelFilter)} lessonId={level === 'all' ? null : `la-${level}`} />;
 }

@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
-import { buildPrepQuestion, highlightPrep, parsePrep, stripPrep, type PrepQuestion } from '@/lib/german/verbs';
+import { buildPrepQuestion, buildSentencePrepQuestion, highlightPrep, parsePrep, stripPrep, type PrepQuestion } from '@/lib/german/verbs';
 import { shuffle } from '@/lib/utils';
 import { markPracticed } from '@/components/NotificationSetup';
+import { readMissed, recordAnswer } from '@/lib/missed';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
 import { useGermanAccess } from './useGermanAccess';
@@ -14,34 +15,29 @@ import { SpeakButton } from './WordView';
 import RoundCards from '@/components/RoundCards';
 
 const ROUND = 10;
-const MISSED_KEY = 'ubuntu_de_prep_missed';
+const DRILL = 'de-prep';
 
-function readMissed(): string[] {
-  try { return JSON.parse(localStorage.getItem(MISSED_KEY) ?? '[]'); } catch { return []; }
-}
-
-function writeMissed(ids: string[]) {
-  try { localStorage.setItem(MISSED_KEY, JSON.stringify(ids)); } catch { /* ignore */ }
-}
-
-/** Up to half the round comes from previously missed verbs, the rest at random. */
-function pickRound(verbs: GermanWord[]): PrepQuestion[] {
-  const missed = new Set(readMissed());
+/**
+ * Up to half the round comes from the profile's previously missed verbs, the rest at random.
+ * Every other question gaps the example sentence when it shows the preposition plainly.
+ */
+function pickRound(verbs: GermanWord[], profile: string): PrepQuestion[] {
+  const missed = readMissed(DRILL, profile);
   const retry = shuffle(verbs.filter((v) => missed.has(v.id))).slice(0, ROUND / 2);
   const rest = shuffle(verbs.filter((v) => !retry.includes(v))).slice(0, ROUND - retry.length);
-  return shuffle([...retry, ...rest]).map((v) => buildPrepQuestion(v)!);
+  return shuffle([...retry, ...rest]).map((v, i) => (i % 2 === 1 && buildSentencePrepQuestion(v)) || buildPrepQuestion(v)!);
 }
 
 export default function PrepDrill({ verbs }: { verbs: GermanWord[] }) {
   const profile = useGermanAccess();
   if (!profile) return null;
-  return <Drill verbs={verbs} />;
+  return <Drill key={profile} verbs={verbs} profile={profile} />;
 }
 
-function Drill({ verbs }: { verbs: GermanWord[] }) {
+function Drill({ verbs, profile }: { verbs: GermanWord[]; profile: string }) {
   const router = useRouter();
   const [byId] = useState(() => new Map(verbs.map((v) => [v.id, v])));
-  const [round, setRound] = useState(() => pickRound(verbs));
+  const [round, setRound] = useState(() => pickRound(verbs, profile));
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [mistakes, setMistakes] = useState<string[]>([]);
@@ -60,7 +56,7 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
 
   if (finished) {
     const score = round.length - mistakes.length;
-    const restart = () => { setRound(pickRound(verbs)); setIndex(0); setSelected(null); setMistakes([]); setLearning(true); };
+    const restart = () => { setRound(pickRound(verbs, profile)); setIndex(0); setSelected(null); setMistakes([]); setLearning(true); };
     return (
       <main className="flex flex-col min-h-dvh px-6 pb-10 pt-12 max-w-md mx-auto">
         <div className="flex flex-col items-center gap-3 text-center mb-8">
@@ -94,17 +90,15 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
   const q = round[index];
   const verb = byId.get(q.wordId)!;
   const construction = parsePrep(verb.governs)!;
-  const accepted = new Set(construction.preps.map((p) => `${p} + ${construction.kase}`));
+  const accepted = new Set(q.sentence ? construction.preps : construction.preps.map((p) => `${p} + ${construction.kase}`));
   const answered = selected !== null;
   const correct = answered && accepted.has(selected);
 
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    const missed = new Set(readMissed());
-    if (accepted.has(option)) missed.delete(verb.id);
-    else { missed.add(verb.id); setMistakes((m) => [...m, verb.id]); }
-    writeMissed([...missed]);
+    recordAnswer(DRILL, profile, verb.id, accepted.has(option));
+    if (!accepted.has(option)) setMistakes((m) => [...m, verb.id]);
   };
 
   const next = () => {
@@ -128,10 +122,10 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
           style={{ width: `${(index / round.length) * 100}%` }} />
       </div>
 
-      {/* French first, then the German verb with its gap */}
+      {/* French first, then the German verb (or example sentence) with its gap */}
       <div className="flex flex-col items-center text-center gap-2 py-6">
-        <p className="text-muted text-base">{verb.fr}</p>
-        <p className="text-3xl font-bold text-ink">{q.prompt}</p>
+        <p className="text-muted text-base">{q.sentence ? verb.example_fr : verb.fr}</p>
+        <p className={`font-bold text-ink ${q.sentence ? 'text-2xl leading-snug' : 'text-3xl'}`}>{q.prompt}</p>
       </div>
 
       <div className="grid grid-cols-2 gap-3">

@@ -30,7 +30,8 @@ export function highlight(text: string): { text: string; hit: boolean }[] {
 
 export interface EnglishPrepQuestion {
   verbId: string;
-  prompt: string;     // "depend ___ sth"
+  sentence: boolean;  // gap in the example sentence rather than in the pattern
+  prompt: string;     // "depend ___ sth" or "It all depends ___ the weather."
   answer: string;     // "on"
   options: string[];  // 4 shuffled choices, answer included
 }
@@ -45,13 +46,14 @@ function shuffled<T>(arr: T[], rand: () => number): T[] {
 }
 
 /** Builds a 4-choice question. The French-calque trap, when known, is always one of the distractors. */
-export function buildQuestion(verb: EnglishVerb, rand: () => number = Math.random): EnglishPrepQuestion {
+export function buildQuestion(verb: EnglishVerb, sentence = false, rand: () => number = Math.random): EnglishPrepQuestion {
   const right = new Set(accepted(verb));
   const trap = verb.trap && !right.has(verb.trap) ? [verb.trap] : [];
   const others = shuffled(PREPS.filter((p) => !right.has(p) && !trap.includes(p)), rand);
   return {
     verbId: verb.id,
-    prompt: gapped(verb.pattern),
+    sentence,
+    prompt: gapped(sentence ? verb.example_en : verb.pattern),
     answer: verb.prep,
     options: shuffled([verb.prep, ...trap, ...others].slice(0, 4), rand),
   };

@@ -3,9 +3,12 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { LatinExpression } from '@/types';
-import { buildQuestion, type LatinQuestion } from '@/lib/latin/quiz';
+import { buildQuestion, type Direction, type LatinQuestion } from '@/lib/latin/quiz';
 import { shuffle } from '@/lib/utils';
 import { markPracticed } from '@/components/NotificationSetup';
+import { readMissed, recordAnswer } from '@/lib/missed';
+import { saveScore } from '@/lib/scores';
+import { useProfile } from '@/lib/profile';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
 import RoundCards from '@/components/RoundCards';
@@ -16,28 +19,34 @@ import { LatinDetails } from './LatinList';
 const ROUND = 10;
 // Latin is read aloud the way French speakers pronounce it
 const LANG = 'fr-FR';
-const MISSED_KEY = 'ubuntu_la_missed';
+const DRILL = 'la';
+const DIRECTIONS: Direction[] = ['meaning', 'sentence', 'latin'];
 
-function readMissed(): string[] {
-  try { return JSON.parse(localStorage.getItem(MISSED_KEY) ?? '[]'); } catch { return []; }
-}
-
-function writeMissed(ids: string[]) {
-  try { localStorage.setItem(MISSED_KEY, JSON.stringify(ids)); } catch { /* ignore */ }
-}
-
-/** Up to half the round comes from previously missed expressions; directions alternate. */
-function pickRound(pool: LatinExpression[]): LatinQuestion[] {
-  const missed = new Set(readMissed());
+/** Up to half the round comes from the profile's previously missed expressions; question types rotate. */
+function pickRound(pool: LatinExpression[], profile: string): LatinQuestion[] {
+  const missed = readMissed(DRILL, profile);
   const retry = shuffle(pool.filter((e) => missed.has(e.id))).slice(0, ROUND / 2);
   const rest = shuffle(pool.filter((e) => !retry.includes(e))).slice(0, ROUND - retry.length);
-  return shuffle([...retry, ...rest]).map((e, i) => buildQuestion(e, pool, i % 2 === 0 ? 'meaning' : 'latin'));
+  return shuffle([...retry, ...rest]).map((e, i) => buildQuestion(e, pool, DIRECTIONS[i % DIRECTIONS.length]));
 }
 
-export default function LatinDrill({ expressions }: { expressions: LatinExpression[] }) {
+/** `lessonId` is set for single-level rounds, whose scores are saved for the leaderboard. */
+export default function LatinDrill({ expressions, lessonId }: { expressions: LatinExpression[]; lessonId: string | null }) {
+  const profile = useProfile();
+  if (!profile) return null;
+  return <Drill key={profile} expressions={expressions} lessonId={lessonId} profile={profile} />;
+}
+
+const PROMPT_LABEL: Record<Direction, string> = {
+  meaning:  'Que veut dire…',
+  latin:    'Comment dit-on en latin…',
+  sentence: 'Complète la phrase',
+};
+
+function Drill({ expressions, lessonId, profile }: { expressions: LatinExpression[]; lessonId: string | null; profile: string }) {
   const router = useRouter();
   const [byId] = useState(() => new Map(expressions.map((e) => [e.id, e])));
-  const [round, setRound] = useState(() => pickRound(expressions));
+  const [round, setRound] = useState(() => pickRound(expressions, profile));
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [mistakes, setMistakes] = useState<string[]>([]);
@@ -62,7 +71,7 @@ export default function LatinDrill({ expressions }: { expressions: LatinExpressi
 
   if (index >= round.length) {
     const score = round.length - mistakes.length;
-    const restart = () => { setRound(pickRound(expressions)); setIndex(0); setSelected(null); setMistakes([]); setLearning(true); };
+    const restart = () => { setRound(pickRound(expressions, profile)); setIndex(0); setSelected(null); setMistakes([]); setLearning(true); };
     return (
       <main className="flex flex-col min-h-dvh px-6 pb-10 pt-12 max-w-md mx-auto">
         <div className="flex flex-col items-center gap-3 text-center mb-8">
@@ -101,14 +110,16 @@ export default function LatinDrill({ expressions }: { expressions: LatinExpressi
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    const missed = new Set(readMissed());
-    if (option === q.answer) missed.delete(expr.id);
-    else { missed.add(expr.id); setMistakes((m) => [...m, expr.id]); }
-    writeMissed([...missed]);
+    recordAnswer(DRILL, profile, expr.id, option === q.answer);
+    if (option !== q.answer) setMistakes((m) => [...m, expr.id]);
   };
 
   const next = () => {
-    if (index === round.length - 1) markPracticed();
+    if (index === round.length - 1) {
+      markPracticed();
+      // Guests practise without recording scores
+      if (lessonId && profile !== 'guest') void saveScore(profile, lessonId, round.length - mistakes.length, round.length);
+    }
     setIndex((i) => i + 1);
     setSelected(null);
   };
@@ -129,8 +140,8 @@ export default function LatinDrill({ expressions }: { expressions: LatinExpressi
       </div>
 
       <div className="flex flex-col items-center text-center gap-2 py-6">
-        <p className="text-muted text-sm">{q.direction === 'meaning' ? 'Que veut dire…' : 'Comment dit-on en latin…'}</p>
-        <p className={`font-bold text-ink ${q.direction === 'meaning' ? 'text-3xl italic' : 'text-2xl'}`}>{q.prompt}</p>
+        <p className="text-muted text-sm">{PROMPT_LABEL[q.direction]}</p>
+        <p className={`font-bold text-ink ${q.direction === 'meaning' ? 'text-3xl italic' : q.direction === 'sentence' ? 'text-xl leading-snug' : 'text-2xl'}`}>{q.prompt}</p>
       </div>
 
       <div className={`grid gap-3 ${q.direction === 'meaning' ? 'grid-cols-1' : 'grid-cols-2'}`}>

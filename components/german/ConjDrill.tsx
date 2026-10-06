@@ -8,6 +8,7 @@ import {
 import { stripPrep, verbKind } from '@/lib/german/verbs';
 import { shuffle } from '@/lib/utils';
 import { markPracticed } from '@/components/NotificationSetup';
+import { readMissed, recordAnswer } from '@/lib/missed';
 import OptionButton from '@/components/OptionButton';
 import PrimaryButton from '@/components/PrimaryButton';
 import { useGermanAccess } from './useGermanAccess';
@@ -17,21 +18,13 @@ import ConjugationTable from './ConjugationTable';
 import { SpeakButton } from './WordView';
 
 const ROUND = 10;
-const MISSED_KEY = 'ubuntu_de_conj_missed';
-
-function readMissed(): string[] {
-  try { return JSON.parse(localStorage.getItem(MISSED_KEY) ?? '[]'); } catch { return []; }
-}
-
-function writeMissed(ids: string[]) {
-  try { localStorage.setItem(MISSED_KEY, JSON.stringify(ids)); } catch { /* ignore */ }
-}
+const DRILL = 'de-conj';
 
 const pick = <T,>(arr: T[]) => arr[Math.floor(Math.random() * arr.length)];
 
 /** One question per verb; up to half the round comes from previously missed verbs. */
-function pickRound(verbs: GermanWord[], tenses: Tense[]): ConjQuestion[] {
-  const missed = new Set(readMissed());
+function pickRound(verbs: GermanWord[], tenses: Tense[], profile: string): ConjQuestion[] {
+  const missed = readMissed(DRILL, profile);
   const retry = shuffle(verbs.filter((v) => missed.has(v.id))).slice(0, ROUND / 2);
   const rest = shuffle(verbs.filter((v) => !retry.includes(v))).slice(0, ROUND - retry.length);
   return shuffle([...retry, ...rest]).flatMap((v) => {
@@ -46,12 +39,12 @@ const withPerson = (person: number, form: string) => `${PERSONS[person].split('/
 export default function ConjDrill({ verbs }: { verbs: GermanWord[] }) {
   const profile = useGermanAccess();
   if (!profile) return null;
-  return <Drill verbs={verbs} />;
+  return <Drill key={profile} verbs={verbs} profile={profile} />;
 }
 
 type Phase = 'setup' | 'cards' | 'quiz';
 
-function Drill({ verbs }: { verbs: GermanWord[] }) {
+function Drill({ verbs, profile }: { verbs: GermanWord[]; profile: string }) {
   const [byId] = useState(() => new Map(verbs.map((v) => [v.id, v])));
   const [tenses, setTenses] = useState<Tense[]>(TENSES);
   const [irregularOnly, setIrregularOnly] = useState(false);
@@ -64,7 +57,7 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
   const pool = irregularOnly ? verbs.filter((v) => verbKind(v).irregular) : verbs;
 
   const start = () => {
-    setRound(pickRound(pool, tenses));
+    setRound(pickRound(pool, tenses, profile));
     setIndex(0);
     setSelected(null);
     setMistakes([]);
@@ -175,10 +168,8 @@ function Drill({ verbs }: { verbs: GermanWord[] }) {
   const choose = (option: string) => {
     if (answered) return;
     setSelected(option);
-    const missed = new Set(readMissed());
-    if (option === q.answer) missed.delete(verb.id);
-    else { missed.add(verb.id); setMistakes((m) => [...m, q]); }
-    writeMissed([...missed]);
+    recordAnswer(DRILL, profile, verb.id, option === q.answer);
+    if (option !== q.answer) setMistakes((m) => [...m, q]);
   };
 
   const next = () => {

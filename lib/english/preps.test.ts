@@ -20,7 +20,7 @@ test('gapped / plain / highlight read the bracketed preposition', () => {
 test('buildQuestion: 4 distinct options, answer and trap included, no other right answer', () => {
   for (let seed = 0; seed < 50; seed++) {
     const rand = () => ((seed * 9301 + 49297) % 233280) / 233280;
-    const q = buildQuestion(verb({ trap: 'of', accept: ['upon'] }), rand);
+    const q = buildQuestion(verb({ trap: 'of', accept: ['upon'] }), false, rand);
     assert.equal(q.prompt, 'depend ___ sth');
     assert.equal(q.options.length, 4);
     assert.equal(new Set(q.options).size, 4);
@@ -28,6 +28,12 @@ test('buildQuestion: 4 distinct options, answer and trap included, no other righ
     assert.ok(q.options.includes('of'));
     assert.ok(!q.options.includes('upon'));
   }
+});
+
+test('buildQuestion in sentence mode gaps the example', () => {
+  const q = buildQuestion(verb(), true);
+  assert.equal(q.prompt, 'It all depends ___ the weather.');
+  assert.equal(q.answer, 'on');
 });
 
 test('data: every entry is well-formed', () => {

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import type { GermanWord } from '@/types';
-import { buildPrepQuestion, highlightPrep, parsePrep, stripPrep, verbKind, weakPreterite } from './verbs.ts';
+import { buildPrepQuestion, buildSentencePrepQuestion, highlightPrep, parsePrep, stripPrep, verbKind, weakPreterite } from './verbs.ts';
 
 const verb = (lemma: string, forms: string, governs: string | null = null): GermanWord => ({
   id: 'x', lemma, article: null, plural: null, pos: 'verb', level: 'B1', theme: 't',
@@ -75,4 +75,15 @@ test('highlightPrep flags the preposition and its contractions', () => {
   assert.deepEqual(hits('Ich warte auf den Bus.', ['auf']), ['auf']);
   assert.deepEqual(hits('Wir gratulieren dir zum Geburtstag!', ['zu']), ['zum']);
   assert.equal(highlightPrep('Ich warte auf den Bus.', ['auf']).map((x) => x.text).join(''), 'Ich warte auf den Bus.');
+});
+
+test('buildSentencePrepQuestion gaps the plain preposition, skips contractions and doubles', () => {
+  const w = (governs: string, example_de: string): GermanWord => ({ ...verb('warten', 'wartet, wartete, hat gewartet', governs), example_de });
+  const q = buildSentencePrepQuestion(w('auf + Akk ~', 'Ich warte auf den Bus.'))!;
+  assert.equal(q.prompt, 'Ich warte ___ den Bus.');
+  assert.equal(q.answer, 'auf');
+  assert.equal(new Set(q.options).size, 4);
+  assert.ok(q.options.includes('auf'));
+  assert.equal(buildSentencePrepQuestion(w('zu + Dat ~', 'Wir gratulieren dir zum Geburtstag!')), null);
+  assert.equal(buildSentencePrepQuestion(w('auf + Akk ~', 'Pass auf die Kinder auf!')), null);
 });

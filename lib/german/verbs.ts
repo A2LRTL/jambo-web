@@ -98,8 +98,9 @@ export function verbKind(word: GermanWord): VerbKind {
 
 export interface PrepQuestion {
   wordId: string;
-  prompt: string;     // "sich interessieren ___"
-  answer: string;     // "für + Akk"
+  sentence: boolean;  // gap in the example sentence; options are then bare prepositions
+  prompt: string;     // "sich interessieren ___" or "Ich warte ___ den Bus."
+  answer: string;     // "für + Akk" (or "auf" in a sentence)
   options: string[];  // 4 shuffled choices, answer included
 }
 
@@ -133,7 +134,31 @@ export function buildPrepQuestion(word: GermanWord, rand: () => number = Math.ra
 
   return {
     wordId: word.id,
+    sentence: false,
     prompt: `${stripPrep(word.lemma)} ___`,
+    answer,
+    options: shuffled([answer, ...distractors], rand),
+  };
+}
+
+/**
+ * Same question with the preposition gapped in the example sentence
+ * ("Ich warte ___ den Bus."), options are bare prepositions. Null when the example
+ * doesn't show the preposition exactly once in its plain form (contractions, prefixes…).
+ */
+export function buildSentencePrepQuestion(word: GermanWord, rand: () => number = Math.random): PrepQuestion | null {
+  const c = parsePrep(word.governs);
+  if (!c) return null;
+  const parts = highlightPrep(word.example_de, c.preps);
+  const hits = parts.filter((p) => p.hit);
+  if (hits.length !== 1 || !c.preps.includes(hits[0].text.toLowerCase())) return null;
+  const answer = hits[0].text.toLowerCase();
+  const named = new Set((word.governs ?? '').split(/[\s/.]+/).filter((t) => ALL_PREPS.includes(t)));
+  const distractors = shuffled(ALL_PREPS.filter((p) => !named.has(p)), rand).slice(0, 3);
+  return {
+    wordId: word.id,
+    sentence: true,
+    prompt: parts.map((p) => (p.hit ? '___' : p.text)).join(''),
     answer,
     options: shuffled([answer, ...distractors], rand),
   };
