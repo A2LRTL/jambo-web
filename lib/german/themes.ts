@@ -13,6 +13,12 @@ export const GERMAN_THEME_LABELS: Record<string, string> = {
   societe:        'Société & politique',
   environnement:  'Environnement & sciences',
   expressions:    'Expressions verbe + nom',
+  loisirs:        'Loisirs, sport & culture',
+  alimentation:   'Cuisine & alimentation',
+  etudes:         'École, études & langues',
+  communication:  'Communication & numérique',
+  ville:          'Ville, nature & météo',
+  caractere:      'Corps & caractère',
 };
 
 export const GERMAN_THEMES = Object.keys(GERMAN_THEME_LABELS);

@@ -1,0 +1,100 @@
+# theme: ville
+N|das|Viertel|-|le quartier|||Wir wohnen in einem ruhigen Viertel.|Nous habitons dans un quartier calme.
+N|die|Innenstadt|¨-e|le centre-ville|||In der Innenstadt gibt es kaum Parkplätze.|Il n'y a presque pas de places de parking au centre-ville.
+N|der|Vorort|-e|la banlieue|||Sie wohnen in einem Vorort von Köln.|Ils habitent en banlieue de Cologne.
+N|die|Kreuzung|-en|le carrefour|||An der nächsten Kreuzung müssen Sie links abbiegen.|Au prochain carrefour, vous devez tourner à gauche.
+N|die|Ampel|-n|le feu (de circulation)|||Die Ampel ist rot.|Le feu est rouge.
+N|der|Bürgersteig|-e|le trottoir|||Fahr nicht mit dem Rad auf dem Bürgersteig!|Ne roule pas à vélo sur le trottoir !
+N|der|Parkplatz|¨-e|la place de parking|||Ich finde nie einen Parkplatz.|Je ne trouve jamais de place de parking.
+N|die|Haltestelle|-n|l'arrêt (bus, tram)|||Wo ist die nächste Haltestelle?|Où est l'arrêt le plus proche ?
+N|das|Rathaus|¨-er|la mairie|||Das Rathaus steht am Marktplatz.|La mairie est sur la place du marché.
+N|die|Umgebung|-en|les environs|||In der Umgebung gibt es schöne Wanderwege.|Il y a de beaux sentiers de randonnée dans les environs.
+N|die|Landschaft|-en|le paysage|||Die Landschaft hier ist wunderschön.|Le paysage ici est magnifique.
+N|der|Wald|¨-er|la forêt|||Sonntags gehen wir im Wald spazieren.|Le dimanche, nous nous promenons en forêt.
+N|das|Gebirge|-|la montagne (massif)|||Im Winter fahren wir ins Gebirge.|En hiver, nous allons à la montagne.
+N|die|Küste|-n|la côte|||Wir verbringen den Urlaub an der Küste.|Nous passons les vacances sur la côte.
+N|der|Fluss|¨-e|le fleuve, la rivière|||Der Fluss fließt mitten durch die Stadt.|Le fleuve traverse le centre de la ville.
+N|das|Ufer|-|la rive|||Wir haben am Ufer gepicknickt.|Nous avons pique-niqué au bord de l'eau.
+N|das|Feld|-er|le champ|||Hinter dem Dorf liegen Felder.|Derrière le village, il y a des champs.
+N|das|Wetter|null|le temps (météo)|||Wie wird das Wetter am Wochenende?|Quel temps fera-t-il ce week-end ?
+N|die|Wettervorhersage|-n|la prévision météo|||Laut Wettervorhersage soll es morgen regnen.|D'après la météo, il doit pleuvoir demain.
+N|die|Temperatur|-en|la température|||Die Temperaturen steigen auf 30 Grad.|Les températures montent jusqu'à 30 degrés.
+N|das|Gewitter|-|l'orage|||Heute Abend gibt es ein Gewitter.|Il y aura un orage ce soir.
+N|der|Regen|null|la pluie|||Bei Regen bleiben wir zu Hause.|S'il pleut, nous restons à la maison.
+N|der|Schnee|null|la neige|||Über Nacht ist viel Schnee gefallen.|Il est tombé beaucoup de neige pendant la nuit.
+N|der|Nebel|-|le brouillard|||Wegen Nebel hatte der Flug Verspätung.|À cause du brouillard, le vol a eu du retard.
+N|die|Hitze|null|la chaleur|||Bei dieser Hitze kann ich nicht schlafen.|Avec cette chaleur, je n'arrive pas à dormir.
+N|die|Kälte|null|le froid|||Ich hasse die Kälte im Winter.|Je déteste le froid en hiver.
+N|die|Jahreszeit|-en|la saison|||Der Herbst ist meine Lieblingsjahreszeit.|L'automne est ma saison préférée.
+N|der|Himmel|-|le ciel|||Der Himmel ist heute ganz blau.|Le ciel est tout bleu aujourd'hui.
+V|null|regnen|null|pleuvoir|regnet, regnete, hat geregnet||Es regnet schon den ganzen Tag.|Il pleut depuis ce matin.
+V|null|schneien|null|neiger|schneit, schneite, hat geschneit||In den Bergen hat es geschneit.|Il a neigé en montagne.
+V|null|scheinen|null|briller ; sembler|scheint, schien, hat geschienen||Endlich scheint wieder die Sonne.|Enfin, le soleil brille à nouveau.
+V|null|frieren|null|avoir froid ; geler|friert, fror, hat gefroren||Ich friere, mach bitte das Fenster zu.|J'ai froid, ferme la fenêtre, s'il te plaît.
+V|null|abbiegen|null|tourner (direction)|biegt ab, bog ab, ist abgebogen||Biegen Sie an der Ampel rechts ab.|Au feu, tournez à droite.
+V|null|überqueren|null|traverser|überquert, überquerte, hat überquert||Überquer die Straße nur bei Grün!|Ne traverse la rue qu'au vert !
+V|null|sich befinden|null|se trouver|befindet sich, befand sich, hat sich befunden||Das Museum befindet sich in der Altstadt.|Le musée se trouve dans la vieille ville.
+V|null|liegen|null|être situé ; être couché|liegt, lag, hat gelegen||Das Dorf liegt direkt am See.|Le village est situé directement au bord du lac.
+V|null|parken|null|se garer|parkt, parkte, hat geparkt||Hier darf man nicht parken.|On n'a pas le droit de se garer ici.
+V|null|blühen|null|fleurir|blüht, blühte, hat geblüht||Im Frühling blühen die Kirschbäume.|Au printemps, les cerisiers fleurissent.
+A|null|sonnig|null|ensoleillé|||Morgen wird es sonnig und warm.|Demain, il fera beau et chaud.
+A|null|bewölkt|null|nuageux|||Der Himmel ist stark bewölkt.|Le ciel est très nuageux.
+A|null|neblig|null|brumeux|||Heute Morgen war es sehr neblig.|Ce matin, il y avait beaucoup de brouillard.
+A|null|feucht|null|humide|||Die Luft ist heute sehr feucht.|L'air est très humide aujourd'hui.
+A|null|mild|null|doux (climat)|||Der Winter war dieses Jahr sehr mild.|L'hiver a été très doux cette année.
+A|null|ländlich|null|rural|||Sie leben in einer ländlichen Gegend.|Ils vivent dans une région rurale.
+A|null|städtisch|null|urbain, municipal|||Das städtische Schwimmbad ist im Sommer geöffnet.|La piscine municipale est ouverte en été.
+A|null|laut|null|bruyant ; fort|||Unsere Straße ist sehr laut.|Notre rue est très bruyante.
+A|null|sauber|null|propre|||Die Stadt ist sehr sauber.|La ville est très propre.
+A|null|schmutzig|null|sale|||Nach der Wanderung waren meine Schuhe schmutzig.|Après la randonnée, mes chaussures étaient sales.
+O|null|in der Nähe|null|à proximité|||Gibt es hier in der Nähe eine Apotheke?|Y a-t-il une pharmacie près d'ici ?
+# theme: caractere
+N|der|Körper|-|le corps|||Sport ist gut für Körper und Geist.|Le sport est bon pour le corps et l'esprit.
+N|das|Gesicht|-er|le visage|||Sie hat ein freundliches Gesicht.|Elle a un visage aimable.
+N|die|Haut|¨-e|la peau|||Ich habe sehr empfindliche Haut.|J'ai la peau très sensible.
+N|das|Aussehen|null|l'apparence, l'allure|||Das Aussehen ist nicht das Wichtigste.|L'apparence n'est pas le plus important.
+N|die|Figur|-en|la silhouette ; le personnage|||Er achtet sehr auf seine Figur.|Il fait très attention à sa ligne.
+N|das|Gewicht|-e|le poids|||Ich habe etwas Gewicht verloren.|J'ai perdu un peu de poids.
+N|die|Brille|-n|les lunettes|||Ohne Brille sehe ich nichts.|Sans lunettes, je ne vois rien.
+N|der|Charakter|-e|le caractère|||Sie hat einen starken Charakter.|Elle a un caractère fort.
+N|die|Eigenschaft|-en|la qualité, la caractéristique|||Ehrlichkeit ist eine wichtige Eigenschaft.|L'honnêteté est une qualité importante.
+N|die|Stärke|-n|le point fort, la force|||Was sind Ihre Stärken?|Quels sont vos points forts ?
+N|die|Schwäche|-n|le point faible, la faiblesse||eine ~ für etw. haben|Ich habe eine Schwäche für Schokolade.|J'ai un faible pour le chocolat.
+N|die|Laune|-n|l'humeur||gute / schlechte ~ haben|Warum hast du heute so schlechte Laune?|Pourquoi es-tu de si mauvaise humeur aujourd'hui ?
+N|das|Verhalten|null|le comportement|||Sein Verhalten war unmöglich.|Son comportement était inadmissible.
+N|die|Persönlichkeit|-en|la personnalité|||Sie hat eine sehr offene Persönlichkeit.|Elle a une personnalité très ouverte.
+N|der|Humor|null|l'humour|||Er hat einen tollen Sinn für Humor.|Il a un super sens de l'humour.
+N|die|Neugier|null|la curiosité|||Aus Neugier habe ich die Tür geöffnet.|Par curiosité, j'ai ouvert la porte.
+V|null|aussehen|null|avoir l'air|sieht aus, sah aus, hat ausgesehen||Du siehst heute müde aus.|Tu as l'air fatigué aujourd'hui.
+V|null|sich verhalten|null|se comporter|verhält sich, verhielt sich, hat sich verhalten||Er hat sich sehr seltsam verhalten.|Il s'est comporté de façon très étrange.
+V|null|wirken|null|paraître, sembler ; agir|wirkt, wirkte, hat gewirkt||Sie wirkt sehr selbstbewusst.|Elle a l'air très sûre d'elle.
+V|null|sich schminken|null|se maquiller|schminkt sich, schminkte sich, hat sich geschminkt||Sie schminkt sich nur selten.|Elle se maquille rarement.
+V|null|sich rasieren|null|se raser|rasiert sich, rasierte sich, hat sich rasiert||Er rasiert sich jeden Morgen.|Il se rase tous les matins.
+V|null|sich kämmen|null|se peigner|kämmt sich, kämmte sich, hat sich gekämmt||Kämm dich bitte, bevor wir gehen.|Peigne-toi avant qu'on parte, s'il te plaît.
+V|null|lächeln|null|sourire|lächelt, lächelte, hat gelächelt||Sie lächelt immer, wenn sie ihn sieht.|Elle sourit toujours quand elle le voit.
+V|null|weinen|null|pleurer|weint, weinte, hat geweint||Das Baby weint schon seit einer Stunde.|Le bébé pleure depuis une heure.
+V|null|sich benehmen|null|se tenir, bien se conduire|benimmt sich, benahm sich, hat sich benommen||Benimm dich bitte beim Essen!|Tiens-toi bien à table, s'il te plaît !
+V|null|lügen|null|mentir|lügt, log, hat gelogen||Ich glaube, er hat gelogen.|Je crois qu'il a menti.
+V|null|sich trauen|null|oser|traut sich, traute sich, hat sich getraut||Ich traue mich nicht, ihn zu fragen.|Je n'ose pas lui demander.
+A|null|freundlich|null|aimable|||Die Verkäuferin war sehr freundlich.|La vendeuse était très aimable.
+A|null|nett|null|gentil|||Das ist sehr nett von dir.|C'est très gentil de ta part.
+A|null|geduldig|null|patient|||Mit Kindern muss man geduldig sein.|Avec les enfants, il faut être patient.
+A|null|ungeduldig|null|impatient|||Sei nicht so ungeduldig!|Ne sois pas si impatient !
+A|null|schüchtern|null|timide|||Als Kind war ich sehr schüchtern.|Enfant, j'étais très timide.
+A|null|selbstbewusst|null|sûr de soi|||Sie ist im Beruf sehr selbstbewusst.|Elle est très sûre d'elle au travail.
+A|null|offen|null|ouvert ; franc|||Er ist offen für neue Ideen.|Il est ouvert aux nouvelles idées.
+A|null|neugierig|null|curieux|||Sei nicht so neugierig!|Ne sois pas si curieux !
+A|null|ordentlich|null|ordonné, soigneux|||Mein Mitbewohner ist sehr ordentlich.|Mon colocataire est très ordonné.
+A|null|chaotisch|null|désordonné, chaotique|||Mein Schreibtisch ist total chaotisch.|Mon bureau est complètement en désordre.
+A|null|streng|null|strict, sévère|||Unser Chef ist streng, aber fair.|Notre chef est strict mais juste.
+A|null|großzügig|null|généreux|||Er ist sehr großzügig mit seinem Geld.|Il est très généreux avec son argent.
+A|null|geizig|null|avare, radin|||Sei nicht so geizig!|Ne sois pas si radin !
+A|null|egoistisch|null|égoïste|||Das war ziemlich egoistisch von ihm.|C'était assez égoïste de sa part.
+A|null|sympathisch|null|sympathique|||Ich finde deinen Bruder sehr sympathisch.|Je trouve ton frère très sympathique.
+A|null|hübsch|null|joli|||Das Kleid ist wirklich hübsch.|La robe est vraiment jolie.
+A|null|schlank|null|mince|||Sie ist groß und schlank.|Elle est grande et mince.
+A|null|lockig|null|bouclé|||Sie hat lange, lockige Haare.|Elle a de longs cheveux bouclés.
+A|null|ernst|null|sérieux|||Warum bist du heute so ernst?|Pourquoi es-tu si sérieux aujourd'hui ?
+A|null|witzig|null|drôle, spirituel|||Er erzählt immer witzige Geschichten.|Il raconte toujours des histoires drôles.
+A|null|nervös|null|nerveux|||Vor Prüfungen bin ich immer nervös.|Avant les examens, je suis toujours nerveux.
+A|null|ähnlich|null|ressemblant||jdm. ~ sehen|Du siehst deiner Mutter sehr ähnlich.|Tu ressembles beaucoup à ta mère.

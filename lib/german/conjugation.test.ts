@@ -39,6 +39,7 @@ test('stem changes and t/d stems: halten, einladen, vergessen, sterben', () => {
   assert.equal(conjugate(verb('einladen', 'lädt ein, lud ein, hat eingeladen'))!.present[4], 'ladet ein');
   assert.equal(conjugate(verb('vergessen', 'vergisst, vergaß, hat vergessen'))!.present[1], 'vergisst');
   assert.equal(conjugate(verb('vergessen', 'vergisst, vergaß, hat vergessen'))!.preterite[1], 'vergaßest');
+  assert.equal(conjugate(verb('schreien', 'schreit, schrie, hat geschrien'))!.preterite[3], 'schrien');
   assert.equal(conjugate(verb('sterben', 'stirbt, starb, ist gestorben'))!.perfect[3], 'sind gestorben');
 });
 

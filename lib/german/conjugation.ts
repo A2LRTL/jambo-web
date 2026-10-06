@@ -72,13 +72,14 @@ function presentForms(p: Parts): string[] {
 function preteriteForms(p: Parts): string[] {
   const v = p.preterite3;
   if (v.endsWith('te')) return [v, `${v}st`, v, `${v}n`, `${v}t`, `${v}n`];
+  const plural = v.endsWith('ie') ? `${v}n` : `${v}en`; // schrie → schrien
   return [
     v,
     v + (/[dtsßz]$/.test(v) ? 'est' : 'st'),
     v,
-    `${v}en`,
+    plural,
     v + (/[dt]$/.test(v) ? 'et' : 't'),
-    `${v}en`,
+    plural,
   ];
 }
 

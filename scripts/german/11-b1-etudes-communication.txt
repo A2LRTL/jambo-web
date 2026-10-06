@@ -1,0 +1,100 @@
+# theme: etudes
+N|die|Schule|-n|l'école|||Meine Tochter geht noch zur Schule.|Ma fille va encore à l'école.
+N|der|Unterricht|null|le cours, l'enseignement|||Der Unterricht beginnt um acht.|Le cours commence à huit heures.
+N|der|Kurs|-e|le cours, la formation|||Ich mache einen Deutschkurs an der Volkshochschule.|Je suis un cours d'allemand à l'université populaire.
+N|die|Prüfung|-en|l'examen||eine ~ bestehen|Morgen habe ich eine wichtige Prüfung.|Demain, j'ai un examen important.
+N|die|Note|-n|la note|||Sie hat in Mathe eine gute Note bekommen.|Elle a eu une bonne note en maths.
+N|das|Zeugnis|-se|le bulletin ; le certificat|||Am Ende des Schuljahres gibt es Zeugnisse.|À la fin de l'année scolaire, on reçoit les bulletins.
+N|das|Fach|¨-er|la matière (scolaire)|||Mein Lieblingsfach war Geschichte.|Ma matière préférée était l'histoire.
+N|das|Studium|Studien|les études (supérieures)|||Nach dem Studium will ich ins Ausland.|Après mes études, je veux partir à l'étranger.
+N|die|Hochschule|-n|l'établissement d'enseignement supérieur|||Er studiert an einer Hochschule in München.|Il étudie dans une école supérieure à Munich.
+N|der|Abschluss|¨-e|le diplôme (de fin d'études)||einen ~ machen|Sie hat einen Abschluss in Informatik.|Elle a un diplôme en informatique.
+N|das|Stipendium|Stipendien|la bourse d'études|||Er hat ein Stipendium bekommen.|Il a obtenu une bourse.
+N|die|Hausaufgabe|-n|le devoir (à la maison)|||Hast du deine Hausaufgaben schon gemacht?|Tu as déjà fait tes devoirs ?
+N|die|Übung|-en|l'exercice|||Diese Übung ist zu schwierig.|Cet exercice est trop difficile.
+N|der|Fehler|-|la faute, l'erreur||einen ~ machen|Ich mache noch viele Fehler beim Sprechen.|Je fais encore beaucoup de fautes à l'oral.
+N|die|Aussprache|null|la prononciation|||Deine Aussprache ist sehr gut.|Ta prononciation est très bonne.
+N|die|Grammatik|null|la grammaire|||Die deutsche Grammatik ist nicht einfach.|La grammaire allemande n'est pas facile.
+N|der|Wortschatz|null|le vocabulaire|||Ich möchte meinen Wortschatz erweitern.|Je voudrais enrichir mon vocabulaire.
+N|die|Fremdsprache|-n|la langue étrangère|||Wie viele Fremdsprachen sprichst du?|Combien de langues étrangères parles-tu ?
+N|die|Muttersprache|-n|la langue maternelle|||Meine Muttersprache ist Französisch.|Ma langue maternelle est le français.
+N|das|Wörterbuch|¨-er|le dictionnaire||im ~ nachschlagen|Schlag das Wort im Wörterbuch nach.|Cherche le mot dans le dictionnaire.
+N|der|Lehrer|-|l'enseignant|||Unser Lehrer erklärt alles sehr geduldig.|Notre professeur explique tout très patiemment.
+N|der|Schüler|-|l'élève|||Die Schüler machen einen Ausflug.|Les élèves font une sortie.
+N|der|Student|-en|l'étudiant|||Viele Studenten wohnen in einer WG.|Beaucoup d'étudiants vivent en colocation.
+N|das|Wissen|null|le savoir, les connaissances|||Sie hat ein großes Wissen über Geschichte.|Elle a de grandes connaissances en histoire.
+N|das|Zertifikat|-e|le certificat|||Für das Visum brauche ich ein B1-Zertifikat.|Pour le visa, j'ai besoin d'un certificat B1.
+V|null|lernen|null|apprendre|lernt, lernte, hat gelernt||Ich lerne seit drei Jahren Deutsch.|J'apprends l'allemand depuis trois ans.
+V|null|studieren|null|faire des études, étudier|studiert, studierte, hat studiert||Sie studiert Medizin in Berlin.|Elle fait des études de médecine à Berlin.
+V|null|unterrichten|null|enseigner|unterrichtet, unterrichtete, hat unterrichtet||Er unterrichtet Mathematik an einem Gymnasium.|Il enseigne les maths dans un lycée.
+V|null|bestehen|null|réussir (un examen)|besteht, bestand, hat bestanden||Ich habe die Prüfung bestanden!|J'ai réussi l'examen !
+V|null|durchfallen|null|échouer (à un examen)|fällt durch, fiel durch, ist durchgefallen|in / bei + Dat ~|Er ist bei der Fahrprüfung durchgefallen.|Il a raté son examen de conduite.
+V|null|wiederholen|null|répéter ; réviser|wiederholt, wiederholte, hat wiederholt||Können Sie das bitte wiederholen?|Pouvez-vous répéter, s'il vous plaît ?
+V|null|üben|null|s'exercer, pratiquer|übt, übte, hat geübt||Ich übe jeden Tag eine halbe Stunde.|Je m'exerce une demi-heure chaque jour.
+V|null|erklären|null|expliquer|erklärt, erklärte, hat erklärt||Kannst du mir die Regel erklären?|Tu peux m'expliquer la règle ?
+V|null|verstehen|null|comprendre|versteht, verstand, hat verstanden||Ich habe die Frage nicht verstanden.|Je n'ai pas compris la question.
+V|null|nachschlagen|null|chercher (dans un ouvrage)|schlägt nach, schlug nach, hat nachgeschlagen||Ich schlage unbekannte Wörter sofort nach.|Je cherche tout de suite les mots inconnus.
+V|null|übersetzen|null|traduire|übersetzt, übersetzte, hat übersetzt||Kannst du mir diesen Brief übersetzen?|Peux-tu me traduire cette lettre ?
+V|null|korrigieren|null|corriger|korrigiert, korrigierte, hat korrigiert||Die Lehrerin korrigiert die Tests.|La professeure corrige les contrôles.
+V|null|sich merken|null|retenir, mémoriser|merkt sich, merkte sich, hat sich gemerkt||Ich kann mir keine Namen merken.|Je n'arrive pas à retenir les noms.
+V|null|aufschreiben|null|noter, écrire|schreibt auf, schrieb auf, hat aufgeschrieben||Schreib dir die Adresse auf.|Note-toi l'adresse.
+V|null|abschreiben|null|copier (tricher) ; recopier|schreibt ab, schrieb ab, hat abgeschrieben||Er hat bei seinem Nachbarn abgeschrieben.|Il a copié sur son voisin.
+V|null|buchstabieren|null|épeler|buchstabiert, buchstabierte, hat buchstabiert||Können Sie Ihren Namen bitte buchstabieren?|Pouvez-vous épeler votre nom, s'il vous plaît ?
+A|null|fleißig|null|travailleur, appliqué|||Sie ist eine sehr fleißige Schülerin.|C'est une élève très travailleuse.
+A|null|faul|null|paresseux|||Heute bin ich zu faul zum Lernen.|Aujourd'hui, j'ai trop la flemme d'étudier.
+A|null|schwierig|null|difficile|||Die Prüfung war schwieriger als erwartet.|L'examen était plus difficile que prévu.
+A|null|leicht|null|facile ; léger|||Die erste Aufgabe war ganz leicht.|Le premier exercice était très facile.
+A|null|richtig|null|juste, correct|||Deine Antwort ist richtig.|Ta réponse est juste.
+A|null|falsch|null|faux|||Dieser Satz ist grammatisch falsch.|Cette phrase est grammaticalement fausse.
+A|null|fließend|null|couramment (langue)|||Sie spricht fließend Englisch.|Elle parle couramment anglais.
+D|null|auswendig|null|par cœur||~ lernen|Ich habe das Gedicht auswendig gelernt.|J'ai appris le poème par cœur.
+# theme: communication
+N|das|Gespräch|-e|la conversation, l'entretien|||Das Gespräch hat eine Stunde gedauert.|La conversation a duré une heure.
+N|der|Anruf|-e|l'appel (téléphonique)|||Ich warte auf einen wichtigen Anruf.|J'attends un appel important.
+N|der|Anrufbeantworter|-|le répondeur||auf den ~ sprechen|Ich habe dir auf den Anrufbeantworter gesprochen.|Je t'ai laissé un message sur le répondeur.
+N|die|Handynummer|-n|le numéro de portable|||Gibst du mir deine Handynummer?|Tu me donnes ton numéro de portable ?
+N|die|E-Mail|-s|l'e-mail|||Ich schicke dir die Unterlagen per E-Mail.|Je t'envoie les documents par e-mail.
+N|der|Anhang|¨-e|la pièce jointe||im ~|Die Rechnung finden Sie im Anhang.|Vous trouverez la facture en pièce jointe.
+N|der|Betreff|-e|l'objet (d'un mail)|||Was soll ich in den Betreff schreiben?|Que dois-je mettre dans l'objet ?
+N|der|Brief|-e|la lettre|||Ich habe einen Brief vom Finanzamt bekommen.|J'ai reçu une lettre des impôts.
+N|das|Paket|-e|le colis|||Das Paket wurde beim Nachbarn abgegeben.|Le colis a été déposé chez le voisin.
+N|der|Absender|-|l'expéditeur|||Auf dem Brief steht kein Absender.|Il n'y a pas d'expéditeur sur la lettre.
+N|der|Empfänger|-|le destinataire|||Der Empfänger war nicht zu Hause.|Le destinataire n'était pas chez lui.
+N|das|Passwort|¨-er|le mot de passe|||Ich habe mein Passwort vergessen.|J'ai oublié mon mot de passe.
+N|das|Netz|-e|le réseau ; le filet||kein ~ haben|Hier im Keller habe ich kein Netz.|Ici à la cave, je n'ai pas de réseau.
+N|der|Akku|-s|la batterie (d'appareil)|||Mein Akku ist fast leer.|Ma batterie est presque vide.
+N|das|Ladegerät|-e|le chargeur|||Hast du ein Ladegerät für mich?|Tu as un chargeur pour moi ?
+N|der|Bildschirm|-e|l'écran|||Der Bildschirm ist kaputt.|L'écran est cassé.
+N|die|Tastatur|-en|le clavier|||Die Tastatur ist auf Deutsch eingestellt.|Le clavier est réglé en allemand.
+N|die|Datei|-en|le fichier|||Ich kann die Datei nicht öffnen.|Je n'arrive pas à ouvrir le fichier.
+N|die|Webseite|-n|le site web|||Die Infos stehen auf unserer Webseite.|Les infos sont sur notre site web.
+N|das|Gerät|-e|l'appareil|||Das Gerät funktioniert nicht mehr.|L'appareil ne fonctionne plus.
+N|die|Mitteilung|-en|la communication, l'avis|||Wir haben eine Mitteilung von der Schule bekommen.|Nous avons reçu un avis de l'école.
+N|die|Auskunft|¨-e|le renseignement||~ geben|Können Sie mir eine Auskunft geben?|Pouvez-vous me donner un renseignement ?
+V|null|anrufen|null|appeler (téléphone)|ruft an, rief an, hat angerufen||Ich rufe dich heute Abend an.|Je t'appelle ce soir.
+V|null|zurückrufen|null|rappeler|ruft zurück, rief zurück, hat zurückgerufen||Können Sie mich bitte zurückrufen?|Pouvez-vous me rappeler, s'il vous plaît ?
+V|null|auflegen|null|raccrocher|legt auf, legte auf, hat aufgelegt||Sie hat einfach aufgelegt.|Elle a simplement raccroché.
+V|null|schicken|null|envoyer|schickt, schickte, hat geschickt||Schick mir bitte ein Foto.|Envoie-moi une photo, s'il te plaît.
+V|null|bekommen|null|recevoir|bekommt, bekam, hat bekommen||Hast du meine Nachricht bekommen?|As-tu reçu mon message ?
+V|null|herunterladen|null|télécharger|lädt herunter, lud herunter, hat heruntergeladen||Du kannst die App kostenlos herunterladen.|Tu peux télécharger l'appli gratuitement.
+V|null|speichern|null|enregistrer, sauvegarder|speichert, speicherte, hat gespeichert||Vergiss nicht, die Datei zu speichern.|N'oublie pas d'enregistrer le fichier.
+V|null|löschen|null|effacer, supprimer|löscht, löschte, hat gelöscht||Ich habe die alten Fotos gelöscht.|J'ai supprimé les vieilles photos.
+V|null|ausdrucken|null|imprimer|druckt aus, druckte aus, hat ausgedruckt||Kannst du mir das Ticket ausdrucken?|Tu peux m'imprimer le billet ?
+V|null|einschalten|null|allumer|schaltet ein, schaltete ein, hat eingeschaltet||Schalte bitte den Computer ein.|Allume l'ordinateur, s'il te plaît.
+V|null|ausschalten|null|éteindre|schaltet aus, schaltete aus, hat ausgeschaltet||Bitte schalten Sie Ihr Handy aus.|Veuillez éteindre votre portable.
+V|null|aufladen|null|recharger|lädt auf, lud auf, hat aufgeladen||Ich muss mein Handy aufladen.|Je dois recharger mon portable.
+V|null|sich einloggen|null|se connecter|loggt sich ein, loggte sich ein, hat sich eingeloggt||Ich kann mich nicht einloggen.|Je n'arrive pas à me connecter.
+V|null|mitteilen|null|communiquer, faire savoir|teilt mit, teilte mit, hat mitgeteilt|jdm. etw. ~|Bitte teilen Sie uns Ihre neue Adresse mit.|Merci de nous communiquer votre nouvelle adresse.
+V|null|sich melden|null|donner des nouvelles, se manifester|meldet sich, meldete sich, hat sich gemeldet|sich bei + Dat ~|Melde dich bei mir, wenn du angekommen bist!|Donne-moi des nouvelles quand tu seras arrivé !
+V|null|chatten|null|discuter en ligne|chattet, chattete, hat gechattet||Abends chatte ich mit meinen Freunden.|Le soir, je discute en ligne avec mes amis.
+V|null|unterbrechen|null|interrompre|unterbricht, unterbrach, hat unterbrochen||Entschuldigung, dass ich Sie unterbreche.|Excusez-moi de vous interrompre.
+V|null|flüstern|null|chuchoter|flüstert, flüsterte, hat geflüstert||Sie flüsterte ihm etwas ins Ohr.|Elle lui a chuchoté quelque chose à l'oreille.
+V|null|schreien|null|crier|schreit, schrie, hat geschrien||Du musst nicht so schreien!|Tu n'as pas besoin de crier comme ça !
+A|null|erreichbar|null|joignable|||Ich bin morgen den ganzen Tag erreichbar.|Je suis joignable toute la journée demain.
+A|null|besetzt|null|occupé (ligne, place)|||Die Leitung ist ständig besetzt.|La ligne est constamment occupée.
+A|null|online|null|en ligne|||Man kann den Termin auch online buchen.|On peut aussi prendre rendez-vous en ligne.
+A|null|deutlich|null|clair, distinct|||Bitte sprechen Sie etwas deutlicher.|Parlez un peu plus distinctement, s'il vous plaît.
+A|null|höflich|null|poli|||Er war sehr höflich am Telefon.|Il a été très poli au téléphone.
+O|null|Bescheid geben|null|prévenir, tenir au courant|||Gib mir Bescheid, wenn du fertig bist.|Préviens-moi quand tu as fini.
+O|null|Mit freundlichen Grüßen|null|Cordialement (formule de lettre)|||Mit freundlichen Grüßen, Anna Müller|Cordialement, Anna Müller
+O|null|Liebe Grüße|null|Bises, amitiés (fin de message)|||Liebe Grüße aus Hamburg!|Amitiés de Hambourg !

@@ -1,0 +1,103 @@
+# theme: loisirs
+N|das|Hobby|-s|le passe-temps|||Mein größtes Hobby ist Fotografieren.|Mon plus grand passe-temps est la photographie.
+N|die|Mannschaft|-en|l'équipe (sport)|||Unsere Mannschaft hat gestern gewonnen.|Notre équipe a gagné hier.
+N|das|Spiel|-e|le match, le jeu|||Das Spiel endete unentschieden.|Le match s'est terminé sur un nul.
+N|das|Tor|-e|le but ; le portail|||In der letzten Minute fiel noch ein Tor.|Un but a encore été marqué à la dernière minute.
+N|der|Wettbewerb|-e|la compétition, le concours||an einem ~ teilnehmen|Sie hat an einem Fotowettbewerb teilgenommen.|Elle a participé à un concours de photo.
+N|das|Training|-s|l'entraînement|||Das Training fängt um sieben an.|L'entraînement commence à sept heures.
+N|der|Ausflug|¨-e|l'excursion, la sortie||einen ~ machen|Am Sonntag machen wir einen Ausflug an den See.|Dimanche, nous faisons une excursion au lac.
+N|die|Wanderung|-en|la randonnée|||Die Wanderung dauerte fünf Stunden.|La randonnée a duré cinq heures.
+N|die|Ausstellung|-en|l'exposition|||Die Ausstellung im Museum ist sehr sehenswert.|L'exposition au musée vaut vraiment le détour.
+N|die|Veranstaltung|-en|l'événement, la manifestation|||Die Veranstaltung wurde wegen Regen abgesagt.|L'événement a été annulé à cause de la pluie.
+N|die|Vorstellung|-en|la représentation, la séance|||Die Vorstellung beginnt um 20 Uhr.|La représentation commence à 20 heures.
+N|die|Eintrittskarte|-n|le billet d'entrée|||Die Eintrittskarten sind schon ausverkauft.|Les billets sont déjà épuisés.
+N|der|Eintritt|-e|l'entrée (prix)||~ frei|Der Eintritt ist für Kinder frei.|L'entrée est gratuite pour les enfants.
+N|das|Publikum|null|le public|||Das Publikum hat lange applaudiert.|Le public a longtemps applaudi.
+N|der|Roman|-e|le roman|||Ich lese gerade einen spannenden Roman.|Je lis en ce moment un roman passionnant.
+N|die|Geschichte|-n|l'histoire|||Erzähl mir eine Geschichte!|Raconte-moi une histoire !
+N|das|Instrument|-e|l'instrument|||Spielst du ein Instrument?|Tu joues d'un instrument ?
+N|der|Urlaub|-e|les vacances, le congé||in ~ fahren|Wir fahren im August in Urlaub.|Nous partons en vacances en août.
+N|der|Feiertag|-e|le jour férié|||Am Montag ist ein Feiertag.|Lundi est un jour férié.
+N|das|Fest|-e|la fête|||Das Fest fand im Garten statt.|La fête a eu lieu dans le jardin.
+N|der|Spaziergang|¨-e|la promenade||einen ~ machen|Nach dem Essen machen wir einen Spaziergang.|Après le repas, nous faisons une promenade.
+N|das|Fitnessstudio|-s|la salle de sport|||Ich gehe dreimal pro Woche ins Fitnessstudio.|Je vais à la salle de sport trois fois par semaine.
+N|die|Sportart|-en|le sport (discipline)|||Welche Sportart treibst du?|Quel sport pratiques-tu ?
+V|null|Sport treiben|null|faire du sport|treibt Sport, trieb Sport, hat Sport getrieben||Ich treibe jeden Morgen Sport.|Je fais du sport tous les matins.
+V|null|gewinnen|null|gagner|gewinnt, gewann, hat gewonnen||Wer hat das Spiel gewonnen?|Qui a gagné le match ?
+V|null|verlieren|null|perdre|verliert, verlor, hat verloren||Wir haben leider 0:2 verloren.|Nous avons malheureusement perdu 0 à 2.
+V|null|trainieren|null|s'entraîner|trainiert, trainierte, hat trainiert||Sie trainiert für den Marathon.|Elle s'entraîne pour le marathon.
+V|null|wandern|null|faire de la randonnée|wandert, wanderte, ist gewandert||Im Sommer wandern wir gern in den Alpen.|En été, nous aimons randonner dans les Alpes.
+V|null|schwimmen|null|nager|schwimmt, schwamm, ist geschwommen||Ich bin heute 1000 Meter geschwommen.|J'ai nagé 1000 mètres aujourd'hui.
+V|null|feiern|null|fêter, faire la fête|feiert, feierte, hat gefeiert||Wir feiern am Samstag seinen Geburtstag.|Nous fêtons son anniversaire samedi.
+V|null|stattfinden|null|avoir lieu|findet statt, fand statt, hat stattgefunden||Das Konzert findet im Park statt.|Le concert a lieu dans le parc.
+V|null|sich amüsieren|null|s'amuser|amüsiert sich, amüsierte sich, hat sich amüsiert||Habt ihr euch auf der Party amüsiert?|Vous vous êtes amusés à la fête ?
+V|null|zuschauen|null|regarder (en spectateur)|schaut zu, schaute zu, hat zugeschaut|jdm. ~|Die Kinder schauen den Spielern zu.|Les enfants regardent les joueurs.
+V|null|mitmachen|null|participer, se joindre à|macht mit, machte mit, hat mitgemacht|bei + Dat ~|Machst du beim Volleyball mit?|Tu participes au volley ?
+V|null|basteln|null|bricoler (loisirs créatifs)|bastelt, bastelte, hat gebastelt||Am Wochenende basteln wir mit den Kindern.|Le week-end, nous faisons du bricolage avec les enfants.
+V|null|malen|null|peindre|malt, malte, hat gemalt||Sie malt am liebsten Landschaften.|Elle aime surtout peindre des paysages.
+V|null|zeichnen|null|dessiner|zeichnet, zeichnete, hat gezeichnet||Mein Sohn zeichnet sehr gut.|Mon fils dessine très bien.
+V|null|singen|null|chanter|singt, sang, hat gesungen||Sie singt in einem Chor.|Elle chante dans une chorale.
+V|null|tanzen|null|danser|tanzt, tanzte, hat getanzt||Wir haben die ganze Nacht getanzt.|Nous avons dansé toute la nuit.
+V|null|faulenzen|null|paresser, ne rien faire|faulenzt, faulenzte, hat gefaulenzt||Im Urlaub will ich nur faulenzen.|En vacances, je veux juste ne rien faire.
+A|null|spannend|null|passionnant, captivant|||Der Film war von Anfang bis Ende spannend.|Le film était captivant du début à la fin.
+A|null|langweilig|null|ennuyeux|||Der Vortrag war ziemlich langweilig.|La conférence était plutôt ennuyeuse.
+A|null|lustig|null|drôle, amusant|||Das war ein sehr lustiger Abend.|C'était une soirée très drôle.
+A|null|sportlich|null|sportif|||Er ist sehr sportlich und fährt viel Rad.|Il est très sportif et fait beaucoup de vélo.
+A|null|beliebt|null|populaire, apprécié||bei jdm. ~|Das Café ist bei Studenten sehr beliebt.|Le café est très apprécié des étudiants.
+A|null|unterhaltsam|null|divertissant|||Die Show war sehr unterhaltsam.|Le spectacle était très divertissant.
+A|null|kreativ|null|créatif|||Sie ist ein sehr kreativer Mensch.|C'est une personne très créative.
+D|null|draußen|null|dehors|||Bei schönem Wetter essen wir draußen.|Quand il fait beau, nous mangeons dehors.
+O|null|Spaß machen|null|plaire, amuser (activité)|||Tanzen macht mir großen Spaß.|J'adore danser.
+O|null|viel Spaß!|null|amuse-toi bien !|||Viel Spaß beim Konzert heute Abend!|Amuse-toi bien au concert ce soir !
+# theme: alimentation
+N|das|Lebensmittel|-|l'aliment, les denrées|||Lebensmittel sind teurer geworden.|Les aliments sont devenus plus chers.
+N|das|Gemüse|null|les légumes|||Ich esse jeden Tag frisches Gemüse.|Je mange des légumes frais tous les jours.
+N|das|Obst|null|les fruits|||Obst ist im Sommer besonders günstig.|Les fruits sont particulièrement bon marché en été.
+N|das|Fleisch|null|la viande|||Ich esse kaum noch Fleisch.|Je ne mange presque plus de viande.
+N|der|Fisch|-e|le poisson|||Freitags gibt es bei uns Fisch.|Chez nous, le vendredi, c'est poisson.
+N|das|Getränk|-e|la boisson|||Die Getränke stehen im Kühlschrank.|Les boissons sont dans le frigo.
+N|die|Speisekarte|-n|le menu, la carte|||Könnten wir bitte die Speisekarte haben?|Pourrions-nous avoir la carte, s'il vous plaît ?
+N|die|Vorspeise|-n|l'entrée (repas)|||Als Vorspeise nehme ich eine Suppe.|En entrée, je prends une soupe.
+N|die|Hauptspeise|-n|le plat principal|||Die Hauptspeise war etwas zu salzig.|Le plat principal était un peu trop salé.
+N|die|Nachspeise|-n|le dessert|||Möchtet ihr noch eine Nachspeise?|Vous voulez encore un dessert ?
+N|das|Trinkgeld|-er|le pourboire|||In Deutschland gibt man etwa zehn Prozent Trinkgeld.|En Allemagne, on donne environ dix pour cent de pourboire.
+N|der|Geschmack|¨-e|le goût|||Die Suppe hat einen besonderen Geschmack.|La soupe a un goût particulier.
+N|die|Portion|-en|la portion|||Die Portionen hier sind riesig.|Les portions ici sont énormes.
+N|der|Topf|¨-e|la casserole|||Stell den Topf auf den Herd.|Mets la casserole sur la cuisinière.
+N|die|Pfanne|-n|la poêle|||Brate das Fleisch in der Pfanne an.|Fais revenir la viande dans la poêle.
+N|der|Herd|-e|la cuisinière|||Der Herd ist noch heiß.|La cuisinière est encore chaude.
+N|der|Backofen|¨|le four|||Der Kuchen muss 40 Minuten in den Backofen.|Le gâteau doit cuire 40 minutes au four.
+N|der|Kühlschrank|¨-e|le réfrigérateur|||Die Milch steht im Kühlschrank.|Le lait est dans le réfrigérateur.
+N|die|Dose|-n|la boîte de conserve|||Hast du eine Dose Tomaten gekauft?|Tu as acheté une boîte de tomates ?
+N|die|Flasche|-n|la bouteille|||Bring bitte eine Flasche Wasser mit.|Apporte une bouteille d'eau, s'il te plaît.
+N|das|Gewürz|-e|l'épice|||Welche Gewürze brauche ich für das Curry?|De quelles épices ai-je besoin pour le curry ?
+N|die|Bäckerei|-en|la boulangerie|||Die Bäckerei an der Ecke hat das beste Brot.|La boulangerie du coin a le meilleur pain.
+N|der|Vegetarier|-|le végétarien|||Seit zwei Jahren bin ich Vegetarier.|Je suis végétarien depuis deux ans.
+N|der|Hunger|null|la faim||~ haben|Ich habe einen Riesenhunger.|J'ai une faim de loup.
+N|der|Durst|null|la soif||~ haben|Nach dem Sport habe ich immer Durst.|Après le sport, j'ai toujours soif.
+V|null|kochen|null|cuisiner ; faire bouillir|kocht, kochte, hat gekocht||Heute koche ich für die ganze Familie.|Aujourd'hui, je cuisine pour toute la famille.
+V|null|backen|null|faire cuire au four, pâtisser|backt, backte, hat gebacken||Am Sonntag backe ich einen Apfelkuchen.|Dimanche, je fais un gâteau aux pommes.
+V|null|braten|null|faire revenir, rôtir|brät, briet, hat gebraten||Er brät die Kartoffeln in Butter.|Il fait revenir les pommes de terre dans du beurre.
+V|null|schneiden|null|couper|schneidet, schnitt, hat geschnitten||Schneid die Zwiebeln in kleine Stücke.|Coupe les oignons en petits morceaux.
+V|null|probieren|null|goûter ; essayer|probiert, probierte, hat probiert||Probier mal die Soße!|Goûte donc la sauce !
+V|null|würzen|null|assaisonner|würzt, würzte, hat gewürzt||Würz die Suppe mit Salz und Pfeffer.|Assaisonne la soupe avec du sel et du poivre.
+V|null|mischen|null|mélanger|mischt, mischte, hat gemischt||Misch das Mehl mit den Eiern.|Mélange la farine avec les œufs.
+V|null|schälen|null|éplucher|schält, schälte, hat geschält||Kannst du die Kartoffeln schälen?|Tu peux éplucher les pommes de terre ?
+V|null|aufwärmen|null|réchauffer|wärmt auf, wärmte auf, hat aufgewärmt||Ich wärme die Reste von gestern auf.|Je réchauffe les restes d'hier.
+V|null|frühstücken|null|prendre le petit-déjeuner|frühstückt, frühstückte, hat gefrühstückt||Wir frühstücken meistens um sieben.|Nous prenons généralement le petit-déjeuner à sept heures.
+V|null|bezahlen|null|payer|bezahlt, bezahlte, hat bezahlt||Kann ich mit Karte bezahlen?|Je peux payer par carte ?
+V|null|empfehlen|null|recommander|empfiehlt, empfahl, hat empfohlen|jdm. etw. ~|Was können Sie uns heute empfehlen?|Que pouvez-vous nous recommander aujourd'hui ?
+V|null|reservieren|null|réserver|reserviert, reservierte, hat reserviert||Ich habe einen Tisch für vier Personen reserviert.|J'ai réservé une table pour quatre personnes.
+A|null|lecker|null|délicieux|||Das Essen war wirklich lecker.|Le repas était vraiment délicieux.
+A|null|frisch|null|frais|||Das Brot ist ganz frisch.|Le pain est tout frais.
+A|null|scharf|null|épicé ; tranchant|||Das Curry ist mir zu scharf.|Le curry est trop épicé pour moi.
+A|null|salzig|null|salé|||Die Suppe ist ein bisschen zu salzig.|La soupe est un peu trop salée.
+A|null|süß|null|sucré ; mignon|||Der Kuchen ist mir zu süß.|Le gâteau est trop sucré pour moi.
+A|null|sauer|null|acide ; fâché|||Die Zitronen sind sehr sauer.|Les citrons sont très acides.
+A|null|bitter|null|amer|||Der Kaffee schmeckt bitter.|Le café a un goût amer.
+A|null|roh|null|cru|||Karotten kann man auch roh essen.|On peut aussi manger les carottes crues.
+A|null|vegetarisch|null|végétarien|||Gibt es auch ein vegetarisches Gericht?|Y a-t-il aussi un plat végétarien ?
+A|null|hausgemacht|null|fait maison|||Die Marmelade ist hausgemacht.|La confiture est faite maison.
+O|null|satt sein|null|être rassasié|||Danke, ich bin schon satt.|Merci, je n'ai plus faim.
+O|null|guten Appetit!|null|bon appétit !|||Das Essen ist fertig – guten Appetit!|Le repas est prêt, bon appétit !
+O|null|zum Mitnehmen|null|à emporter|||Einen Kaffee zum Mitnehmen, bitte.|Un café à emporter, s'il vous plaît.
