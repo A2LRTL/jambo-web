@@ -5,7 +5,7 @@ import { buildConjQuestion, conjugate } from './conjugation.ts';
 
 const verb = (lemma: string, forms: string): GermanWord => ({
   id: lemma, lemma, article: null, plural: null, pos: 'verb', level: 'B1', theme: 't',
-  fr: 'f', forms, governs: null, example_de: '', example_fr: '',
+  fr: 'f', forms, governs: null, example_de: '', example_fr: '', compound: null,
 });
 
 test('strong separable verb: teilnehmen', () => {

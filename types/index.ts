@@ -68,6 +68,8 @@ export interface GermanWord {
   governs: string | null;  // construction: "sich ~ für + Akk"
   example_de: string;
   example_fr: string;
+  // Compound breakdown: Feier (fête) + Abend (soir) → « le soir de fête »
+  compound: { parts: { de: string; fr: string }[]; literal: string } | null;
 }
 
 export interface WordProgress {

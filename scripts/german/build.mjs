@@ -72,6 +72,26 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.txt')).sort()) {
   });
 }
 
+// Compound breakdowns (compounds.list): "lemma|Teil=sens + Teil=sens|mot à mot", matched by lemma
+const compounds = new Map();
+readFileSync(join(dir, 'compounds.list'), 'utf8').split('\n').forEach((line, i) => {
+  const where = `compounds.list:${i + 1}`;
+  if (!line.trim() || line.startsWith('#')) return;
+  const [lemma, parts, literal] = line.split('|').map((s) => s?.trim());
+  if (!lemma || !parts || !literal) { errors.push(`${where} expected lemma|parts|literal`); return; }
+  const split = parts.split(' + ').map((p) => {
+    const at = p.indexOf('=');
+    return at > 0 ? { de: p.slice(0, at).trim(), fr: p.slice(at + 1).trim() } : null;
+  });
+  if (split.length < 2 || split.includes(null)) { errors.push(`${where} parts must be "Teil=sens + Teil=sens"`); return; }
+  if (compounds.has(lemma)) errors.push(`${where} duplicate "${lemma}"`);
+  compounds.set(lemma, { parts: split, literal });
+});
+for (const lemma of compounds.keys()) {
+  if (!words.some((w) => w.lemma === lemma)) errors.push(`compounds.list: no word "${lemma}"`);
+}
+for (const w of words) w.compound = compounds.get(w.lemma) ?? null;
+
 if (errors.length) {
   console.error(errors.join('\n'));
   console.error(`\n${errors.length} error(s) — nothing written.`);

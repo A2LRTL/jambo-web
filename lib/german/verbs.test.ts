@@ -5,7 +5,7 @@ import { buildPrepQuestion, buildSentencePrepQuestion, highlightPrep, parsePrep,
 
 const verb = (lemma: string, forms: string, governs: string | null = null): GermanWord => ({
   id: 'x', lemma, article: null, plural: null, pos: 'verb', level: 'B1', theme: 't',
-  fr: 'f', forms, governs, example_de: '', example_fr: '',
+  fr: 'f', forms, governs, example_de: '', example_fr: '', compound: null,
 });
 
 test('parsePrep reads "prep + case", ignores the rest', () => {

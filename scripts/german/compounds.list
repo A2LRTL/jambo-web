@@ -1,0 +1,240 @@
+# Décomposition des mots composés — lemma|Partie=sens + Partie=sens|mot à mot
+# Lu par build.mjs (fichier .list : ignoré comme lot de mots). Le lemme doit exister dans un lot.
+# ── Noms
+Freizeit|frei=libre + Zeit=temps|temps libre
+Haushalt|Haus=maison + Halt=tenue|la tenue de la maison
+Mahlzeit|Mahl=repas + Zeit=moment|le moment du repas
+Feierabend|Feier=fête + Abend=soir|le soir de fête
+Wochenende|Woche=semaine + Ende=fin|la fin de la semaine
+Mietvertrag|Miete=loyer + Vertrag=contrat|le contrat de loyer
+Nebenkosten|neben=à côté + Kosten=frais|les frais à côté
+Wohngemeinschaft|wohnen=habiter + Gemeinschaft=communauté|la communauté d'habitation
+Hausmeister|Haus=maison + Meister=maître|le maître de la maison
+Erdgeschoss|Erde=terre + Geschoss=étage|l'étage de la terre
+Mülltonne|Müll=ordures + Tonne=tonneau|le tonneau à ordures
+Hausordnung|Haus=maison + Ordnung=ordre|l'ordre de la maison
+Umzug|um=changement + Zug=déplacement|le déplacement vers ailleurs
+Aufzug|auf=vers le haut + Zug=traction|ce qui tire vers le haut
+Lebenslauf|Leben(s)=vie + Lauf=course|la course de la vie (comme « curriculum vitae »)
+Vorstellungsgespräch|Vorstellung(s)=présentation + Gespräch=entretien|l'entretien de présentation
+Arbeitgeber|Arbeit=travail + Geber=celui qui donne|celui qui donne le travail
+Arbeitnehmer|Arbeit=travail + Nehmer=celui qui prend|celui qui prend le travail
+Überstunde|über=en plus + Stunde=heure|l'heure en plus
+Weiterbildung|weiter=plus loin + Bildung=formation|la formation qui va plus loin
+Teilzeit|Teil=partie + Zeit=temps|le temps partiel
+Homeoffice|Home=maison (anglais) + Office=bureau (anglais)|le bureau à la maison
+Notfall|Not=détresse + Fall=cas|le cas de détresse
+Notaufnahme|Not=détresse + Aufnahme=admission|l'admission en détresse
+Krankenkasse|Kranke(n)=malades + Kasse=caisse|la caisse des malades
+Krankmeldung|krank=malade + Meldung=déclaration|la déclaration de maladie
+Sprechstunde|sprechen=parler + Stunde=heure|l'heure où l'on parle
+Nebenwirkung|neben=à côté + Wirkung=effet|l'effet à côté
+Unterschrift|unter=en dessous + Schrift=écriture|l'écriture en dessous
+Ausweis|aus=hors + weisen=montrer|ce qu'on sort pour montrer
+Reisepass|Reise=voyage + Pass=passeport|le passeport de voyage
+Aufenthaltserlaubnis|Aufenthalt(s)=séjour + Erlaubnis=permission|la permission de séjour
+Steuererklärung|Steuer=impôt + Erklärung=déclaration|la déclaration d'impôt
+Staatsangehörigkeit|Staat(s)=État + Angehörigkeit=appartenance|l'appartenance à l'État
+Wohnsitz|wohnen=habiter + Sitz=siège|le siège où l'on habite
+Wartenummer|warten=attendre + Nummer=numéro|le numéro d'attente
+Vorschrift|vor=avant + Schrift=écrit|ce qui est écrit d'avance
+Unterkunft|unter=sous + Kunft (kommen)=venue|le fait de « venir sous » un toit
+Anschluss|an=contre + Schluss=jonction|ce qui se raccroche
+Fahrkarte|fahren=voyager + Karte=carte|la carte pour voyager
+Umleitung|um=autour + Leitung=conduite|la conduite qui fait le tour
+Führerschein|Führer=conducteur + Schein=certificat|le certificat de conducteur
+Tankstelle|tanken=faire le plein + Stelle=endroit|l'endroit pour faire le plein
+Sehenswürdigkeit|sehen(s)=voir + würdig=digne + -keit=-ité|la chose digne d'être vue
+Aufenthalt|auf=sur + Halt=arrêt|l'arrêt sur place
+Rundfahrt|rund=en rond + Fahrt=trajet|le trajet en rond
+Fahrgast|fahren=voyager + Gast=invité|l'invité du trajet
+Kassenbon|Kasse(n)=caisse + Bon=ticket|le ticket de caisse
+Umtausch|um=changement + Tausch=échange|l'échange contre autre chose
+Umkleidekabine|umkleiden=se changer + Kabine=cabine|la cabine pour se changer
+Kreditkarte|Kredit=crédit + Karte=carte|la carte de crédit
+Flohmarkt|Floh=puce + Markt=marché|le marché aux puces
+Öffnungszeiten|Öffnung(s)=ouverture + Zeiten=heures|les heures d'ouverture
+Hochzeit|hoch=haut + Zeit=temps|le grand moment (la grande fête)
+Missverständnis|miss-=de travers + Verständnis=compréhension|la compréhension de travers
+Standpunkt|Stand=position + Punkt=point|le point où l'on se tient
+Vorteil|vor=avant + Teil=part|la part qui passe avant
+Nachteil|nach=après + Teil=part|la part qui vient après
+Zeitschrift|Zeit=temps + Schrift=écrit|l'écrit du moment (le périodique)
+Umwelt|um=autour + Welt=monde|le monde autour
+Klimawandel|Klima=climat + Wandel=changement|le changement du climat
+Arbeitsmarkt|Arbeit(s)=travail + Markt=marché|le marché du travail
+Arbeitslosigkeit|Arbeit(s)=travail + los=sans + -igkeit=-ité|le fait d'être sans travail
+Fachkraft|Fach=spécialité + Kraft=force|la force spécialisée
+Herausforderung|heraus=dehors + Forderung=exigence|l'exigence qui fait sortir de soi
+Arbeitsbedingungen|Arbeit(s)=travail + Bedingungen=conditions|les conditions de travail
+Gehaltserhöhung|Gehalt(s)=salaire + Erhöhung=hausse|la hausse du salaire
+Probezeit|Probe=essai + Zeit=période|la période d'essai
+Mitarbeiter|mit=avec + Arbeiter=travailleur|celui qui travaille avec
+Führungskraft|Führung(s)=direction + Kraft=force|la force de direction
+Zusammenarbeit|zusammen=ensemble + Arbeit=travail|le travail ensemble
+Gleichberechtigung|gleich=égal + Berechtigung=droit|l'égalité de droits
+Wohlstand|wohl=bien + Stand=état|l'état de bien-être
+Vorurteil|vor=avant + Urteil=jugement|le jugement d'avance
+Ehrenamt|Ehre(n)=honneur + Amt=fonction|la fonction d'honneur
+Umweltschutz|Umwelt=environnement + Schutz=protection|la protection de l'environnement
+Umweltverschmutzung|Umwelt=environnement + Verschmutzung=salissure|la salissure de l'environnement
+Erderwärmung|Erde=terre + Erwärmung=réchauffement|le réchauffement de la terre
+Treibhauseffekt|Treibhaus=serre (« maison qui fait pousser ») + Effekt=effet|l'effet de serre
+Datenschutz|Daten=données + Schutz=protection|la protection des données
+Wohlbefinden|wohl=bien + Befinden=état|le fait de se trouver bien
+Falschmeldung|falsch=faux + Meldung=annonce|la fausse annonce
+Berichterstattung|Bericht=rapport + Erstattung=restitution|le fait de rendre compte
+Pressefreiheit|Presse=presse + Freiheit=liberté|la liberté de la presse
+Schlagzeile|Schlag=coup + Zeile=ligne|la ligne qui frappe
+Tatsache|Tat=acte + Sache=chose|la chose de fait
+Mitgefühl|mit=avec + Gefühl=sentiment|le sentiment partagé avec
+Auseinandersetzung|auseinander=à part + Setzung=fait de poser|le fait de poser les choses à part
+Zuneigung|zu=vers + Neigung=penchant|le penchant vers quelqu'un
+Wettbewerb|Wett(e)=pari, rivalité + Bewerb=concours|le concours où l'on rivalise
+Eintritt|ein=dedans + Tritt=pas|le pas vers l'intérieur
+Eintrittskarte|Eintritt(s)=entrée + Karte=billet|le billet d'entrée
+Feiertag|Feier=fête + Tag=jour|le jour de fête
+Spaziergang|spazieren=se promener + Gang=marche|la marche de promenade
+Fitnessstudio|Fitness=forme + Studio=salle|la salle de forme
+Sportart|Sport=sport + Art=sorte|la sorte de sport
+Lebensmittel|Leben(s)=vie + Mittel=moyen|le moyen de vivre
+Speisekarte|Speise=plat + Karte=carte|la carte des plats
+Vorspeise|vor=avant + Speise=plat|le plat d'avant
+Hauptspeise|Haupt=principal + Speise=plat|le plat principal
+Nachspeise|nach=après + Speise=plat|le plat d'après
+Trinkgeld|trinken=boire + Geld=argent|l'argent pour boire (comme « pourboire »)
+Backofen|backen=cuire au four + Ofen=four|le four pour cuire
+Kühlschrank|kühl=frais + Schrank=armoire|l'armoire fraîche
+Hochschule|hoch=haut + Schule=école|l'école haute
+Abschluss|ab=fin + Schluss=clôture|la clôture finale
+Hausaufgabe|Haus=maison + Aufgabe=tâche|la tâche pour la maison
+Aussprache|aus=dehors + Sprache=langage|le langage mis dehors
+Wortschatz|Wort=mot + Schatz=trésor|le trésor de mots
+Fremdsprache|fremd=étranger + Sprache=langue|la langue étrangère
+Muttersprache|Mutter=mère + Sprache=langue|la langue de la mère
+Wörterbuch|Wörter=mots + Buch=livre|le livre de mots
+Anrufbeantworter|Anruf=appel + Beantworter=celui qui répond|celui qui répond aux appels
+Handynummer|Handy=portable + Nummer=numéro|le numéro de portable
+Passwort|Pass=passage + Wort=mot|le mot de passage
+Ladegerät|laden=charger + Gerät=appareil|l'appareil pour charger
+Bildschirm|Bild=image + Schirm=écran|l'écran à images
+Webseite|Web=web + Seite=page|la page web
+Innenstadt|innen=dedans + Stadt=ville|la ville du dedans
+Bürgersteig|Bürger=citoyen + Steig=sentier|le sentier des citoyens
+Parkplatz|parken=se garer + Platz=place|la place pour se garer
+Haltestelle|halten=s'arrêter + Stelle=endroit|l'endroit où l'on s'arrête
+Wettervorhersage|Wetter=temps + Vorhersage=prédiction|la prédiction du temps
+Jahreszeit|Jahr(es)=année + Zeit=temps|le temps de l'année
+Aussehen|aus=dehors + Sehen=vue|ce qui se voit de dehors
+# ── Adjectifs
+preiswert|Preis=prix + wert=qui vaut|qui vaut son prix
+arbeitslos|Arbeit(s)=travail + los=sans|sans travail
+gleichzeitig|gleich=même + zeitig=du temps|au même temps
+verschreibungspflichtig|Verschreibung(s)=prescription + pflichtig=soumis à obligation|soumis à prescription obligatoire
+kostenlos|Kosten=frais + los=sans|sans frais
+ausgebucht|aus=complètement + gebucht=réservé|réservé jusqu'au bout
+überfüllt|über=trop + gefüllt=rempli|trop rempli
+ausverkauft|aus=complètement + verkauft=vendu|vendu jusqu'au bout
+hilfsbereit|Hilfe(s)=aide + bereit=prêt|prêt à aider
+umweltfreundlich|Umwelt=environnement + freundlich=ami|ami de l'environnement
+klimafreundlich|Klima=climat + freundlich=ami|ami du climat
+unbefristet|un-=non + befristet=à durée limitée|sans limite de durée
+glaubwürdig|glauben=croire + würdig=digne|digne d'être cru
+fragwürdig|fragen=questionner + würdig=digne|digne d'être questionné
+rücksichtsvoll|Rücksicht(s)=égard + voll=plein|plein d'égards
+verständnisvoll|Verständnis=compréhension + voll=plein|plein de compréhension
+einseitig|ein=un + seitig=de côté|d'un seul côté
+sehenswert|sehen(s)=voir + wert=qui vaut|qui vaut d'être vu
+selbstbewusst|selbst=soi-même + bewusst=conscient|conscient de soi
+selbstständig|selbst=soi-même + ständig=qui se tient|qui tient tout seul
+hausgemacht|Haus=maison + gemacht=fait|fait maison
+langweilig|lang=long + Weile=moment|qui rend le moment long
+# ── Verbes à particule
+aufräumen|auf=complètement + räumen=débarrasser|débarrasser complètement
+sich ausruhen|aus=jusqu'au bout + ruhen=se reposer|se reposer jusqu'au bout
+absagen|ab=en se retirant + sagen=dire|dire qu'on se retire
+vorbereiten|vor=avant + bereiten=préparer|préparer d'avance
+sich vorbereiten|vor=avant + bereiten=préparer|se préparer d'avance
+zubereiten|zu=en plus + bereiten=préparer|apprêter (un plat)
+ausgehen|aus=dehors + gehen=aller|aller dehors
+abholen|ab=depuis + holen=aller chercher|aller chercher (là où c'est)
+sich anziehen|an=sur + ziehen=tirer|tirer (les vêtements) sur soi
+umziehen|um=changement + ziehen=se déplacer|se déplacer ailleurs
+einziehen|ein=dedans + ziehen=se déplacer|se déplacer dedans
+ausziehen|aus=dehors + ziehen=se déplacer|se déplacer dehors
+einrichten|ein=dedans + richten=disposer|disposer à l'intérieur
+einstellen|ein=dedans + stellen=placer|placer dedans (dans l'équipe)
+einhalten|ein=dedans + halten=tenir|tenir dans les limites
+sich krankmelden|krank=malade + melden=signaler|se signaler malade
+teilnehmen|Teil=part + nehmen=prendre|prendre part
+wehtun|weh=mal + tun=faire|faire mal
+einnehmen|ein=dedans + nehmen=prendre|prendre dedans (avaler)
+abnehmen|ab=en moins + nehmen=prendre|prendre en moins
+zunehmen|zu=en plus + nehmen=prendre|prendre en plus
+vorbeugen|vor=devant + beugen=pencher|se pencher en avant (pour parer)
+ausfüllen|aus=complètement + füllen=remplir|remplir complètement
+einreichen|ein=dedans + reichen=tendre|tendre (un dossier) à l'intérieur
+sich anmelden|an=auprès de + melden=signaler|se signaler auprès de
+sich abmelden|ab=en partant + melden=signaler|signaler son départ
+ablaufen|ab=jusqu'au bout + laufen=courir|courir jusqu'au bout
+ablehnen|ab=loin + lehnen=appuyer|repousser
+nachweisen|nach=après coup + weisen=montrer|montrer après coup
+vorlegen|vor=devant + legen=poser|poser devant
+ausstellen|aus=dehors + stellen=placer|placer dehors (à la vue)
+abbuchen|ab=en moins + buchen=inscrire (au compte)|inscrire en moins
+zustehen|zu=vers + stehen=se tenir|revenir à quelqu'un
+umsteigen|um=changement + steigen=monter|monter ailleurs
+abfahren|ab=en partant + fahren=rouler|partir en roulant
+ankommen|an=jusqu'à + kommen=venir|venir jusqu'à
+ankommen auf|an=jusqu'à + kommen=venir|en venir à (dépendre de)
+einchecken|ein=dedans + checken=vérifier (anglais)|se faire vérifier à l'entrée
+umtauschen|um=changement + tauschen=échanger|échanger contre autre chose
+zurückgeben|zurück=en retour + geben=donner|donner en retour
+anprobieren|an=sur + probieren=essayer|essayer sur soi
+ausgeben|aus=dehors + geben=donner|donner vers l'extérieur
+abheben|ab=depuis + heben=soulever|soulever depuis (le compte)
+kennenlernen|kennen=connaître + lernen=apprendre|apprendre à connaître
+einladen|ein=dedans + laden=convier|convier à entrer
+zustimmen|zu=vers + stimmen=voter|voter pour
+sich einsetzen|ein=dedans + setzen=poser|se mettre dedans (s'engager)
+vorschlagen|vor=devant + schlagen=frapper, poser|poser devant
+aufpassen|auf=sur + passen=guetter|guetter sur (veiller)
+sich anpassen|an=à + passen=convenir|se rendre convenable à
+nachdenken|nach=après + denken=penser|penser après coup
+abhängen|ab=de + hängen=pendre|pendre de
+aufhören|auf=vers le haut + hören=écouter|dresser l'oreille (et cesser ce qu'on fait)
+anfangen|an=au début + fangen=attraper|attraper au début
+umgehen|um=autour + gehen=aller|aller autour
+sich auseinandersetzen|auseinander=à part + setzen=poser|poser les choses à part
+beitragen|bei=auprès + tragen=porter|porter sa part auprès
+sich weiterbilden|weiter=plus loin + bilden=former|se former plus loin
+sich durchsetzen|durch=à travers + setzen=poser|se poser à travers les obstacles
+umsetzen|um=changement + setzen=poser|poser autrement (dans le réel)
+abschaffen|ab=loin + schaffen=faire|faire partir
+einführen|ein=dedans + führen=mener|mener dedans
+aussterben|aus=jusqu'au bout + sterben=mourir|mourir jusqu'au dernier
+sich auswirken|aus=dehors + wirken=agir|agir vers l'extérieur
+sich anstecken|an=contre + stecken=accrocher|s'accrocher (une maladie)
+zurückweisen|zurück=en arrière + weisen=montrer|montrer le chemin du retour
+sich aufregen|auf=vers le haut + regen=remuer|se remuer vers le haut
+sich anfreunden|an=à + Freund=ami|se faire ami de
+stattfinden|statt=lieu + finden=trouver|trouver (son) lieu
+zuschauen|zu=vers + schauen=regarder|regarder vers
+mitmachen|mit=avec + machen=faire|faire avec
+aufwärmen|auf=à nouveau + wärmen=chauffer|chauffer à nouveau
+durchfallen|durch=à travers + fallen=tomber|tomber à travers
+nachschlagen|nach=après + schlagen=ouvrir (un livre)|ouvrir pour vérifier
+aufschreiben|auf=sur + schreiben=écrire|écrire sur (le papier)
+abschreiben|ab=depuis + schreiben=écrire|écrire depuis (un modèle)
+anrufen|an=à + rufen=appeler|appeler quelqu'un
+zurückrufen|zurück=en retour + rufen=appeler|appeler en retour
+auflegen|auf=sur + legen=poser|poser (le combiné) dessus
+herunterladen|herunter=vers le bas + laden=charger|charger vers le bas
+ausdrucken|aus=dehors + drucken=imprimer|faire sortir imprimé
+einschalten|ein=dedans + schalten=commuter|mettre en circuit
+ausschalten|aus=hors + schalten=commuter|mettre hors circuit
+aufladen|auf=à fond + laden=charger|charger à fond
+sich einloggen|ein=dedans + loggen=se connecter (anglais « log in »)|se connecter dedans
+mitteilen|mit=avec + teilen=partager|partager avec
+abbiegen|ab=hors du chemin + biegen=tourner|tourner hors du chemin
+aussehen|aus=dehors + sehen=voir|se voir de dehors

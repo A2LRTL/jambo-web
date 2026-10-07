@@ -112,9 +112,7 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
                 <SpeakButton text={word.example_de} />
               </div>
             </div>
-          ) : (
-            <p className="text-xs text-muted">Dis-le en allemand, avec l&apos;article si c&apos;est un nom.</p>
-          )}
+          ) : null}
         </div>
       </div>
 
