@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
 import { buildSession, markKnown, QUEUED_BOX, review, type Grade } from '@/lib/german/srs';
+import { recordAnswer } from '@/lib/german/history';
 import { addNewIntroduced, getNewPerDay, getProgress, newIntroducedToday, updateProgress } from '@/lib/german/progress';
 import { shuffle } from '@/lib/utils';
 import { markPracticed } from '@/components/NotificationSetup';
@@ -37,6 +38,7 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
   const [byId] = useState(() => new Map(deck.map((w) => [w.id, w])));
   const [queue, setQueue] = useState(() => planQueue(profile, deck));
   const [total] = useState(queue.length);
+  const [sessionId] = useState(() => new Date().toISOString());
   const [revealed, setRevealed] = useState(false);
   const [tally, setTally] = useState({ again: 0, hard: 0, good: 0, known: 0 });
 
@@ -60,6 +62,7 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
         title="Session terminée !"
         message={`${done} réponses · ${tally.good} faciles · ${tally.hard} difficiles · ${tally.again} ratées${tally.known ? ` · ${tally.known} déjà connus` : ''}`}
         onHome={() => router.push('/de')}
+        onRecent={() => router.push('/de/recent')}
       />
     );
   }
@@ -70,6 +73,7 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
     const now = new Date();
     const next = grade === 'known' ? markKnown(prev, word.id, now) : review(prev, word.id, grade, now);
     updateProgress(profile, [next]);
+    recordAnswer(profile, sessionId, word.id, grade);
     if (isNew) addNewIntroduced(profile, 1);
 
     setTally((t) => ({ ...t, [grade]: t[grade] + 1 }));
@@ -144,7 +148,9 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
   );
 }
 
-function Finished({ title, message, onHome }: { title: string; message: string; onHome: () => void }) {
+function Finished({ title, message, onHome, onRecent }: {
+  title: string; message: string; onHome: () => void; onRecent?: () => void;
+}) {
   return (
     <main className="flex flex-col min-h-dvh px-6 pb-10 pt-16 max-w-md mx-auto">
       <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center">
@@ -152,6 +158,12 @@ function Finished({ title, message, onHome }: { title: string; message: string; 
         <h1 className="text-3xl font-bold text-accent">{title}</h1>
         <p className="text-muted">{message}</p>
       </div>
+      {onRecent && (
+        <button type="button" onClick={onRecent}
+          className="w-full py-4 mb-3 rounded-xl border border-border bg-card text-ink font-semibold hover:border-accent transition-all">
+          Revoir les mots de la session
+        </button>
+      )}
       <button type="button" onClick={onHome}
         className="w-full py-4 rounded-xl bg-accent text-white font-semibold text-lg shadow-sm active:scale-[0.98] hover:bg-accent-dark transition-all">
         Retour

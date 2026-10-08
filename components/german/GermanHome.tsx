@@ -81,6 +81,11 @@ function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] })
       </div>
 
       <div className="flex flex-col gap-3 mb-8">
+        <button type="button" onClick={() => router.push('/de/recent')}
+          className="w-full py-4 px-5 rounded-xl border border-border bg-card text-left hover:border-accent transition-all active:scale-[0.98] shadow-sm">
+          <p className="text-sm font-bold text-ink">Révision</p>
+          <p className="text-xs text-muted mt-0.5">Les mots de tes dernières sessions, avec un mode « cacher l&apos;allemand »</p>
+        </button>
         <button type="button" onClick={() => router.push('/de/triage')} disabled={stats.untriaged === 0}
           className="w-full py-4 px-5 rounded-xl border border-border bg-card text-left hover:border-accent transition-all active:scale-[0.98] shadow-sm disabled:opacity-40">
           <p className="text-sm font-bold text-ink">Trier des mots</p>
