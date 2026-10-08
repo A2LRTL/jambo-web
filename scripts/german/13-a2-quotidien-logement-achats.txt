@@ -1,0 +1,106 @@
+# theme: quotidien
+N|der|Wecker|-|le réveil|||Mein Wecker klingelt um sechs Uhr.|Mon réveil sonne à six heures.|A2
+N|das|Frühstück|-e|le petit-déjeuner|||Zum Frühstück esse ich Müsli.|Au petit-déjeuner, je mange du muesli.|A2
+N|das|Mittagessen|-|le déjeuner|||Das Mittagessen ist um zwölf fertig.|Le déjeuner est prêt à midi.|A2
+N|das|Abendessen|-|le dîner|||Was gibt es heute zum Abendessen?|Qu'est-ce qu'il y a pour le dîner ce soir ?|A2
+N|die|Uhrzeit|-en|l'heure (indiquée)|||Kannst du mir die Uhrzeit sagen?|Tu peux me dire l'heure ?|A2
+N|der|Vormittag|-e|la matinée|||Am Vormittag bin ich im Büro.|Le matin, je suis au bureau.|A2
+N|der|Nachmittag|-e|l'après-midi|||Am Nachmittag gehe ich einkaufen.|L'après-midi, je fais les courses.|A2
+N|die|Woche|-n|la semaine|||Nächste Woche habe ich Urlaub.|La semaine prochaine, je suis en congé.|A2
+N|der|Monat|-e|le mois|||Die Miete zahle ich jeden Monat.|Je paie le loyer chaque mois.|A2
+N|der|Geburtstag|-e|l'anniversaire|||Wann hast du Geburtstag?|C'est quand ton anniversaire ?|A2
+N|das|Geschenk|-e|le cadeau|||Ich habe noch kein Geschenk für sie.|Je n'ai pas encore de cadeau pour elle.|A2
+N|die|Familie|-n|la famille|||Meine Familie wohnt in Lyon.|Ma famille habite à Lyon.|A2
+N|die|Eltern|null|les parents|||Am Sonntag besuche ich meine Eltern.|Dimanche, je rends visite à mes parents.|A2
+N|die|Geschwister|null|les frères et sœurs|||Hast du Geschwister?|Tu as des frères et sœurs ?|A2
+V|null|aufstehen|null|se lever|steht auf, stand auf, ist aufgestanden||Ich stehe jeden Tag um sieben auf.|Je me lève tous les jours à sept heures.|A2
+V|null|aufwachen|null|se réveiller|wacht auf, wachte auf, ist aufgewacht||Heute bin ich zu spät aufgewacht.|Aujourd'hui, je me suis réveillé trop tard.|A2
+V|null|einschlafen|null|s'endormir|schläft ein, schlief ein, ist eingeschlafen||Ich bin vor dem Fernseher eingeschlafen.|Je me suis endormi devant la télé.|A2
+V|null|sich waschen|null|se laver|wäscht sich, wusch sich, hat sich gewaschen||Die Kinder waschen sich vor dem Essen die Hände.|Les enfants se lavent les mains avant de manger.|A2
+V|null|duschen|null|se doucher|duscht, duschte, hat geduscht||Ich dusche lieber abends.|Je préfère me doucher le soir.|A2
+V|null|sich die Zähne putzen|null|se brosser les dents|putzt sich die Zähne, putzte sich die Zähne, hat sich die Zähne geputzt||Vergiss nicht, dir die Zähne zu putzen!|N'oublie pas de te brosser les dents !|A2
+V|null|besuchen|null|rendre visite à, visiter|besucht, besuchte, hat besucht||Wir besuchen morgen meine Großeltern.|Demain, nous rendons visite à mes grands-parents.|A2
+V|null|helfen|null|aider|hilft, half, hat geholfen|jdm. ~ bei + Dat|Kannst du mir beim Tragen helfen?|Tu peux m'aider à porter ?|A2
+V|null|vorhaben|null|avoir prévu, projeter|hat vor, hatte vor, hat vorgehabt||Was hast du am Wochenende vor?|Qu'est-ce que tu as prévu ce week-end ?|A2
+D|null|manchmal|null|parfois|||Manchmal fahre ich mit dem Rad zur Arbeit.|Parfois, je vais au travail à vélo.|A2
+D|null|oft|null|souvent|||Wir gehen oft ins Kino.|Nous allons souvent au cinéma.|A2
+D|null|selten|null|rarement|||Ich esse selten Fleisch.|Je mange rarement de la viande.|A2
+D|null|nie|null|jamais|||Er kommt nie pünktlich.|Il n'arrive jamais à l'heure.|A2
+D|null|immer|null|toujours|||Sie ist immer gut gelaunt.|Elle est toujours de bonne humeur.|A2
+D|null|früher|null|autrefois, avant|||Früher habe ich in Berlin gewohnt.|Avant, j'habitais à Berlin.|A2
+D|null|bald|null|bientôt|||Bis bald!|À bientôt !|A2
+D|null|gleich|null|tout de suite|||Ich komme gleich!|J'arrive tout de suite !|A2
+D|null|endlich|null|enfin|||Endlich ist Wochenende!|Enfin le week-end !|A2
+
+# theme: logement
+N|die|Wohnung|-en|l'appartement|||Unsere Wohnung hat drei Zimmer.|Notre appartement a trois pièces.|A2
+N|das|Zimmer|-|la pièce, la chambre|||Das Zimmer ist hell und ruhig.|La pièce est claire et calme.|A2
+N|die|Küche|-n|la cuisine (pièce)|||Wir essen meistens in der Küche.|Nous mangeons la plupart du temps dans la cuisine.|A2
+N|das|Bad|¨-er|la salle de bain|||Das Bad ist leider sehr klein.|La salle de bain est malheureusement très petite.|A2
+N|das|Schlafzimmer|-|la chambre à coucher|||Das Schlafzimmer liegt zum Garten.|La chambre donne sur le jardin.|A2
+N|das|Wohnzimmer|-|le salon|||Im Wohnzimmer steht ein großes Sofa.|Il y a un grand canapé dans le salon.|A2
+N|der|Flur|-e|le couloir, l'entrée|||Stell die Schuhe bitte in den Flur.|Mets les chaussures dans l'entrée, s'il te plaît.|A2
+N|die|Treppe|-n|l'escalier|||Der Aufzug ist kaputt, wir nehmen die Treppe.|L'ascenseur est en panne, on prend l'escalier.|A2
+N|der|Garten|Gärten|le jardin|||Im Sommer frühstücken wir im Garten.|En été, nous prenons le petit-déjeuner au jardin.|A2
+N|das|Fenster|-|la fenêtre|||Mach bitte das Fenster zu.|Ferme la fenêtre, s'il te plaît.|A2
+N|die|Tür|-en|la porte|||Jemand klopft an die Tür.|Quelqu'un frappe à la porte.|A2
+N|die|Wand|¨-e|le mur (intérieur)|||Wir streichen die Wände weiß.|Nous peignons les murs en blanc.|A2
+N|der|Boden|Böden|le sol, le plancher|||Die Tasche liegt auf dem Boden.|Le sac est par terre.|A2
+N|der|Tisch|-e|la table|||Das Essen steht auf dem Tisch.|Le repas est sur la table.|A2
+N|der|Stuhl|¨-e|la chaise|||Wir brauchen noch zwei Stühle.|Il nous faut encore deux chaises.|A2
+N|das|Bett|-en|le lit|||Ich gehe heute früh ins Bett.|Ce soir, je vais me coucher tôt.|A2
+N|der|Schrank|¨-e|l'armoire, le placard|||Die Gläser sind im Schrank.|Les verres sont dans le placard.|A2
+N|das|Regal|-e|l'étagère|||Die Bücher stehen im Regal.|Les livres sont sur l'étagère.|A2
+N|die|Lampe|-n|la lampe|||Die Lampe über dem Tisch ist kaputt.|La lampe au-dessus de la table est cassée.|A2
+N|die|Waschmaschine|-n|la machine à laver|||Die Waschmaschine läuft gerade.|La machine à laver tourne en ce moment.|A2
+N|die|Spülmaschine|-n|le lave-vaisselle|||Kannst du die Spülmaschine ausräumen?|Tu peux vider le lave-vaisselle ?|A2
+N|die|Klingel|-n|la sonnette|||Die Klingel funktioniert nicht.|La sonnette ne marche pas.|A2
+N|die|Garage|-n|le garage|||Das Auto steht in der Garage.|La voiture est au garage.|A2
+N|das|Haus|¨-er|la maison|||Sie haben ein Haus auf dem Land gekauft.|Ils ont acheté une maison à la campagne.|A2
+V|null|wohnen|null|habiter|wohnt, wohnte, hat gewohnt||Wo wohnst du?|Où habites-tu ?|A2
+V|null|aufmachen|null|ouvrir|macht auf, machte auf, hat aufgemacht||Kannst du bitte die Tür aufmachen?|Tu peux ouvrir la porte, s'il te plaît ?|A2
+V|null|zumachen|null|fermer|macht zu, machte zu, hat zugemacht||Mach bitte das Fenster zu, es ist kalt.|Ferme la fenêtre, s'il te plaît, il fait froid.|A2
+V|null|abschließen|null|fermer à clé|schließt ab, schloss ab, hat abgeschlossen||Hast du die Tür abgeschlossen?|Tu as fermé la porte à clé ?|A2
+V|null|staubsaugen|null|passer l'aspirateur|staubsaugt, staubsaugte, hat gestaubsaugt||Am Samstag staubsauge ich die ganze Wohnung.|Le samedi, je passe l'aspirateur dans tout l'appartement.|A2
+V|null|spülen|null|faire la vaisselle|spült, spülte, hat gespült||Wer spült heute?|Qui fait la vaisselle aujourd'hui ?|A2
+V|null|stellen|null|poser (debout), mettre|stellt, stellte, hat gestellt||Stell die Flasche in den Kühlschrank.|Mets la bouteille au frigo.|A2
+V|null|legen|null|poser (à plat), mettre|legt, legte, hat gelegt||Ich lege den Schlüssel auf den Tisch.|Je pose la clé sur la table.|A2
+V|null|hängen|null|accrocher|hängt, hängte, hat gehängt||Wir hängen das Bild an die Wand.|Nous accrochons le tableau au mur.|A2
+A|null|groß|null|grand|||Die Wohnung ist groß genug für uns.|L'appartement est assez grand pour nous.|A2
+A|null|klein|null|petit|||Das Zimmer ist leider sehr klein.|La pièce est malheureusement très petite.|A2
+A|null|dunkel|null|sombre|||Im Winter ist es hier schon um vier dunkel.|En hiver, il fait déjà nuit ici à quatre heures.|A2
+A|null|bequem|null|confortable|||Das Sofa ist sehr bequem.|Le canapé est très confortable.|A2
+A|null|leer|null|vide|||Der Kühlschrank ist fast leer.|Le frigo est presque vide.|A2
+A|null|voll|null|plein|||Der Bus war total voll.|Le bus était complètement plein.|A2
+
+# theme: achats
+N|der|Supermarkt|¨-e|le supermarché|||Der Supermarkt hat bis 22 Uhr geöffnet.|Le supermarché est ouvert jusqu'à 22 heures.|A2
+N|das|Geschäft|-e|le magasin|||Die Geschäfte sind sonntags geschlossen.|Les magasins sont fermés le dimanche.|A2
+N|die|Kasse|-n|la caisse|||Bitte zahlen Sie an der Kasse.|Veuillez payer à la caisse.|A2
+N|der|Preis|-e|le prix|||Der Preis ist mir zu hoch.|Le prix est trop élevé pour moi.|A2
+N|das|Geld|null|l'argent|||Ich habe kein Geld dabei.|Je n'ai pas d'argent sur moi.|A2
+N|die|Tüte|-n|le sac (plastique, papier)|||Brauchen Sie eine Tüte?|Il vous faut un sac ?|A2
+N|die|Kleidung|null|les vêtements|||Ich kaufe Kleidung meistens online.|J'achète les vêtements surtout en ligne.|A2
+N|die|Hose|-n|le pantalon|||Die Hose ist mir zu lang.|Le pantalon est trop long pour moi.|A2
+N|das|Hemd|-en|la chemise|||Er trägt ein weißes Hemd.|Il porte une chemise blanche.|A2
+N|der|Pullover|-|le pull|||Nimm einen Pullover mit, es wird kalt.|Prends un pull, il va faire froid.|A2
+N|die|Jacke|-n|la veste|||Deine Jacke hängt an der Garderobe.|Ta veste est au portemanteau.|A2
+N|der|Mantel|Mäntel|le manteau|||Im Winter trage ich einen dicken Mantel.|En hiver, je porte un manteau épais.|A2
+N|der|Schuh|-e|la chaussure|||Ich brauche neue Schuhe.|J'ai besoin de nouvelles chaussures.|A2
+N|das|Kleid|-er|la robe|||Sie trägt ein rotes Kleid.|Elle porte une robe rouge.|A2
+N|die|Tasche|-n|le sac, la poche|||Das Handy ist in meiner Tasche.|Le portable est dans mon sac.|A2
+N|das|Sonderangebot|-e|la promotion|||Die Äpfel sind heute im Sonderangebot.|Les pommes sont en promotion aujourd'hui.|A2
+N|das|Kilo|-s|le kilo|||Ein Kilo Tomaten, bitte.|Un kilo de tomates, s'il vous plaît.|A2
+N|das|Stück|-e|le morceau, la pièce|||Ich nehme zwei Stück Kuchen.|Je prends deux parts de gâteau.|A2
+V|null|einkaufen|null|faire les courses|kauft ein, kaufte ein, hat eingekauft||Ich kaufe nach der Arbeit ein.|Je fais les courses après le travail.|A2
+V|null|kaufen|null|acheter|kauft, kaufte, hat gekauft||Wir haben ein neues Sofa gekauft.|Nous avons acheté un nouveau canapé.|A2
+V|null|verkaufen|null|vendre|verkauft, verkaufte, hat verkauft||Er verkauft sein altes Fahrrad.|Il vend son vieux vélo.|A2
+V|null|zahlen|null|payer|zahlt, zahlte, hat gezahlt|bar / mit Karte ~|Kann ich mit Karte zahlen?|Je peux payer par carte ?|A2
+V|null|anziehen|null|mettre (un vêtement)|zieht an, zog an, hat angezogen||Zieh dir eine Jacke an!|Mets une veste !|A2
+V|null|tragen|null|porter|trägt, trug, hat getragen||Sie trägt heute eine Brille.|Aujourd'hui, elle porte des lunettes.|A2
+V|null|aussuchen|null|choisir|sucht aus, suchte aus, hat ausgesucht||Such dir etwas aus, ich lade dich ein.|Choisis quelque chose, je t'invite.|A2
+A|null|billig|null|bon marché|||Das T-Shirt war richtig billig.|Le t-shirt était vraiment pas cher.|A2
+A|null|eng|null|serré, étroit|||Die Hose ist mir zu eng.|Le pantalon est trop serré pour moi.|A2
+A|null|weit|null|large, loin|||Der Pullover ist schön weit.|Le pull est bien ample.|A2
+A|null|geöffnet|null|ouvert|||Die Apotheke ist heute bis 20 Uhr geöffnet.|La pharmacie est ouverte jusqu'à 20 heures aujourd'hui.|A2
+A|null|geschlossen|null|fermé|||Sonntags ist die Bäckerei geschlossen.|Le dimanche, la boulangerie est fermée.|A2

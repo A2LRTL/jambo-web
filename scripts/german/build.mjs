@@ -5,7 +5,7 @@
 // Batch format (one word per line, `|`-separated, `null` or empty = no value):
 //   # theme: <theme id>
 //   POS|article|lemma|plural|fr|forms|governs|example_de|example_fr
-// POS: N noun, V verb, A adjective, D adverb, O other. Optional 10th field: level (default B1).
+// POS: N noun, V verb, A adjective, D adverb, O other. Optional 10th field: level A2 / B1 / B2 (default B1).
 //
 // Word ids are derived from the lemma, so progress survives edits and new batches.
 // Homonyms get -2, -3… in file order: only ever APPEND homonyms, never insert before one.
@@ -54,7 +54,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.txt')).sort()) {
     if (pos === 'noun' && !['der', 'die', 'das'].includes(article)) errors.push(`${where} noun without der/die/das`);
     if (pos !== 'noun' && article) errors.push(`${where} article on a non-noun`);
     if (pos === 'verb' && !forms) errors.push(`${where} verb without forms`);
-    if (level && !['B1', 'B2'].includes(level)) errors.push(`${where} bad level "${level}"`);
+    if (level && !['A2', 'B1', 'B2'].includes(level)) errors.push(`${where} bad level "${level}"`);
 
     const key = `${article ?? ''} ${lemma} ${fr}`;
     if (seen.has(key)) errors.push(`${where} duplicate "${lemma}" (${fr})`);

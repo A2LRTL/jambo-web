@@ -61,7 +61,7 @@ export interface GermanWord {
   article: 'der' | 'die' | 'das' | null;
   plural: string | null;   // e.g. "-en", "¨-e", "–" (no plural)
   pos: GermanPos;
-  level: 'B1' | 'B2';
+  level: 'A2' | 'B1' | 'B2';
   theme: string;
   fr: string;
   forms: string | null;    // verbs: "entscheidet, entschied, hat entschieden"

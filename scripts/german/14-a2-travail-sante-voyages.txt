@@ -1,0 +1,83 @@
+# theme: travail
+N|die|Arbeit|-en|le travail|||Ich fahre mit dem Bus zur Arbeit.|Je vais au travail en bus.|A2
+N|der|Beruf|-e|le métier, la profession|||Was sind Sie von Beruf?|Quel est votre métier ?|A2
+N|die|Firma|Firmen|l'entreprise, la société|||Sie arbeitet bei einer kleinen Firma.|Elle travaille dans une petite entreprise.|A2
+N|das|Büro|-s|le bureau (lieu)|||Ich bin bis 17 Uhr im Büro.|Je suis au bureau jusqu'à 17 heures.|A2
+N|der|Chef|-s|le chef, le patron|||Mein Chef ist heute nicht da.|Mon chef n'est pas là aujourd'hui.|A2
+N|die|Pause|-n|la pause|||Um zwölf machen wir eine Pause.|À midi, nous faisons une pause.|A2
+N|die|Arbeitszeit|-en|les horaires de travail|||Meine Arbeitszeiten sind flexibel.|Mes horaires de travail sont flexibles.|A2
+N|der|Job|-s|le job, le boulot|||Er sucht einen neuen Job.|Il cherche un nouveau boulot.|A2
+N|der|Lohn|¨-e|le salaire (horaire, ouvrier)|||Der Lohn kommt am Monatsende.|Le salaire tombe en fin de mois.|A2
+N|der|Drucker|-|l'imprimante|||Der Drucker hat kein Papier mehr.|L'imprimante n'a plus de papier.|A2
+N|der|Computer|-|l'ordinateur|||Mein Computer ist sehr langsam.|Mon ordinateur est très lent.|A2
+V|null|Pause machen|null|faire une pause|macht Pause, machte Pause, hat Pause gemacht||Lass uns kurz Pause machen.|Faisons une petite pause.|A2
+V|null|schaffen|null|réussir à, y arriver|schafft, schaffte, hat geschafft||Ich schaffe das heute nicht mehr.|Je n'y arriverai plus aujourd'hui.|A2
+V|null|drucken|null|imprimer|druckt, druckte, hat gedruckt||Kannst du mir das Dokument drucken?|Tu peux m'imprimer le document ?|A2
+V|null|kopieren|null|photocopier, copier|kopiert, kopierte, hat kopiert||Ich kopiere schnell die Unterlagen.|Je photocopie vite les documents.|A2
+V|null|anmachen|null|allumer|macht an, machte an, hat angemacht||Mach bitte das Licht an.|Allume la lumière, s'il te plaît.|A2
+V|null|ausmachen|null|éteindre|macht aus, machte aus, hat ausgemacht||Vergiss nicht, den Computer auszumachen.|N'oublie pas d'éteindre l'ordinateur.|A2
+A|null|fertig|null|fini, prêt|||Das Essen ist gleich fertig.|Le repas est bientôt prêt.|A2
+A|null|frei|null|libre|||Morgen habe ich frei.|Demain, je suis en congé.|A2
+A|null|wichtig|null|important|||Das ist ein wichtiger Termin.|C'est un rendez-vous important.|A2
+A|null|dringend|null|urgent|||Ich muss dich dringend sprechen.|Je dois te parler d'urgence.|A2
+
+# theme: sante
+N|der|Arzt|¨-e|le médecin|||Ich muss morgen zum Arzt.|Je dois aller chez le médecin demain.|A2
+N|die|Ärztin|-nen|la médecin (femme)|||Die Ärztin hat mich untersucht.|La médecin m'a examiné.|A2
+N|der|Zahnarzt|¨-e|le dentiste|||Ich habe Angst vor dem Zahnarzt.|J'ai peur du dentiste.|A2
+N|das|Krankenhaus|¨-er|l'hôpital|||Er liegt seit zwei Tagen im Krankenhaus.|Il est à l'hôpital depuis deux jours.|A2
+N|der|Kopf|¨-e|la tête|||Mir tut der Kopf weh.|J'ai mal à la tête.|A2
+N|der|Bauch|¨-e|le ventre|||Nach dem Essen hatte ich Bauchschmerzen.|Après le repas, j'avais mal au ventre.|A2
+N|der|Rücken|-|le dos|||Vom vielen Sitzen tut mir der Rücken weh.|À force d'être assis, j'ai mal au dos.|A2
+N|der|Hals|¨-e|la gorge, le cou|||Ich habe Halsschmerzen.|J'ai mal à la gorge.|A2
+N|das|Bein|-e|la jambe|||Sie hat sich das Bein gebrochen.|Elle s'est cassé la jambe.|A2
+N|der|Arm|-e|le bras|||Mein Arm tut seit gestern weh.|J'ai mal au bras depuis hier.|A2
+N|die|Hand|¨-e|la main|||Wasch dir bitte die Hände.|Lave-toi les mains, s'il te plaît.|A2
+N|der|Fuß|¨-e|le pied|||Wir gehen zu Fuß.|Nous y allons à pied.|A2
+N|das|Auge|-n|l'œil|||Meine Augen sind müde.|Mes yeux sont fatigués.|A2
+N|der|Zahn|¨-e|la dent|||Mir tut ein Zahn weh.|J'ai mal à une dent.|A2
+N|der|Husten|null|la toux|||Ich habe seit einer Woche Husten.|Je tousse depuis une semaine.|A2
+N|der|Schnupfen|null|le rhume (nez qui coule)|||Bei Schnupfen trinke ich viel Tee.|Quand j'ai le rhume, je bois beaucoup de thé.|A2
+N|die|Tablette|-n|le comprimé|||Nehmen Sie zwei Tabletten am Tag.|Prenez deux comprimés par jour.|A2
+N|der|Unfall|¨-e|l'accident|||Er hatte einen Unfall mit dem Fahrrad.|Il a eu un accident à vélo.|A2
+V|null|sich hinlegen|null|s'allonger|legt sich hin, legte sich hin, hat sich hingelegt||Ich lege mich kurz hin.|Je m'allonge un moment.|A2
+V|null|brechen|null|casser|bricht, brach, hat gebrochen|sich (Dat) etw. ~|Er hat sich den Arm gebrochen.|Il s'est cassé le bras.|A2
+V|null|bluten|null|saigner|blutet, blutete, hat geblutet||Die Wunde blutet stark.|La plaie saigne beaucoup.|A2
+V|null|schlafen|null|dormir|schläft, schlief, hat geschlafen||Ich habe schlecht geschlafen.|J'ai mal dormi.|A2
+A|null|schwach|null|faible|||Nach dem Fieber fühle ich mich noch schwach.|Après la fièvre, je me sens encore faible.|A2
+A|null|stark|null|fort|||Er hat starke Schmerzen.|Il a de fortes douleurs.|A2
+A|null|verletzt|null|blessé|||Bei dem Unfall wurde niemand verletzt.|Personne n'a été blessé dans l'accident.|A2
+
+# theme: voyages
+N|der|Bahnhof|¨-e|la gare|||Wir treffen uns am Bahnhof.|On se retrouve à la gare.|A2
+N|der|Flughafen|Flughäfen|l'aéroport|||Wie komme ich zum Flughafen?|Comment je vais à l'aéroport ?|A2
+N|der|Zug|¨-e|le train|||Der Zug fährt um 8:15 Uhr ab.|Le train part à 8 h 15.|A2
+N|der|Bus|-se|le bus|||Ich nehme den Bus um halb acht.|Je prends le bus de sept heures et demie.|A2
+N|die|U-Bahn|-en|le métro|||Mit der U-Bahn bist du in zehn Minuten da.|En métro, tu y es en dix minutes.|A2
+N|die|Straßenbahn|-en|le tramway|||Die Straßenbahn hält direkt vor dem Haus.|Le tram s'arrête juste devant la maison.|A2
+N|das|Fahrrad|¨-er|le vélo|||Ich fahre jeden Tag mit dem Fahrrad.|Je fais du vélo tous les jours.|A2
+N|das|Auto|-s|la voiture|||Wir fahren mit dem Auto nach Italien.|Nous allons en Italie en voiture.|A2
+N|das|Flugzeug|-e|l'avion|||Das Flugzeug landet um 14 Uhr.|L'avion atterrit à 14 heures.|A2
+N|der|Koffer|-|la valise|||Mein Koffer ist zu schwer.|Ma valise est trop lourde.|A2
+N|das|Hotel|-s|l'hôtel|||Das Hotel liegt direkt am Meer.|L'hôtel est juste au bord de la mer.|A2
+N|das|Meer|-e|la mer|||Im Sommer fahren wir ans Meer.|En été, nous allons à la mer.|A2
+N|der|Berg|-e|la montagne|||Wir sind auf den Berg gestiegen.|Nous sommes montés sur la montagne.|A2
+N|das|Ausland|null|l'étranger|||Sie möchte ein Jahr im Ausland leben.|Elle voudrait vivre un an à l'étranger.|A2
+N|der|Fahrplan|¨-e|l'horaire (transports)|||Laut Fahrplan kommt der Bus in fünf Minuten.|D'après l'horaire, le bus arrive dans cinq minutes.|A2
+N|der|Ausgang|¨-e|la sortie|||Der Ausgang ist auf der linken Seite.|La sortie est sur la gauche.|A2
+N|der|Eingang|¨-e|l'entrée|||Wir warten am Eingang auf euch.|On vous attend à l'entrée.|A2
+N|die|Landkarte|-n|la carte (géographique)|||Ohne Landkarte hätten wir uns verlaufen.|Sans carte, nous nous serions perdus.|A2
+V|null|fahren|null|aller (en véhicule), conduire|fährt, fuhr, ist gefahren||Wir fahren morgen nach Hamburg.|Nous partons demain pour Hambourg.|A2
+V|null|fliegen|null|prendre l'avion, voler|fliegt, flog, ist geflogen||Wir fliegen im Mai nach Spanien.|En mai, nous allons en Espagne en avion.|A2
+V|null|einsteigen|null|monter (dans un véhicule)|steigt ein, stieg ein, ist eingestiegen||Bitte schnell einsteigen!|Montez vite, s'il vous plaît !|A2
+V|null|aussteigen|null|descendre (d'un véhicule)|steigt aus, stieg aus, ist ausgestiegen||Wir müssen an der nächsten Haltestelle aussteigen.|Nous devons descendre au prochain arrêt.|A2
+V|null|reisen|null|voyager|reist, reiste, ist gereist||Sie reist gern allein.|Elle aime voyager seule.|A2
+V|null|landen|null|atterrir|landet, landete, ist gelandet||Wir sind pünktlich gelandet.|Nous avons atterri à l'heure.|A2
+V|null|zurückkommen|null|revenir|kommt zurück, kam zurück, ist zurückgekommen||Wann kommst du aus dem Urlaub zurück?|Quand reviens-tu de vacances ?|A2
+V|null|mitnehmen|null|emporter, emmener|nimmt mit, nahm mit, hat mitgenommen||Nimm einen Regenschirm mit!|Prends un parapluie !|A2
+A|null|nah|null|proche|||Der Strand ist ganz nah.|La plage est toute proche.|A2
+D|null|geradeaus|null|tout droit|||Gehen Sie immer geradeaus.|Allez toujours tout droit.|A2
+D|null|links|null|à gauche|||Die Apotheke ist links neben der Bank.|La pharmacie est à gauche de la banque.|A2
+D|null|rechts|null|à droite|||Biegen Sie an der Ampel rechts ab.|Au feu, tournez à droite.|A2
+D|null|hier|null|ici|||Wohnen Sie schon lange hier?|Vous habitez ici depuis longtemps ?|A2
+D|null|dort|null|là-bas|||Dort drüben ist der Eingang.|L'entrée est là-bas.|A2

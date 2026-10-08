@@ -1,0 +1,117 @@
+# theme: relations
+N|der|Freund|-e|l'ami, le copain|||Ich gehe heute mit einem Freund essen.|Ce soir, je vais manger avec un ami.|A2
+N|die|Freundin|-nen|l'amie, la copine|||Seine Freundin kommt aus Spanien.|Sa copine vient d'Espagne.|A2
+N|der|Mann|¨-er|l'homme, le mari|||Ihr Mann arbeitet bei der Bahn.|Son mari travaille à la Deutsche Bahn.|A2
+N|die|Frau|-en|la femme, l'épouse|||Darf ich Ihnen meine Frau vorstellen?|Puis-je vous présenter ma femme ?|A2
+N|das|Kind|-er|l'enfant|||Die Kinder spielen im Garten.|Les enfants jouent dans le jardin.|A2
+N|der|Sohn|¨-e|le fils|||Unser Sohn geht in die zweite Klasse.|Notre fils est en CE1.|A2
+N|die|Tochter|Töchter|la fille (enfant)|||Ihre Tochter studiert in Wien.|Sa fille fait ses études à Vienne.|A2
+N|die|Großeltern|null|les grands-parents|||Die Großeltern wohnen auf dem Land.|Les grands-parents habitent à la campagne.|A2
+N|der|Gast|¨-e|l'invité, le client (restaurant)|||Heute Abend haben wir Gäste.|Ce soir, nous avons des invités.|A2
+N|die|Party|-s|la fête, la soirée|||Kommst du am Samstag zu meiner Party?|Tu viens à ma soirée samedi ?|A2
+V|null|kennen|null|connaître|kennt, kannte, hat gekannt||Kennst du meinen Bruder?|Tu connais mon frère ?|A2
+V|null|treffen|null|rencontrer, retrouver|trifft, traf, hat getroffen||Ich habe gestern zufällig deinen Bruder getroffen.|J'ai croisé ton frère par hasard hier.|A2
+V|null|vorstellen|null|présenter|stellt vor, stellte vor, hat vorgestellt|jdm. jdn. ~|Darf ich Ihnen meinen Kollegen vorstellen?|Puis-je vous présenter mon collègue ?|A2
+V|null|lieben|null|aimer (d'amour)|liebt, liebte, hat geliebt||Ich liebe dich.|Je t'aime.|A2
+V|null|küssen|null|embrasser|küsst, küsste, hat geküsst||Er küsst sie zum Abschied.|Il l'embrasse pour lui dire au revoir.|A2
+V|null|sich freuen|null|se réjouir, être content|freut sich, freute sich, hat sich gefreut||Ich freue mich, dich zu sehen!|Je suis content de te voir !|A2
+A|null|traurig|null|triste|||Warum bist du so traurig?|Pourquoi es-tu si triste ?|A2
+A|null|glücklich|null|heureux|||Sie sehen sehr glücklich aus.|Ils ont l'air très heureux.|A2
+A|null|ledig|null|célibataire|||Er ist 35 und noch ledig.|Il a 35 ans et il est encore célibataire.|A2
+A|null|allein|null|seul|||Am Wochenende war ich allein zu Hause.|Le week-end, j'étais seul à la maison.|A2
+
+# theme: loisirs
+N|das|Kino|-s|le cinéma|||Gehen wir heute Abend ins Kino?|On va au cinéma ce soir ?|A2
+N|der|Film|-e|le film|||Der Film war richtig spannend.|Le film était vraiment palpitant.|A2
+N|das|Theater|-|le théâtre|||Wir haben Karten fürs Theater.|Nous avons des billets pour le théâtre.|A2
+N|das|Konzert|-e|le concert|||Das Konzert beginnt um acht.|Le concert commence à huit heures.|A2
+N|das|Museum|Museen|le musée|||Am Sonntag ist das Museum kostenlos.|Le dimanche, le musée est gratuit.|A2
+N|die|Musik|null|la musique|||Welche Musik hörst du gern?|Quelle musique aimes-tu écouter ?|A2
+N|das|Buch|¨-er|le livre|||Ich lese gerade ein spannendes Buch.|Je lis en ce moment un livre passionnant.|A2
+N|das|Fußballspiel|-e|le match de foot|||Wir schauen uns das Fußballspiel im Fernsehen an.|Nous regardons le match de foot à la télé.|A2
+N|der|Fernseher|-|la télévision (appareil)|||Der Fernseher läuft den ganzen Tag.|La télé est allumée toute la journée.|A2
+N|der|Strand|¨-e|la plage|||Wir liegen den ganzen Tag am Strand.|Nous restons toute la journée à la plage.|A2
+N|der|Park|-s|le parc|||Die Kinder spielen im Park.|Les enfants jouent au parc.|A2
+V|null|spielen|null|jouer|spielt, spielte, hat gespielt||Spielst du ein Instrument?|Tu joues d'un instrument ?|A2
+V|null|lesen|null|lire|liest, las, hat gelesen||Abends lese ich gern im Bett.|Le soir, j'aime lire au lit.|A2
+V|null|hören|null|entendre, écouter|hört, hörte, hat gehört||Ich höre beim Kochen Radio.|J'écoute la radio en cuisinant.|A2
+V|null|fernsehen|null|regarder la télé|sieht fern, sah fern, hat ferngesehen||Wir sehen abends selten fern.|Le soir, nous regardons rarement la télé.|A2
+V|null|fotografieren|null|photographier|fotografiert, fotografierte, hat fotografiert||Er fotografiert gern Tiere.|Il aime photographier les animaux.|A2
+V|null|Rad fahren|null|faire du vélo|fährt Rad, fuhr Rad, ist Rad gefahren||Am Wochenende fahren wir Rad.|Le week-end, nous faisons du vélo.|A2
+V|null|laufen|null|courir, marcher|läuft, lief, ist gelaufen||Ich laufe jeden Morgen fünf Kilometer.|Je cours cinq kilomètres chaque matin.|A2
+V|null|spazieren gehen|null|se promener|geht spazieren, ging spazieren, ist spazieren gegangen||Nach dem Essen gehen wir spazieren.|Après le repas, nous allons nous promener.|A2
+V|null|sich treffen|null|se retrouver|trifft sich, traf sich, hat sich getroffen|mit + Dat ~|Wir treffen uns um acht vor dem Kino.|On se retrouve à huit heures devant le cinéma.|A2
+A|null|interessant|null|intéressant|||Die Ausstellung war sehr interessant.|L'exposition était très intéressante.|A2
+A|null|toll|null|génial|||Das Wetter war toll!|Il a fait un temps génial !|A2
+A|null|schön|null|beau, agréable|||Wir hatten einen schönen Abend.|Nous avons passé une belle soirée.|A2
+
+# theme: alimentation
+N|das|Brot|-e|le pain|||Ich hole schnell Brot vom Bäcker.|Je vais vite chercher du pain chez le boulanger.|A2
+N|das|Brötchen|-|le petit pain|||Sonntags gibt es frische Brötchen.|Le dimanche, il y a des petits pains frais.|A2
+N|der|Käse|-|le fromage|||Französischer Käse ist sehr beliebt.|Le fromage français est très apprécié.|A2
+N|die|Wurst|¨-e|la saucisse, la charcuterie|||Möchtest du Wurst oder Käse aufs Brot?|Tu veux de la charcuterie ou du fromage sur ton pain ?|A2
+N|das|Ei|-er|l'œuf|||Ich esse zum Frühstück ein Ei.|Je mange un œuf au petit-déjeuner.|A2
+N|die|Milch|null|le lait|||Trinkst du den Kaffee mit Milch?|Tu bois ton café avec du lait ?|A2
+N|der|Zucker|null|le sucre|||Ohne Zucker, bitte.|Sans sucre, s'il vous plaît.|A2
+N|das|Salz|null|le sel|||Gib mir bitte das Salz.|Passe-moi le sel, s'il te plaît.|A2
+N|der|Kuchen|-|le gâteau|||Ich habe einen Kuchen gebacken.|J'ai fait un gâteau.|A2
+N|die|Kartoffel|-n|la pomme de terre|||Heute gibt es Kartoffeln mit Gemüse.|Aujourd'hui, il y a des pommes de terre avec des légumes.|A2
+N|der|Reis|null|le riz|||Der Reis braucht zwanzig Minuten.|Le riz cuit en vingt minutes.|A2
+N|der|Apfel|Äpfel|la pomme|||Ein Apfel am Tag ist gesund.|Une pomme par jour, c'est bon pour la santé.|A2
+N|das|Wasser|null|l'eau|||Ein Glas Wasser, bitte.|Un verre d'eau, s'il vous plaît.|A2
+N|der|Saft|¨-e|le jus|||Die Kinder trinken Apfelsaft.|Les enfants boivent du jus de pomme.|A2
+N|das|Glas|¨-er|le verre|||Möchtest du ein Glas Wein?|Tu veux un verre de vin ?|A2
+N|der|Teller|-|l'assiette|||Stell die Teller bitte auf den Tisch.|Mets les assiettes sur la table, s'il te plaît.|A2
+N|das|Restaurant|-s|le restaurant|||Wir haben im Restaurant einen Tisch reserviert.|Nous avons réservé une table au restaurant.|A2
+V|null|essen|null|manger|isst, aß, hat gegessen||Was isst du am liebsten?|Qu'est-ce que tu préfères manger ?|A2
+V|null|trinken|null|boire|trinkt, trank, hat getrunken||Ich trinke morgens nur Tee.|Le matin, je ne bois que du thé.|A2
+A|null|warm|null|chaud|||Das Essen ist noch warm.|Le repas est encore chaud.|A2
+A|null|kalt|null|froid|||Das Bier ist schön kalt.|La bière est bien fraîche.|A2
+
+# theme: etudes
+N|die|Sprache|-n|la langue|||Wie viele Sprachen sprichst du?|Combien de langues parles-tu ?|A2
+N|das|Wort|¨-er|le mot|||Dieses Wort kenne ich nicht.|Je ne connais pas ce mot.|A2
+N|der|Satz|¨-e|la phrase|||Bitte bilden Sie einen Satz.|Formez une phrase, s'il vous plaît.|A2
+N|die|Frage|-n|la question|||Ich habe eine Frage.|J'ai une question.|A2
+N|die|Antwort|-en|la réponse|||Die Antwort ist richtig.|La réponse est juste.|A2
+N|die|Klasse|-n|la classe|||In meiner Klasse sind zwanzig Schüler.|Il y a vingt élèves dans ma classe.|A2
+N|das|Heft|-e|le cahier|||Schreibt die Wörter ins Heft.|Écrivez les mots dans le cahier.|A2
+N|der|Kugelschreiber|-|le stylo-bille|||Hast du einen Kugelschreiber für mich?|Tu as un stylo pour moi ?|A2
+N|die|Universität|-en|l'université|||Sie studiert an der Universität Heidelberg.|Elle étudie à l'université de Heidelberg.|A2
+V|null|fehlen|null|manquer, être absent|fehlt, fehlte, hat gefehlt||Wer fehlt heute?|Qui est absent aujourd'hui ?|A2
+V|null|ankreuzen|null|cocher|kreuzt an, kreuzte an, hat angekreuzt||Kreuzen Sie die richtige Antwort an.|Cochez la bonne réponse.|A2
+V|null|zuhören|null|écouter (quelqu'un)|hört zu, hörte zu, hat zugehört|jdm. ~|Hör mir bitte zu!|Écoute-moi, s'il te plaît !|A2
+A|null|schwer|null|difficile, lourd|||Die Prüfung war ziemlich schwer.|L'examen était assez difficile.|A2
+
+# theme: ville
+N|die|Stadt|¨-e|la ville|||Ich wohne lieber in der Stadt.|Je préfère habiter en ville.|A2
+N|das|Dorf|¨-er|le village|||Sie kommt aus einem kleinen Dorf.|Elle vient d'un petit village.|A2
+N|die|Straße|-n|la rue|||In welcher Straße wohnst du?|Dans quelle rue habites-tu ?|A2
+N|der|Platz|¨-e|la place|||Das Café ist am Marktplatz.|Le café est sur la place du marché.|A2
+N|die|Brücke|-n|le pont|||Geh über die Brücke und dann links.|Traverse le pont puis va à gauche.|A2
+N|die|Kirche|-n|l'église|||Die Kirche ist über 800 Jahre alt.|L'église a plus de 800 ans.|A2
+N|die|Post|null|la poste, le courrier|||Ich muss noch zur Post.|Je dois encore passer à la poste.|A2
+N|die|Bank|-en|la banque|||Die Bank öffnet um neun.|La banque ouvre à neuf heures.|A2
+N|die|Sonne|-n|le soleil|||Heute scheint die Sonne.|Aujourd'hui, il y a du soleil.|A2
+N|der|Wind|-e|le vent|||Es weht ein kalter Wind.|Il souffle un vent froid.|A2
+A|null|windig|null|venteux|||Am Meer ist es oft windig.|Au bord de la mer, il y a souvent du vent.|A2
+A|null|heiß|null|très chaud|||Im August war es sehr heiß.|En août, il faisait très chaud.|A2
+
+# theme: connecteurs
+O|null|weil|null|parce que|||Ich bleibe zu Hause, weil ich krank bin.|Je reste à la maison parce que je suis malade.|A2
+O|null|dass|null|que|||Ich glaube, dass er recht hat.|Je crois qu'il a raison.|A2
+O|null|wenn|null|quand, si|||Wenn es regnet, nehme ich den Bus.|Quand il pleut, je prends le bus.|A2
+O|null|als|null|quand (passé, une fois)|||Als ich klein war, wohnten wir in München.|Quand j'étais petit, nous habitions à Munich.|A2
+O|null|ob|null|si (interrogation indirecte)|||Weißt du, ob der Laden heute offen ist?|Tu sais si le magasin est ouvert aujourd'hui ?|A2
+O|null|aber|null|mais|||Das Hotel ist schön, aber teuer.|L'hôtel est beau, mais cher.|A2
+O|null|oder|null|ou|||Möchtest du Tee oder Kaffee?|Tu veux du thé ou du café ?|A2
+O|null|denn|null|car|||Ich gehe früh ins Bett, denn ich bin müde.|Je vais me coucher tôt, car je suis fatigué.|A2
+D|null|dann|null|ensuite, alors|||Zuerst essen wir, dann gehen wir spazieren.|D'abord on mange, ensuite on va se promener.|A2
+D|null|zuerst|null|d'abord|||Zuerst muss ich die Wohnung putzen.|D'abord, je dois nettoyer l'appartement.|A2
+D|null|danach|null|après, ensuite|||Danach haben wir einen Kaffee getrunken.|Après, nous avons bu un café.|A2
+D|null|leider|null|malheureusement|||Ich kann leider nicht kommen.|Malheureusement, je ne peux pas venir.|A2
+D|null|vielleicht|null|peut-être|||Vielleicht regnet es morgen.|Il va peut-être pleuvoir demain.|A2
+D|null|natürlich|null|bien sûr|||Natürlich helfe ich dir!|Bien sûr que je t'aide !|A2
+D|null|sicher|null|sûrement|||Er kommt sicher gleich.|Il va sûrement arriver tout de suite.|A2
+D|null|genug|null|assez|||Wir haben genug Zeit.|Nous avons assez de temps.|A2
+D|null|zusammen|null|ensemble|||Wir fahren zusammen in den Urlaub.|Nous partons en vacances ensemble.|A2

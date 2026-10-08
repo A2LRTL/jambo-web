@@ -57,7 +57,7 @@ function parts(word: GermanWord): Parts | null {
 
 function presentForms(p: Parts): string[] {
   const stem = verbStem(p.base);
-  const ich = stem.endsWith('el') ? `${stem.slice(0, -2)}le` : `${stem}e`;
+  const ich = p.base.endsWith('eln') ? `${stem.slice(0, -2)}le` : `${stem}e`;
   // du: from the er-form, so stem changes carry over (nimmt → nimmst, hält → hältst, lädt → lädst)
   let du: string;
   if (stem.endsWith('t') && !p.present3.endsWith('et')) du = `${p.present3}st`;

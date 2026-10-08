@@ -1,3 +1,5 @@
+import type { GermanWord } from '@/types';
+
 export const GERMAN_THEME_LABELS: Record<string, string> = {
   quotidien:      'Vie quotidienne',
   logement:       'Logement',
@@ -22,3 +24,5 @@ export const GERMAN_THEME_LABELS: Record<string, string> = {
 };
 
 export const GERMAN_THEMES = Object.keys(GERMAN_THEME_LABELS);
+
+export const GERMAN_LEVELS: GermanWord['level'][] = ['A2', 'B1', 'B2'];

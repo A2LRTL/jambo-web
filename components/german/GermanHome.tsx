@@ -37,7 +37,7 @@ function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] })
 
   return (
     <main className="max-w-md mx-auto px-6 pb-12">
-      <GermanHeader kicker="🇩🇪 Deutsch" title="Vocabulaire B1 → B2" back="/" />
+      <GermanHeader kicker="🇩🇪 Deutsch" title="Vocabulaire A2 → B2" back="/" />
 
       {/* Today */}
       <div className="p-5 rounded-2xl border border-border bg-card shadow-sm mb-6">

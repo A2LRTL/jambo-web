@@ -43,6 +43,11 @@ test('stem changes and t/d stems: halten, einladen, vergessen, sterben', () => {
   assert.equal(conjugate(verb('sterben', 'stirbt, starb, ist gestorben'))!.perfect[3], 'sind gestorben');
 });
 
+test('-eln drops the e (ich sammle), but not -elen (ich spiele)', () => {
+  assert.equal(conjugate(verb('sammeln', 'sammelt, sammelte, hat gesammelt'))!.present[0], 'sammle');
+  assert.equal(conjugate(verb('spielen', 'spielt, spielte, hat gespielt'))!.present[0], 'spiele');
+});
+
 test('-eln / -ern verbs and tun', () => {
   assert.equal(conjugate(verb('klingeln', 'klingelt, klingelte, hat geklingelt'))!.present[0], 'klingle');
   assert.equal(conjugate(verb('sich ärgern', 'ärgert sich, ärgerte sich, hat sich geärgert'))!.present[0], 'ärgere mich');

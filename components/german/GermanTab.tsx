@@ -19,7 +19,7 @@ export default function GermanTab({ profile }: { profile: string }) {
 
   return (
     <div className="p-5 rounded-2xl border border-border bg-card shadow-sm">
-      <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-1">Vocabulaire B1 → B2</p>
+      <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-1">Vocabulaire A2 → B2</p>
       <p className="font-bold text-ink text-lg leading-snug mb-1">
         {!started ? 'Commence par trier tes premiers mots' : due > 0 ? `${due} mots à réviser` : 'Tout est à jour ✓'}
       </p>
