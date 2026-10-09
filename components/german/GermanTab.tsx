@@ -3,14 +3,18 @@
 import { useRouter } from 'next/navigation';
 import { isDue, KNOWN_BOX, QUEUED_BOX } from '@/lib/german/srs';
 import { useGermanProgress } from '@/lib/german/progress';
+import { useCustomWords } from '@/lib/custom-words';
 
 /** Summary card shown in the home page's 🇩🇪 tab — the full dashboard lives at /de. */
 export default function GermanTab({ profile }: { profile: string }) {
   const router = useRouter();
   const progress = useGermanProgress(profile);
-  if (!progress) return null;
+  const custom = useCustomWords(profile);
+  if (!progress || !custom) return null;
 
-  const entries = Object.values(progress);
+  // Leave out progress kept for own words that have since been deleted
+  const ownIds = new Set(custom.map((w) => w.id));
+  const entries = Object.values(progress).filter((p) => !p.wordId.startsWith('my_') || ownIds.has(p.wordId));
   const now = new Date();
   const due = entries.filter((p) => isDue(p, now)).length;
   const known = entries.filter((p) => p.box >= KNOWN_BOX).length;

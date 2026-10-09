@@ -70,6 +70,7 @@ export interface GermanWord {
   example_fr: string;
   // Compound breakdown: Feier (fête) + Abend (soir) → « le soir de fête »
   compound: { parts: { de: string; fr: string }[]; literal: string } | null;
+  custom?: true;           // added by the learner (lib/german/custom.ts)
 }
 
 export interface WordProgress {

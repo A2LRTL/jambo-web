@@ -3,7 +3,7 @@
 
 import { useSyncExternalStore } from 'react';
 import { supabase } from '@/lib/supabase';
-import type { WordProgress } from '@/types';
+import type { GermanWord, WordProgress } from '@/types';
 import type { ProgressMap } from './srs';
 
 const TABLE = 'de_progress';
@@ -171,4 +171,22 @@ export function getNewPerDay(): number {
 
 export function setNewPerDay(n: number) {
   writeJSON(SETTINGS_KEY, { ...readJSON(SETTINGS_KEY, {}), newPerDay: n });
+}
+
+// ── Level of new words ────────────────────────────────────────────────────────
+
+/** `null` = every level. Only filters which new words come in; reviews are never filtered. */
+export type LevelChoice = GermanWord['level'] | null;
+
+/** Own words are always in, whatever the level. */
+export function inLevel(w: Pick<GermanWord, 'level' | 'custom'>, level: LevelChoice): boolean {
+  return !level || w.level === level || !!w.custom;
+}
+
+export function getLevel(): LevelChoice {
+  return readJSON<{ level?: LevelChoice }>(SETTINGS_KEY, {}).level ?? null;
+}
+
+export function setLevel(level: LevelChoice) {
+  writeJSON(SETTINGS_KEY, { ...readJSON(SETTINGS_KEY, {}), level });
 }

@@ -21,6 +21,7 @@ export const GERMAN_THEME_LABELS: Record<string, string> = {
   communication:  'Communication & numérique',
   ville:          'Ville, nature & météo',
   caractere:      'Corps & caractère',
+  perso:          'Mes mots',
 };
 
 export const GERMAN_THEMES = Object.keys(GERMAN_THEME_LABELS);

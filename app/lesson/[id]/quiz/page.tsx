@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import type { Lesson } from '@/types';
 import ExerciseClient from '@/components/ExerciseClient';
+import { MyQuiz } from '@/components/mine/MyPractice';
+import { isCustomLang } from '@/lib/custom-langs';
 import lesson1 from '@/data/lesson-1.json';
 import { generateKirundiLesson, generateSwahiliLesson, reverseLesson } from '@/lib/exercises';
 
@@ -13,6 +15,13 @@ export default async function QuizPage({
 }) {
   const { id } = await params;
   const { mode } = await searchParams;
+
+  // The learner's own words live on the device, so the quiz is built client-side
+  if (id.startsWith('mine-')) {
+    const lang = id.slice('mine-'.length);
+    if (!isCustomLang(lang)) notFound();
+    return <MyQuiz lang={lang} mode={mode} />;
+  }
 
   let lesson: Lesson | null = null;
   if (id === 'lesson-1') lesson = lesson1 as Lesson;

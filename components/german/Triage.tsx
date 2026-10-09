@@ -4,11 +4,13 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
 import { markKnown, markToLearn } from '@/lib/german/srs';
-import { getProgress, updateProgress, useGermanProgress } from '@/lib/german/progress';
+import { getLevel, getProgress, inLevel, setLevel, updateProgress, useGermanProgress, type LevelChoice } from '@/lib/german/progress';
 import { GERMAN_THEME_LABELS } from '@/lib/german/themes';
+import { useGermanDeck } from '@/lib/german/custom';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
 import ThemeChips from './ThemeChips';
+import LevelChips from './LevelChips';
 import { Example, GrammarLine, Headword, headword, SpeakButton } from './WordView';
 
 const BATCH = 20;
@@ -19,14 +21,16 @@ export default function Triage({ deck }: { deck: GermanWord[] }) {
   return <TriageRunner profile={profile} deck={deck} />;
 }
 
-function TriageRunner({ profile, deck }: { profile: string; deck: GermanWord[] }) {
+function TriageRunner({ profile, deck: builtIn }: { profile: string; deck: GermanWord[] }) {
   const router = useRouter();
+  const deck = useGermanDeck(profile, builtIn);
   const progress = useGermanProgress(profile);
   const [theme, setTheme] = useState<string | null>(null);
+  const [level, setLevelState] = useState(getLevel);
   const [doneInBatch, setDoneInBatch] = useState(0);
 
   // The current word is simply the first untriaged one: triaging it moves on
-  const untriaged = deck.filter((w) => !progress?.[w.id] && (!theme || w.theme === theme));
+  const untriaged = deck.filter((w) => !progress?.[w.id] && inLevel(w, level) && (!theme || w.theme === theme));
   const word = doneInBatch < BATCH ? untriaged[0] : undefined;
 
   if (!progress) return null;
@@ -40,13 +44,15 @@ function TriageRunner({ profile, deck }: { profile: string; deck: GermanWord[] }
   };
 
   const selectTheme = (t: string | null) => { setTheme(t); setDoneInBatch(0); };
+  const selectLevel = (l: LevelChoice) => { setLevel(l); setLevelState(l); setDoneInBatch(0); };
 
   return (
     <main className="flex flex-col min-h-dvh max-w-md mx-auto px-6 pb-10">
       <GermanHeader kicker="Tri" title={theme ? GERMAN_THEME_LABELS[theme] : 'Tous les thèmes'}
         right={<p className="text-sm text-muted font-medium">{Math.min(doneInBatch, BATCH)} / {BATCH}</p>} />
 
-      <ThemeChips deck={deck} value={theme} onChange={selectTheme} count={(t) => deck.filter((w) => w.theme === t && !progress[w.id]).length} />
+      <LevelChips value={level} onChange={selectLevel} />
+      <ThemeChips deck={deck} value={theme} onChange={selectTheme} count={(t) => deck.filter((w) => w.theme === t && inLevel(w, level) && !progress[w.id]).length} />
 
       {!word ? (
         <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center">

@@ -10,6 +10,10 @@ interface Props {
   lessonId: string;
   title: string;
   items: VocabItem[];
+  /** Label of the term side — defaults to Kirundi / Kiswahili from the lesson id. */
+  termLabel?: string;
+  /** "Ask mum" and "report" buttons — off for the learner's own words. */
+  canReport?: boolean;
 }
 
 function readSavedCard(key: string, length: number): number | null {
@@ -26,7 +30,7 @@ export default function FlashcardClient(props: Props) {
   return isClient ? <Flashcards {...props} /> : null;
 }
 
-function Flashcards({ lessonId, title, items }: Props) {
+function Flashcards({ lessonId, title, items, termLabel: label, canReport = true }: Props) {
   const router = useRouter();
   const posKey = `jambo_fc_pos_${lessonId}`;
   const [resumed] = useState(() => readSavedCard(posKey, items.length));
@@ -39,7 +43,7 @@ function Flashcards({ lessonId, title, items }: Props) {
   const card = items[index];
   const isLast = index === items.length - 1;
   const isSwahili = lessonId.startsWith('swahili-');
-  const termLabel = isSwahili ? 'Kiswahili' : 'Kirundi';
+  const termLabel = label ?? (isSwahili ? 'Kiswahili' : 'Kirundi');
 
   // ── Saved position (resume where you left off) ──────────────────────────────
   // Persist position; clear it once the deck is finished or back at the start
@@ -217,7 +221,7 @@ function Flashcards({ lessonId, title, items }: Props) {
       )}
 
       {/* Card action buttons */}
-      <div className="flex gap-2 mt-4">
+      {canReport && <div className="flex gap-2 mt-4">
         <a
           href={whatsappHref}
           target="_blank"
@@ -238,7 +242,7 @@ function Flashcards({ lessonId, title, items }: Props) {
           {reportState === 'done'   && <><span>✓</span> Signalé</>}
           {reportState === 'error'  && <><span>✕</span> Erreur</>}
         </button>
-      </div>
+      </div>}
     </main>
   );
 }

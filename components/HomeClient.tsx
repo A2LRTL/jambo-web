@@ -10,6 +10,7 @@ import Leaderboard from './Leaderboard';
 import GermanTab from './german/GermanTab';
 import EnglishTab from './english/EnglishTab';
 import LatinTab from './latin/LatinTab';
+import MyWordsButton from './mine/MyWordsButton';
 
 type Lang = 'kirundi' | 'swahili' | 'english' | 'german' | 'latin' | 'scores';
 
@@ -260,6 +261,8 @@ export default function HomeClient() {
               ))}
             </div>
 
+            <MyWordsButton profile={profile} lang="kirundi" className="mt-3" />
+
             <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 mt-6">Phrases</p>
             <div className="grid grid-cols-2 gap-3">
               {PHRASE_TOPICS.filter((t) => t !== 'dialogue_nikiza_jenny').map((topic) => (
@@ -287,9 +290,9 @@ export default function HomeClient() {
 
         {lang === 'scores' && <Leaderboard />}
 
-        {lang === 'english' && <EnglishTab />}
+        {lang === 'english' && <><EnglishTab /><MyWordsButton profile={profile} lang="english" className="mt-3" /></>}
 
-        {lang === 'latin' && <LatinTab />}
+        {lang === 'latin' && <><LatinTab /><MyWordsButton profile={profile} lang="latin" className="mt-3" /></>}
 
         {lang === 'german' && hasGerman && <GermanTab profile={profile} />}
 
@@ -308,6 +311,8 @@ export default function HomeClient() {
                 </button>
               ))}
             </div>
+
+            <MyWordsButton profile={profile} lang="swahili" className="mt-3" />
 
             <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 mt-6">Phrases</p>
             <div className="grid grid-cols-2 gap-3">

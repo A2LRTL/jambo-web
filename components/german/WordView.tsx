@@ -81,6 +81,7 @@ export function GrammarLine({ word }: { word: GermanWord }) {
 }
 
 export function Example({ word }: { word: GermanWord }) {
+  if (!word.example_de) return null;
   return (
     <div className="px-4 py-3 rounded-xl bg-cream border border-border text-left w-full flex items-start gap-3">
       <div className="flex-1">

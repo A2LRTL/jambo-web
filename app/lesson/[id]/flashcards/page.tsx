@@ -2,10 +2,19 @@ import { notFound } from 'next/navigation';
 import { CATEGORY_LABELS, SWAHILI_CATEGORY_LABELS } from '@/lib/lesson-registry';
 import { getKirundiVocabItems, getSwahiliVocabItems } from '@/lib/exercises';
 import FlashcardClient from '@/components/FlashcardClient';
+import { MyFlashcards } from '@/components/mine/MyPractice';
+import { isCustomLang } from '@/lib/custom-langs';
 import lesson1 from '@/data/lesson-1.json';
 
 export default async function FlashcardsPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+
+  // The learner's own words live on the device, so these pages render client-side
+  if (id.startsWith('mine-')) {
+    const lang = id.slice('mine-'.length);
+    if (!isCustomLang(lang)) notFound();
+    return <MyFlashcards lang={lang} />;
+  }
 
   if (id === 'lesson-1') {
     const items = lesson1.exercises.map((ex) => ({

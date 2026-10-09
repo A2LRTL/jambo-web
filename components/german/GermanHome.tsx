@@ -3,22 +3,31 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { deckStats } from '@/lib/german/srs';
+import type { GermanWord } from '@/types';
 import {
-  getNewPerDay, newIntroducedToday, NEW_PER_DAY_CHOICES, pullProgress, pushDirty, setNewPerDay, useGermanProgress,
+  getLevel, getNewPerDay, inLevel, newIntroducedToday, NEW_PER_DAY_CHOICES, pullProgress, pushDirty, setLevel, setNewPerDay,
+  useGermanProgress, type LevelChoice,
 } from '@/lib/german/progress';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
+import LevelChips from './LevelChips';
+import MyWordsButton from '@/components/mine/MyWordsButton';
+import { useCustomWords } from '@/lib/custom-words';
 
-export default function GermanHome({ deckIds }: { deckIds: string[] }) {
+type DeckEntry = Pick<GermanWord, 'id' | 'level' | 'custom'>;
+
+export default function GermanHome({ deck }: { deck: DeckEntry[] }) {
   const profile = useGermanAccess();
   if (!profile) return null;
-  return <Dashboard profile={profile} deckIds={deckIds} />;
+  return <Dashboard profile={profile} deck={deck} />;
 }
 
-function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] }) {
+function Dashboard({ profile, deck: builtIn }: { profile: string; deck: DeckEntry[] }) {
   const router = useRouter();
   const progress = useGermanProgress(profile);
+  const custom = useCustomWords(profile);
   const [newPerDay, setNewPerDayState] = useState(getNewPerDay);
+  const [level, setLevelState] = useState(getLevel);
 
   useEffect(() => {
     void pullProgress(profile);
@@ -27,13 +36,23 @@ function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] })
     return () => window.removeEventListener('online', onOnline);
   }, [profile]);
 
-  if (!progress) return null;
+  if (!progress || !custom) return null;
 
-  const stats = deckStats(progress, deckIds, new Date());
+  const deck: DeckEntry[] = [
+    ...builtIn,
+    ...custom.filter((w) => w.lang === 'german').map((w) => ({ id: w.id, level: 'A2' as const, custom: true as const })),
+  ];
+
+  const now = new Date();
+  // Reviews cover every level; the level only picks which new words come in
+  const due = deckStats(progress, deck.map((w) => w.id), now).due;
+  const deckIds = deck.filter((w) => inLevel(w, level)).map((w) => w.id);
+  const stats = deckStats(progress, deckIds, now);
   const newLeft = Math.min(stats.queued + stats.untriaged, Math.max(0, newPerDay - newIntroducedToday(profile)));
-  const sessionSize = stats.due + newLeft;
+  const sessionSize = due + newLeft;
 
   const chooseNewPerDay = (n: number) => { setNewPerDay(n); setNewPerDayState(n); };
+  const chooseLevel = (l: LevelChoice) => { setLevel(l); setLevelState(l); };
 
   return (
     <main className="max-w-md mx-auto px-6 pb-12">
@@ -44,7 +63,7 @@ function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] })
         <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-3">Aujourd&apos;hui</p>
         <div className="flex gap-6 mb-4">
           <div>
-            <p className="text-3xl font-bold text-ink">{stats.due}</p>
+            <p className="text-3xl font-bold text-ink">{due}</p>
             <p className="text-xs text-muted">à réviser</p>
           </div>
           <div>
@@ -65,7 +84,7 @@ function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] })
       </div>
 
       {/* Deck */}
-      <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Ton vocabulaire · {deckIds.length} mots</p>
+      <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Ton vocabulaire · {level ? `${level} · ` : ''}{deckIds.length} mots</p>
       <div className="grid grid-cols-4 gap-2 mb-6 text-center">
         {[
           { n: stats.known,     label: 'connus' },
@@ -96,6 +115,7 @@ function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] })
           <p className="text-sm font-bold text-ink">Verbes</p>
           <p className="text-xs text-muted mt-0.5">Réfléchis, séparables, irréguliers · entraînement verbe + préposition</p>
         </button>
+        <MyWordsButton profile={profile} lang="german" />
         <button type="button" onClick={() => router.push('/de/words')}
           className="w-full py-4 px-5 rounded-xl border border-border bg-card text-left hover:border-accent transition-all active:scale-[0.98] shadow-sm">
           <p className="text-sm font-bold text-ink">Liste des mots</p>
@@ -104,6 +124,9 @@ function Dashboard({ profile, deckIds }: { profile: string; deckIds: string[] })
       </div>
 
       {/* Settings */}
+      <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Niveau des nouveaux mots</p>
+      <LevelChips value={level} onChange={chooseLevel} className="mb-6" />
+
       <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Nouveaux mots par jour</p>
       <div className="flex gap-2">
         {NEW_PER_DAY_CHOICES.map((n) => (

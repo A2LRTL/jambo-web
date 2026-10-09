@@ -5,9 +5,10 @@ import { useRouter } from 'next/navigation';
 import type { GermanWord } from '@/types';
 import { buildSession, markKnown, QUEUED_BOX, review, type Grade } from '@/lib/german/srs';
 import { recordAnswer } from '@/lib/german/history';
-import { addNewIntroduced, getNewPerDay, getProgress, newIntroducedToday, updateProgress } from '@/lib/german/progress';
+import { addNewIntroduced, getLevel, getNewPerDay, inLevel, getProgress, newIntroducedToday, updateProgress } from '@/lib/german/progress';
 import { shuffle } from '@/lib/utils';
 import { markPracticed } from '@/components/NotificationSetup';
+import { useGermanDeck } from '@/lib/german/custom';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
 import { GrammarLine, Headword, headword, SpeakButton } from './WordView';
@@ -20,11 +21,16 @@ export default function ReviewSession({ deck }: { deck: GermanWord[] }) {
 
 /** Mixes new words in among the reviews instead of saving them all for the end. */
 function planQueue(profile: string, deck: GermanWord[]): string[] {
-  const { reviews, fresh } = buildSession(getProgress(profile), deck.map((w) => w.id), new Date(), {
+  // Reviews come from all progress; the chosen level only filters the new words
+  const level = getLevel();
+  const ids = deck.filter((w) => inLevel(w, level)).map((w) => w.id);
+  const { reviews, fresh } = buildSession(getProgress(profile), ids, new Date(), {
     newLimit: getNewPerDay() - newIntroducedToday(profile),
     maxReviews: 100,
   });
-  return shuffle([...reviews, ...fresh]);
+  // Skip progress left by an own word that has since been deleted
+  const known = new Set(deck.map((w) => w.id));
+  return shuffle([...reviews.filter((id) => known.has(id)), ...fresh]);
 }
 
 const GRADES: { grade: Grade; label: string; className: string }[] = [
@@ -33,8 +39,9 @@ const GRADES: { grade: Grade; label: string; className: string }[] = [
   { grade: 'good',  label: 'Facile',    className: 'bg-success-bg text-success border-success/30' },
 ];
 
-function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
+function Session({ profile, deck: builtIn }: { profile: string; deck: GermanWord[] }) {
   const router = useRouter();
+  const deck = useGermanDeck(profile, builtIn);
   const [byId] = useState(() => new Map(deck.map((w) => [w.id, w])));
   const [queue, setQueue] = useState(() => planQueue(profile, deck));
   const [total] = useState(queue.length);
@@ -101,7 +108,7 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
           <div>
             <p className="text-xs text-muted uppercase tracking-wider font-semibold mb-1">Comment dit-on…</p>
             <p className="text-3xl font-bold text-ink leading-snug">{word.fr}</p>
-            <p className="text-sm text-muted italic mt-3">{word.example_fr}</p>
+            {word.example_fr && <p className="text-sm text-muted italic mt-3">{word.example_fr}</p>}
           </div>
 
           {revealed ? (
@@ -111,10 +118,12 @@ function Session({ profile, deck }: { profile: string; deck: GermanWord[] }) {
                 <SpeakButton text={headword(word)} />
               </div>
               <GrammarLine word={word} />
-              <div className="px-4 py-3 rounded-xl bg-cream border border-border flex items-start gap-3">
-                <p className="flex-1 text-sm text-ink italic">{word.example_de}</p>
-                <SpeakButton text={word.example_de} />
-              </div>
+              {word.example_de && (
+                <div className="px-4 py-3 rounded-xl bg-cream border border-border flex items-start gap-3">
+                  <p className="flex-1 text-sm text-ink italic">{word.example_de}</p>
+                  <SpeakButton text={word.example_de} />
+                </div>
+              )}
             </div>
           ) : null}
         </div>

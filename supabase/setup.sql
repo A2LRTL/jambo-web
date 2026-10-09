@@ -52,3 +52,26 @@ alter table de_progress enable row level security;
 create policy "Public read de_progress"   on de_progress for select using (true);
 create policy "Public insert de_progress" on de_progress for insert with check (true);
 create policy "Public update de_progress" on de_progress for update using (true) with check (true);
+
+
+-- ─── Custom words ────────────────────────────────────────────────────────────
+-- Words each profile adds itself, any language (lib/custom-words.ts).
+-- The app keeps working offline without it; words then stay on the device.
+
+create table if not exists custom_words (
+  profile     text        not null,
+  id          text        not null,
+  lang        text        not null,
+  term        text        not null,
+  translation text        not null,
+  example     text,
+  example_fr  text,
+  created_at  timestamptz not null default now(),
+  primary key (profile, id)
+);
+
+alter table custom_words enable row level security;
+create policy "Public read custom_words"   on custom_words for select using (true);
+create policy "Public insert custom_words" on custom_words for insert with check (true);
+create policy "Public update custom_words" on custom_words for update using (true) with check (true);
+create policy "Public delete custom_words" on custom_words for delete using (true);

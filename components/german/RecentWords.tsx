@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { GermanWord } from '@/types';
 import { useSessionHistory, type SessionGrade, type SessionLog } from '@/lib/german/history';
+import { useGermanDeck } from '@/lib/german/custom';
 import { useGermanAccess } from './useGermanAccess';
 import GermanHeader from './GermanHeader';
 import { GrammarLine, Headword, headword, SpeakButton } from './WordView';
@@ -35,9 +36,10 @@ export default function RecentWords({ deck }: { deck: GermanWord[] }) {
   return <Recent profile={profile} deck={deck} />;
 }
 
-function Recent({ profile, deck }: { profile: string; deck: GermanWord[] }) {
+function Recent({ profile, deck: builtIn }: { profile: string; deck: GermanWord[] }) {
   const history = useSessionHistory(profile);
-  const [byId] = useState(() => new Map(deck.map((w) => [w.id, w])));
+  const deck = useGermanDeck(profile, builtIn);
+  const byId = useMemo(() => new Map(deck.map((w) => [w.id, w])), [deck]);
   const [count, setCount] = useState(1);
   const [hardOnly, setHardOnly] = useState(false);
   const [quiz, setQuiz] = useState(false);
@@ -111,7 +113,7 @@ function Recent({ profile, deck }: { profile: string; deck: GermanWord[] }) {
                             <>
                               <Headword word={w} size="text-base" />
                               <GrammarLine word={w} />
-                              <p className="text-sm text-muted italic">{w.example_de}</p>
+                              {w.example_de && <p className="text-sm text-muted italic">{w.example_de}</p>}
                             </>
                           )}
                         </div>

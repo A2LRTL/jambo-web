@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import { CATEGORY_LABELS } from '@/lib/lesson-registry';
+import { CUSTOM_LANGS, isCustomLang } from '@/lib/custom-langs';
 import ScoreSaver from '@/components/ScoreSaver';
 import { getMessage } from '@/lib/utils';
 
 function getLessonTitle(id: string): string {
   if (id === 'lesson-1') return 'Salutations de base';
   if (id.startsWith('kirundi-')) return CATEGORY_LABELS[id.slice('kirundi-'.length)] ?? id;
+  const mine = id.slice('mine-'.length);
+  if (id.startsWith('mine-') && isCustomLang(mine)) return `Mes mots · ${CUSTOM_LANGS[mine].label}`;
   return id;
 }
 

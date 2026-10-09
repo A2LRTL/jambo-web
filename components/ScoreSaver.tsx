@@ -35,8 +35,8 @@ export default function ScoreSaver({ lessonId, score, total, attemptId }: Props)
     const profile = localStorage.getItem('jambo_profile');
     if (!profile) return;
     if (attemptId && alreadySaved(`${lessonId}:${attemptId}`)) return;
-    // Guests practise without recording scores
-    if (profile !== 'guest') saveScore(profile, lessonId, score, total);
+    // Guests practise without recording scores; own-word quizzes stay out of the leaderboard
+    if (profile !== 'guest' && !lessonId.startsWith('mine-')) saveScore(profile, lessonId, score, total);
     markPracticed();
   }, [lessonId, score, total, attemptId]);
 
